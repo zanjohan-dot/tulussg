@@ -367,7 +367,6 @@ html,body { width:100vw; height:100vh; overflow:hidden; background:var(--cream);
   <div id="yt-player"></div>
 </div>
 
-<div class="global-footer">A community-first initiative by The Digital Systems Architect | admin@tulussg.com</div>
 
 <div class="mobile-bar">
   <div class="mob-logo">
@@ -502,7 +501,6 @@ html,body { width:100vw; height:100vh; overflow:hidden; background:var(--cream);
             </a>
           </div>
 
-          <p class="c-note anim" style="text-align: center; margin-top: 30px;">A community-first initiative by The Digital Systems Architect | admin@tulussg.com</p>
         </div>
         <div class="connect-right">
           <!-- Mobile-only compact header -->
@@ -624,7 +622,7 @@ function submitForm(){
   const data = Object.fromEntries(formData.entries());
   
   // TO DO: Replace this URL with your generated Google Apps Script Web App URL
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbwRhUVezDOOxxgyiksSeQfT1JaL3URDePGzBZZ482YwqE1ef0DTQjcH2R6AiOshPGLwJg/exec';
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzIElMTz3stYubgU30k7lCgZKxuVL40RHpsD9L-CHBE6obiJO37Om80XjpHk95-5UKXQQ/exec';
   
   if(scriptURL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
     // Demo mode if URL is not set
@@ -696,6 +694,20 @@ function onFirstInteract() {
 }
 document.addEventListener('click', onFirstInteract);
 document.addEventListener('touchstart', onFirstInteract, {passive:true});
+
+// Disable right-click
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+// Disable F12 and common developer tool shortcut keys
+document.addEventListener('keydown', e => {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
+    (e.ctrlKey && e.key.toUpperCase() === 'U')
+  ) {
+    e.preventDefault();
+  }
+});
 
 </script>
 </body>
