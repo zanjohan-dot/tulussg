@@ -3,37 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>TulusSG | Community Support for Domestic Workers, Caregivers and Families in Singapore</title>
-<meta name="description" content="TulusSG is a community-first initiative creating practical resources, trusted support and meaningful connections for domestic workers, caregivers and families across Singapore.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.tulussg.com/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="TulusSG">
-<meta property="og:description" content="Practical resources, trusted support and meaningful connections for domestic workers, caregivers and families across Singapore.">
-<meta property="og:url" content="https://www.tulussg.com/">
-<meta name="twitter:card" content="summary">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "TulusSG",
-  "url": "https://www.tulussg.com/",
-  "email": "admin@tulussg.com",
-  "areaServed": "Singapore",
-  "sameAs": [
-    "https://www.instagram.com/tulussg",
-    "https://www.linkedin.com/showcase/tulussg/",
-    "https://www.linkedin.com/in/zanjohan"
-  ],
-  "knowsAbout": [
-    "Domestic worker support in Singapore",
-    "Caregiver support in Singapore",
-    "Community resources in Singapore",
-    "Digital inclusion for community care"
-  ],
-  "description": "A community-first initiative creating practical resources, trusted support and meaningful connections for domestic workers, caregivers and families across Singapore."
-}
-</script>
+<title>TulusSG — Built on Dignity. Designed for Trust.</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -378,6 +348,27 @@ html,body { width:100vw; height:100vh; overflow:hidden; background:var(--cream);
   @media(max-width:768px) {
     .global-footer { bottom: 12px; font-size: 9px; color: rgba(44,32,21,0.4); }
   }
+
+  .seo-pill {
+    font-size: 10px;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 100px;
+    border: 1px solid rgba(44,32,21,0.12);
+    transition: all 0.3s var(--ease);
+    background: transparent;
+    display: inline-block;
+  }
+  .seo-pill:hover {
+    background: var(--terra);
+    color: var(--white);
+    border-color: var(--terra);
+    transform: translateY(-2px);
+  }
+  @media(max-width:768px) {
+    .seo-pill { font-size: 9px; padding: 5px 10px; }
+  }
 </style>
 </head>
 <body>
@@ -429,7 +420,7 @@ html,body { width:100vw; height:100vh; overflow:hidden; background:var(--cream);
       <button class="v-nav-item" onclick="goTo(4)"><div class="n-bar"></div><span class="n-num">05</span><span class="n-label">Connect</span></button>
     </nav>
     <div class="sidebar-foot">
-   
+      <a href="mailto:admin@tulussg.com">admin@tulussg.com</a>
     </div>
   </aside>
 
@@ -567,13 +558,15 @@ html,body { width:100vw; height:100vh; overflow:hidden; background:var(--cream);
             </div>
             <div class="form-row anim"><label>Message</label><textarea name="message" rows="3" placeholder="How would you like to connect?" required></textarea></div>
             <button type="submit" class="form-btn anim">Send Message</button>
-            <p class="anim" style="font-size: 10px; color: var(--muted); text-align: center; margin-top: 16px;">A community-first initiative by The Digital Systems Architect | <a href="https://digi-architect.studio" target="_blank" style="color: var(--terra); text-decoration: none;">https://digi-architect.studio</a></p>
-            <p class="anim" style="font-size: 10px; color: var(--muted); text-align: center; margin-top: 10px; line-height: 1.8;">
-              <a href="/domestic-worker-support-singapore/" style="color: var(--terra); text-decoration: none;">Domestic worker support Singapore</a> |
-              <a href="/caregiver-support-singapore/" style="color: var(--terra); text-decoration: none;">Caregiver support Singapore</a> |
-              <a href="/community-resources-singapore/" style="color: var(--terra); text-decoration: none;">Community resources Singapore</a> |
-              <a href="/faq/" style="color: var(--terra); text-decoration: none;">FAQ</a>
-            </p>
+            <p class="anim" style="font-size: 10px; color: var(--muted); text-align: center; margin-top: 16px; margin-bottom: 12px;">A community-first initiative by The Digital Systems Architect | <a href="https://digi-architect.studio" target="_blank" style="color: var(--terra); text-decoration: none;">https://digi-architect.studio</a></p>
+            
+            <div class="anim" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 8px;">
+              <a href="/domestic-worker-support-singapore/" class="seo-pill">Domestic Worker Support</a>
+              <a href="/caregiver-support-singapore/" class="seo-pill">Caregiver Support</a>
+              <a href="/community-resources-singapore/" class="seo-pill">Community Resources</a>
+              <a href="/faq/" class="seo-pill">FAQ</a>
+            </div>
+
             <div class="s-over" id="s-over">
               <div class="s-check">&#x2713;</div>
               <h3 style="font-family:'Cormorant Garant',serif;font-size:24px;color:var(--ink);margin-bottom:8px;">Message Sent</h3>
