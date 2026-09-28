@@ -404,12 +404,14 @@ html,body { width:100vw; height:100vh; overflow:hidden; background:var(--cream);
     .collab-lbl { font-size:12px; }
   }
   @media(max-width:768px) {
-    #s1 { padding-bottom:140px; }
+    #s1 { padding-bottom:190px; }
     #s1 .display { font-size:26px !important; }
     .people-grid .person { grid-column:1/-1; gap:10px; align-items:center; }
     .p-photo { width:38px; font-size:13px; }
-    .collab-row { gap:8px; }
-    .collab-group { flex:0 0 auto; }
+    .collab-row { display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:10px; }
+    .collab-group .logos { flex-wrap:nowrap; }
+    .collab-group { display:flex; flex-direction:column; justify-content:space-between; }
+    .collab-lbl { line-height:1.3; }
     .logo-slot.logo-img { padding:2px 4px; }
     .collab-lbl { font-size:8px; margin-bottom:4px; }
     .logos { gap:5px; }
@@ -519,8 +521,9 @@ html,body { width:100vw; height:100vh; overflow:hidden; background:var(--cream);
           <div class="why-item span2">
             <div class="why-item-num">Collaborators</div>
             <div class="collab-row">
-              <div class="collab-group"><span class="collab-lbl">Strategic partnerships</span><div class="logos"><a class="logo-slot logo-img" href="https://www.facebook.com/thefacilitatorsproject/" target="_blank" rel="noopener" title="The Facilitators&#8217; Project on Facebook"><img src="assets/collaborators/facilitators-project.png" alt="The Facilitators&#8217; Project"></a><a class="logo-slot logo-img" href="https://www.instagram.com/the.affirmative.people/" target="_blank" rel="noopener" title="The Affirmative People on Instagram"><img src="assets/collaborators/affirmative-people.png" alt="The Affirmative People"></a><a class="logo-slot logo-img" href="https://alac.sg/" target="_blank" rel="noopener" title="ALA Consulting website"><img src="assets/collaborators/ala-consulting.png" alt="ALA Consulting Pte Ltd"></a></div></div>
-              <div class="collab-group"><span class="collab-lbl">Media production</span><div class="logos"><a class="logo-slot logo-img" href="https://www.youtube.com/@kauapehalx" target="_blank" rel="noopener" title="Kahtel TV on YouTube"><img src="assets/collaborators/kahtel.png" alt="Kahtel TV"></a><a class="logo-slot logo-img" href="https://www.instagram.com/outsideinsg/" target="_blank" rel="noopener" title="Outsidein Podcast on Instagram"><img src="assets/collaborators/outsidein.png" alt="Outsidein Podcast"></a></div></div>
+              <div class="collab-group"><span class="collab-lbl">Strategic Partnerships</span><div class="logos"><a class="logo-slot logo-img" href="https://www.facebook.com/thefacilitatorsproject/" target="_blank" rel="noopener" title="The Facilitators&#8217; Project on Facebook"><img src="assets/collaborators/facilitators-project.png" alt="The Facilitators Project"></a><a class="logo-slot logo-img" href="https://www.instagram.com/the.affirmative.people/" target="_blank" rel="noopener" title="The Affirmative People on Instagram"><img src="assets/collaborators/affirmative-people.png" alt="The Affirmative People"></a></div></div>
+              <div class="collab-group"><span class="collab-lbl">Legal &amp; Data Protection Advisory</span><div class="logos"><a class="logo-slot logo-img" href="https://alac.sg/" target="_blank" rel="noopener" title="ALA Consulting website"><img src="assets/collaborators/ala-consulting.png" alt="ALAC Consulting Pte Ltd"></a></div></div>
+              <div class="collab-group"><span class="collab-lbl">Media Production</span><div class="logos"><a class="logo-slot logo-img" href="https://www.youtube.com/@kauapehalx" target="_blank" rel="noopener" title="Kahtel TV on YouTube"><img src="assets/collaborators/kahtel.png" alt="Kahtel Media"></a><a class="logo-slot logo-img" href="https://www.instagram.com/outsideinsg/" target="_blank" rel="noopener" title="Outsidein Podcast on Instagram"><img src="assets/collaborators/outsidein.png" alt="Outsidein Motion"></a></div></div>
             </div>
           </div>
         </div>
