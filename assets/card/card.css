@@ -608,6 +608,15 @@ img {
 }
 
 /* ---- Additions for the Zan / Vijai cards ---- */
+/* Show each photo whole: the frame follows the photo's own shape. */
+.profile-photo-ring {
+  height: auto;
+}
+
+.profile-photo {
+  height: auto;
+  object-fit: contain;
+}
 .bio {
   max-width: 320px;
   margin: 10px auto 0;
