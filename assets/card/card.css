@@ -523,7 +523,7 @@ img {
 
   .brand-logo {
     max-width: 170px;
-    height: 34px;
+    height: 48px;
   }
 
   .brand-logo-icon {
@@ -604,5 +604,68 @@ img {
   *::after {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+  }
+}
+
+/* ---- Additions for the Zan / Vijai cards ---- */
+.bio {
+  max-width: 320px;
+  margin: 10px auto 0;
+  color: var(--brown-soft);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.join-button {
+  width: 100%;
+  min-height: 48px;
+  margin: 16px 0 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: var(--radius-round);
+  color: var(--white);
+  background: var(--terracotta);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 10px 22px rgba(193, 97, 60, 0.28);
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.join-button i {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.join-button:hover {
+  transform: translateY(-1px);
+  background: #a84f30;
+}
+
+.join-button:focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+}
+
+.follow-label {
+  margin: 14px 0 -6px;
+  color: var(--muted);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (max-width: 430px) {
+  .bio {
+    font-size: 0.76rem;
+  }
+
+  .join-button {
+    min-height: 46px;
+    font-size: 0.82rem;
   }
 }
