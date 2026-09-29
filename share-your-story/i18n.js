@@ -5,14 +5,17 @@
  * To add a language (e.g. Tamil): copy the `en` block, translate it, add it to
  * SYS_LANGUAGES below, and add an <option> to the language selector in index.html.
  *
- * REVIEW STATUS: id, tl and my are drafts that need a native speaker's review before launch.
+ * REVIEW STATUS: id, tl and my are PENDING NATIVE-SPEAKER REVIEW (see `review` below). Do not launch publicly
+ * until reviewed strings have been inserted and `review` is set to 'reviewed'.
  * Specific concerns are listed in SYS_REVIEW_NOTES at the bottom of this file.
  */
+// review: 'source' | 'pending-native-review' | 'reviewed'
+// LAUNCH RULE: do not deploy publicly while any language is 'pending-native-review'.
 window.SYS_LANGUAGES = {
-  en: { htmlLang: 'en', name: 'English' },
-  id: { htmlLang: 'id', name: 'Bahasa Indonesia' },
-  tl: { htmlLang: 'fil', name: 'Filipino / Tagalog' },
-  my: { htmlLang: 'my', name: 'မြန်မာဘာသာ' },
+  en: { htmlLang: 'en', name: 'English', review: 'source' },
+  id: { htmlLang: 'id', name: 'Bahasa Indonesia', review: 'pending-native-review' },
+  tl: { htmlLang: 'fil', name: 'Filipino / Tagalog', review: 'pending-native-review' },
+  my: { htmlLang: 'my', name: 'မြန်မာဘာသာ', review: 'pending-native-review' },
 };
 
 window.SYS_I18N = {
@@ -72,6 +75,9 @@ window.SYS_I18N = {
     'film.maybe': 'Maybe, tell me more',
     'film.no': 'No',
     'f.consent': 'I agree that TulusSG may contact me about this story-sharing opportunity.',
+    'f.consentAck': 'By submitting this form, you acknowledge our {link}.',
+    'f.privacyLink': 'Privacy Policy',
+    'f.mediaNote': 'Submitting your interest does not give TulusSG permission to publish or use your story, image or voice. Media consent will be obtained separately if you are selected.',
     'form.submit': 'Share my story',
     'form.submitting': 'Sending…',
     'err.fullName': 'Please enter your name.',
@@ -95,6 +101,7 @@ window.SYS_I18N = {
     'success.shortlisted': "If you're shortlisted, the TulusSG team will contact you.",
     'success.back': 'Back to TulusSG',
     'footer.questions': 'Questions?',
+    'footer.privacy': 'Privacy Policy',
   },
 
   id: {
@@ -153,6 +160,9 @@ window.SYS_I18N = {
     'film.maybe': 'Mungkin, ceritakan lebih lanjut',
     'film.no': 'Tidak',
     'f.consent': 'Saya setuju bahwa TulusSG boleh menghubungi saya tentang kesempatan berbagi cerita ini.',
+    'f.consentAck': 'Dengan mengirim formulir ini, Anda menyatakan telah membaca {link} kami.',
+    'f.privacyLink': 'Kebijakan Privasi',
+    'f.mediaNote': 'Menyatakan minat tidak berarti TulusSG boleh memublikasikan atau menggunakan cerita, gambar, atau suara Anda. Izin media akan diminta secara terpisah jika Anda terpilih.',
     'form.submit': 'Bagikan cerita saya',
     'form.submitting': 'Sedang mengirim…',
     'err.fullName': 'Mohon isi nama Anda.',
@@ -176,6 +186,7 @@ window.SYS_I18N = {
     'success.shortlisted': 'Jika Anda masuk daftar pendek, tim TulusSG akan menghubungi Anda.',
     'success.back': 'Kembali ke TulusSG',
     'footer.questions': 'Ada pertanyaan?',
+    'footer.privacy': 'Kebijakan Privasi',
   },
 
   tl: {
@@ -234,6 +245,9 @@ window.SYS_I18N = {
     'film.maybe': 'Siguro, sabihin pa sa akin',
     'film.no': 'Hindi',
     'f.consent': 'Pumapayag ako na kontakin ako ng TulusSG tungkol sa pagkakataong ito na magbahagi ng kuwento.',
+    'f.consentAck': 'Sa pagpapadala ng form na ito, kinikilala mo ang aming {link}.',
+    'f.privacyLink': 'Privacy Policy',
+    'f.mediaNote': 'Ang pagpapahayag ng interes ay hindi nagbibigay ng pahintulot sa TulusSG na i-publish o gamitin ang iyong kuwento, larawan o boses. Hihingin nang hiwalay ang media consent kung mapipili ka.',
     'form.submit': 'Ibahagi ang kuwento ko',
     'form.submitting': 'Ipinapadala…',
     'err.fullName': 'Pakilagay ang iyong pangalan.',
@@ -257,6 +271,7 @@ window.SYS_I18N = {
     'success.shortlisted': 'Kung mapasama ka sa shortlist, kokontakin ka ng TulusSG team.',
     'success.back': 'Bumalik sa TulusSG',
     'footer.questions': 'May tanong?',
+    'footer.privacy': 'Privacy Policy',
   },
 
   my: {
@@ -315,6 +330,9 @@ window.SYS_I18N = {
     'film.maybe': 'ဖြစ်နိုင်ပါတယ်၊ ပိုပြောပြပါ',
     'film.no': 'မသက်သာပါ',
     'f.consent': 'ဤဇာတ်လမ်းမျှဝေခြင်း အခွင့်အလမ်းနှင့် ပတ်သက်၍ TulusSG က ကျွန်ုပ်ကို ဆက်သွယ်ခွင့်ပြုပါသည်။',
+    'f.consentAck': 'ဤဖောင်ကို ပေးပို့ခြင်းဖြင့် ကျွန်ုပ်တို့၏ {link} ကို အသိအမှတ်ပြုပါသည်။',
+    'f.privacyLink': 'ကိုယ်ရေးအချက်အလက် မူဝါဒ',
+    'f.mediaNote': 'စိတ်ဝင်စားကြောင်း ပေးပို့ခြင်းသည် သင့်ဇာတ်လမ်း၊ ပုံ သို့မဟုတ် အသံကို TulusSG က ထုတ်ဝေရန် သို့မဟုတ် အသုံးပြုရန် ခွင့်ပြုချက် မဟုတ်ပါ။ သင် ရွေးချယ်ခံရပါက မီဒီယာ ခွင့်ပြုချက်ကို သီးခြား တောင်းခံပါမည်။',
     'form.submit': 'ဇာတ်လမ်း မျှဝေမယ်',
     'form.submitting': 'ပေးပို့နေသည်…',
     'err.fullName': 'သင့်အမည်ကို ထည့်ပေးပါ။',
@@ -338,6 +356,7 @@ window.SYS_I18N = {
     'success.shortlisted': 'သင် ရွေးချယ်စာရင်းဝင်ပါက TulusSG အဖွဲ့မှ သင့်ကို ဆက်သွယ်ပါမည်။',
     'success.back': 'TulusSG သို့ ပြန်သွားရန်',
     'footer.questions': 'မေးစရာ ရှိပါသလား။',
+    'footer.privacy': 'ကိုယ်ရေးအချက်အလက် မူဝါဒ',
   },
 };
 
@@ -351,6 +370,10 @@ window.SYS_REVIEW_NOTES = {
   tl: [
     'Uses informal "ka/mo" without "po". Confirm the tone for older helpers.',
     'trust.be "Magpakatotoo ka lang." for "Just be yourself."',
+  ],
+  all: [
+    'f.consentAck / f.mediaNote / f.privacyLink are new consent wording — review with the privacy policy wording.',
+    'The Privacy Policy page itself is English only; consider translated summaries.',
   ],
   my: [
     'ENTIRE locale needs native review. Myanmar Unicode (not Zawgyi).',

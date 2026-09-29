@@ -21,6 +21,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.tulussg.com/privacy/</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://www.tulussg.com/faq/</loc>
     <priority>0.6</priority>
   </url>

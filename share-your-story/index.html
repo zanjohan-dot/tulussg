@@ -71,7 +71,7 @@ a{color:var(--terra-d)}
 /* Hero */
 .hero{padding:2px 0 36px}
 .hero-photo{border-radius:16px;overflow:hidden;height:clamp(170px,30svh,340px);background:var(--warm)}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:var(--hero-focus,50% 30%)}
 .tag{display:inline-flex;align-items:center;gap:8px;margin:14px 0 4px;font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--terra)}
 .tag::after{content:'';width:24px;height:1px;background:var(--terra);opacity:0.5}
 h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,9.6vw,72px);line-height:1;margin:0 0 10px;letter-spacing:-0.01em}
@@ -127,6 +127,9 @@ fieldset{border:0;margin:0 0 22px;padding:0;min-width:0}
 .consent{display:flex;align-items:flex-start;gap:12px;padding:14px;border:1.5px solid var(--line);border-radius:8px;cursor:pointer;font-size:16px;line-height:1.5}
 .consent:has(input:checked){border-color:var(--terra);background:#FDF1E8}
 .consent input{margin-top:2px}
+.consent-note{margin-top:10px;font-size:14px;line-height:1.55;color:var(--muted)}
+.consent-note p{margin:0 0 6px}
+.consent-note a{color:var(--terra-d);font-weight:600}
 .other{margin-top:10px}
 .count{margin-top:6px;font-size:13px;color:var(--muted);text-align:right}
 .error{display:flex;align-items:flex-start;gap:6px;margin-top:8px;font-size:15px;font-weight:600;color:var(--error)}
@@ -199,7 +202,16 @@ footer img{height:40px;width:auto}
 
   <main>
     <section class="hero">
-      <div class="hero-photo">
+      <!--
+        HERO PHOTO — to replace it (e.g. with a real, consenting participant):
+        1. Export a portrait photo (about 3:4, at least 1069px wide) with no text in it.
+        2. Save it over hero-640.webp / hero-1069.webp / hero-640.jpg / hero-1069.jpg (same names = no code change),
+           or change the four file names below.
+        3. Set --hero-focus to the point that must stay visible (the face), as "X% Y%" from the top-left.
+        4. Update the alt text key "hero.alt" in i18n.js, and og-image.jpg (1200x630) for link previews.
+        The frame crops with object-fit: cover, so any size or shape works without stretching.
+      -->
+      <div class="hero-photo" style="--hero-focus: 50% 30%">
         <picture>
           <source type="image/webp" srcset="hero-640.webp 640w, hero-1069.webp 1069w" sizes="(min-width: 880px) 45vw, 100vw">
           <img src="hero-640.jpg" srcset="hero-640.jpg 640w, hero-1069.jpg 1069w" sizes="(min-width: 880px) 45vw, 100vw"
@@ -327,10 +339,14 @@ footer img{height:40px;width:auto}
 
           <div class="field" data-field="consentContact">
             <label class="consent">
-              <input type="checkbox" id="consentContact" name="consentContact" aria-describedby="consentContact-error" required>
+              <input type="checkbox" id="consentContact" name="consentContact" aria-describedby="consent-note consentContact-error" required>
               <span><span data-i18n="f.consent">I agree that TulusSG may contact me about this story-sharing opportunity.</span><span class="req" aria-hidden="true">*</span></span>
             </label>
             <p class="error" id="consentContact-error" hidden></p>
+            <div class="consent-note" id="consent-note">
+              <p data-i18n-link="f.consentAck" data-link-key="f.privacyLink" data-link-href="/privacy/#share-your-story">By submitting this form, you acknowledge our <a href="/privacy/#share-your-story">Privacy Policy</a>.</p>
+              <p data-i18n="f.mediaNote">Submitting your interest does not give TulusSG permission to publish or use your story, image or voice. Media consent will be obtained separately if you are selected.</p>
+            </div>
           </div>
 
           <!-- Honeypot: hidden from people and screen readers; bots tend to fill it. -->
@@ -359,6 +375,7 @@ footer img{height:40px;width:auto}
   <div class="wrap">
     <a href="/" data-i18n-attr="aria-label:nav.home" aria-label="TulusSG home"><img src="/assets/card/tulussg-logo.png" alt="TulusSG" width="517" height="539"></a>
     <span><span data-i18n="footer.questions">Questions?</span> <a href="mailto:admin@tulussg.com">admin@tulussg.com</a></span>
+    <a href="/privacy/" data-i18n="footer.privacy">Privacy Policy</a>
   </div>
 </footer>
 

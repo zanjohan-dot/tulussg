@@ -15,11 +15,12 @@
   var STORY_MAX = 1000;
 
   var metaApi = document.querySelector('meta[name="share-story-api"]');
-  // Local preview talks to a locally running API; the live site uses the address in the <meta> tag.
-  var API =
-    /^(localhost|127\.0\.0\.1)$/.test(location.hostname)
-      ? 'http://localhost:3000/api/share-your-story'
-      : metaApi && metaApi.content;
+  // Local preview talks to a locally running API (or, for the controlled pre-launch test, to the address in
+  // ?api=). The override is ignored on the live site, which always uses the address in the <meta> tag.
+  var isLocal = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+  var API = isLocal
+    ? new URLSearchParams(location.search).get('api') || 'http://localhost:3000/api/share-your-story'
+    : metaApi && metaApi.content;
 
   var form = document.getElementById('story-form');
   var langSelect = document.getElementById('lang-select');
@@ -64,6 +65,17 @@
     document.documentElement.lang = LANGS[lang].htmlLang;
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       el.textContent = t(el.getAttribute('data-i18n'));
+    });
+    // Sentences containing a link: "... our {link}." — built with text nodes, never innerHTML.
+    document.querySelectorAll('[data-i18n-link]').forEach(function (el) {
+      var parts = t(el.getAttribute('data-i18n-link')).split('{link}');
+      var link = document.createElement('a');
+      link.href = el.getAttribute('data-link-href');
+      link.textContent = t(el.getAttribute('data-link-key'));
+      el.textContent = '';
+      el.appendChild(document.createTextNode(parts[0] || ''));
+      el.appendChild(link);
+      el.appendChild(document.createTextNode(parts[1] || ''));
     });
     document.querySelectorAll('[data-i18n-attr]').forEach(function (el) {
       el.getAttribute('data-i18n-attr').split(';').forEach(function (pair) {
