@@ -1,32 +1,42 @@
 /*
- * Share Your Story: page translations.
+ * Share Your Story — page text. English is the source; every language must have exactly the same keys
+ * (checked by _tests/check-i18n.mjs). Shared text (navigation, footer, generic errors) is in
+ * /campaigns/shared/i18n-shared.js.
  *
- * English is the source. Each language must have exactly the same keys.
- * To add a language (e.g. Tamil): copy the `en` block, translate it, add it to
- * SYS_LANGUAGES below, and add an <option> to the language selector in index.html.
- *
- * REVIEW STATUS: id, tl and my are PENDING NATIVE-SPEAKER REVIEW (see `review` below). Do not launch publicly
- * until reviewed strings have been inserted and `review` is set to 'reviewed'.
- * Specific concerns are listed in SYS_REVIEW_NOTES at the bottom of this file.
+ * REVIEW STATUS: id, tl and my are PENDING NATIVE-SPEAKER REVIEW. Do not launch publicly until reviewed
+ * strings have been inserted and `review` is set to 'reviewed' for each language.
  */
-// review: 'source' | 'pending-native-review' | 'reviewed'
-// LAUNCH RULE: do not deploy publicly while any language is 'pending-native-review'.
-window.SYS_LANGUAGES = {
-  en: { htmlLang: 'en', name: 'English', review: 'source' },
-  id: { htmlLang: 'id', name: 'Bahasa Indonesia', review: 'pending-native-review' },
-  tl: { htmlLang: 'fil', name: 'Filipino / Tagalog', review: 'pending-native-review' },
-  my: { htmlLang: 'my', name: 'မြန်မာဘာသာ', review: 'pending-native-review' },
-};
+TulusI18n.register({
+  name: 'share-your-story',
+  review: { en: 'source', id: 'pending-native-review', tl: 'pending-native-review', my: 'pending-native-review' },
+  reviewNotes: {
+    "id": [
+      "Uses formal \"Anda\". Confirm this vs. the warmer \"kamu\" for the PMI audience.",
+      "hero.line2 \"dibuat-buat\" for \"scripted\"; alternative: \"yang sudah ada naskahnya\".",
+      "success.shortlisted \"masuk daftar pendek\" for \"shortlisted\"."
+    ],
+    "tl": [
+      "Uses informal \"ka/mo\" without \"po\". Confirm the tone for older helpers.",
+      "trust.be \"Magpakatotoo ka lang.\" for \"Just be yourself.\""
+    ],
+    "all": [
+      "f.consentAck / f.mediaNote (and privacy.link in the shared file) are consent wording — review with the privacy policy wording.",
+      "The Privacy Policy page itself is English only; consider translated summaries."
+    ],
+    "my": [
+      "ENTIRE locale needs native review. Myanmar Unicode (not Zawgyi).",
+      "trust.be \"သင့်အတိုင်း သင်ဖြစ်ပါစေ။\" for \"Just be yourself.\"",
+      "film.no \"မသက်သာပါ\" (not comfortable) for \"No\".",
+      "f.consent: consent wording must be exact."
+    ]
+  },
 
-window.SYS_I18N = {
   en: {
     'meta.title': 'Share Your Story | TulusSG',
     'meta.description': 'TulusSG is looking for four domestic helpers in Singapore to share their stories in an upcoming media production.',
-    'nav.language': 'Language',
-    'nav.home': 'TulusSG home',
     'hero.tag': 'A TulusSG story project',
     'hero.title': 'Share your story',
-    'hero.lead': "We're looking for 4 domestic helpers in Singapore to share their stories in an upcoming TulusSG media production.",
+    'hero.lead': 'We\'re looking for 4 domestic helpers in Singapore to share their stories in an upcoming TulusSG media production.',
     'hero.line1': 'Not a perfect story.',
     'hero.line2': 'Not a scripted story.',
     'hero.line3': 'Just your story.',
@@ -45,9 +55,6 @@ window.SYS_I18N = {
     'trust.be': 'Just be yourself.',
     'trust.contact': 'Selected participants will be contacted by the TulusSG team.',
     'form.title': 'Interested? Tell us a little about your story.',
-    'form.required': 'required',
-    'form.optional': 'optional',
-    'form.choose': 'Choose one',
     'f.name': 'Name',
     'f.phone': 'WhatsApp number',
     'f.phone.help': 'Singapore: 8 digits, e.g. 9123 4567. Other countries: start with + and the country code.',
@@ -76,10 +83,8 @@ window.SYS_I18N = {
     'film.no': 'No',
     'f.consent': 'I agree that TulusSG may contact me about this story-sharing opportunity.',
     'f.consentAck': 'By submitting this form, you acknowledge our {link}.',
-    'f.privacyLink': 'Privacy Policy',
     'f.mediaNote': 'Submitting your interest does not give TulusSG permission to publish or use your story, image or voice. Media consent will be obtained separately if you are selected.',
     'form.submit': 'Share my story',
-    'form.submitting': 'Sending…',
     'err.fullName': 'Please enter your name.',
     'err.phone': 'Please enter your WhatsApp number.',
     'err.nationality': 'Please choose your nationality.',
@@ -87,28 +92,17 @@ window.SYS_I18N = {
     'err.preferredLanguage': 'Please choose a language.',
     'err.preferredLanguageOther': 'Please tell us which language.',
     'err.filmingComfort': 'Please choose an answer.',
+    'err.story': 'Please check this answer.',
     'err.consentContact': 'Please tick this box so we can contact you.',
-    'err.invalid_phone': 'This WhatsApp number doesn’t look right.',
-    'err.phone_country_code': 'For numbers outside Singapore, start with + and the country code (e.g. +62…).',
-    'err.too_long': 'This is too long. Please make it shorter.',
-    'err.invalid_option': 'Please choose one of the answers shown.',
-    'err.network': 'Your registration was not sent. Please check your internet connection and try again.',
-    'err.server': 'Sorry, something went wrong on our side and your registration was NOT sent. Please try again in a few minutes.',
-    'err.rate_limited': 'Too many tries in a short time. Please wait a few minutes and try again.',
-    'err.too_fast': 'That was quick! Please check your answers and send again.',
     'success.title': 'Thank you for sharing your story',
-    'success.received': "We've received your registration.",
-    'success.shortlisted': "If you're shortlisted, the TulusSG team will contact you.",
+    'success.received': 'We\'ve received your registration.',
+    'success.shortlisted': 'If you\'re shortlisted, the TulusSG team will contact you.',
     'success.back': 'Back to TulusSG',
-    'footer.questions': 'Questions?',
-    'footer.privacy': 'Privacy Policy',
   },
 
   id: {
     'meta.title': 'Bagikan Cerita Anda | TulusSG',
     'meta.description': 'TulusSG mencari empat pekerja rumah tangga di Singapura untuk membagikan cerita mereka dalam produksi media yang akan datang.',
-    'nav.language': 'Bahasa',
-    'nav.home': 'Beranda TulusSG',
     'hero.tag': 'Proyek cerita TulusSG',
     'hero.title': 'Bagikan cerita Anda',
     'hero.lead': 'Kami mencari 4 pekerja rumah tangga di Singapura untuk membagikan cerita mereka dalam produksi media TulusSG yang akan datang.',
@@ -130,9 +124,6 @@ window.SYS_I18N = {
     'trust.be': 'Jadilah diri sendiri.',
     'trust.contact': 'Peserta yang terpilih akan dihubungi oleh tim TulusSG.',
     'form.title': 'Tertarik? Ceritakan sedikit tentang kisah Anda.',
-    'form.required': 'wajib',
-    'form.optional': 'tidak wajib',
-    'form.choose': 'Pilih salah satu',
     'f.name': 'Nama',
     'f.phone': 'Nomor WhatsApp',
     'f.phone.help': 'Singapura: 8 angka, misalnya 9123 4567. Negara lain: awali dengan + dan kode negara.',
@@ -161,10 +152,8 @@ window.SYS_I18N = {
     'film.no': 'Tidak',
     'f.consent': 'Saya setuju bahwa TulusSG boleh menghubungi saya tentang kesempatan berbagi cerita ini.',
     'f.consentAck': 'Dengan mengirim formulir ini, Anda menyatakan telah membaca {link} kami.',
-    'f.privacyLink': 'Kebijakan Privasi',
     'f.mediaNote': 'Menyatakan minat tidak berarti TulusSG boleh memublikasikan atau menggunakan cerita, gambar, atau suara Anda. Izin media akan diminta secara terpisah jika Anda terpilih.',
     'form.submit': 'Bagikan cerita saya',
-    'form.submitting': 'Sedang mengirim…',
     'err.fullName': 'Mohon isi nama Anda.',
     'err.phone': 'Mohon isi nomor WhatsApp Anda.',
     'err.nationality': 'Mohon pilih kewarganegaraan Anda.',
@@ -172,28 +161,17 @@ window.SYS_I18N = {
     'err.preferredLanguage': 'Mohon pilih bahasa.',
     'err.preferredLanguageOther': 'Mohon sebutkan bahasanya.',
     'err.filmingComfort': 'Mohon pilih salah satu jawaban.',
+    'err.story': 'Mohon periksa jawaban ini.',
     'err.consentContact': 'Mohon centang kotak ini agar kami bisa menghubungi Anda.',
-    'err.invalid_phone': 'Nomor WhatsApp ini sepertinya kurang tepat.',
-    'err.phone_country_code': 'Untuk nomor di luar Singapura, awali dengan + dan kode negara (misalnya +62…).',
-    'err.too_long': 'Terlalu panjang. Mohon dipersingkat.',
-    'err.invalid_option': 'Mohon pilih salah satu jawaban yang tersedia.',
-    'err.network': 'Pendaftaran Anda belum terkirim. Periksa koneksi internet Anda lalu coba lagi.',
-    'err.server': 'Maaf, ada masalah di pihak kami dan pendaftaran Anda BELUM terkirim. Mohon coba lagi beberapa menit lagi.',
-    'err.rate_limited': 'Terlalu banyak percobaan dalam waktu singkat. Mohon tunggu beberapa menit lalu coba lagi.',
-    'err.too_fast': 'Cepat sekali! Mohon periksa jawaban Anda lalu kirim lagi.',
     'success.title': 'Terima kasih telah berbagi cerita Anda',
     'success.received': 'Kami sudah menerima pendaftaran Anda.',
     'success.shortlisted': 'Jika Anda masuk daftar pendek, tim TulusSG akan menghubungi Anda.',
     'success.back': 'Kembali ke TulusSG',
-    'footer.questions': 'Ada pertanyaan?',
-    'footer.privacy': 'Kebijakan Privasi',
   },
 
   tl: {
     'meta.title': 'Ibahagi ang Iyong Kuwento | TulusSG',
     'meta.description': 'Naghahanap ang TulusSG ng apat na kasambahay sa Singapore na magbabahagi ng kanilang kuwento sa isang paparating na media production.',
-    'nav.language': 'Wika',
-    'nav.home': 'TulusSG home',
     'hero.tag': 'Isang story project ng TulusSG',
     'hero.title': 'Ibahagi ang iyong kuwento',
     'hero.lead': 'Naghahanap kami ng 4 na kasambahay sa Singapore na magbabahagi ng kanilang kuwento sa isang paparating na media production ng TulusSG.',
@@ -215,9 +193,6 @@ window.SYS_I18N = {
     'trust.be': 'Magpakatotoo ka lang.',
     'trust.contact': 'Kokontakin ng TulusSG team ang mga mapipili.',
     'form.title': 'Interesado? Magkuwento nang kaunti tungkol sa iyo.',
-    'form.required': 'kailangan',
-    'form.optional': 'opsyonal',
-    'form.choose': 'Pumili ng isa',
     'f.name': 'Pangalan',
     'f.phone': 'WhatsApp number',
     'f.phone.help': 'Singapore: 8 digit, hal. 9123 4567. Ibang bansa: magsimula sa + at country code.',
@@ -246,10 +221,8 @@ window.SYS_I18N = {
     'film.no': 'Hindi',
     'f.consent': 'Pumapayag ako na kontakin ako ng TulusSG tungkol sa pagkakataong ito na magbahagi ng kuwento.',
     'f.consentAck': 'Sa pagpapadala ng form na ito, kinikilala mo ang aming {link}.',
-    'f.privacyLink': 'Privacy Policy',
     'f.mediaNote': 'Ang pagpapahayag ng interes ay hindi nagbibigay ng pahintulot sa TulusSG na i-publish o gamitin ang iyong kuwento, larawan o boses. Hihingin nang hiwalay ang media consent kung mapipili ka.',
     'form.submit': 'Ibahagi ang kuwento ko',
-    'form.submitting': 'Ipinapadala…',
     'err.fullName': 'Pakilagay ang iyong pangalan.',
     'err.phone': 'Pakilagay ang iyong WhatsApp number.',
     'err.nationality': 'Pakipili ang iyong nasyonalidad.',
@@ -257,28 +230,17 @@ window.SYS_I18N = {
     'err.preferredLanguage': 'Pakipili ng wika.',
     'err.preferredLanguageOther': 'Pakisabi kung anong wika.',
     'err.filmingComfort': 'Pakipili ng sagot.',
+    'err.story': 'Pakitingnan ang sagot na ito.',
     'err.consentContact': 'Paki-tsek ang kahong ito para makontak ka namin.',
-    'err.invalid_phone': 'Mukhang hindi tama ang WhatsApp number na ito.',
-    'err.phone_country_code': 'Para sa number sa labas ng Singapore, magsimula sa + at country code (hal. +63…).',
-    'err.too_long': 'Masyadong mahaba. Pakiikli.',
-    'err.invalid_option': 'Pakipili ng isa sa mga sagot.',
-    'err.network': 'Hindi naipadala ang iyong registration. Pakitingnan ang internet connection mo at subukang muli.',
-    'err.server': 'Paumanhin, may problema sa aming panig at HINDI naipadala ang iyong registration. Pakisubukang muli pagkalipas ng ilang minuto.',
-    'err.rate_limited': 'Masyadong maraming subok sa maikling panahon. Maghintay ng ilang minuto at subukang muli.',
-    'err.too_fast': 'Ang bilis! Pakitingnan muna ang mga sagot mo at ipadala ulit.',
     'success.title': 'Salamat sa pagbabahagi ng iyong kuwento',
     'success.received': 'Natanggap na namin ang iyong registration.',
     'success.shortlisted': 'Kung mapasama ka sa shortlist, kokontakin ka ng TulusSG team.',
     'success.back': 'Bumalik sa TulusSG',
-    'footer.questions': 'May tanong?',
-    'footer.privacy': 'Privacy Policy',
   },
 
   my: {
     'meta.title': 'သင့်ဇာတ်လမ်းကို မျှဝေပါ | TulusSG',
     'meta.description': 'TulusSG သည် လာမည့် မီဒီယာထုတ်လုပ်မှုတစ်ခုတွင် ၎င်းတို့၏ ဇာတ်လမ်းများကို မျှဝေပေးမည့် စင်္ကာပူရှိ အိမ်အကူ လေးဦးကို ရှာဖွေနေပါသည်။',
-    'nav.language': 'ဘာသာစကား',
-    'nav.home': 'TulusSG ပင်မစာမျက်နှာ',
     'hero.tag': 'TulusSG ဇာတ်လမ်း စီမံကိန်း',
     'hero.title': 'သင့်ဇာတ်လမ်းကို မျှဝေပါ',
     'hero.lead': 'လာမည့် TulusSG မီဒီယာထုတ်လုပ်မှုတွင် ကိုယ့်ဇာတ်လမ်းကို မျှဝေပေးမည့် စင်္ကာပူရှိ အိမ်အကူ ၄ ဦးကို ကျွန်ုပ်တို့ ရှာဖွေနေပါသည်။',
@@ -300,9 +262,6 @@ window.SYS_I18N = {
     'trust.be': 'သင့်အတိုင်း သင်ဖြစ်ပါစေ။',
     'trust.contact': 'ရွေးချယ်ခံရသူများကို TulusSG အဖွဲ့မှ ဆက်သွယ်ပါမည်။',
     'form.title': 'စိတ်ဝင်စားပါသလား။ သင့်ဇာတ်လမ်းအကြောင်း နည်းနည်း ပြောပြပါ။',
-    'form.required': 'မဖြစ်မနေ',
-    'form.optional': 'ချန်လှပ်နိုင်သည်',
-    'form.choose': 'တစ်ခု ရွေးပါ',
     'f.name': 'အမည်',
     'f.phone': 'WhatsApp နံပါတ်',
     'f.phone.help': 'စင်္ကာပူ - ဂဏန်း ၈ လုံး၊ ဥပမာ 9123 4567။ အခြားနိုင်ငံများ - + နှင့် နိုင်ငံကုဒ်ဖြင့် စပါ။',
@@ -331,10 +290,8 @@ window.SYS_I18N = {
     'film.no': 'မသက်သာပါ',
     'f.consent': 'ဤဇာတ်လမ်းမျှဝေခြင်း အခွင့်အလမ်းနှင့် ပတ်သက်၍ TulusSG က ကျွန်ုပ်ကို ဆက်သွယ်ခွင့်ပြုပါသည်။',
     'f.consentAck': 'ဤဖောင်ကို ပေးပို့ခြင်းဖြင့် ကျွန်ုပ်တို့၏ {link} ကို အသိအမှတ်ပြုပါသည်။',
-    'f.privacyLink': 'ကိုယ်ရေးအချက်အလက် မူဝါဒ',
     'f.mediaNote': 'စိတ်ဝင်စားကြောင်း ပေးပို့ခြင်းသည် သင့်ဇာတ်လမ်း၊ ပုံ သို့မဟုတ် အသံကို TulusSG က ထုတ်ဝေရန် သို့မဟုတ် အသုံးပြုရန် ခွင့်ပြုချက် မဟုတ်ပါ။ သင် ရွေးချယ်ခံရပါက မီဒီယာ ခွင့်ပြုချက်ကို သီးခြား တောင်းခံပါမည်။',
     'form.submit': 'ဇာတ်လမ်း မျှဝေမယ်',
-    'form.submitting': 'ပေးပို့နေသည်…',
     'err.fullName': 'သင့်အမည်ကို ထည့်ပေးပါ။',
     'err.phone': 'သင့် WhatsApp နံပါတ်ကို ထည့်ပေးပါ။',
     'err.nationality': 'သင့်နိုင်ငံသားကို ရွေးပေးပါ။',
@@ -342,43 +299,11 @@ window.SYS_I18N = {
     'err.preferredLanguage': 'ဘာသာစကားတစ်ခု ရွေးပေးပါ။',
     'err.preferredLanguageOther': 'ဘယ်ဘာသာစကားလဲ ပြောပြပေးပါ။',
     'err.filmingComfort': 'အဖြေတစ်ခု ရွေးပေးပါ။',
+    'err.story': 'ဤအဖြေကို ပြန်စစ်ပေးပါ။',
     'err.consentContact': 'သင့်ကို ဆက်သွယ်နိုင်ရန် ဤအကွက်ကို အမှန်ခြစ်ပေးပါ။',
-    'err.invalid_phone': 'ဤ WhatsApp နံပါတ် မှန်ပုံမရပါ။',
-    'err.phone_country_code': 'စင်္ကာပူပြင်ပ နံပါတ်များအတွက် + နှင့် နိုင်ငံကုဒ်ဖြင့် စပေးပါ (ဥပမာ +95…)။',
-    'err.too_long': 'ရှည်လွန်းပါတယ်။ တိုအောင် ပြင်ပေးပါ။',
-    'err.invalid_option': 'ပြထားသော အဖြေများထဲမှ တစ်ခုကို ရွေးပေးပါ။',
-    'err.network': 'သင့်မှတ်ပုံတင်မှုကို ပေးပို့၍ မရပါ။ အင်တာနက်ချိတ်ဆက်မှုကို စစ်ဆေးပြီး ထပ်ကြိုးစားပါ။',
-    'err.server': 'စိတ်မကောင်းပါ၊ ကျွန်ုပ်တို့ဘက်တွင် ပြဿနာတစ်ခု ဖြစ်ပွားသဖြင့် သင့်မှတ်ပုံတင်မှုကို ပေးပို့ခြင်း မရှိသေးပါ။ မိနစ်အနည်းငယ်အကြာတွင် ထပ်ကြိုးစားပါ။',
-    'err.rate_limited': 'အချိန်တိုအတွင်း အကြိမ်များစွာ ကြိုးစားထားပါသည်။ မိနစ်အနည်းငယ် စောင့်ပြီး ထပ်ကြိုးစားပါ။',
-    'err.too_fast': 'အရမ်းမြန်သွားပါတယ်။ အဖြေတွေကို ပြန်စစ်ပြီး ထပ်ပို့ပါ။',
     'success.title': 'သင့်ဇာတ်လမ်းကို မျှဝေပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်',
     'success.received': 'သင့်မှတ်ပုံတင်မှုကို လက်ခံရရှိပါပြီ။',
     'success.shortlisted': 'သင် ရွေးချယ်စာရင်းဝင်ပါက TulusSG အဖွဲ့မှ သင့်ကို ဆက်သွယ်ပါမည်။',
     'success.back': 'TulusSG သို့ ပြန်သွားရန်',
-    'footer.questions': 'မေးစရာ ရှိပါသလား။',
-    'footer.privacy': 'ကိုယ်ရေးအချက်အလက် မူဝါဒ',
   },
-};
-
-/* Strings a native speaker should check first (beyond the general "draft" status). */
-window.SYS_REVIEW_NOTES = {
-  id: [
-    'Uses formal "Anda". Confirm this vs. the warmer "kamu" for the PMI audience.',
-    'hero.line2 "dibuat-buat" for "scripted"; alternative: "yang sudah ada naskahnya".',
-    'success.shortlisted "masuk daftar pendek" for "shortlisted".',
-  ],
-  tl: [
-    'Uses informal "ka/mo" without "po". Confirm the tone for older helpers.',
-    'trust.be "Magpakatotoo ka lang." for "Just be yourself."',
-  ],
-  all: [
-    'f.consentAck / f.mediaNote / f.privacyLink are new consent wording — review with the privacy policy wording.',
-    'The Privacy Policy page itself is English only; consider translated summaries.',
-  ],
-  my: [
-    'ENTIRE locale needs native review. Myanmar Unicode (not Zawgyi).',
-    'trust.be "သင့်အတိုင်း သင်ဖြစ်ပါစေ။" for "Just be yourself."',
-    'film.no "မသက်သာပါ" (not comfortable) for "No".',
-    'f.consent: consent wording must be exact.',
-  ],
-};
+});

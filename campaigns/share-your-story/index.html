@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Share Your Story | TulusSG</title>
+<meta name="description" content="TulusSG is looking for four domestic helpers in Singapore to share their stories in an upcoming media production.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.tulussg.com/campaigns/share-your-story/">
+<link rel="alternate" hreflang="en" href="https://www.tulussg.com/campaigns/share-your-story/">
+<link rel="alternate" hreflang="id" href="https://www.tulussg.com/campaigns/share-your-story/?lang=id">
+<link rel="alternate" hreflang="fil" href="https://www.tulussg.com/campaigns/share-your-story/?lang=tl">
+<link rel="alternate" hreflang="my" href="https://www.tulussg.com/campaigns/share-your-story/?lang=my">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TulusSG">
+<meta property="og:title" content="Share Your Story | TulusSG">
+<meta property="og:description" content="We're looking for 4 domestic helpers in Singapore to share their stories. Not a perfect story. Just your story.">
+<meta property="og:url" content="https://www.tulussg.com/campaigns/share-your-story/">
+<meta property="og:locale" content="en_SG">
+<meta property="og:image" content="https://www.tulussg.com/campaigns/share-your-story/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A smiling woman sitting by Marina Bay in Singapore">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Share Your Story | TulusSG">
+<meta name="twitter:description" content="We're looking for 4 domestic helpers in Singapore to share their stories. Not a perfect story. Just your story.">
+<meta name="twitter:image" content="https://www.tulussg.com/campaigns/share-your-story/og-image.jpg">
+<link rel="icon" href="/assets/share/favicon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/share/apple-touch-icon.png">
+<!-- Registration API base (not a secret). The page never talks to Google Sheets directly and never knows a Sheet ID:
+     it posts to /api/campaigns/<campaign>/interest and the API decides where the registration is stored. -->
+<meta name="tulussg-api" content="https://api.tulussg.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Site fonts, plus Noto Sans Myanmar (its unicode-range means it only downloads when Burmese text is shown). -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+Myanmar:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="hero-640.webp" imagesrcset="hero-640.webp 640w, hero-1069.webp 1069w" imagesizes="(min-width: 880px) 45vw, 100vw">
+<link rel="stylesheet" href="/campaigns/shared/campaign.css">
+</head>
+<body data-campaign="share-your-story" data-analytics="share_story">
+<div class="wrap">
+  <header class="top">
+    <a class="top-logo" href="/" data-i18n-attr="aria-label:nav.home" aria-label="TulusSG home">
+      <img src="/assets/card/tulussg-logo.png" alt="TulusSG" width="517" height="539">
+    </a>
+    <div class="lang">
+      <label for="lang-select" class="sr-only" data-i18n="nav.language">Language</label>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <select id="lang-select">
+        <option value="en" lang="en">English</option>
+        <option value="id" lang="id">Bahasa Indonesia</option>
+        <option value="tl" lang="fil">Filipino / Tagalog</option>
+        <option value="my" lang="my">မြန်မာဘာသာ</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <!--
+        HERO PHOTO — to replace it (e.g. with a real, consenting participant):
+        1. Export a portrait photo (about 3:4, at least 1069px wide) with no text in it.
+        2. Save it over hero-640.webp / hero-1069.webp / hero-640.jpg / hero-1069.jpg (same names = no code change),
+           or change the four file names below.
+        3. Set --hero-focus to the point that must stay visible (the face), as "X% Y%" from the top-left.
+        4. Update the alt text key "hero.alt" in i18n.js, and og-image.jpg (1200x630) for link previews.
+        The frame crops with object-fit: cover, so any size or shape works without stretching.
+      -->
+      <div class="hero-photo" style="--hero-focus: 50% 30%">
+        <picture>
+          <source type="image/webp" srcset="hero-640.webp 640w, hero-1069.webp 1069w" sizes="(min-width: 880px) 45vw, 100vw">
+          <img src="hero-640.jpg" srcset="hero-640.jpg 640w, hero-1069.jpg 1069w" sizes="(min-width: 880px) 45vw, 100vw"
+               width="1069" height="1472" alt="A smiling woman sitting by Marina Bay in Singapore" data-i18n-attr="alt:hero.alt" fetchpriority="high">
+        </picture>
+      </div>
+      <div class="hero-text">
+        <p class="tag" data-i18n="hero.tag">A TulusSG story project</p>
+        <h1 data-i18n="hero.title">Share your story</h1>
+        <p class="lead" data-i18n="hero.lead">We're looking for 4 domestic helpers in Singapore to share their stories in an upcoming TulusSG media production.</p>
+        <p class="lines">
+          <span data-i18n="hero.line1">Not a perfect story.</span>
+          <span data-i18n="hero.line2">Not a scripted story.</span>
+          <span data-i18n="hero.line3">Just your story.</span>
+        </p>
+        <div id="hero-cta">
+          <a class="btn" href="#register" data-cta="hero">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3.1 4.5 6.8 4.5c2.1 0 3.6 1.2 4.4 2.5.8-1.3 2.3-2.5 4.4-2.5 3.7 0 5.9 3.8 4.4 7.2C19.5 16.4 12 21 12 21z"/></svg>
+            <span data-i18n="hero.cta">Share my story</span>
+          </a>
+          <a class="about-link" href="#about" data-cta="about"><span data-i18n="hero.about">What is this about?</span> <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="about" aria-labelledby="share-title">
+      <div>
+        <h2 id="share-title" data-i18n="share.title">What can you share?</h2>
+        <ul class="chips">
+          <li class="chip"><span class="emoji" aria-hidden="true">💬</span><span data-i18n="share.c1">Your experiences</span></li>
+          <li class="chip"><span class="emoji" aria-hidden="true">😂</span><span data-i18n="share.c2">Funny moments</span></li>
+          <li class="chip"><span class="emoji" aria-hidden="true">💭</span><span data-i18n="share.c3">Challenges</span></li>
+          <li class="chip"><span class="emoji" aria-hidden="true">❤️</span><span data-i18n="share.c4">Your hopes</span></li>
+        </ul>
+        <p class="anything" data-i18n="share.anything">Anything that matters to you.</p>
+      </div>
+      <div>
+        <div class="trust">
+          <ul>
+            <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span data-i18n="trust.t1">No media experience needed</span></li>
+            <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span data-i18n="trust.t2">No perfect English needed</span></li>
+            <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span data-i18n="trust.t3">No perfect story needed</span></li>
+          </ul>
+          <p class="be"><span data-i18n="trust.be">Just be yourself.</span> <span aria-hidden="true">🤍</span></p>
+        </div>
+        <p class="contact-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span data-i18n="trust.contact">Selected participants will be contacted by the TulusSG team.</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="form-card" id="register" aria-labelledby="form-title">
+      <div id="form-view">
+        <h2 id="form-title" tabindex="-1" data-i18n="form.title">Interested? Tell us a little about your story.</h2>
+        <noscript><p>Please turn on JavaScript to register, or email <a href="mailto:admin@tulussg.com">admin@tulussg.com</a>.</p></noscript>
+        <form id="campaign-form" novalidate>
+          <div class="field" data-field="fullName">
+            <label class="label" for="fullName"><span data-i18n="f.name">Name</span><span class="req" aria-hidden="true">*</span><span class="sr-only" data-i18n="form.required">required</span></label>
+            <input id="fullName" name="fullName" type="text" autocomplete="name" maxlength="100" aria-describedby="fullName-error" required>
+            <p class="error" id="fullName-error" hidden></p>
+          </div>
+
+          <div class="field" data-field="phone">
+            <label class="label" for="phone"><span data-i18n="f.phone">WhatsApp number</span><span class="req" aria-hidden="true">*</span><span class="sr-only" data-i18n="form.required">required</span></label>
+            <p class="help" id="phone-help" data-i18n="f.phone.help">Singapore: 8 digits, e.g. 9123 4567. Other countries: start with + and the country code.</p>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="25" placeholder="e.g. 9123 4567" data-i18n-attr="placeholder:f.phone.placeholder" aria-describedby="phone-help phone-error" required>
+            <p class="error" id="phone-error" hidden></p>
+          </div>
+
+          <div class="field" data-field="nationality">
+            <label class="label" for="nationality"><span data-i18n="f.nationality">Nationality</span><span class="req" aria-hidden="true">*</span><span class="sr-only" data-i18n="form.required">required</span></label>
+            <select class="input" id="nationality" name="nationality" aria-describedby="nationality-error" required>
+              <option value="" data-i18n="form.choose">Choose one</option>
+              <option value="indonesia" data-i18n="nat.indonesia">Indonesia</option>
+              <option value="philippines" data-i18n="nat.philippines">Philippines</option>
+              <option value="myanmar" data-i18n="nat.myanmar">Myanmar</option>
+              <option value="india" data-i18n="nat.india">India</option>
+              <option value="sri_lanka" data-i18n="nat.sri_lanka">Sri Lanka</option>
+              <option value="malaysia" data-i18n="nat.malaysia">Malaysia</option>
+              <option value="other" data-i18n="nat.other">Other</option>
+            </select>
+            <p class="error" id="nationality-error" hidden></p>
+            <div class="other" data-field="nationalityOther" hidden>
+              <label class="label" for="nationalityOther"><span data-i18n="f.nationalityOther">Please tell us your nationality</span><span class="req" aria-hidden="true">*</span></label>
+              <input id="nationalityOther" name="nationalityOther" type="text" maxlength="80" aria-describedby="nationalityOther-error">
+              <p class="error" id="nationalityOther-error" hidden></p>
+            </div>
+          </div>
+
+          <fieldset data-field="preferredLanguage" aria-describedby="preferredLanguage-error">
+            <legend><span data-i18n="f.language">Preferred language</span><span class="req" aria-hidden="true">*</span><span class="sr-only" data-i18n="form.required">required</span></legend>
+            <div class="options">
+              <label class="option"><input type="radio" name="preferredLanguage" value="en" id="preferredLanguage"><span data-i18n="lang.en">English</span></label>
+              <label class="option"><input type="radio" name="preferredLanguage" value="id"><span data-i18n="lang.id">Bahasa Indonesia</span></label>
+              <label class="option"><input type="radio" name="preferredLanguage" value="tl"><span data-i18n="lang.tl">Filipino / Tagalog</span></label>
+              <label class="option"><input type="radio" name="preferredLanguage" value="my"><span data-i18n="lang.my">Burmese</span></label>
+              <label class="option"><input type="radio" name="preferredLanguage" value="other"><span data-i18n="lang.other">Other</span></label>
+            </div>
+            <p class="error" id="preferredLanguage-error" hidden></p>
+            <div class="other" data-field="preferredLanguageOther" hidden>
+              <label class="label" for="preferredLanguageOther"><span data-i18n="f.languageOther">Which language do you prefer?</span><span class="req" aria-hidden="true">*</span></label>
+              <input id="preferredLanguageOther" name="preferredLanguageOther" type="text" maxlength="80" aria-describedby="preferredLanguageOther-error">
+              <p class="error" id="preferredLanguageOther-error" hidden></p>
+            </div>
+          </fieldset>
+
+          <div class="field" data-field="story">
+            <label class="label" for="story"><span data-i18n="f.story">Your story</span> <span class="opt">(<span data-i18n="form.optional">optional</span>)</span></label>
+            <p class="help" id="story-help" data-i18n="f.story.help">A few sentences are enough. You can write in any language you are comfortable with.</p>
+            <textarea id="story" name="story" maxlength="1000" rows="4" aria-describedby="story-help story-error"></textarea>
+            <p class="count" aria-hidden="true"><span id="story-count">0</span> / 1000</p>
+            <p class="error" id="story-error" hidden></p>
+          </div>
+
+          <fieldset data-field="filmingComfort" aria-describedby="filmingComfort-error">
+            <legend><span data-i18n="f.filming">Would you be comfortable being filmed?</span><span class="req" aria-hidden="true">*</span><span class="sr-only" data-i18n="form.required">required</span></legend>
+            <div class="options">
+              <label class="option"><input type="radio" name="filmingComfort" value="yes" id="filmingComfort"><span data-i18n="film.yes">Yes</span></label>
+              <label class="option"><input type="radio" name="filmingComfort" value="maybe"><span data-i18n="film.maybe">Maybe, tell me more</span></label>
+              <label class="option"><input type="radio" name="filmingComfort" value="no"><span data-i18n="film.no">No</span></label>
+            </div>
+            <p class="error" id="filmingComfort-error" hidden></p>
+          </fieldset>
+
+          <div class="field" data-field="consentContact">
+            <label class="consent">
+              <input type="checkbox" id="consentContact" name="consentContact" aria-describedby="consent-note consentContact-error" required>
+              <span><span data-i18n="f.consent">I agree that TulusSG may contact me about this story-sharing opportunity.</span><span class="req" aria-hidden="true">*</span></span>
+            </label>
+            <p class="error" id="consentContact-error" hidden></p>
+            <div class="consent-note" id="consent-note">
+              <p data-i18n-link="f.consentAck" data-privacy-anchor="share-your-story">By submitting this form, you acknowledge our <a href="/privacy/#share-your-story">Privacy Policy</a>.</p>
+              <p data-i18n="f.mediaNote">Submitting your interest does not give TulusSG permission to publish or use your story, image or voice. Media consent will be obtained separately if you are selected.</p>
+            </div>
+          </div>
+
+          <!-- Honeypot: hidden from people and screen readers; bots tend to fill it. -->
+          <div class="hp" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+
+          <p class="send-error" id="send-error" role="alert" hidden></p>
+          <button class="btn" type="submit" id="submit-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3.1 4.5 6.8 4.5c2.1 0 3.6 1.2 4.4 2.5.8-1.3 2.3-2.5 4.4-2.5 3.7 0 5.9 3.8 4.4 7.2C19.5 16.4 12 21 12 21z"/></svg>
+            <span data-i18n="form.submit">Share my story</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Shown instead of the form when this campaign is not open (status from /campaigns/campaigns.js). -->
+      <div id="status-view" class="success" hidden>
+        <h2 id="status-title" tabindex="-1" data-i18n="state.closed.title">This campaign is closed</h2>
+        <p id="status-body" data-i18n="state.closed.body">Thank you for your interest. Registrations for this campaign are no longer open.</p>
+        <a class="btn" href="/campaigns/" data-keep-lang data-i18n="state.backToCampaigns">See all campaigns</a>
+      </div>
+
+      <div id="success-view" class="success" hidden>
+        <div class="heart" aria-hidden="true">🤍</div>
+        <h2 id="success-title" tabindex="-1" data-i18n="success.title">Thank you for sharing your story</h2>
+        <p data-i18n="success.received">We've received your registration.</p>
+        <p data-i18n="success.shortlisted">If you're shortlisted, the TulusSG team will contact you.</p>
+        <a class="btn" href="/" data-i18n="success.back">Back to TulusSG</a>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <div class="wrap">
+    <a href="/" data-i18n-attr="aria-label:nav.home" aria-label="TulusSG home"><img src="/assets/card/tulussg-logo.png" alt="TulusSG" width="517" height="539"></a>
+    <span><span data-i18n="footer.questions">Questions?</span> <a href="mailto:admin@tulussg.com">admin@tulussg.com</a></span>
+    <a href="/privacy/" data-privacy-link>Privacy Policy</a>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky" aria-hidden="true">
+  <a class="btn" href="#register" data-cta="sticky" tabindex="-1"><span data-i18n="hero.cta">Share my story</span></a>
+</div>
+
+<script src="/campaigns/shared/i18n-core.js"></script>
+<script src="/campaigns/shared/i18n-shared.js"></script>
+<script src="/campaigns/campaigns.js"></script>
+<script src="i18n.js"></script>
+<script src="/campaigns/shared/form-core.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
