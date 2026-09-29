@@ -120,6 +120,9 @@ fieldset{border:0;margin:0 0 22px;padding:0;min-width:0}
 footer{padding:26px 0 110px;border-top:1px solid rgba(196,98,45,0.15);font-size:14px;color:var(--muted)}
 footer .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 footer img{height:40px;width:auto}
+/* Low-emphasis link back to the hub on campaign pages (kept out of the conversion flow). */
+.footer-campaigns{font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+html[lang="my"] .footer-campaigns{letter-spacing:normal}
 
 /* Sticky mobile CTA */
 .sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(253,246,236,0.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-top:1px solid rgba(196,98,45,0.15);transform:translateY(110%);transition:transform 0.3s var(--ease)}
