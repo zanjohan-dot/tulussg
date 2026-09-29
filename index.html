@@ -3,7 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>TulusSG — Sport, friends and community for migrant domestic workers</title>
+<title>TulusSG | A ground-up community initiative for migrant domestic workers in Singapore</title>
+<meta name="description" content="TulusSG aims to strengthen connection and belonging among migrant domestic workers in Singapore by widening access to meaningful activities, creating space for their stories and connecting them with relevant community support.">
+<link rel="canonical" href="https://www.tulussg.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.tulussg.com/">
+<meta property="og:title" content="TulusSG | A ground-up community initiative for migrant domestic workers in Singapore">
+<meta property="og:description" content="TulusSG aims to strengthen connection and belonging among migrant domestic workers in Singapore by widening access to meaningful activities, creating space for their stories and connecting them with relevant community support.">
+<meta property="og:site_name" content="TulusSG">
+<meta property="og:image" content="https://www.tulussg.com/assets/share/tulussg-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TulusSG logo. A ground-up community initiative for migrant domestic workers in Singapore.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.tulussg.com/assets/share/tulussg-preview.png">
+<meta name="twitter:title" content="TulusSG | A ground-up community initiative for migrant domestic workers in Singapore">
+<meta name="twitter:description" content="TulusSG aims to strengthen connection and belonging among migrant domestic workers in Singapore by widening access to meaningful activities, creating space for their stories and connecting them with relevant community support.">
+<link rel="icon" href="/assets/share/favicon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/share/apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -678,10 +695,10 @@ html,body { width:100vw; height:100vh; overflow:hidden; background:var(--cream);
               <a href="/faq/" class="seo-pill">FAQ</a>
             </div>
 
-            <div class="s-over" id="s-over">
-              <div class="s-check">&#x2713;</div>
-              <h3 style="font-family:'Cormorant Garant',serif;font-size:24px;color:var(--ink);margin-bottom:8px;">Message Sent</h3>
-              <p style="font-size:12px;color:var(--muted);margin-bottom:18px;">We'll be in touch within 2 business days.</p>
+            <div class="s-over" id="s-over" role="status" aria-live="polite">
+              <div class="s-check" id="s-over-icon">&#x2713;</div>
+              <h3 id="s-over-title" style="font-family:'Cormorant Garant',serif;font-size:24px;color:var(--ink);margin-bottom:8px;">Message Sent</h3>
+              <p id="s-over-text" style="font-size:12px;color:var(--muted);margin-bottom:18px;">We'll be in touch within 2 business days.</p>
               <button class="form-btn" style="max-width:160px;" onclick="document.getElementById('s-over').style.display='none'">Close</button>
             </div>
           </form>
@@ -766,49 +783,50 @@ function pick(el,type){
   desc.style.opacity='0';
   setTimeout(()=>{desc.textContent=AUDIENCE[type];desc.style.opacity='1';},220);
 }
+function showFormResult(sent){
+  document.getElementById('s-over-icon').innerHTML = sent ? '&#x2713;' : '!';
+  document.getElementById('s-over-title').textContent = sent ? 'Message Sent' : 'Message not sent';
+  document.getElementById('s-over-text').innerHTML = sent
+    ? "We'll be in touch within 2 business days."
+    : 'Sorry, something went wrong. Please try again, or email us at <a href="mailto:admin@tulussg.com" style="color:var(--terra);">admin@tulussg.com</a>.';
+  document.getElementById('s-over').style.display='flex';
+}
 function submitForm(){
   const form = document.getElementById('cForm');
   const btn = form.querySelector('.form-btn');
   const origText = btn.innerHTML;
-  
+
   btn.innerHTML = 'Sending...';
   btn.style.opacity = '0.7';
-  
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries());
-  
-  // TO DO: Replace this URL with your generated Google Apps Script Web App URL
+  btn.disabled = true;
+
+  const data = Object.fromEntries(new FormData(form).entries());
   const scriptURL = 'https://script.google.com/macros/s/AKfycbzIElMTz3stYubgU30k7lCgZKxuVL40RHpsD9L-CHBE6obiJO37Om80XjpHk95-5UKXQQ/exec';
-  
-  if(scriptURL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-    // Demo mode if URL is not set
-    setTimeout(()=>{
-      document.getElementById('s-over').style.display='flex';
-      form.reset();
-      btn.innerHTML = origText;
-      btn.style.opacity = '1';
-    }, 1000);
-    return;
-  }
-  
+
+  // Only report success when the Apps Script confirms the email was sent.
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 20000);
   fetch(scriptURL, {
     method: 'POST',
     body: JSON.stringify(data),
-    headers: {
-      'Content-Type': 'text/plain;charset=utf-8',
-    }
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    signal: controller.signal
   })
-  .then(response => {
-    document.getElementById('s-over').style.display='flex';
+  .then(response => response.json())
+  .then(result => {
+    if (!result || result.result !== 'success') throw new Error((result && result.error) || 'Send failed');
     form.reset();
-    btn.innerHTML = origText;
-    btn.style.opacity = '1';
+    showFormResult(true);
   })
   .catch(error => {
-    console.error('Error!', error.message);
-    btn.innerHTML = 'Error. Try Again';
+    console.error('Contact form not sent:', error.message);
+    showFormResult(false);
+  })
+  .finally(() => {
+    clearTimeout(timer);
+    btn.innerHTML = origText;
     btn.style.opacity = '1';
-    setTimeout(() => { btn.innerHTML = origText; }, 3000);
+    btn.disabled = false;
   });
 }
 function toggleMob(){
