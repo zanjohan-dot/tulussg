@@ -20,6 +20,7 @@ TulusI18n.register({
       "trust.be \"Magpakatotoo ka lang.\" for \"Just be yourself.\""
     ],
     "all": [
+      "CHANGED 2026-10-01: f.mediaNote rewritten to match Privacy Policy section 11 (media consent on taking part, with opt-out). Consent wording: review with ALAC and native speakers.",
       "NEW 2026-10-01 (drafted by Claude, review in every language): f.phone.help, f.phone.code, f.social, f.social.help, f.social.placeholder, f.social.platform/choose/other/handle/add/remove, err.social_platform.",
       "f.consentAck / f.mediaNote (and privacy.link in the shared file) are consent wording — review with the privacy policy wording.",
       "The Privacy Policy page itself is English only; consider translated summaries."
@@ -95,7 +96,7 @@ TulusI18n.register({
     'film.no': 'No',
     'f.consent': 'I agree that TulusSG may contact me about this story-sharing opportunity.',
     'f.consentAck': 'By submitting this form, you acknowledge our {link}.',
-    'f.mediaNote': 'Submitting your interest does not give TulusSG permission to publish or use your story, image or voice. Media consent will be obtained separately if you are selected.',
+    'f.mediaNote': 'If you are selected and take part, TulusSG may use your image, voice and story for TulusSG events, publicity, social media and media productions, as explained in our Privacy Policy. You can opt out at any time by emailing admin@tulussg.com.',
     'form.submit': 'Share my story',
     'err.fullName': 'Please enter your name.',
     'err.phone': 'Please enter your WhatsApp number.',
@@ -175,7 +176,7 @@ TulusI18n.register({
     'film.no': 'Tidak',
     'f.consent': 'Saya setuju bahwa TulusSG boleh menghubungi saya tentang kesempatan berbagi cerita ini.',
     'f.consentAck': 'Dengan mengirim formulir ini, Anda menyatakan telah membaca {link} kami.',
-    'f.mediaNote': 'Menyatakan minat tidak berarti TulusSG boleh memublikasikan atau menggunakan cerita, gambar, atau suara Anda. Izin media akan diminta secara terpisah jika Anda terpilih.',
+    'f.mediaNote': 'Jika Anda terpilih dan ikut serta, TulusSG boleh menggunakan gambar, suara, dan cerita Anda untuk acara, publikasi, media sosial, dan produksi media TulusSG, seperti dijelaskan dalam Kebijakan Privasi kami. Anda dapat menolak kapan saja dengan mengirim email ke admin@tulussg.com.',
     'form.submit': 'Bagikan cerita saya',
     'err.fullName': 'Mohon isi nama Anda.',
     'err.phone': 'Mohon isi nomor WhatsApp Anda.',
@@ -255,7 +256,7 @@ TulusI18n.register({
     'film.no': 'Hindi',
     'f.consent': 'Pumapayag ako na kontakin ako ng TulusSG tungkol sa pagkakataong ito na magbahagi ng kuwento.',
     'f.consentAck': 'Sa pagpapadala ng form na ito, kinikilala mo ang aming {link}.',
-    'f.mediaNote': 'Ang pagpapahayag ng interes ay hindi nagbibigay ng pahintulot sa TulusSG na i-publish o gamitin ang iyong kuwento, larawan o boses. Hihingin nang hiwalay ang media consent kung mapipili ka.',
+    'f.mediaNote': 'Kung mapipili ka at sasali, maaaring gamitin ng TulusSG ang iyong larawan, boses at kuwento para sa mga event, publicity, social media at media production ng TulusSG, gaya ng nakasaad sa aming Privacy Policy. Maaari kang tumanggi anumang oras sa pamamagitan ng pag-email sa admin@tulussg.com.',
     'form.submit': 'Ibahagi ang kuwento ko',
     'err.fullName': 'Pakilagay ang iyong pangalan.',
     'err.phone': 'Pakilagay ang iyong WhatsApp number.',
@@ -335,7 +336,7 @@ TulusI18n.register({
     'film.no': 'မသက်သာပါ',
     'f.consent': 'ဤဇာတ်လမ်းမျှဝေခြင်း အခွင့်အလမ်းနှင့် ပတ်သက်၍ TulusSG က ကျွန်ုပ်ကို ဆက်သွယ်ခွင့်ပြုပါသည်။',
     'f.consentAck': 'ဤဖောင်ကို ပေးပို့ခြင်းဖြင့် ကျွန်ုပ်တို့၏ {link} ကို အသိအမှတ်ပြုပါသည်။',
-    'f.mediaNote': 'စိတ်ဝင်စားကြောင်း ပေးပို့ခြင်းသည် သင့်ဇာတ်လမ်း၊ ပုံ သို့မဟုတ် အသံကို TulusSG က ထုတ်ဝေရန် သို့မဟုတ် အသုံးပြုရန် ခွင့်ပြုချက် မဟုတ်ပါ။ သင် ရွေးချယ်ခံရပါက မီဒီယာ ခွင့်ပြုချက်ကို သီးခြား တောင်းခံပါမည်။',
+    'f.mediaNote': 'သင် ရွေးချယ်ခံရပြီး ပါဝင်ပါက TulusSG သည် သင့်ပုံ၊ အသံနှင့် ဇာတ်လမ်းကို TulusSG ၏ အစီအစဉ်များ၊ ကြော်ငြာများ၊ ဆိုရှယ်မီဒီယာနှင့် မီဒီယာထုတ်လုပ်မှုများအတွက် ကျွန်ုပ်တို့၏ ကိုယ်ရေးအချက်အလက်မူဝါဒတွင် ရှင်းပြထားသည့်အတိုင်း အသုံးပြုနိုင်ပါသည်။ admin@tulussg.com သို့ အီးမေးလ်ပို့၍ အချိန်မရွေး ငြင်းဆိုနိုင်ပါသည်။',
     'form.submit': 'ဇာတ်လမ်း မျှဝေမယ်',
     'err.fullName': 'သင့်အမည်ကို ထည့်ပေးပါ။',
     'err.phone': 'သင့် WhatsApp နံပါတ်ကို ထည့်ပေးပါ။',
