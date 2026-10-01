@@ -200,9 +200,16 @@
           </div>
 
           <div class="field" data-field="socialLinks">
-            <label class="label" for="socialLinks"><span data-i18n="f.social">Your social media</span> <span class="opt">(<span data-i18n="form.optional">optional</span>)</span></label>
-            <p class="help" id="socialLinks-help" data-i18n="f.social.help">Share your Instagram, TikTok, Facebook or YouTube, if you like.</p>
-            <input id="socialLinks" name="socialLinks" type="text" maxlength="300" autocomplete="off" placeholder="e.g. Instagram @yourname" data-i18n-attr="placeholder:f.social.placeholder" aria-describedby="socialLinks-help socialLinks-error">
+            <p class="label" id="social-label"><span data-i18n="f.social">Your social media</span> <span class="opt">(<span data-i18n="form.optional">optional</span>)</span></p>
+            <p class="help" id="socialLinks-help" data-i18n="f.social.help">Choose the platform, then type your username.</p>
+            <div class="social-rows" id="socialLinks" tabindex="-1" role="group" aria-labelledby="social-label" aria-describedby="socialLinks-help socialLinks-error">
+              <div class="social-row">
+                <select class="input" name="socialPlatform" aria-label="Platform" data-i18n-attr="aria-label:f.social.platform"><option value="" data-i18n="f.social.choose">Choose</option><option value="instagram">Instagram</option><option value="tiktok">TikTok</option><option value="facebook">Facebook</option><option value="youtube">YouTube</option><option value="x">X (Twitter)</option><option value="other" data-i18n="f.social.other">Other</option></select>
+                <input type="text" name="socialHandle" maxlength="100" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="@yourname" aria-label="Username" data-i18n-attr="placeholder:f.social.placeholder;aria-label:f.social.handle">
+                <button type="button" class="social-btn social-remove" hidden aria-label="Remove" data-i18n-attr="aria-label:f.social.remove;title:f.social.remove" title="Remove"><span aria-hidden="true">&times;</span></button>
+              </div>
+            </div>
+            <button type="button" class="social-btn social-add" id="social-add" aria-label="Add another social media account" data-i18n-attr="aria-label:f.social.add;title:f.social.add" title="Add another social media account"><span aria-hidden="true">+</span></button>
             <p class="error" id="socialLinks-error" hidden></p>
           </div>
 

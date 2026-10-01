@@ -87,6 +87,16 @@ input::placeholder,textarea::placeholder{color:#A8998A}
 .phone-row{display:flex;gap:8px}
 .phone-row select.input{flex:0 0 auto;width:auto;min-width:112px}
 .phone-row input{flex:1 1 auto;min-width:0}
+.social-rows{display:flex;flex-direction:column;gap:12px}
+.social-row{display:grid;grid-template-columns:auto minmax(0,1fr) 44px;gap:8px;align-items:center}
+.social-row:has(.social-remove[hidden]) input{grid-column:2/-1}
+.social-row select.input{min-width:132px}
+.social-row input{min-width:0}
+@media (max-width:480px){.social-row{grid-template-columns:minmax(0,1fr) 44px}.social-row input,.social-row:has(.social-remove[hidden]) input{grid-column:1/-1;grid-row:2}.social-row:has(.social-remove[hidden]) select.input{grid-column:1/-1}}
+.social-btn{flex:0 0 auto;width:44px;height:44px;display:inline-grid;place-items:center;border:1.5px solid var(--line);border-radius:50%;background:var(--white);color:var(--ink);font-family:inherit;font-size:24px;font-weight:600;line-height:1;cursor:pointer;padding:0}
+.social-btn:hover,.social-btn:focus-visible{border-color:var(--terra);color:var(--terra);outline:none;box-shadow:0 0 0 3px rgba(196,98,45,0.22)}
+.social-btn[hidden]{display:none}
+.social-add{margin-top:8px;border-color:var(--terra);color:var(--terra)}
 :is(input,select,textarea):focus{outline:none;border-color:var(--terra);box-shadow:0 0 0 3px rgba(196,98,45,0.22)}
 fieldset{border:0;margin:0 0 22px;padding:0;min-width:0}
 .options{display:grid;gap:8px}

@@ -7,7 +7,7 @@
   'use strict';
 
   var STORY_MAX = 1000;
-  var SOCIAL_MAX = 300;
+  var SOCIAL_ROWS_MAX = 4;
 
   // The country-code dropdown and the number box are sent to the API as ONE international number
   // (e.g. +6591234567), the format normalizePhone() and the API already accept. Typing a full number
@@ -39,6 +39,48 @@
     return { ok: false, code: 'invalid_phone' };
   }
 
+
+  // Social media: one row per account (platform dropdown + username). Rows with no username are ignored.
+  // Sent to the API as socialAccounts: [{ platform, handle }].
+  function socialAccounts(form) {
+    return Array.prototype.map.call(form.querySelectorAll('.social-row'), function (row) {
+      return {
+        platform: row.querySelector('select').value,
+        handle: row.querySelector('input').value.trim(),
+      };
+    }).filter(function (a) { return a.handle; });
+  }
+
+  function setupSocialRows() {
+    var rows = document.getElementById('socialLinks');
+    var add = document.getElementById('social-add');
+    function refresh() {
+      var all = rows.querySelectorAll('.social-row');
+      Array.prototype.forEach.call(all, function (row) { row.querySelector('.social-remove').hidden = all.length === 1; });
+      add.hidden = all.length >= SOCIAL_ROWS_MAX;
+    }
+    add.addEventListener('click', function () {
+      var row = rows.querySelector('.social-row').cloneNode(true);
+      row.querySelector('select').value = '';
+      row.querySelector('input').value = '';
+      rows.appendChild(row);
+      refresh();
+      row.querySelector('select').focus();
+    });
+    rows.addEventListener('click', function (e) {
+      var btn = e.target.closest('.social-remove');
+      if (!btn) return;
+      var row = btn.closest('.social-row');
+      var next = row.nextElementSibling || row.previousElementSibling;
+      row.remove();
+      refresh();
+      (next ? next.querySelector('select') : add).focus();
+      rows.dispatchEvent(new Event('change', { bubbles: true })); // re-run the form checks
+    });
+    refresh();
+  }
+  setupSocialRows();
+
   TulusCampaignForm.init({
     fields: ['fullName', 'phone', 'nationality', 'nationalityOther', 'preferredLanguage', 'preferredLanguageOther', 'story', 'socialLinks', 'filmingComfort', 'consentContact'],
 
@@ -53,7 +95,7 @@
         preferredLanguage: get('preferredLanguage'),
         preferredLanguageOther: get('preferredLanguageOther'),
         story: get('story'),
-        socialLinks: get('socialLinks').trim(),
+        socialAccounts: socialAccounts(form),
         filmingComfort: get('filmingComfort'),
         consentContact: form.consentContact.checked,
       };
@@ -70,7 +112,8 @@
       if (!v.preferredLanguage) e.preferredLanguage = 'required';
       if (v.preferredLanguage === 'other' && !v.preferredLanguageOther.trim()) e.preferredLanguageOther = 'required';
       if (v.story.length > STORY_MAX) e.story = 'too_long';
-      if (v.socialLinks.length > SOCIAL_MAX) e.socialLinks = 'too_long';
+      var badSocial = v.socialAccounts.filter(function (a) { return a.handle && !a.platform; }).length;
+      if (badSocial) e.socialLinks = 'social_platform';
       if (!v.filmingComfort) e.filmingComfort = 'required';
       if (!v.consentContact) e.consentContact = 'required';
       return e;
