@@ -1,3 +1,7 @@
+> **Zan's decisions, 1 Oct 2026 (for ALAC to review):**
+> 1. Remove "TulusSG is a community initiative operated under Zan J Private Limited." from the published policy; replace with "TulusSG is a ground-up community initiative." (Note: the PDPA review rated naming the responsible organisation HIGH — ALAC to advise.)
+> 2. Media (published §11 / draft §13): joining TulusSG or taking part in its activities = consent to use image, voice and story for TulusSG events, activities, publicity, social media and media productions, with notice at the time and an opt-out by email. This replaces the "separate written consent" approach below — ALAC to advise. The Share Your Story form note (f.mediaNote: "Media consent will be obtained separately if you are selected") should be aligned once decided.
+
 # TulusSG Privacy Policy: revised draft v2 (for ALAC review)
 
 **Status: DRAFT, not published.** This does not replace `privacy/index.html`. Prepared 30 September 2026 alongside `_review/pdpa-review-2026-09-30.md`. It is not legal advice; ALAC must approve before use.
