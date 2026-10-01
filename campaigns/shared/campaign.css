@@ -207,3 +207,5 @@ html[lang="my"] .card-body h2{font-size:25px}
   .hub-hero{padding:32px 0 16px}
   .hub-list{padding:16px 0 64px}
 }
+/* Per-campaign hero focus (kept in CSS, not a style attribute, so the page works under its Content Security Policy) */
+[data-campaign="share-your-story"] .hero-photo{--hero-focus:50% 30%}

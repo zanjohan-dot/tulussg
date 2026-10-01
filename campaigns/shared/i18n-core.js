@@ -39,6 +39,7 @@
   var dictionaries = [];
   var listeners = [];
   var lang = 'en';
+  function known(code) { return typeof code === 'string' && Object.prototype.hasOwnProperty.call(LANGS, code); }
 
   function register(dict) {
     dictionaries.push(dict);
@@ -79,7 +80,7 @@
   }
 
   function apply(code, persist) {
-    lang = LANGS[code] ? code : 'en';
+    lang = known(code) ? code : 'en';
     document.documentElement.lang = LANGS[lang].htmlLang;
 
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
@@ -128,9 +129,9 @@
 
   function start() {
     var fromUrl = new URLSearchParams(location.search).get('lang');
-    var initial = (fromUrl && LANGS[fromUrl] && fromUrl) || (LANGS[saved()] && saved()) || 'en';
+    var initial = (known(fromUrl) && fromUrl) || (known(saved()) && saved()) || 'en';
     // A ?lang= link is an explicit choice: remember it for the other campaign pages and later visits.
-    if (fromUrl && LANGS[fromUrl]) save(fromUrl);
+    if (known(fromUrl)) save(fromUrl);
     var select = document.getElementById('lang-select');
     if (select) {
       select.addEventListener('change', function () {

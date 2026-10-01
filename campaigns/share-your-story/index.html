@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.tulussg.com http://localhost:3000; form-action 'self'; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Share Your Story | TulusSG</title>
 <meta name="description" content="TulusSG is looking for four domestic helpers in Singapore to share their stories in an upcoming media production.">
 <meta name="robots" content="index, follow">
@@ -66,7 +68,7 @@
         4. Update the alt text key "hero.alt" in i18n.js, and og-image.jpg (1200x630) for link previews.
         The frame crops with object-fit: cover, so any size or shape works without stretching.
       -->
-      <div class="hero-photo" style="--hero-focus: 50% 30%">
+      <div class="hero-photo">
         <picture>
           <source type="image/webp" srcset="hero-640.webp 640w, hero-1069.webp 1069w" sizes="(min-width: 880px) 45vw, 100vw">
           <img src="hero-640.jpg" srcset="hero-640.jpg 640w, hero-1069.jpg 1069w" sizes="(min-width: 880px) 45vw, 100vw"
@@ -230,7 +232,7 @@
             </label>
             <div class="other" id="copy-email-box" hidden>
               <label class="label" for="copyEmail"><span data-i18n="f.copyEmail">Your email address</span><span class="req" aria-hidden="true">*</span></label>
-              <p class="help" id="copyEmail-help" data-i18n="f.copyEmail.help">We will only use this to send you the copy. We won't add you to any mailing list.</p>
+              <p class="help" id="copyEmail-help" data-i18n="f.copyEmail.help">We'll first email you a link to confirm this address, then send your copy. We use it only for this and won't add you to any mailing list.</p>
               <input id="copyEmail" name="copyEmail" type="email" inputmode="email" autocomplete="email" maxlength="254" spellcheck="false" aria-describedby="copyEmail-help copyEmail-error">
             </div>
             <p class="error" id="copyEmail-error" hidden></p>
@@ -271,8 +273,8 @@
         <h2 id="success-title" tabindex="-1" data-i18n="success.title">Thank you!</h2>
         <p data-i18n="success.received">We've received your registration.</p>
         <p class="ty-ref" id="success-reference-row" hidden><span data-i18n="success.reference">Your registration reference:</span> <strong id="success-reference"></strong></p>
-        <p class="ty-copy ok" id="success-copy-sent" hidden data-i18n="success.copySent">A copy has been emailed to you.</p>
-        <p class="ty-copy warn" id="success-copy-failed" hidden><span data-i18n="success.copyFailed">Your registration was received, but we couldn't email you a copy. For help, contact</span> <a href="mailto:admin@tulussg.com">admin@tulussg.com</a>.</p>
+        <p class="ty-copy ok" id="success-copy-sent" hidden data-i18n="success.copySent">We've emailed you a link. Open it within 24 hours to receive your copy.</p>
+        <p class="ty-copy warn" id="success-copy-failed" hidden><span data-i18n="success.copyFailed">Your registration was received, but we couldn't email you the link for your copy. For help, contact</span> <a href="mailto:admin@tulussg.com">admin@tulussg.com</a>.</p>
         <p class="ty-next" data-i18n="success.next">Join our WhatsApp community for activity updates, and follow TulusSG to see what's coming next.</p>
         <a class="btn ty-wa" href="https://chat.whatsapp.com/F4tFULkpAh7EIJkxRVet8q?mode=gi_t" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span data-i18n="success.whatsapp">Join our WhatsApp community</span></a>
         <p class="ty-follow" data-i18n="success.follow">Follow TulusSG</p>
