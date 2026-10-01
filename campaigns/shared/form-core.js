@@ -214,7 +214,7 @@
           clearTimeout(timer);
           if (r.res.ok && r.json && r.json.ok === true) {
             track('form_submitted', config.analytics ? config.analytics(v) : {});
-            showSuccess();
+            showSuccess(r.json);
             return;
           }
           var json = r.json || {};
@@ -240,7 +240,19 @@
       if (code !== 'validation') showSendError(code);
     }
 
-    function showSuccess() {
+    // Shown ONLY after the API confirms the registration was saved (json.ok === true).
+    // The reference and the email-copy result come from the server, never from the browser.
+    function showSuccess(json) {
+      json = json || {};
+      var refRow = document.getElementById('success-reference-row');
+      if (refRow) {
+        document.getElementById('success-reference').textContent = json.reference || '';
+        refRow.hidden = !json.reference;
+      }
+      var copySent = document.getElementById('success-copy-sent');
+      var copyFailed = document.getElementById('success-copy-failed');
+      if (copySent) copySent.hidden = !(json.copyRequested && json.copyEmailed === true);
+      if (copyFailed) copyFailed.hidden = !(json.copyRequested && json.copyEmailed !== true);
       formView.hidden = true;
       successView.hidden = false;
       updateSticky(true);

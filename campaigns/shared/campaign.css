@@ -128,6 +128,22 @@ fieldset{border:0;margin:0 0 22px;padding:0;min-width:0}
 .success h2{margin-bottom:12px}
 .success p{margin:0 0 6px;font-size:17px}
 .success .btn{margin-top:22px}
+.ty-ref{margin-top:10px!important;font-size:16px!important}
+.ty-ref strong{font-size:18px;letter-spacing:0.06em;color:var(--ink);white-space:nowrap}
+.ty-copy{margin:10px auto 0!important;max-width:460px;padding:10px 14px;border-radius:8px;font-size:15px!important;line-height:1.5}
+.ty-copy.ok{background:#EAF5EC;color:#1E5A2C}
+.ty-copy.warn{background:#FDF1E8;color:var(--ink)}
+.ty-copy a{color:var(--terra-d);font-weight:600}
+.ty-next{margin-top:16px!important;max-width:460px;margin-left:auto!important;margin-right:auto!important;color:var(--muted);font-size:16px!important}
+.ty-wa{gap:10px}
+.ty-wa svg{width:22px;height:22px;fill:currentColor;flex-shrink:0}
+.ty-follow{margin-top:20px!important;font-size:13px!important;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted)}
+.ty-socials{display:flex;justify-content:center;gap:12px;margin-top:10px}
+.ty-social{width:48px;height:48px;display:inline-grid;place-items:center;border-radius:50%;border:1.5px solid var(--line);background:var(--white);color:var(--ink);transition:border-color .2s,color .2s,transform .2s}
+.ty-social svg{width:22px;height:22px;fill:currentColor}
+.ty-social:hover,.ty-social:focus-visible{border-color:var(--terra);color:var(--terra);transform:translateY(-2px);outline:none;box-shadow:0 0 0 3px rgba(196,98,45,0.22)}
+.ty-back{display:inline-block;margin-top:22px;font-size:15px;color:var(--muted);text-decoration:underline;text-underline-offset:4px}
+.copy-opt{margin-top:4px}
 
 /* Footer */
 footer{padding:26px 0 110px;border-top:1px solid rgba(196,98,45,0.15);font-size:14px;color:var(--muted)}

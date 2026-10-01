@@ -1,3 +1,5 @@
+> **SUPERSEDED, kept for history (1 October 2026).** The current pack is `legal-review.md`; where this file disagrees, `legal-review.md` wins. Zan decided that **admin@tulussg.com** is the only contact address, so the earlier suggestion of a separate privacy mailbox has been replaced with admin@tulussg.com below. Media consent now follows Privacy Policy §11 (consent on joining or taking part, with notice and opt-out); suggestions here about obtaining media consent only through separate documents are superseded. The English policy was reviewed by Zan Johan on 1 Oct 2026; it is not ALAC-approved.
+
 # TulusSG Privacy Policy: PDPA review (internal drafting simulation)
 
 **Prepared as:** simulated review by ALAC's Singapore PDPA adviser, for internal drafting only. **This is not legal advice.** ALAC must confirm every conclusion before launch.
@@ -156,7 +158,7 @@ A privacy policy does not by itself achieve compliance. Part 7 lists the interna
 **Current:** "TulusSG, Email: admin@tulussg.com"
 * **Issue (CRITICAL):** no designated data protection contact and no organisation name. See Q2.
 * **Basis:** [Law] s 11(3), (5).
-* **Change:** "Data Protection Officer, Zan J Private Limited (for TulusSG): privacy@tulussg.com [●]."
+* **Change:** "Data Protection Officer, Zan J Private Limited (for TulusSG): admin@tulussg.com."
 
 ### Consent line on the form
 **Current:** "By submitting this form, you acknowledge our Privacy Policy."
@@ -175,10 +177,10 @@ A privacy policy does not by itself achieve compliance. Part 7 lists the interna
 
 ### Q2. Data Protection Officer
 * **Requirement [Law]:** s 11(3) requires at least one individual designated as responsible for PDPA compliance (commonly called the DPO). s 11(5) requires the **business contact information of at least one designated individual** to be made available to the public. The DPO need not be an employee and may delegate. PDPC guidance: for access and correction requests, at least one contact should be a mailing address or email.
-* **Is admin@tulussg.com enough?** Legally it *may* suffice if it demonstrably reaches the designated individual and is presented as the data protection contact. It isn't sufficient **as currently drafted**, because nothing identifies it as the DPO contact or shows anyone has been designated. **Recommended:** a dedicated role address (e.g. `privacy@tulussg.com` or `dpo@tulussg.com`) that the DPO monitors, with at least one backup person. This keeps privacy requests, including withdrawals and breach reports, out of the general inbox.
+* **Is admin@tulussg.com enough?** Legally it *may* suffice if it demonstrably reaches the designated individual and is presented as the data protection contact. It isn't sufficient **as currently drafted**, because nothing identifies it as the DPO contact or shows anyone has been designated. **Decision (Zan, 1 Oct 2026):** keep admin@tulussg.com, presented as the data protection contact, monitored by the DPO, with at least one backup person. This keeps privacy requests, including withdrawals and breach reports, out of the general inbox.
 * **Personal name:** **not necessary** in the public policy. A title ("Data Protection Officer") plus a business email is a common, accepted approach. The individual's name should be recorded internally and given in the registration to PDPC.
 * **Registration [PDPC]:** register the DPO's details with PDPC. Registration was via ACRA BizFile+; PDPC indicated that from 1 Dec 2024 it would be done through PDPC's own form until BizFile+ was restored ⚑. Check the current channel.
-* **Implementation:** designate the individual in writing (board or director note) → create the `privacy@` mailbox → publish "Data Protection Officer, Zan J Private Limited (TulusSG): privacy@tulussg.com" → register with PDPC.
+* **Implementation:** designate the individual in writing (board or director note) → publish admin@tulussg.com as the data protection contact → register with PDPC.
 
 ### Q3. Notification / purpose limitation
 * The general policy explains broad purposes adequately after the edits in Part 2. **But for a multi-campaign site, the most important notice is the campaign collection notice at the point of collection** [PDPC: layered notices]. Each form should say, in 2–4 sentences in the page's language:

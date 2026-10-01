@@ -1,3 +1,5 @@
+> **SUPERSEDED, kept for history (1 October 2026).** The current pack is `legal-review.md`; where this file disagrees, `legal-review.md` wins. Zan decided that **admin@tulussg.com** is the only contact address, so the earlier suggestion of a separate privacy mailbox has been replaced with admin@tulussg.com below. Media consent now follows Privacy Policy §11 (consent on joining or taking part, with notice and opt-out); suggestions here about obtaining media consent only through separate documents are superseded. The English policy was reviewed by Zan Johan on 1 Oct 2026; it is not ALAC-approved.
+
 > **Zan's decisions, 1 Oct 2026 (for ALAC to review):**
 > 1. Remove "TulusSG is a community initiative operated under Zan J Private Limited." from the published policy; replace with "TulusSG is a ground-up community initiative." (Note: the PDPA review rated naming the responsible organisation HIGH — ALAC to advise.)
 > 2. Media (published §11 / draft §13): joining TulusSG or taking part in its activities = consent to use image, voice and story for TulusSG events, activities, publicity, social media and media productions, with notice at the time and an opt-out by email. This replaces the "separate written consent" approach below — ALAC to advise. The Share Your Story form note (f.mediaNote: "Media consent will be obtained separately if you are selected") should be aligned once decided.
@@ -246,7 +248,7 @@ Where possible, we will explain this in your language.
 
 **Data Protection Officer**
 Zan J Private Limited (TulusSG)
-Email: **privacy@tulussg.com** [DECISION: mailbox to be created]
+Email: **admin@tulussg.com**
 [Optional: WhatsApp number for privacy requests: [●]]
 
 For general questions about TulusSG: admin@tulussg.com
@@ -262,7 +264,7 @@ These replace the current wording under the checkbox. They are English source te
 
 ## A1. Short privacy notice (shown above the submit button)
 
-> **About your information.** TulusSG (Zan J Private Limited) will use what you share here only to consider you for Share Your Story and to contact you about it. Only our small campaign team can see it, and we delete it within 6 months if you are not selected. You can ask us to stop at any time by messaging us or writing to privacy@tulussg.com. [Privacy Policy (in English)]
+> **About your information.** TulusSG (Zan J Private Limited) will use what you share here only to consider you for Share Your Story and to contact you about it. Only our small campaign team can see it, and we delete it within 6 months if you are not selected. You can ask us to stop at any time by messaging us or writing to admin@tulussg.com. [Privacy Policy (in English)]
 
 3 sentences plus a link. The period and email depend on the decisions below.
 
@@ -303,7 +305,7 @@ Owner: Zan J Private Limited director unless stated. This is internal, not publi
 | # | Action | Law / basis | Done |
 |---|---|---|---|
 | M1 | **Designate a DPO** in writing (director's note). Name a backup person. | s 11(3) | ☐ |
-| M2 | Create **privacy@tulussg.com**, monitored by the DPO and the backup. Publish it in the policy. | s 11(5) | ☐ |
+| M2 | Use **admin@tulussg.com** (Zan, 1 Oct 2026), monitored by the DPO and the backup. Publish it in the policy. | s 11(5) | ☐ |
 | M3 | **Register the DPO with PDPC** (check the current channel: the PDPC form or BizFile+ ⚑). | PDPC | ☐ |
 | M4 | Confirm the **UEN** and the legal name to be shown. | Practice | ☐ |
 | M5 | **One-page data inventory** for Share Your Story: fields, where stored (Sheet, email, WhatsApp), who can access, retention. | s 12, s 24 | ☐ |

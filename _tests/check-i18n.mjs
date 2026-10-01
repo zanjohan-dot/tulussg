@@ -3,8 +3,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
+import { fileURLToPath } from 'node:url';
 
-const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..'); // works on Windows too
 const LANGS = ['en', 'id', 'tl', 'my'];
 const STATUSES = ['active', 'coming-soon', 'closed', 'hidden'];
 const problems = [];
@@ -44,7 +45,7 @@ function htmlKeys(file) {
 
 // Keys the shared scripts use in code (not in markup).
 const CORE_KEYS = ['meta.title', 'meta.description', 'privacy.link', 'privacy.linkEnglishOnly'];
-const FORM_KEYS = ['form.submit', 'form.submitting', ...['invalid_phone', 'phone_country_code', 'too_long', 'invalid_option', 'network', 'server', 'rate_limited', 'too_fast', 'campaign_closed'].map((c) => `err.${c}`),
+const FORM_KEYS = ['form.submit', 'form.submitting', ...['invalid_phone', 'phone_country_code', 'too_long', 'invalid_option', 'network', 'server', 'rate_limited', 'too_fast', 'campaign_closed', 'invalid_email', 'social_platform'].map((c) => `err.${c}`),
   ...['coming-soon', 'closed'].flatMap((s) => [`state.${s}.title`, `state.${s}.body`])];
 
 function resolve(dicts, keys, label) {
