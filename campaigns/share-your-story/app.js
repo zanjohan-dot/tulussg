@@ -7,6 +7,21 @@
   'use strict';
 
   var STORY_MAX = 1000;
+  var SOCIAL_MAX = 300;
+
+  // The country-code dropdown and the number box are sent to the API as ONE international number
+  // (e.g. +6591234567), the format normalizePhone() and the API already accept. Typing a full number
+  // starting with + overrides the dropdown.
+  function combinedPhone(form) {
+    var raw = (form.phone.value || '').trim();
+    if (!raw) return '';
+    if (raw.charAt(0) === '+') return raw;
+    var cc = form.phoneCountry.value || '65';
+    if (!/^[\d\s\-().]+$/.test(raw)) return '+' + cc + ' ' + raw; // let validation flag it
+    var digits = raw.replace(/\D/g, '').replace(/^0+/, ''); // drop a local trunk 0 (e.g. Indonesia 0812…)
+    if (cc === '65' && /^65[3689]\d{7}$/.test(digits)) digits = digits.slice(2); // 65 typed twice
+    return '+' + cc + digits;
+  }
 
   // Mirrors normalizePhone() in the API (server/core/sanitize.ts).
   function normalizePhone(raw) {
@@ -25,19 +40,20 @@
   }
 
   TulusCampaignForm.init({
-    fields: ['fullName', 'phone', 'nationality', 'nationalityOther', 'preferredLanguage', 'preferredLanguageOther', 'story', 'filmingComfort', 'consentContact'],
+    fields: ['fullName', 'phone', 'nationality', 'nationalityOther', 'preferredLanguage', 'preferredLanguageOther', 'story', 'socialLinks', 'filmingComfort', 'consentContact'],
 
     values: function (form) {
       var data = new FormData(form);
       var get = function (name) { return (data.get(name) || '').toString(); };
       return {
         fullName: get('fullName'),
-        phone: get('phone'),
+        phone: combinedPhone(form),
         nationality: get('nationality'),
         nationalityOther: get('nationalityOther'),
         preferredLanguage: get('preferredLanguage'),
         preferredLanguageOther: get('preferredLanguageOther'),
         story: get('story'),
+        socialLinks: get('socialLinks').trim(),
         filmingComfort: get('filmingComfort'),
         consentContact: form.consentContact.checked,
       };
@@ -54,6 +70,7 @@
       if (!v.preferredLanguage) e.preferredLanguage = 'required';
       if (v.preferredLanguage === 'other' && !v.preferredLanguageOther.trim()) e.preferredLanguageOther = 'required';
       if (v.story.length > STORY_MAX) e.story = 'too_long';
+      if (v.socialLinks.length > SOCIAL_MAX) e.socialLinks = 'too_long';
       if (!v.filmingComfort) e.filmingComfort = 'required';
       if (!v.consentContact) e.consentContact = 'required';
       return e;

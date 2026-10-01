@@ -408,6 +408,12 @@ html,body { width:100vw; height:100vh; overflow:hidden; background:var(--cream);
   .act-more { display:flex; align-items:center; justify-content:center; border:1px dashed rgba(196,98,45,0.35); background:transparent; font-family:'Cormorant Garant',serif; font-size:20px; font-style:italic; color:var(--terra); }
   .act-note { font-size:10px; color:var(--muted); margin-top:10px; }
   .soc-dock { flex-wrap:wrap; }
+  /* Campaign link on the first slide */
+  .campaign-link { display:inline-flex; align-items:center; gap:8px; margin-top:22px; padding:9px 16px; border-radius:100px; border:1.5px solid var(--terra); color:var(--terra); font-size:12px; font-weight:600; letter-spacing:0.02em; text-decoration:none; background:rgba(196,98,45,0.06); transition:background 0.3s,color 0.3s,transform 0.3s; }
+  .campaign-link:hover, .campaign-link:focus-visible { background:var(--terra); color:var(--white); transform:translateY(-2px); }
+  .campaign-dot { width:8px; height:8px; border-radius:50%; background:currentColor; }
+  @media(min-width:1440px) { .campaign-link { font-size:14px; padding:11px 20px; } }
+  @media(max-width:768px) { .campaign-link { margin-top:12px; padding:7px 13px; font-size:11px; } }
   .logo-slot.logo-img { padding:4px 6px; }
   a.logo-slot { text-decoration:none; transition:border-color 0.3s,transform 0.3s; }
   a.logo-slot:hover, a.logo-slot:focus-visible { border-color:var(--terra); transform:translateY(-2px); }
@@ -519,6 +525,7 @@ html,body { width:100vw; height:100vh; overflow:hidden; background:var(--cream);
           <div class="h-stat"><div class="h-stat-n">10</div><div class="h-stat-l">Activities in planning</div></div>
           <div class="h-stat"><div class="h-stat-n">SG</div><div class="h-stat-l">Ground-up</div></div>
         </div>
+        <a class="campaign-link anim" href="/campaigns/share-your-story/"><span class="campaign-dot" aria-hidden="true"></span>Now open: Share your story <span aria-hidden="true">&#x2192;</span></a>
       </div>
     </section>
 
@@ -692,6 +699,7 @@ html,body { width:100vw; height:100vh; overflow:hidden; background:var(--cream);
               <a href="/domestic-worker-support-singapore/" class="seo-pill">For Domestic Workers</a>
               <a href="/caregiver-support-singapore/" class="seo-pill">For Employers</a>
               <a href="/community-resources-singapore/" class="seo-pill">Our Community</a>
+              <a href="/campaigns/" class="seo-pill">Campaigns</a>
               <a href="/faq/" class="seo-pill">FAQ</a>
             </div>
 
