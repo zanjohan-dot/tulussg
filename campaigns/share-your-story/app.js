@@ -101,6 +101,8 @@
         copyEmail: form.emailCopy.checked ? get('copyEmail').trim() : '',
         consentContact: form.consentContact.checked,
         consentMedia: form.consentMedia.checked,
+        // The consent wording shown on this page. Must match the server's version (change both together).
+        consentVersion: 'share-your-story-v5-2026-10-05',
       };
     },
 

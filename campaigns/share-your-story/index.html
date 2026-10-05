@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://tulussg-api-451117268823.asia-southeast1.run.app http://localhost:3000; form-action 'self'; base-uri 'self'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://tulussg-api-451117268823.asia-southeast1.run.app; form-action 'self'; base-uri 'self'; object-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Share Your Story | TulusSG</title>
 <meta name="description" content="TulusSG is looking for four domestic helpers in Singapore to share their stories in an upcoming media production.">
@@ -128,7 +128,7 @@
       <div id="form-view">
         <h2 id="form-title" tabindex="-1" data-i18n="form.title">Interested? Tell us a little about your story.</h2>
         <noscript><p>Please turn on JavaScript to register, or email <a href="mailto:admin@tulussg.com">admin@tulussg.com</a>.</p></noscript>
-        <form id="campaign-form" novalidate>
+        <form id="campaign-form" method="post" novalidate>
           <div class="field" data-field="fullName">
             <label class="label" for="fullName"><span data-i18n="f.name">Name</span><span class="req" aria-hidden="true">*</span><span class="sr-only" data-i18n="form.required">required</span></label>
             <input id="fullName" name="fullName" type="text" autocomplete="name" maxlength="100" aria-describedby="fullName-error" required>

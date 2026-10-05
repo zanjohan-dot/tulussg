@@ -18,6 +18,11 @@
  *   data-privacy-link               → the site-wide privacy policy link (text + href follow the language)
  *   data-keep-lang                  → internal link that carries ?lang= (backup for in-app browsers)
  */
+// Anti-framing: GitHub Pages cannot send X-Frame-Options, so break out of (or hide inside) foreign frames.
+if (window.top !== window.self) {
+  try { window.top.location.replace(window.location.href); } catch (e) { document.documentElement.style.display = 'none'; }
+}
+
 (function () {
   'use strict';
 
