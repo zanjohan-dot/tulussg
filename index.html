@@ -408,6 +408,16 @@ html,body { width:100vw; height:100vh; overflow:hidden; background:var(--cream);
   .act-more { display:flex; align-items:center; justify-content:center; border:1px dashed rgba(196,98,45,0.35); background:transparent; font-family:'Cormorant Garant',serif; font-size:20px; font-style:italic; color:var(--terra); }
   .act-note { font-size:10px; color:var(--muted); margin-top:10px; }
   .soc-dock { flex-wrap:wrap; }
+  /* Campaigns menu item (a link, not a slide) */
+  a.v-nav-item, a.m-item { text-decoration:none; }
+  a.v-nav-item { font-family:Arial,Helvetica,sans-serif; } /* same face the sibling <button>s get by default */
+  .v-nav-link .n-num { font-size:12px; line-height:11.5px; }
+  /* Campaign link on the first slide */
+  .campaign-link { display:inline-flex; align-items:center; gap:8px; margin-top:22px; padding:9px 16px; border-radius:100px; border:1.5px solid var(--terra); color:var(--terra); font-size:12px; font-weight:600; letter-spacing:0.02em; text-decoration:none; background:rgba(196,98,45,0.06); transition:background 0.3s,color 0.3s,transform 0.3s; }
+  .campaign-link:hover, .campaign-link:focus-visible { background:var(--terra); color:var(--white); transform:translateY(-2px); }
+  .campaign-dot { width:8px; height:8px; border-radius:50%; background:currentColor; }
+  @media(min-width:1440px) { .campaign-link { font-size:14px; padding:11px 20px; } }
+  @media(max-width:768px) { .campaign-link { margin-top:12px; padding:7px 13px; font-size:11px; } }
   .logo-slot.logo-img { padding:4px 6px; }
   a.logo-slot { text-decoration:none; transition:border-color 0.3s,transform 0.3s; }
   a.logo-slot:hover, a.logo-slot:focus-visible { border-color:var(--terra); transform:translateY(-2px); }
@@ -485,6 +495,7 @@ html,body { width:100vw; height:100vh; overflow:hidden; background:var(--cream);
   <div class="m-item" onclick="goTo(2);toggleMob()">Activities</div>
   <div class="m-item" onclick="goTo(3);toggleMob()">Get Involved</div>
   <div class="m-item" onclick="goTo(4);toggleMob()">Connect</div>
+  <a class="m-item" href="/campaigns/">Campaigns</a>
 </div>
 
 <div class="shell">
@@ -498,6 +509,7 @@ html,body { width:100vw; height:100vh; overflow:hidden; background:var(--cream);
       <button class="v-nav-item" onclick="goTo(2)"><div class="n-bar"></div><span class="n-num">03</span><span class="n-label">Activities</span></button>
       <button class="v-nav-item" onclick="goTo(3)"><div class="n-bar"></div><span class="n-num">04</span><span class="n-label">Get Involved</span></button>
       <button class="v-nav-item" onclick="goTo(4)"><div class="n-bar"></div><span class="n-num">05</span><span class="n-label">Connect</span></button>
+      <a class="v-nav-item v-nav-link" href="/campaigns/"><div class="n-bar"></div><span class="n-num" aria-hidden="true">&#x2197;</span><span class="n-label">Campaigns</span></a>
     </nav>
     <div class="sidebar-foot">
       <a href="mailto:admin@tulussg.com">admin@tulussg.com</a>
@@ -519,6 +531,7 @@ html,body { width:100vw; height:100vh; overflow:hidden; background:var(--cream);
           <div class="h-stat"><div class="h-stat-n">10</div><div class="h-stat-l">Activities in planning</div></div>
           <div class="h-stat"><div class="h-stat-n">SG</div><div class="h-stat-l">Ground-up</div></div>
         </div>
+        <a class="campaign-link anim" href="/campaigns/share-your-story/"><span class="campaign-dot" aria-hidden="true"></span>Now open: Share your story <span aria-hidden="true">&#x2192;</span></a>
       </div>
     </section>
 
@@ -668,7 +681,7 @@ html,body { width:100vw; height:100vh; overflow:hidden; background:var(--cream);
               </a>
             </div>
           </div>
-          <form class="min-form" id="cForm" onsubmit="event.preventDefault();submitForm();">
+          <form class="min-form" id="cForm" method="post" onsubmit="event.preventDefault();submitForm();">
             <div class="form-row anim"><label>Your Name</label><input type="text" name="name" placeholder="Full name" required></div>
             <div class="form-row anim"><label>Email Address</label><input type="email" name="email" placeholder="you@email.com" required></div>
             <div class="form-row anim">
@@ -691,6 +704,7 @@ html,body { width:100vw; height:100vh; overflow:hidden; background:var(--cream);
               <a href="/domestic-worker-support-singapore/" class="seo-pill">For Domestic Workers</a>
               <a href="/caregiver-support-singapore/" class="seo-pill">For Employers</a>
               <a href="/community-resources-singapore/" class="seo-pill">Our Community</a>
+              <a href="/campaigns/" class="seo-pill">Campaigns</a>
               <a href="/faq/" class="seo-pill">FAQ</a>
             </div>
 
