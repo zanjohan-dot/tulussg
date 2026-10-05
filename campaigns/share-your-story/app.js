@@ -82,7 +82,7 @@
   setupSocialRows();
 
   TulusCampaignForm.init({
-    fields: ['fullName', 'phone', 'nationality', 'nationalityOther', 'preferredLanguage', 'preferredLanguageOther', 'story', 'socialLinks', 'filmingComfort', 'copyEmail', 'consentContact'],
+    fields: ['fullName', 'phone', 'nationality', 'nationalityOther', 'preferredLanguage', 'preferredLanguageOther', 'story', 'socialLinks', 'copyEmail', 'consentContact', 'consentMedia'],
 
     values: function (form) {
       var data = new FormData(form);
@@ -96,11 +96,11 @@
         preferredLanguageOther: get('preferredLanguageOther'),
         story: get('story'),
         socialAccounts: socialAccounts(form),
-        filmingComfort: get('filmingComfort'),
         // Optional copy by email: only used to send that copy (never marketing).
         emailCopy: form.emailCopy.checked,
         copyEmail: form.emailCopy.checked ? get('copyEmail').trim() : '',
         consentContact: form.consentContact.checked,
+        consentMedia: form.consentMedia.checked,
       };
     },
 
@@ -117,12 +117,12 @@
       if (v.story.length > STORY_MAX) e.story = 'too_long';
       var badSocial = v.socialAccounts.filter(function (a) { return a.handle && !a.platform; }).length;
       if (badSocial) e.socialLinks = 'social_platform';
-      if (!v.filmingComfort) e.filmingComfort = 'required';
       if (v.emailCopy) {
         if (!v.copyEmail) e.copyEmail = 'required';
         else if (v.copyEmail.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.copyEmail)) e.copyEmail = 'invalid_email';
       }
       if (!v.consentContact) e.consentContact = 'required';
+      if (!v.consentMedia) e.consentMedia = 'required';
       return e;
     },
 
@@ -135,7 +135,7 @@
 
     // Only non-personal answers go to analytics.
     analytics: function (v) {
-      return { filming_comfort: v.filmingComfort };
+      return { email_copy: v.emailCopy };
     },
   });
 })();

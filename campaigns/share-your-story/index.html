@@ -215,16 +215,6 @@
             <p class="error" id="socialLinks-error" hidden></p>
           </div>
 
-          <fieldset data-field="filmingComfort" aria-describedby="filmingComfort-error">
-            <legend><span data-i18n="f.filming">Would you be comfortable being filmed?</span><span class="req" aria-hidden="true">*</span><span class="sr-only" data-i18n="form.required">required</span></legend>
-            <div class="options">
-              <label class="option"><input type="radio" name="filmingComfort" value="yes" id="filmingComfort"><span data-i18n="film.yes">Yes</span></label>
-              <label class="option"><input type="radio" name="filmingComfort" value="maybe"><span data-i18n="film.maybe">Maybe, tell me more</span></label>
-              <label class="option"><input type="radio" name="filmingComfort" value="no"><span data-i18n="film.no">No</span></label>
-            </div>
-            <p class="error" id="filmingComfort-error" hidden></p>
-          </fieldset>
-
           <div class="field" data-field="copyEmail">
             <label class="consent copy-opt">
               <input type="checkbox" id="emailCopy" name="emailCopy" aria-controls="copy-email-box">
@@ -244,9 +234,18 @@
               <span><span data-i18n="f.consent">I agree that TulusSG may contact me about this story-sharing opportunity.</span><span class="req" aria-hidden="true">*</span></span>
             </label>
             <p class="error" id="consentContact-error" hidden></p>
+          </div>
+
+          <div class="field" data-field="consentMedia">
+            <label class="consent">
+              <input type="checkbox" id="consentMedia" name="consentMedia" aria-describedby="consentMedia-note consentMedia-error consent-note" required>
+              <span><span data-i18n="f.consentMedia">I agree that, if I am selected and take part, TulusSG may photograph, film and record me, and use my image, voice and story in the Share Your Story production. I understand that the production may be edited and published on TulusSG’s website and on TulusSG’s Instagram, Facebook, TikTok, YouTube and official WhatsApp channels, for the Share Your Story campaign.</span><span class="req" aria-hidden="true">*</span></span>
+            </label>
+            <p class="consent-note" id="consentMedia-note" data-i18n="f.consentMediaNote">If you have concerns about showing your face or using your actual voice, please email admin@tulussg.com before submitting. We can discuss possible ways for you to participate.</p>
+            <p class="error" id="consentMedia-error" hidden></p>
             <div class="consent-note" id="consent-note">
               <p data-i18n-link="f.consentAck" data-privacy-anchor="share-your-story">By submitting this form, you acknowledge our <a href="/privacy/#share-your-story">Privacy Policy</a>.</p>
-              <p data-i18n="f.mediaNote">If you are selected and take part, TulusSG may use your image, voice and story for TulusSG events, publicity, social media and media productions, as explained in our Privacy Policy. You can opt out at any time by emailing admin@tulussg.com.</p>
+              <p data-i18n="f.mediaNote">You can withdraw your consent at any time by emailing admin@tulussg.com. If you withdraw before filming, you will not take part in the production. If you withdraw later, we will stop using your image, voice and story in new materials, but we may not be able to remove them from materials already published or shared. Our Privacy Policy explains how we use and protect your information.</p>
             </div>
           </div>
 
