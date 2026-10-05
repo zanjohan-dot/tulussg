@@ -3,12 +3,12 @@
  * (checked by _tests/check-i18n.mjs). Shared text (navigation, footer, generic errors) is in
  * /campaigns/shared/i18n-shared.js.
  *
- * REVIEW STATUS: id, tl and my are PENDING NATIVE-SPEAKER REVIEW. Do not launch publicly until reviewed
- * strings have been inserted and `review` is set to 'reviewed' for each language.
+ * TRANSLATION STATUS: id, tl and my were ACCEPTED FOR LAUNCH by Zan Johan on 5 Oct 2026 (owner acceptance).
+ * They have NOT been independently reviewed by native speakers. English prevails (see lang.clause).
  */
 TulusI18n.register({
   name: 'share-your-story',
-  review: { en: 'source', id: 'pending-native-review', tl: 'pending-native-review', my: 'pending-native-review' },
+  review: { en: 'source', id: 'accepted-by-owner-2026-10-05', tl: 'accepted-by-owner-2026-10-05', my: 'accepted-by-owner-2026-10-05' },
   reviewNotes: {
     "id": [
       "Uses formal \"Anda\". Confirm this vs. the warmer \"kamu\" for the PMI audience.",
@@ -23,6 +23,7 @@ TulusI18n.register({
       "NEW 2026-10-01 (drafted by Claude, review in every language): optional email copy (f.emailCopy, f.copyEmail, f.copyEmail.help, err.copyEmail, err.invalid_email), thank-you page (success.*), social.* icon labels.",
       "CHANGED 2026-10-01: f.mediaNote rewritten to match Privacy Policy section 11 (media consent on taking part, with opt-out). English consent wording reviewed by Zan Johan (1 Oct 2026); translations need native-speaker review.",
       "NEW 2026-10-01 (drafted by Claude, review in every language): f.phone.help, f.phone.code, f.social, f.social.help, f.social.placeholder, f.social.platform/choose/other/handle/add/remove, err.social_platform.",
+      "CHANGED 2026-10-05 (late): Prevailing Language clause added (shared lang.notice / lang.clauseTitle / lang.clause). Corrected against the English: id f.consentAck, hero.line2, f.story.help, f.consentMedia, f.mediaNote; tl form.title; my f.mediaNote. Translations accepted for launch by Zan Johan (owner acceptance, NOT independent native-speaker review).",
       "CHANGED 2026-10-05 (Zan decision): the filming question (f.filming, film.*, err.filmingComfort) is REMOVED. NEW required media consent: f.consentMedia, f.consentMediaNote, err.consentMedia; f.mediaNote rewritten as the withdrawal notice. English approved by Zan Johan 5 Oct 2026; translations drafted by Claude and need native-speaker review. Consent wording must be exact.",
       "f.consentAck / f.mediaNote (and privacy.link in the shared file) are consent wording — review with the privacy policy wording.",
       "The Privacy Policy page itself is English only; consider translated summaries."
@@ -134,7 +135,7 @@ TulusI18n.register({
     'hero.title': 'Bagikan cerita Anda',
     'hero.lead': 'Kami mencari 4 pekerja rumah tangga di Singapura untuk membagikan cerita mereka dalam produksi media TulusSG yang akan datang.',
     'hero.line1': 'Bukan cerita yang sempurna.',
-    'hero.line2': 'Bukan cerita yang dibuat-buat.',
+    'hero.line2': 'Bukan cerita dengan naskah.',
     'hero.line3': 'Cukup cerita Anda.',
     'hero.cta': 'Bagikan cerita saya',
     'hero.about': 'Tentang apa ini?',
@@ -173,7 +174,7 @@ TulusI18n.register({
     'lang.my': 'Bahasa Myanmar (Burma)',
     'lang.other': 'Lainnya',
     'f.story': 'Cerita Anda',
-    'f.story.help': 'Beberapa kalimat saja sudah cukup. Anda boleh menulis dalam bahasa apa pun yang Anda nyaman.',
+    'f.story.help': 'Beberapa kalimat saja sudah cukup. Anda boleh menulis dalam bahasa apa pun yang nyaman bagi Anda.',
     'f.social': 'Media sosial Anda',
     'f.social.help': 'Pilih platformnya, lalu ketik nama pengguna Anda.',
     'f.social.placeholder': '@namaanda',
@@ -185,10 +186,10 @@ TulusI18n.register({
     'f.social.remove': 'Hapus',
     'err.social_platform': 'Mohon pilih platform untuk setiap nama pengguna.',
     'f.consent': 'Saya setuju bahwa TulusSG boleh menghubungi saya tentang kesempatan berbagi cerita ini.',
-    'f.consentMedia': 'Saya setuju bahwa, jika saya terpilih dan ikut serta, TulusSG boleh memotret, merekam video, dan merekam suara saya, serta menggunakan gambar, suara, dan cerita saya dalam produksi Bagikan Cerita Anda (Share Your Story). Saya memahami bahwa produksi ini dapat disunting dan dipublikasikan di situs web TulusSG serta di Instagram, Facebook, TikTok, YouTube, dan saluran WhatsApp resmi TulusSG, untuk kampanye Bagikan Cerita Anda.',
+    'f.consentMedia': 'Saya setuju bahwa, jika saya terpilih dan ikut serta, TulusSG boleh memotret, memfilmkan, dan merekam saya, serta menggunakan gambar, suara, dan cerita saya dalam produksi Bagikan Cerita Anda (Share Your Story). Saya memahami bahwa produksi ini dapat disunting dan dipublikasikan di situs web TulusSG serta di Instagram, Facebook, TikTok, YouTube, dan saluran WhatsApp resmi TulusSG, untuk kampanye Bagikan Cerita Anda.',
     'f.consentMediaNote': 'Jika Anda khawatir menampilkan wajah atau menggunakan suara asli Anda, mohon kirim email ke admin@tulussg.com sebelum mengirim formulir. Kita dapat membicarakan cara-cara yang memungkinkan Anda untuk ikut serta.',
-    'f.consentAck': 'Dengan mengirim formulir ini, Anda menyatakan telah membaca {link} kami.',
-    'f.mediaNote': 'Anda dapat menarik persetujuan Anda kapan saja dengan mengirim email ke admin@tulussg.com. Jika Anda menariknya sebelum perekaman, Anda tidak akan ikut serta dalam produksi. Jika Anda menariknya kemudian, kami akan berhenti menggunakan gambar, suara, dan cerita Anda dalam materi baru, tetapi kami mungkin tidak dapat menghapusnya dari materi yang sudah dipublikasikan atau dibagikan. Kebijakan Privasi kami menjelaskan cara kami menggunakan dan melindungi informasi Anda.',
+    'f.consentAck': 'Dengan mengirim formulir ini, Anda mengakui {link} kami.',
+    'f.mediaNote': 'Anda dapat menarik persetujuan Anda kapan saja dengan mengirim email ke admin@tulussg.com. Jika Anda menariknya sebelum pengambilan gambar (syuting), Anda tidak akan ikut serta dalam produksi. Jika Anda menariknya kemudian, kami akan berhenti menggunakan gambar, suara, dan cerita Anda dalam materi baru, tetapi kami mungkin tidak dapat menghapusnya dari materi yang sudah dipublikasikan atau dibagikan. Kebijakan Privasi kami menjelaskan cara kami menggunakan dan melindungi informasi Anda.',
     'form.submit': 'Bagikan cerita saya',
     'err.fullName': 'Mohon isi nama Anda.',
     'err.phone': 'Mohon isi nomor WhatsApp Anda.',
@@ -243,7 +244,7 @@ TulusI18n.register({
     'trust.t3': 'Hindi kailangan ng perpektong kuwento',
     'trust.be': 'Magpakatotoo ka lang.',
     'trust.contact': 'Kokontakin ng TulusSG team ang mga mapipili.',
-    'form.title': 'Interesado? Magkuwento nang kaunti tungkol sa iyo.',
+    'form.title': 'Interesado? Ikuwento sa amin nang kaunti ang iyong kuwento.',
     'f.name': 'Pangalan',
     'f.phone': 'WhatsApp number',
     'f.phone.help': 'Piliin ang country code mo, saka i-type ang number mo.',
@@ -374,7 +375,7 @@ TulusI18n.register({
     'f.consentMedia': 'ကျွန်ုပ် ရွေးချယ်ခံရပြီး ပါဝင်ပါက TulusSG သည် ကျွန်ုပ်ကို ဓာတ်ပုံရိုက်ခြင်း၊ ဗီဒီယိုရိုက်ကူးခြင်းနှင့် အသံသွင်းခြင်း ပြုလုပ်နိုင်ပြီး ကျွန်ုပ်၏ ပုံ၊ အသံနှင့် ဇာတ်လမ်းကို Share Your Story ထုတ်လုပ်မှုတွင် အသုံးပြုနိုင်ကြောင်း သဘောတူပါသည်။ ဤထုတ်လုပ်မှုကို တည်းဖြတ်ပြီး TulusSG ၏ ဝက်ဘ်ဆိုက်နှင့် TulusSG ၏ Instagram၊ Facebook၊ TikTok၊ YouTube နှင့် တရားဝင် WhatsApp channel များတွင် Share Your Story campaign အတွက် ထုတ်ဝေနိုင်ကြောင်း နားလည်ပါသည်။',
     'f.consentMediaNote': 'သင့်မျက်နှာကို ပြသခြင်း သို့မဟုတ် သင့်အသံအစစ်ကို အသုံးပြုခြင်းနှင့် ပတ်သက်၍ စိုးရိမ်မှုရှိပါက ဖောင်မပို့မီ admin@tulussg.com သို့ အီးမေးလ်ပို့ပါ။ သင် ပါဝင်နိုင်မည့် နည်းလမ်းများကို ဆွေးနွေးနိုင်ပါသည်။',
     'f.consentAck': 'ဤဖောင်ကို ပေးပို့ခြင်းဖြင့် ကျွန်ုပ်တို့၏ {link} ကို အသိအမှတ်ပြုပါသည်။',
-    'f.mediaNote': 'admin@tulussg.com သို့ အီးမေးလ်ပို့၍ သင့်သဘောတူညီချက်ကို အချိန်မရွေး ရုပ်သိမ်းနိုင်ပါသည်။ ရိုက်ကူးမှုမစမီ ရုပ်သိမ်းပါက ထုတ်လုပ်မှုတွင် ပါဝင်မည် မဟုတ်ပါ။ နောက်ပိုင်းတွင် ရုပ်သိမ်းပါက သင့်ပုံ၊ အသံနှင့် ဇာတ်လမ်းကို အရာအသစ်များတွင် ဆက်မသုံးတော့ပါ၊ သို့သော် ထုတ်ဝေပြီး သို့မဟုတ် မျှဝေပြီးသား အရာများမှ ဖယ်ရှားနိုင်ချင်မှ ဖယ်ရှားနိုင်ပါမည်။ ကျွန်ုပ်တို့၏ ကိုယ်ရေးအချက်အလက်မူဝါဒတွင် သင့်အချက်အလက်များကို မည်သို့ အသုံးပြုပြီး ကာကွယ်ကြောင်း ရှင်းပြထားပါသည်။',
+    'f.mediaNote': 'admin@tulussg.com သို့ အီးမေးလ်ပို့၍ သင့်သဘောတူညီချက်ကို အချိန်မရွေး ရုပ်သိမ်းနိုင်ပါသည်။ ရိုက်ကူးမှုမစမီ ရုပ်သိမ်းပါက ထုတ်လုပ်မှုတွင် ပါဝင်မည် မဟုတ်ပါ။ နောက်ပိုင်းတွင် ရုပ်သိမ်းပါက သင့်ပုံ၊ အသံနှင့် ဇာတ်လမ်းကို အကြောင်းအရာအသစ်များတွင် ဆက်လက်အသုံးမပြုတော့ပါ၊ သို့သော် ထုတ်ဝေပြီး သို့မဟုတ် မျှဝေပြီးသား အကြောင်းအရာများမှ ဖယ်ရှားနိုင်မည် မဟုတ်သည့်အခါလည်း ရှိနိုင်ပါသည်။ ကျွန်ုပ်တို့၏ ကိုယ်ရေးအချက်အလက်မူဝါဒတွင် သင့်အချက်အလက်များကို မည်သို့ အသုံးပြုပြီး ကာကွယ်ကြောင်း ရှင်းပြထားပါသည်။',
     'form.submit': 'ဇာတ်လမ်း မျှဝေမယ်',
     'err.fullName': 'သင့်အမည်ကို ထည့်ပေးပါ။',
     'err.phone': 'သင့် WhatsApp နံပါတ်ကို ထည့်ပေးပါ။',

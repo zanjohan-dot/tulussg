@@ -1,14 +1,18 @@
 /*
  * Shared text for every campaign page and the /campaigns/ hub: navigation, footer, privacy link,
  * generic form states and errors, campaign statuses.
- * REVIEW: id, tl and my are PENDING NATIVE-SPEAKER REVIEW. Do not launch publicly until reviewed.
+ * TRANSLATION STATUS: id, tl and my were ACCEPTED FOR LAUNCH by Zan Johan on 5 Oct 2026 (owner acceptance).
+ * They have NOT been independently reviewed by native speakers. English prevails (see lang.clause).
  */
 TulusI18n.register({
   name: 'shared',
-  review: { en: 'source', id: 'pending-native-review', tl: 'pending-native-review', my: 'pending-native-review' },
+  review: { en: 'source', id: 'accepted-by-owner-2026-10-05', tl: 'accepted-by-owner-2026-10-05', my: 'accepted-by-owner-2026-10-05' },
 
   en: {
     'nav.language': 'Language',
+    'lang.notice': 'Translations are for convenience. The English version prevails.',
+    'lang.clauseTitle': 'Prevailing Language',
+    'lang.clause': 'These materials are provided in English and may be translated into other languages for convenience. In the event of any inconsistency, discrepancy or conflict between the English version and any translated version, the English version shall prevail.',
     'nav.home': 'TulusSG home',
     'form.required': 'required',
     'form.optional': 'optional',
@@ -40,6 +44,9 @@ TulusI18n.register({
 
   id: {
     'nav.language': 'Bahasa',
+    'lang.notice': 'Terjemahan disediakan untuk kemudahan. Versi bahasa Inggris yang berlaku.',
+    'lang.clauseTitle': 'Bahasa yang Berlaku',
+    'lang.clause': 'Materi ini disediakan dalam bahasa Inggris dan dapat diterjemahkan ke dalam bahasa lain untuk kemudahan. Apabila terdapat ketidaksesuaian, perbedaan, atau pertentangan antara versi bahasa Inggris dan versi terjemahan mana pun, maka versi bahasa Inggris yang berlaku.',
     'nav.home': 'Beranda TulusSG',
     'form.required': 'wajib',
     'form.optional': 'tidak wajib',
@@ -71,6 +78,9 @@ TulusI18n.register({
 
   tl: {
     'nav.language': 'Wika',
+    'lang.notice': 'Para sa kaginhawahan lamang ang mga salin. Ang bersyong Ingles ang mananaig.',
+    'lang.clauseTitle': 'Nananaig na Wika',
+    'lang.clause': 'Ang mga materyal na ito ay ibinibigay sa Ingles at maaaring isalin sa ibang mga wika para sa kaginhawahan. Kung may anumang hindi pagkakatugma, pagkakaiba o salungatan sa pagitan ng bersyong Ingles at ng anumang isinaling bersyon, ang bersyong Ingles ang mananaig.',
     'nav.home': 'TulusSG home',
     'form.required': 'kailangan',
     'form.optional': 'opsyonal',
@@ -102,6 +112,9 @@ TulusI18n.register({
 
   my: {
     'nav.language': 'ဘာသာစကား',
+    'lang.notice': 'ဘာသာပြန်များသည် အဆင်ပြေစေရန်အတွက်သာ ဖြစ်ပါသည်။ အင်္ဂလိပ်ဗားရှင်းကို အတည်ယူပါသည်။',
+    'lang.clauseTitle': 'အတည်ယူရမည့် ဘာသာစကား',
+    'lang.clause': 'ဤအကြောင်းအရာများကို အင်္ဂလိပ်ဘာသာဖြင့် ပေးထားပြီး အဆင်ပြေစေရန်အတွက် အခြားဘာသာစကားများသို့ ဘာသာပြန်ဆိုထားနိုင်ပါသည်။ အင်္ဂလိပ်ဗားရှင်းနှင့် မည်သည့် ဘာသာပြန်ဗားရှင်းကြားတွင်မဆို ကိုက်ညီမှုမရှိခြင်း၊ ကွဲလွဲမှု သို့မဟုတ် ဆန့်ကျင်မှု ရှိပါက အင်္ဂလိပ်ဗားရှင်းကို အတည်ယူရမည်။',
     'nav.home': 'TulusSG ပင်မစာမျက်နှာ',
     'form.required': 'မဖြစ်မနေ',
     'form.optional': 'ချန်လှပ်နိုင်သည်',

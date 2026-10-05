@@ -30,6 +30,8 @@ a{color:var(--terra-d)}
 /* Header */
 .top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0}
 .top-logo img{height:46px;width:auto}
+.lang-wrap{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.lang-note{margin:0;max-width:200px;font-size:12px;line-height:1.35;color:var(--muted);text-align:right}
 .lang{position:relative;display:flex;align-items:center}
 .lang svg{position:absolute;left:12px;width:18px;height:18px;color:var(--terra);pointer-events:none}
 .lang select{appearance:none;-webkit-appearance:none;min-height:44px;max-width:190px;padding:0 34px 0 38px;border:1px solid rgba(196,98,45,0.3);border-radius:100px;background:var(--white);color:var(--ink);font:600 15px var(--sans);cursor:pointer;text-overflow:ellipsis}
@@ -55,8 +57,9 @@ h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,9.6vw,72px);lin
 /* What can you share */
 .block{padding:28px 0}
 h2{font-family:var(--serif);font-weight:600;font-size:34px;line-height:1.1;margin:0 0 16px}
-.chips{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0;padding:0;list-style:none}
-.chip{display:flex;align-items:center;gap:10px;min-height:64px;padding:12px 14px;border-radius:12px;font-weight:600;font-size:15px;line-height:1.3}
+.chips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.chip{display:flex;align-items:center;gap:10px;min-height:64px;padding:12px 14px;border-radius:12px;font-weight:600;font-size:15px;line-height:1.3;min-width:0;overflow-wrap:break-word;hyphens:auto}
+@media (max-width:359px){.chip{flex-direction:column;align-items:flex-start;gap:6px}}
 .chip .emoji{font-size:24px;line-height:1}
 .chip:nth-child(1){background:#FBE3D4}
 .chip:nth-child(2){background:#F9ECD2}
@@ -110,6 +113,7 @@ fieldset{border:0;margin:0 0 22px;padding:0;min-width:0}
 .consent-note{margin-top:10px;font-size:14px;line-height:1.55;color:var(--muted)}
 .consent-note p{margin:0 0 6px}
 .consent-note a{color:var(--terra-d);font-weight:600}
+.consent-note .prevail{margin-top:10px}
 .other{margin-top:10px}
 .count{margin-top:6px;font-size:13px;color:var(--muted);text-align:right}
 .error{display:flex;align-items:flex-start;gap:6px;margin-top:8px;font-size:15px;font-weight:600;color:var(--error)}

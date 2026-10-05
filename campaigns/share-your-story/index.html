@@ -45,15 +45,18 @@
     <a class="top-logo" href="/" data-i18n-attr="aria-label:nav.home" aria-label="TulusSG home">
       <img src="/assets/card/tulussg-logo.png" alt="TulusSG" width="517" height="539">
     </a>
-    <div class="lang">
-      <label for="lang-select" class="sr-only" data-i18n="nav.language">Language</label>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-      <select id="lang-select">
-        <option value="en" lang="en">English</option>
-        <option value="id" lang="id">Bahasa Indonesia</option>
-        <option value="tl" lang="fil">Filipino / Tagalog</option>
-        <option value="my" lang="my">မြန်မာဘာသာ</option>
-      </select>
+    <div class="lang-wrap">
+      <div class="lang">
+        <label for="lang-select" class="sr-only" data-i18n="nav.language">Language</label>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <select id="lang-select" aria-describedby="lang-note">
+          <option value="en" lang="en">English</option>
+          <option value="id" lang="id">Bahasa Indonesia</option>
+          <option value="tl" lang="fil">Filipino / Tagalog</option>
+          <option value="my" lang="my">မြန်မာဘာသာ</option>
+        </select>
+      </div>
+      <p class="lang-note" id="lang-note" data-i18n="lang.notice">Translations are for convenience. The English version prevails.</p>
     </div>
   </header>
 
@@ -246,6 +249,7 @@
             <div class="consent-note" id="consent-note">
               <p data-i18n-link="f.consentAck" data-privacy-anchor="share-your-story">By submitting this form, you acknowledge our <a href="/privacy/#share-your-story">Privacy Policy</a>.</p>
               <p data-i18n="f.mediaNote">You can withdraw your consent at any time by emailing admin@tulussg.com. If you withdraw before filming, you will not take part in the production. If you withdraw later, we will stop using your image, voice and story in new materials, but we may not be able to remove them from materials already published or shared. Our Privacy Policy explains how we use and protect your information.</p>
+              <p class="prevail"><strong data-i18n="lang.clauseTitle">Prevailing Language</strong><br><span data-i18n="lang.clause">These materials are provided in English and may be translated into other languages for convenience. In the event of any inconsistency, discrepancy or conflict between the English version and any translated version, the English version shall prevail.</span></p>
             </div>
           </div>
 
