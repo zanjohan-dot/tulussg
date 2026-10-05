@@ -80,7 +80,7 @@ h2{font-family:var(--serif);font-weight:600;font-size:34px;line-height:1.1;margi
 .req{color:var(--terra);margin-left:2px}
 .opt{font-weight:400;color:var(--muted);font-size:14px}
 .help{margin:-2px 0 8px;font-size:14px;color:var(--muted);line-height:1.5}
-input[type=text],input[type=tel],select.input,textarea{width:100%;min-height:52px;padding:12px 14px;border:1.5px solid var(--line);border-radius:8px;background:var(--white);color:var(--ink);font:16px var(--sans);transition:border-color 0.2s,box-shadow 0.2s}
+input[type=text],input[type=tel],input[type=email],select.input,textarea{width:100%;min-height:52px;padding:12px 14px;border:1.5px solid var(--line);border-radius:8px;background:var(--white);color:var(--ink);font:16px var(--sans);transition:border-color 0.2s,box-shadow 0.2s}
 textarea{min-height:120px;resize:vertical;line-height:1.5}
 select.input{appearance:none;-webkit-appearance:none;padding-right:40px;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat;cursor:pointer}
 input::placeholder,textarea::placeholder{color:#A8998A}
