@@ -81,8 +81,24 @@
   }
   setupSocialRows();
 
+  // Year list: from 18 years ago back to 1940 (the server applies the same date rules).
+  (function () {
+    var sel = document.getElementById('dobYear');
+    var top = new Date().getFullYear() - 18;
+    for (var y = top; y >= 1940; y--) { var o = document.createElement('option'); o.value = String(y); o.textContent = String(y); sel.appendChild(o); }
+  })();
+
+  function validDob(s) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s);
+    if (!m) return false;
+    var d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3]));
+    if (d.getUTCMonth() !== +m[2] - 1 || d.getUTCDate() !== +m[3]) return false;
+    var now = new Date(), age = now.getFullYear() - +m[1] - ((now.getMonth() + 1 < +m[2] || (now.getMonth() + 1 === +m[2] && now.getDate() < +m[3])) ? 1 : 0);
+    return age >= 18;
+  }
+
   TulusCampaignForm.init({
-    fields: ['fullName', 'phone', 'nationality', 'nationalityOther', 'preferredLanguage', 'preferredLanguageOther', 'story', 'socialLinks', 'copyEmail', 'consentContact', 'consentMedia'],
+    fields: ['fullName', 'dateOfBirth', 'idType', 'idNumber', 'mdwDeclaration', 'phone', 'nationality', 'nationalityOther', 'preferredLanguage', 'preferredLanguageOther', 'story', 'socialLinks', 'copyEmail', 'consentVerification', 'consentContact', 'consentMedia'],
 
     values: function (form) {
       var data = new FormData(form);
@@ -101,8 +117,14 @@
         copyEmail: form.emailCopy.checked ? get('copyEmail').trim() : '',
         consentContact: form.consentContact.checked,
         consentMedia: form.consentMedia.checked,
+        // Work-pass eligibility. Sent to the server only (which stores it encrypted); never stored in the browser.
+        dateOfBirth: get('dobYear') && get('dobMonth') && get('dobDay') ? get('dobYear') + '-' + get('dobMonth') + '-' + get('dobDay') : '',
+        idType: get('idType'),
+        idNumber: get('idNumber').toUpperCase().replace(/[\s-]/g, ''),
+        mdwDeclaration: form.mdwDeclaration.checked,
+        consentVerification: form.consentVerification.checked,
         // The consent wording shown on this page. Must match the server's version (change both together).
-        consentVersion: 'share-your-story-v5-2026-10-05',
+        consentVersion: 'share-your-story-v6-2026-10-06',
       };
     },
 
@@ -125,6 +147,15 @@
       }
       if (!v.consentContact) e.consentContact = 'required';
       if (!v.consentMedia) e.consentMedia = 'required';
+      // Format checks only: they never show that a document or a person is genuine.
+      if (!v.dateOfBirth) e.dateOfBirth = 'required';
+      else if (!validDob(v.dateOfBirth)) e.dateOfBirth = 'invalid_dob';
+      if (!v.idType) e.idType = 'required';
+      if (!v.idNumber) e.idNumber = 'required';
+      else if (v.idType === 'fin' && !/^[FGM]\d{7}[A-Z]$/.test(v.idNumber)) e.idNumber = 'invalid_fin';
+      else if (v.idType === 'passport' && !/^[A-Z0-9]{5,15}$/.test(v.idNumber)) e.idNumber = 'invalid_passport';
+      if (!v.mdwDeclaration) e.mdwDeclaration = 'required';
+      if (!v.consentVerification) e.consentVerification = 'required';
       return e;
     },
 
@@ -133,6 +164,8 @@
       document.querySelector('[data-field="preferredLanguageOther"]').hidden = v.preferredLanguage !== 'other';
       document.getElementById('story-count').textContent = String(v.story.length);
       document.getElementById('copy-email-box').hidden = !v.emailCopy;
+      var shown = v.idType === 'fin' || v.idType === 'passport' ? v.idType : 'none';
+      Array.prototype.forEach.call(document.querySelectorAll('[data-id-label]'), function (el) { el.hidden = el.getAttribute('data-id-label') !== shown; });
     },
 
     // Only non-personal answers go to analytics.

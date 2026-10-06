@@ -130,9 +130,44 @@
         <noscript><p>Please turn on JavaScript to register, or email <a href="mailto:admin@tulussg.com">admin@tulussg.com</a>.</p></noscript>
         <form id="campaign-form" method="post" novalidate>
           <div class="field" data-field="fullName">
-            <label class="label" for="fullName"><span data-i18n="f.name">Name</span><span class="req" aria-hidden="true">*</span><span class="sr-only" data-i18n="form.required">required</span></label>
+            <label class="label" for="fullName"><span data-i18n="f.name">Full name (as shown on your work pass)</span><span class="req" aria-hidden="true">*</span><span class="sr-only" data-i18n="form.required">required</span></label>
             <input id="fullName" name="fullName" type="text" autocomplete="name" maxlength="100" aria-describedby="fullName-error" required>
             <p class="error" id="fullName-error" hidden></p>
+          </div>
+
+          <div class="field" data-field="dateOfBirth">
+            <label class="label" for="dobDay"><span data-i18n="f.dob">Date of birth</span><span class="req" aria-hidden="true">*</span><span class="sr-only" data-i18n="form.required">required</span></label>
+            <div class="dob-row">
+              <select class="input" id="dobDay" name="dobDay" autocomplete="bday-day" aria-label="Day" data-i18n-attr="aria-label:f.dob.day" aria-describedby="dateOfBirth-error"><option value="" data-i18n="f.dob.day">Day</option><option value="01">1</option><option value="02">2</option><option value="03">3</option><option value="04">4</option><option value="05">5</option><option value="06">6</option><option value="07">7</option><option value="08">8</option><option value="09">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>
+              <select class="input" id="dobMonth" name="dobMonth" autocomplete="bday-month" aria-label="Month" data-i18n-attr="aria-label:f.dob.month" aria-describedby="dateOfBirth-error"><option value="" data-i18n="f.dob.month">Month</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select>
+              <select class="input" id="dobYear" name="dobYear" autocomplete="bday-year" aria-label="Year" data-i18n-attr="aria-label:f.dob.year" aria-describedby="dateOfBirth-error"><option value="" data-i18n="f.dob.year">Year</option></select>
+            </div>
+            <p class="error" id="dateOfBirth-error" hidden></p>
+          </div>
+
+          <fieldset data-field="idType" aria-describedby="idType-error">
+            <legend><span data-i18n="f.idType">Identification type</span><span class="req" aria-hidden="true">*</span><span class="sr-only" data-i18n="form.required">required</span></legend>
+            <div class="options">
+              <label class="option"><input type="radio" name="idType" value="fin" id="idType"><span data-i18n="f.idType.fin">FIN (the number on your work pass)</span></label>
+              <label class="option"><input type="radio" name="idType" value="passport"><span data-i18n="f.idType.passport">Passport number</span></label>
+            </div>
+            <p class="error" id="idType-error" hidden></p>
+          </fieldset>
+
+          <div class="field" data-field="idNumber">
+            <label class="label" for="idNumber"><span data-id-label="none" data-i18n="f.idNumber">FIN or passport number</span><span data-id-label="fin" data-i18n="f.idNumber.fin" hidden>FIN</span><span data-id-label="passport" data-i18n="f.idNumber.passport" hidden>Passport number</span><span class="req" aria-hidden="true">*</span><span class="sr-only" data-i18n="form.required">required</span></label>
+            <p class="help" id="idNumber-help"><span data-id-label="none" data-i18n="f.idNumber.help">Choose FIN or passport number above first.</span><span data-id-label="fin" data-i18n="f.idNumber.help.fin" hidden>9 characters: F, G or M, then 7 digits, then a letter.</span><span data-id-label="passport" data-i18n="f.idNumber.help.passport" hidden>Type it exactly as shown on your passport.</span></p>
+            <input id="idNumber" name="idNumber" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="20" aria-describedby="idNumber-help idNumber-error verify-note" required>
+            <p class="error" id="idNumber-error" hidden></p>
+            <p class="consent-note" id="verify-note" data-i18n="f.verifyNote">These details are used to check your work-pass status and campaign eligibility. They will not be published.</p>
+          </div>
+
+          <div class="field" data-field="mdwDeclaration">
+            <label class="consent">
+              <input type="checkbox" id="mdwDeclaration" name="mdwDeclaration" aria-describedby="mdwDeclaration-error" required>
+              <span><span data-i18n="f.mdwDeclaration">I am currently working in Singapore as a migrant domestic worker.</span><span class="req" aria-hidden="true">*</span></span>
+            </label>
+            <p class="error" id="mdwDeclaration-error" hidden></p>
           </div>
 
           <div class="field" data-field="phone">
@@ -226,9 +261,18 @@
             <div class="other" id="copy-email-box" hidden>
               <label class="label" for="copyEmail"><span data-i18n="f.copyEmail">Your email address</span><span class="req" aria-hidden="true">*</span></label>
               <p class="help" id="copyEmail-help" data-i18n="f.copyEmail.help">We'll first email you a link to confirm this address, then send your copy. We use it only for this and won't add you to any mailing list.</p>
+              <p class="help" data-i18n="f.copyEmail.omitted">For security, your date of birth and FIN or passport number are not included in the emailed copy.</p>
               <input id="copyEmail" name="copyEmail" type="email" inputmode="email" autocomplete="email" maxlength="254" spellcheck="false" aria-describedby="copyEmail-help copyEmail-error">
             </div>
             <p class="error" id="copyEmail-error" hidden></p>
+          </div>
+
+          <div class="field" data-field="consentVerification">
+            <label class="consent">
+              <input type="checkbox" id="consentVerification" name="consentVerification" aria-describedby="verify-note consentVerification-error" required>
+              <span><span data-i18n="f.consentVerification">I agree that TulusSG may use my date of birth and FIN or passport number to check my work-pass status through the Ministry of Manpower and verify my eligibility for this campaign.</span><span class="req" aria-hidden="true">*</span></span>
+            </label>
+            <p class="error" id="consentVerification-error" hidden></p>
           </div>
 
           <div class="field" data-field="consentContact">
