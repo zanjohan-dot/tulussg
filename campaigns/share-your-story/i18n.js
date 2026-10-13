@@ -20,6 +20,7 @@ TulusI18n.register({
       "trust.be \"Magpakatotoo ka lang.\" for \"Just be yourself.\""
     ],
     "all": [
+      "NEW 2026-10-14 (Zan approval: Zan J Private Limited is the responsible organisation): f.use.operator (form notice) and footer.operator (footer); id/tl/my drafted by Claude, AWAITING native review. Consent version bumped to v7-2026-10-14.",
       "CHANGED 2026-10-13 (consent v7, Documents 1 and 6; English approved by Zan Johan): the required media consent is REMOVED (f.consentMedia, f.consentMediaNote, f.mediaNote, err.consentMedia). NEW/CHANGED, drafted by Claude, AWAITING native review: f.story.help, f.story.chars, err.story_too_long, f.social.help, f.after.*, f.use.*, f.consent, err.consentContact, f.withdraw, f.consentAck, form.submit; thank-you page success.referenceHelp, success.copySent, success.next1-4/nextTitle, success.safe*, success.withdraw*, success.channel* (success.next and success.whatsapp removed: the page links to the WhatsApp Channel, not the group). Consent wording must be exact.",
       "CHANGED 2026-10-01 (security): the email copy now needs the address confirmed by a link first: f.copyEmail.help, success.copySent, success.copyFailed. Review in every language.",
       "NEW 2026-10-01 (drafted by Claude, review in every language): optional email copy (f.emailCopy, f.copyEmail, f.copyEmail.help, err.copyEmail, err.invalid_email), thank-you page (success.*), social.* icon labels.",
@@ -146,6 +147,8 @@ TulusI18n.register({
     'success.channelTitle': 'Want TulusSG news?',
     'success.channelBody': 'Follow our WhatsApp Channel for news and activity updates. This is your choice and has nothing to do with your registration or whether you are selected. Other followers cannot see your name or phone number.',
     'success.channel': 'Follow our WhatsApp Channel',
+    'f.use.operator': 'Share Your Story is an initiative presented by TulusSG and operated by Zan J Private Limited, which is responsible for the information you provide.',
+    'footer.operator': 'Share Your Story is an initiative presented by TulusSG and operated by Zan J Private Limited.',
   },
 
   id: {
@@ -257,6 +260,8 @@ TulusI18n.register({
     'success.channelTitle': 'Ingin kabar dari TulusSG?',
     'success.channelBody': 'Ikuti Saluran WhatsApp kami untuk berita dan kabar kegiatan. Ini pilihan Anda dan tidak ada hubungannya dengan pendaftaran Anda atau apakah Anda terpilih. Pengikut lain tidak dapat melihat nama atau nomor telepon Anda.',
     'success.channel': 'Ikuti Saluran WhatsApp kami',
+    'f.use.operator': 'Share Your Story adalah inisiatif yang dipersembahkan oleh TulusSG dan dijalankan oleh Zan J Private Limited, yang bertanggung jawab atas informasi yang Anda berikan.',
+    'footer.operator': 'Share Your Story adalah inisiatif yang dipersembahkan oleh TulusSG dan dijalankan oleh Zan J Private Limited.',
   },
 
   tl: {
@@ -368,6 +373,8 @@ TulusI18n.register({
     'success.channelTitle': 'Gusto mo ng balita mula sa TulusSG?',
     'success.channelBody': 'I-follow ang aming WhatsApp Channel para sa mga balita at update sa activities. Ikaw ang bahala rito at wala itong kinalaman sa registration mo o kung mapipili ka. Hindi makikita ng ibang followers ang pangalan o phone number mo.',
     'success.channel': 'I-follow ang aming WhatsApp Channel',
+    'f.use.operator': 'Ang Share Your Story ay isang inisyatiba na inihahandog ng TulusSG at pinapatakbo ng Zan J Private Limited, na responsable sa impormasyong ibinibigay mo.',
+    'footer.operator': 'Ang Share Your Story ay isang inisyatiba na inihahandog ng TulusSG at pinapatakbo ng Zan J Private Limited.',
   },
 
   my: {
@@ -479,5 +486,7 @@ TulusI18n.register({
     'success.channelTitle': 'TulusSG သတင်းများ လိုချင်ပါသလား။',
     'success.channelBody': 'သတင်းများနှင့် လှုပ်ရှားမှု အပ်ဒိတ်များအတွက် ကျွန်ုပ်တို့၏ WhatsApp Channel ကို follow လုပ်ပါ။ ၎င်းသည် သင့်ရွေးချယ်မှုဖြစ်ပြီး သင့်မှတ်ပုံတင်ခြင်း သို့မဟုတ် ရွေးချယ်ခံရခြင်းနှင့် မသက်ဆိုင်ပါ။ အခြား follower များသည် သင့်အမည် သို့မဟုတ် ဖုန်းနံပါတ်ကို မမြင်နိုင်ပါ။',
     'success.channel': 'ကျွန်ုပ်တို့၏ WhatsApp Channel ကို follow လုပ်ရန်',
+    'f.use.operator': 'Share Your Story သည် TulusSG က တင်ဆက်ပြီး Zan J Private Limited က လည်ပတ်သော အစီအစဉ်ဖြစ်ပြီး သင်ပေးသော အချက်အလက်များအတွက် Zan J Private Limited က တာဝန်ရှိပါသည်။',
+    'footer.operator': 'Share Your Story သည် TulusSG က တင်ဆက်ပြီး Zan J Private Limited က လည်ပတ်သော အစီအစဉ်ဖြစ်ပါသည်။',
   },
 });
