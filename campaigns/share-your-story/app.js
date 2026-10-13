@@ -82,7 +82,7 @@
   setupSocialRows();
 
   TulusCampaignForm.init({
-    fields: ['fullName', 'phone', 'nationality', 'nationalityOther', 'preferredLanguage', 'preferredLanguageOther', 'story', 'socialLinks', 'copyEmail', 'consentContact', 'consentMedia'],
+    fields: ['fullName', 'phone', 'nationality', 'nationalityOther', 'preferredLanguage', 'preferredLanguageOther', 'story', 'socialLinks', 'copyEmail', 'consentContact'],
 
     values: function (form) {
       var data = new FormData(form);
@@ -100,9 +100,9 @@
         emailCopy: form.emailCopy.checked,
         copyEmail: form.emailCopy.checked ? get('copyEmail').trim() : '',
         consentContact: form.consentContact.checked,
-        consentMedia: form.consentMedia.checked,
-        // The consent wording shown on this page. Must match the server's version (change both together).
-        consentVersion: 'share-your-story-v5-2026-10-05',
+        // The consent wording shown on this page. Must match the server's version: the server refuses any other
+        // (409 form_outdated), so deploy the server first. v7 = two-stage consent (no media consent at registration).
+        consentVersion: 'share-your-story-v7-2026-10-13',
       };
     },
 
@@ -116,7 +116,7 @@
       if (v.nationality === 'other' && !v.nationalityOther.trim()) e.nationalityOther = 'required';
       if (!v.preferredLanguage) e.preferredLanguage = 'required';
       if (v.preferredLanguage === 'other' && !v.preferredLanguageOther.trim()) e.preferredLanguageOther = 'required';
-      if (v.story.length > STORY_MAX) e.story = 'too_long';
+      if (v.story.length > STORY_MAX) e.story = 'story_too_long';
       var badSocial = v.socialAccounts.filter(function (a) { return a.handle && !a.platform; }).length;
       if (badSocial) e.socialLinks = 'social_platform';
       if (v.emailCopy) {
@@ -124,7 +124,6 @@
         else if (v.copyEmail.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.copyEmail)) e.copyEmail = 'invalid_email';
       }
       if (!v.consentContact) e.consentContact = 'required';
-      if (!v.consentMedia) e.consentMedia = 'required';
       return e;
     },
 

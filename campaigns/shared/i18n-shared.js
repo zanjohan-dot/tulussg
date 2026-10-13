@@ -1,8 +1,9 @@
 /*
  * Shared text for every campaign page and the /campaigns/ hub: navigation, footer, privacy link,
  * generic form states and errors, campaign statuses.
- * TRANSLATION STATUS: id, tl and my were ACCEPTED FOR LAUNCH by Zan Johan on 5 Oct 2026 (owner acceptance).
- * They have NOT been independently reviewed by native speakers. English prevails (see lang.clause).
+ * TRANSLATION STATUS: id, tl and my were accepted for launch by Zan Johan on 5 Oct 2026 (owner acceptance). lang.notice
+ * changed 13 Oct 2026 (consent v7: neutral language notice, no "English prevails"); the new id/tl/my text is a Claude
+ * draft AWAITING independent native-speaker review.
  */
 TulusI18n.register({
   name: 'shared',
@@ -10,9 +11,7 @@ TulusI18n.register({
 
   en: {
     'nav.language': 'Language',
-    'lang.notice': 'Translations are for convenience. The English version prevails.',
-    'lang.clauseTitle': 'Prevailing Language',
-    'lang.clause': 'These materials are provided in English and may be translated into other languages for convenience. In the event of any inconsistency, discrepancy or conflict between the English version and any translated version, the English version shall prevail.',
+    'lang.notice': 'This page is available in English, Bahasa Indonesia, Filipino and Burmese. Each version is meant to say the same thing. If anything is unclear, please ask us at admin@tulussg.com before you submit.',
     'nav.home': 'TulusSG home',
     'form.required': 'required',
     'form.optional': 'optional',
@@ -45,9 +44,7 @@ TulusI18n.register({
 
   id: {
     'nav.language': 'Bahasa',
-    'lang.notice': 'Terjemahan disediakan untuk kemudahan. Versi bahasa Inggris yang berlaku.',
-    'lang.clauseTitle': 'Bahasa yang Berlaku',
-    'lang.clause': 'Materi ini disediakan dalam bahasa Inggris dan dapat diterjemahkan ke dalam bahasa lain untuk kemudahan. Apabila terdapat ketidaksesuaian, perbedaan, atau pertentangan antara versi bahasa Inggris dan versi terjemahan mana pun, maka versi bahasa Inggris yang berlaku.',
+    'lang.notice': 'Halaman ini tersedia dalam bahasa Inggris, Bahasa Indonesia, Filipino, dan Burma. Setiap versi dimaksudkan untuk menyampaikan hal yang sama. Jika ada yang kurang jelas, mohon tanyakan kepada kami di admin@tulussg.com sebelum Anda mengirim.',
     'nav.home': 'Beranda TulusSG',
     'form.required': 'wajib',
     'form.optional': 'tidak wajib',
@@ -80,9 +77,7 @@ TulusI18n.register({
 
   tl: {
     'nav.language': 'Wika',
-    'lang.notice': 'Para sa kaginhawahan lamang ang mga salin. Ang bersyong Ingles ang mananaig.',
-    'lang.clauseTitle': 'Nananaig na Wika',
-    'lang.clause': 'Ang mga materyal na ito ay ibinibigay sa Ingles at maaaring isalin sa ibang mga wika para sa kaginhawahan. Kung may anumang hindi pagkakatugma, pagkakaiba o salungatan sa pagitan ng bersyong Ingles at ng anumang isinaling bersyon, ang bersyong Ingles ang mananaig.',
+    'lang.notice': 'Available ang pahinang ito sa English, Bahasa Indonesia, Filipino at Burmese. Pareho dapat ang sinasabi ng bawat bersyon. Kung may hindi malinaw, pakitanong muna sa amin sa admin@tulussg.com bago ka magpadala.',
     'nav.home': 'TulusSG home',
     'form.required': 'kailangan',
     'form.optional': 'opsyonal',
@@ -115,9 +110,7 @@ TulusI18n.register({
 
   my: {
     'nav.language': 'ဘာသာစကား',
-    'lang.notice': 'ဘာသာပြန်များသည် အဆင်ပြေစေရန်အတွက်သာ ဖြစ်ပါသည်။ အင်္ဂလိပ်ဗားရှင်းကို အတည်ယူပါသည်။',
-    'lang.clauseTitle': 'အတည်ယူရမည့် ဘာသာစကား',
-    'lang.clause': 'ဤအကြောင်းအရာများကို အင်္ဂလိပ်ဘာသာဖြင့် ပေးထားပြီး အဆင်ပြေစေရန်အတွက် အခြားဘာသာစကားများသို့ ဘာသာပြန်ဆိုထားနိုင်ပါသည်။ အင်္ဂလိပ်ဗားရှင်းနှင့် မည်သည့် ဘာသာပြန်ဗားရှင်းကြားတွင်မဆို ကိုက်ညီမှုမရှိခြင်း၊ ကွဲလွဲမှု သို့မဟုတ် ဆန့်ကျင်မှု ရှိပါက အင်္ဂလိပ်ဗားရှင်းကို အတည်ယူရမည်။',
+    'lang.notice': 'ဤစာမျက်နှာကို အင်္ဂလိပ်၊ အင်ဒိုနီးရှား၊ ဖိလစ်ပိုင်နှင့် မြန်မာ ဘာသာများဖြင့် ရရှိနိုင်ပါသည်။ ဗားရှင်းတိုင်းသည် အကြောင်းအရာ တူညီစေရန် ရည်ရွယ်ပါသည်။ နားမလည်သည်များ ရှိပါက မပို့မီ admin@tulussg.com တွင် ကျွန်ုပ်တို့ကို မေးမြန်းပါ။',
     'nav.home': 'TulusSG ပင်မစာမျက်နှာ',
     'form.required': 'မဖြစ်မနေ',
     'form.optional': 'ချန်လှပ်နိုင်သည်',

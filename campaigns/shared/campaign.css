@@ -113,7 +113,11 @@ fieldset{border:0;margin:0 0 22px;padding:0;min-width:0}
 .consent-note{margin-top:10px;font-size:14px;line-height:1.55;color:var(--muted)}
 .consent-note p{margin:0 0 6px}
 .consent-note a{color:var(--terra-d);font-weight:600}
-.consent-note .prevail{margin-top:10px}
+/* Notices before the consent box (consent v7, Document 1 items 8-9) */
+.form-info{margin:22px 0 14px;padding:14px 16px;border-radius:10px;background:var(--cream);border:1px solid var(--warm)}
+.form-info h3{font-family:var(--sans);font-size:15px;font-weight:700;margin:0 0 6px;color:var(--ink)}
+.form-info p{margin:0 0 8px;font-size:14px;line-height:1.55;color:var(--ink)}
+.form-info p + h3{margin-top:12px}
 .other{margin-top:10px}
 .count{margin-top:6px;font-size:13px;color:var(--muted);text-align:right}
 .error{display:flex;align-items:flex-start;gap:6px;margin-top:8px;font-size:15px;font-weight:600;color:var(--error)}
@@ -134,10 +138,18 @@ fieldset{border:0;margin:0 0 22px;padding:0;min-width:0}
 .success .btn{margin-top:22px}
 .ty-ref{margin-top:10px!important;font-size:16px!important}
 .ty-ref strong{font-size:18px;letter-spacing:0.06em;color:var(--ink);white-space:nowrap}
+.ty-ref-help{display:block;max-width:460px;margin:4px auto 0;font-size:14px;line-height:1.5;color:var(--muted)}
 .ty-copy{margin:10px auto 0!important;max-width:460px;padding:10px 14px;border-radius:8px;font-size:15px!important;line-height:1.5}
 .ty-copy.ok{background:#EAF5EC;color:#1E5A2C}
 .ty-copy.warn{background:#FDF1E8;color:var(--ink)}
 .ty-copy a{color:var(--terra-d);font-weight:600}
+/* Thank-you page details (Document 6) */
+.ty-info{text-align:left;max-width:520px;margin:22px auto 0;padding:16px 18px;border:1px solid var(--warm);border-radius:12px;background:var(--cream)}
+.ty-info h3{font-family:var(--sans);font-size:16px;font-weight:700;margin:14px 0 6px;color:var(--ink)}
+.ty-info h3:first-child{margin-top:0}
+.ty-info p{font-size:15px!important;line-height:1.55}
+.ty-optional{max-width:520px;margin:26px auto 0;padding-top:18px;border-top:1px solid var(--warm)}
+.ty-optional h3{font-family:var(--sans);font-size:17px;font-weight:700;margin:0;color:var(--ink)}
 .ty-next{margin-top:16px!important;max-width:460px;margin-left:auto!important;margin-right:auto!important;color:var(--muted);font-size:16px!important}
 .ty-wa{gap:10px}
 .ty-wa svg{width:22px;height:22px;fill:currentColor;flex-shrink:0}
