@@ -112,7 +112,7 @@
         consentContact: form.consentContact.checked,
         // The consent wording shown on this page. Must match the server's version: the server refuses any other
         // (409 form_outdated), so deploy the server first. v7 = two-stage consent (no media consent at registration).
-        consentVersion: 'share-your-story-v7.2-2026-10-14',
+        consentVersion: 'share-your-story-v7.3-2026-10-14',
       };
     },
 
