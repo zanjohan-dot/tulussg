@@ -17,7 +17,8 @@
 window.TULUS_CAMPAIGNS = [
   {
     slug: 'share-your-story',
-    status: 'active',
+    // 'hidden' until Zan approves opening registration (then 'active'). The API is live; this keeps the form closed.
+    status: 'hidden',
     order: 1,
     image: '/campaigns/share-your-story/hero-640.webp',
     imageFallback: '/campaigns/share-your-story/hero-640.jpg',
