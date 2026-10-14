@@ -3,15 +3,15 @@
  * (checked by _tests/check-i18n.mjs). Shared text (navigation, footer, generic errors) is in
  * /campaigns/shared/i18n-shared.js.
  *
- * TRANSLATION STATUS (15 Oct 2026): id, tl and my were AI-audited on 15 Oct 2026 (blind AI re-translation, comparison,
+ * TRANSLATION STATUS (14 Oct 2026): id, tl and my were AI-audited on 14 Oct 2026 (blind AI re-translation, comparison,
  * Google Translate back-translation of every string; 103 corrections) and Zan Johan accepted the AI-reviewed text for
- * launch on 15 Oct 2026. These are AI-reviewed translations, NOT independently human-certified. Participants can report
+ * launch on 14 Oct 2026. These are AI-reviewed translations, NOT independently human-certified. Participants can report
  * a translation problem (shared lang.notice); any material error must be corrected promptly. Audit records: private
  * repo docs/review-packs/v7-2026-10-15-audit/. No "English prevails" statement (Document 1; Privacy Policy section 14).
  */
 TulusI18n.register({
   name: 'share-your-story',
-  review: { en: 'source', id: 'ai-audited-2026-10-15-accepted-by-owner', tl: 'ai-audited-2026-10-15-accepted-by-owner', my: 'ai-audited-2026-10-15-accepted-by-owner' },
+  review: { en: 'source', id: 'ai-audited-2026-10-14-accepted-by-owner', tl: 'ai-audited-2026-10-14-accepted-by-owner', my: 'ai-audited-2026-10-14-accepted-by-owner' },
   reviewNotes: {
     "id": [
       "Uses formal \"Anda\". Confirm this vs. the warmer \"kamu\" for the PMI audience.",
@@ -22,8 +22,8 @@ TulusI18n.register({
       "trust.be \"Magpakatotoo ka lang.\" for \"Just be yourself.\""
     ],
     "all": [
-      "CHANGED 2026-10-15 (Zan approval: organisation structure): footer.operator names The Digital Systems Architect (operating brand); f.use.operator adds \"The Digital Systems Architect is a brand operated by Zan J Private Limited (UEN: 202616105R)\". Consent version bumped to v7-2026-10-15.",
-      "CHANGED 2026-10-15 (Zan decisions F1-F4): f.story.help \"when we contact you\" -> \"You can tell us more about your story if we contact you\" (EN + id/tl/my); story limit 1,000 -> 2,000 user-perceived characters (err.story_too_long; app.js + API); f.phone.help says any country code can be used; id hero.tag keeps the official name \"Share Your Story\"; shared lang.notice invites reports of translation problems.",
+      "CHANGED 2026-10-14 (Zan approval: organisation structure): footer.operator names The Digital Systems Architect (operating brand); f.use.operator adds \"The Digital Systems Architect is a brand operated by Zan J Private Limited (UEN: 202616105R)\". Consent version bumped to v7.1-2026-10-14 (v7-2026-10-14 was the earlier organisation wording).",
+      "CHANGED 2026-10-14 (Zan decisions F1-F4): f.story.help \"when we contact you\" -> \"You can tell us more about your story if we contact you\" (EN + id/tl/my); story limit 1,000 -> 2,000 user-perceived characters (err.story_too_long; app.js + API); f.phone.help says any country code can be used; id hero.tag keeps the official name \"Share Your Story\"; shared lang.notice invites reports of translation problems.",
       "NEW 2026-10-14 (Zan approval: Zan J Private Limited is the responsible organisation): f.use.operator (form notice) and footer.operator (footer); id/tl/my drafted by Claude, AWAITING native review. Consent version bumped to v7-2026-10-14.",
       "CHANGED 2026-10-13 (consent v7, Documents 1 and 6; English approved by Zan Johan): the required media consent is REMOVED (f.consentMedia, f.consentMediaNote, f.mediaNote, err.consentMedia). NEW/CHANGED, drafted by Claude, AWAITING native review: f.story.help, f.story.chars, err.story_too_long, f.social.help, f.after.*, f.use.*, f.consent, err.consentContact, f.withdraw, f.consentAck, form.submit; thank-you page success.referenceHelp, success.copySent, success.next1-4/nextTitle, success.safe*, success.withdraw*, success.channel* (success.next and success.whatsapp removed: the page links to the WhatsApp Channel, not the group). Consent wording must be exact.",
       "CHANGED 2026-10-01 (security): the email copy now needs the address confirmed by a link first: f.copyEmail.help, success.copySent, success.copyFailed. Review in every language.",

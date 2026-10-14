@@ -1,13 +1,13 @@
 /*
  * Shared text for every campaign page and the /campaigns/ hub: navigation, footer, privacy link,
  * generic form states and errors, campaign statuses.
- * TRANSLATION STATUS: id, tl and my AI-audited 15 Oct 2026 and accepted for launch by Zan Johan on 15 Oct 2026
+ * TRANSLATION STATUS: id, tl and my AI-audited 14 Oct 2026 and accepted for launch by Zan Johan on 14 Oct 2026
  * (AI-reviewed, NOT independently human-certified). lang.notice: neutral language notice (consent v7, no "English
- * prevails"); 15 Oct 2026 it also invites participants to report a translation problem.
+ * prevails"); 14 Oct 2026 it also invites participants to report a translation problem.
  */
 TulusI18n.register({
   name: 'shared',
-  review: { en: 'source', id: 'ai-audited-2026-10-15-accepted-by-owner', tl: 'ai-audited-2026-10-15-accepted-by-owner', my: 'ai-audited-2026-10-15-accepted-by-owner' },
+  review: { en: 'source', id: 'ai-audited-2026-10-14-accepted-by-owner', tl: 'ai-audited-2026-10-14-accepted-by-owner', my: 'ai-audited-2026-10-14-accepted-by-owner' },
 
   en: {
     'nav.language': 'Language',
