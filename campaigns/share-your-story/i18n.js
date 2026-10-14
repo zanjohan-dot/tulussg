@@ -22,6 +22,7 @@ TulusI18n.register({
       "trust.be \"Magpakatotoo ka lang.\" for \"Just be yourself.\""
     ],
     "all": [
+      "CHANGED 2026-10-15 (Zan approval: organisation structure): footer.operator names The Digital Systems Architect (operating brand); f.use.operator adds \"The Digital Systems Architect is a brand operated by Zan J Private Limited (UEN: 202616105R)\". Consent version bumped to v7-2026-10-15.",
       "CHANGED 2026-10-15 (Zan decisions F1-F4): f.story.help \"when we contact you\" -> \"You can tell us more about your story if we contact you\" (EN + id/tl/my); story limit 1,000 -> 2,000 user-perceived characters (err.story_too_long; app.js + API); f.phone.help says any country code can be used; id hero.tag keeps the official name \"Share Your Story\"; shared lang.notice invites reports of translation problems.",
       "NEW 2026-10-14 (Zan approval: Zan J Private Limited is the responsible organisation): f.use.operator (form notice) and footer.operator (footer); id/tl/my drafted by Claude, AWAITING native review. Consent version bumped to v7-2026-10-14.",
       "CHANGED 2026-10-13 (consent v7, Documents 1 and 6; English approved by Zan Johan): the required media consent is REMOVED (f.consentMedia, f.consentMediaNote, f.mediaNote, err.consentMedia). NEW/CHANGED, drafted by Claude, AWAITING native review: f.story.help, f.story.chars, err.story_too_long, f.social.help, f.after.*, f.use.*, f.consent, err.consentContact, f.withdraw, f.consentAck, form.submit; thank-you page success.referenceHelp, success.copySent, success.next1-4/nextTitle, success.safe*, success.withdraw*, success.channel* (success.next and success.whatsapp removed: the page links to the WhatsApp Channel, not the group). Consent wording must be exact.",
@@ -150,8 +151,8 @@ TulusI18n.register({
     'success.channelTitle': 'Want TulusSG news?',
     'success.channelBody': 'Follow our WhatsApp Channel for news and activity updates. This is your choice and has nothing to do with your registration or whether you are selected. Other followers cannot see your name or phone number.',
     'success.channel': 'Follow our WhatsApp Channel',
-    'f.use.operator': 'Share Your Story is an initiative presented by TulusSG and operated by Zan J Private Limited, which is responsible for the information you provide.',
-    'footer.operator': 'Share Your Story is an initiative presented by TulusSG and operated by Zan J Private Limited.',
+    'f.use.operator': 'Share Your Story is an initiative presented by TulusSG and operated by The Digital Systems Architect. The Digital Systems Architect is a brand operated by Zan J Private Limited (UEN: 202616105R), which is responsible for the information you provide.',
+    'footer.operator': 'Share Your Story is an initiative presented by TulusSG and operated by The Digital Systems Architect.',
   },
 
   id: {
@@ -263,8 +264,8 @@ TulusI18n.register({
     'success.channelTitle': 'Ingin kabar dari TulusSG?',
     'success.channelBody': 'Ikuti Saluran WhatsApp kami untuk berita dan kabar kegiatan. Ini pilihan Anda dan tidak ada hubungannya dengan pendaftaran Anda atau apakah Anda terpilih. Pengikut lain tidak dapat melihat nama atau nomor telepon Anda.',
     'success.channel': 'Ikuti Saluran WhatsApp kami',
-    'f.use.operator': 'Share Your Story adalah inisiatif yang dipersembahkan oleh TulusSG dan dijalankan oleh Zan J Private Limited, yang bertanggung jawab atas informasi yang Anda berikan.',
-    'footer.operator': 'Share Your Story adalah inisiatif yang dipersembahkan oleh TulusSG dan dijalankan oleh Zan J Private Limited.',
+    'f.use.operator': 'Share Your Story adalah inisiatif yang dipersembahkan oleh TulusSG dan dijalankan oleh The Digital Systems Architect. The Digital Systems Architect adalah merek yang dijalankan oleh Zan J Private Limited (UEN: 202616105R), yang bertanggung jawab atas informasi yang Anda berikan.',
+    'footer.operator': 'Share Your Story adalah inisiatif yang dipersembahkan oleh TulusSG dan dijalankan oleh The Digital Systems Architect.',
   },
 
   tl: {
@@ -376,8 +377,8 @@ TulusI18n.register({
     'success.channelTitle': 'Gusto mo ng balita mula sa TulusSG?',
     'success.channelBody': 'I-follow ang aming WhatsApp Channel para sa mga balita at update sa activities. Ikaw ang bahala rito at wala itong kinalaman sa registration mo o kung mapipili ka. Hindi makikita ng ibang followers ang pangalan o phone number mo.',
     'success.channel': 'I-follow ang aming WhatsApp Channel',
-    'f.use.operator': 'Ang Share Your Story ay isang proyektong hatid ng TulusSG at pinapatakbo ng Zan J Private Limited, na siyang responsable sa impormasyong ibinibigay mo.',
-    'footer.operator': 'Ang Share Your Story ay isang proyektong hatid ng TulusSG at pinapatakbo ng Zan J Private Limited.',
+    'f.use.operator': 'Ang Share Your Story ay isang proyektong hatid ng TulusSG at pinapatakbo ng The Digital Systems Architect. Ang The Digital Systems Architect ay isang brand na pinapatakbo ng Zan J Private Limited (UEN: 202616105R), na siyang responsable sa impormasyong ibinibigay mo.',
+    'footer.operator': 'Ang Share Your Story ay isang proyektong hatid ng TulusSG at pinapatakbo ng The Digital Systems Architect.',
   },
 
   my: {
@@ -489,7 +490,7 @@ TulusI18n.register({
     'success.channelTitle': 'TulusSG သတင်းများ လိုချင်ပါသလား။',
     'success.channelBody': 'သတင်းများနှင့် လုပ်ဆောင်ချက် အသစ်များကို သိရှိရန် ကျွန်ုပ်တို့၏ WhatsApp Channel ကို follow လုပ်ပါ။ ၎င်းသည် သင့်ဆန္ဒအလျောက်သာ ဖြစ်ပြီး သင့်စာရင်းသွင်းမှု သို့မဟုတ် သင် ရွေးချယ်ခံရခြင်း ရှိ/မရှိနှင့် မသက်ဆိုင်ပါ။ follow လုပ်ထားသော အခြားသူများသည် သင့်အမည် သို့မဟုတ် ဖုန်းနံပါတ်ကို မမြင်နိုင်ပါ။',
     'success.channel': 'ကျွန်ုပ်တို့၏ WhatsApp Channel ကို follow လုပ်ရန်',
-    'f.use.operator': 'Share Your Story သည် TulusSG က တင်ဆက်ပြီး Zan J Private Limited က လည်ပတ်သော အစီအစဉ်ဖြစ်ပြီး သင်ပေးသော အချက်အလက်များအတွက် Zan J Private Limited က တာဝန်ရှိပါသည်။',
-    'footer.operator': 'Share Your Story သည် TulusSG က တင်ဆက်ပြီး Zan J Private Limited က လည်ပတ်သော အစီအစဉ်ဖြစ်ပါသည်။',
+    'f.use.operator': 'Share Your Story သည် TulusSG က တင်ဆက်ပြီး The Digital Systems Architect က လည်ပတ်သော အစီအစဉ်ဖြစ်ပါသည်။ The Digital Systems Architect သည် Zan J Private Limited (UEN: 202616105R) က လည်ပတ်သော အမှတ်တံဆိပ် (brand) ဖြစ်ပြီး သင်ပေးသော အချက်အလက်များအတွက် Zan J Private Limited က တာဝန်ရှိပါသည်။',
+    'footer.operator': 'Share Your Story သည် TulusSG က တင်ဆက်ပြီး The Digital Systems Architect က လည်ပတ်သော အစီအစဉ်ဖြစ်ပါသည်။',
   },
 });
