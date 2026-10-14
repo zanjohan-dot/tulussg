@@ -56,7 +56,7 @@
           <option value="my" lang="my">မြန်မာဘာသာ</option>
         </select>
       </div>
-      <p class="lang-note" id="lang-note" data-i18n="lang.notice">This page is available in English, Bahasa Indonesia, Filipino and Burmese. Each version is meant to say the same thing. If anything is unclear, please ask us at admin@tulussg.com before you submit.</p>
+      <p class="lang-note" id="lang-note" data-i18n="lang.notice">This page is available in English, Bahasa Indonesia, Filipino and Burmese. Each version is meant to say the same thing. If anything is unclear, please ask us at admin@tulussg.com before you submit. You can also tell us there if a translation seems wrong.</p>
     </div>
   </header>
 
@@ -137,7 +137,7 @@
 
           <div class="field" data-field="phone">
             <label class="label" for="phone"><span data-i18n="f.phone">WhatsApp number</span><span class="req" aria-hidden="true">*</span><span class="sr-only" data-i18n="form.required">required</span></label>
-            <p class="help" id="phone-help" data-i18n="f.phone.help">Choose your country code, then type your number.</p>
+            <p class="help" id="phone-help" data-i18n="f.phone.help">Choose your country code, then type your number. If your country is not listed, type your full number starting with + and the country code.</p>
             <div class="phone-row">
               <select class="input" id="phoneCountry" name="phoneCountry" autocomplete="tel-country-code" aria-label="Country code" data-i18n-attr="aria-label:f.phone.code" aria-describedby="phone-help">
                 <option value="65" selected>SG +65</option>
@@ -198,9 +198,9 @@
 
           <div class="field" data-field="story">
             <label class="label" for="story"><span data-i18n="f.story">Your story</span> <span class="opt">(<span data-i18n="form.optional">optional</span>)</span></label>
-            <p class="help" id="story-help" data-i18n="f.story.help">Tell us a little about the experience you would like to share. A few sentences are enough, and you can write in any language you are comfortable with. You can also leave this blank and tell us your story when we contact you. Please do not include your employer's name or address, or personal details about other people.</p>
-            <textarea id="story" name="story" maxlength="1000" rows="4" aria-describedby="story-help story-error"></textarea>
-            <p class="count" aria-hidden="true"><span id="story-count">0</span> / 1,000 <span data-i18n="f.story.chars">characters</span></p>
+            <p class="help" id="story-help" data-i18n="f.story.help">Tell us a little about the experience you would like to share. A few sentences are enough, and you can write in any language you are comfortable with. You can also leave this blank. You can tell us more about your story if we contact you. Please do not include your employer's name or address, or personal details about other people.</p>
+            <textarea id="story" name="story" maxlength="6000" rows="4" aria-describedby="story-help story-error"></textarea>
+            <p class="count" aria-hidden="true"><span id="story-count">0</span> / 2,000 <span data-i18n="f.story.chars">characters</span></p>
             <p class="error" id="story-error" hidden></p>
           </div>
 

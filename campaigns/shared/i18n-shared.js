@@ -1,17 +1,17 @@
 /*
  * Shared text for every campaign page and the /campaigns/ hub: navigation, footer, privacy link,
  * generic form states and errors, campaign statuses.
- * TRANSLATION STATUS: id, tl and my were accepted for launch by Zan Johan on 5 Oct 2026 (owner acceptance). lang.notice
- * changed 13 Oct 2026 (consent v7: neutral language notice, no "English prevails"); the new id/tl/my text is a Claude
- * draft AWAITING independent native-speaker review.
+ * TRANSLATION STATUS: id, tl and my AI-audited 15 Oct 2026 and accepted for launch by Zan Johan on 15 Oct 2026
+ * (AI-reviewed, NOT independently human-certified). lang.notice: neutral language notice (consent v7, no "English
+ * prevails"); 15 Oct 2026 it also invites participants to report a translation problem.
  */
 TulusI18n.register({
   name: 'shared',
-  review: { en: 'source', id: 'accepted-by-owner-2026-10-05', tl: 'accepted-by-owner-2026-10-05', my: 'accepted-by-owner-2026-10-05' },
+  review: { en: 'source', id: 'ai-audited-2026-10-15-accepted-by-owner', tl: 'ai-audited-2026-10-15-accepted-by-owner', my: 'ai-audited-2026-10-15-accepted-by-owner' },
 
   en: {
     'nav.language': 'Language',
-    'lang.notice': 'This page is available in English, Bahasa Indonesia, Filipino and Burmese. Each version is meant to say the same thing. If anything is unclear, please ask us at admin@tulussg.com before you submit.',
+    'lang.notice': 'This page is available in English, Bahasa Indonesia, Filipino and Burmese. Each version is meant to say the same thing. If anything is unclear, please ask us at admin@tulussg.com before you submit. You can also tell us there if a translation seems wrong.',
     'nav.home': 'TulusSG home',
     'form.required': 'required',
     'form.optional': 'optional',
@@ -44,7 +44,7 @@ TulusI18n.register({
 
   id: {
     'nav.language': 'Bahasa',
-    'lang.notice': 'Halaman ini tersedia dalam bahasa Inggris, Bahasa Indonesia, Filipino, dan Burma. Setiap versi dimaksudkan untuk menyampaikan hal yang sama. Jika ada yang kurang jelas, mohon tanyakan kepada kami di admin@tulussg.com sebelum Anda mengirim.',
+    'lang.notice': 'Halaman ini tersedia dalam bahasa Inggris, Bahasa Indonesia, Filipino, dan Burma. Setiap versi dimaksudkan untuk menyampaikan hal yang sama. Jika ada yang kurang jelas, mohon tanyakan kepada kami di admin@tulussg.com sebelum Anda mengirim. Anda juga dapat memberi tahu kami di alamat tersebut jika ada terjemahan yang tampaknya keliru.',
     'nav.home': 'Beranda TulusSG',
     'form.required': 'wajib',
     'form.optional': 'tidak wajib',
@@ -77,7 +77,7 @@ TulusI18n.register({
 
   tl: {
     'nav.language': 'Wika',
-    'lang.notice': 'Available ang pahinang ito sa English, Bahasa Indonesia, Filipino at Burmese. Pareho dapat ang sinasabi ng bawat bersyon. Kung may hindi malinaw, pakitanong muna sa amin sa admin@tulussg.com bago ka magpadala.',
+    'lang.notice': 'Available ang pahinang ito sa English, Bahasa Indonesia, Filipino at Burmese. Pareho dapat ang sinasabi ng bawat bersyon. Kung may hindi malinaw, pakitanong muna sa amin sa admin@tulussg.com bago ka magpadala. Puwede mo ring sabihin sa amin doon kung may salin na mukhang mali.',
     'nav.home': 'TulusSG home',
     'form.required': 'kailangan',
     'form.optional': 'opsyonal',
@@ -110,7 +110,7 @@ TulusI18n.register({
 
   my: {
     'nav.language': 'ဘာသာစကား',
-    'lang.notice': 'ဤစာမျက်နှာကို အင်္ဂလိပ်၊ အင်ဒိုနီးရှား၊ ဖိလစ်ပိုင်နှင့် မြန်မာ ဘာသာများဖြင့် ရရှိနိုင်ပါသည်။ ဗားရှင်းတိုင်းသည် အကြောင်းအရာ တူညီစေရန် ရည်ရွယ်ပါသည်။ နားမလည်သည်များ ရှိပါက မပို့မီ admin@tulussg.com တွင် ကျွန်ုပ်တို့ကို မေးမြန်းပါ။',
+    'lang.notice': 'ဤစာမျက်နှာကို အင်္ဂလိပ်၊ အင်ဒိုနီးရှား၊ ဖိလစ်ပိုင်နှင့် မြန်မာ ဘာသာများဖြင့် ရရှိနိုင်ပါသည်။ ဗားရှင်းတိုင်းသည် အကြောင်းအရာ တူညီစေရန် ရည်ရွယ်ပါသည်။ နားမလည်သည်များ ရှိပါက မပို့မီ admin@tulussg.com တွင် ကျွန်ုပ်တို့ကို မေးမြန်းပါ။ ဘာသာပြန်ချက် မှားနေသည်ဟု ထင်ပါကလည်း ထိုလိပ်စာသို့ ကျွန်ုပ်တို့ကို အသိပေးနိုင်ပါသည်။',
     'nav.home': 'TulusSG ပင်မစာမျက်နှာ',
     'form.required': 'မဖြစ်မနေ',
     'form.optional': 'ချန်လှပ်နိုင်သည်',

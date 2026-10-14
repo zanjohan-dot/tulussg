@@ -3,13 +3,15 @@
  * (checked by _tests/check-i18n.mjs). Shared text (navigation, footer, generic errors) is in
  * /campaigns/shared/i18n-shared.js.
  *
- * TRANSLATION STATUS: id, tl and my were accepted for launch by Zan Johan on 5 Oct 2026 (owner acceptance), BUT the
- * consent v7 strings (13 Oct 2026) are Claude drafts AWAITING independent native-speaker review, and the page must not
- * be published until that review is done. No "English prevails" statement (Document 1; Privacy Policy section 14).
+ * TRANSLATION STATUS (15 Oct 2026): id, tl and my were AI-audited on 15 Oct 2026 (blind AI re-translation, comparison,
+ * Google Translate back-translation of every string; 103 corrections) and Zan Johan accepted the AI-reviewed text for
+ * launch on 15 Oct 2026. These are AI-reviewed translations, NOT independently human-certified. Participants can report
+ * a translation problem (shared lang.notice); any material error must be corrected promptly. Audit records: private
+ * repo docs/review-packs/v7-2026-10-15-audit/. No "English prevails" statement (Document 1; Privacy Policy section 14).
  */
 TulusI18n.register({
   name: 'share-your-story',
-  review: { en: 'source', id: 'v7-draft-awaiting-review', tl: 'v7-draft-awaiting-review', my: 'v7-draft-awaiting-review' },
+  review: { en: 'source', id: 'ai-audited-2026-10-15-accepted-by-owner', tl: 'ai-audited-2026-10-15-accepted-by-owner', my: 'ai-audited-2026-10-15-accepted-by-owner' },
   reviewNotes: {
     "id": [
       "Uses formal \"Anda\". Confirm this vs. the warmer \"kamu\" for the PMI audience.",
@@ -20,6 +22,7 @@ TulusI18n.register({
       "trust.be \"Magpakatotoo ka lang.\" for \"Just be yourself.\""
     ],
     "all": [
+      "CHANGED 2026-10-15 (Zan decisions F1-F4): f.story.help \"when we contact you\" -> \"You can tell us more about your story if we contact you\" (EN + id/tl/my); story limit 1,000 -> 2,000 user-perceived characters (err.story_too_long; app.js + API); f.phone.help says any country code can be used; id hero.tag keeps the official name \"Share Your Story\"; shared lang.notice invites reports of translation problems.",
       "NEW 2026-10-14 (Zan approval: Zan J Private Limited is the responsible organisation): f.use.operator (form notice) and footer.operator (footer); id/tl/my drafted by Claude, AWAITING native review. Consent version bumped to v7-2026-10-14.",
       "CHANGED 2026-10-13 (consent v7, Documents 1 and 6; English approved by Zan Johan): the required media consent is REMOVED (f.consentMedia, f.consentMediaNote, f.mediaNote, err.consentMedia). NEW/CHANGED, drafted by Claude, AWAITING native review: f.story.help, f.story.chars, err.story_too_long, f.social.help, f.after.*, f.use.*, f.consent, err.consentContact, f.withdraw, f.consentAck, form.submit; thank-you page success.referenceHelp, success.copySent, success.next1-4/nextTitle, success.safe*, success.withdraw*, success.channel* (success.next and success.whatsapp removed: the page links to the WhatsApp Channel, not the group). Consent wording must be exact.",
       "CHANGED 2026-10-01 (security): the email copy now needs the address confirmed by a link first: f.copyEmail.help, success.copySent, success.copyFailed. Review in every language.",
@@ -64,7 +67,7 @@ TulusI18n.register({
     'form.title': 'Interested? Tell us a little about your story.',
     'f.name': 'Name',
     'f.phone': 'WhatsApp number',
-    'f.phone.help': 'Choose your country code, then type your number.',
+    'f.phone.help': 'Choose your country code, then type your number. If your country is not listed, type your full number starting with + and the country code.',
     'f.phone.placeholder': 'e.g. 9123 4567',
     'f.phone.code': 'Country code',
     'f.nationality': 'Nationality',
@@ -84,7 +87,7 @@ TulusI18n.register({
     'lang.my': 'Burmese',
     'lang.other': 'Other',
     'f.story': 'Your story',
-    'f.story.help': 'Tell us a little about the experience you would like to share. A few sentences are enough, and you can write in any language you are comfortable with. You can also leave this blank and tell us your story when we contact you. Please do not include your employer\'s name or address, or personal details about other people.',
+    'f.story.help': 'Tell us a little about the experience you would like to share. A few sentences are enough, and you can write in any language you are comfortable with. You can also leave this blank. You can tell us more about your story if we contact you. Please do not include your employer\'s name or address, or personal details about other people.',
     'f.social': 'Your social media',
     'f.social.help': 'Choose the platform, then type your username. This is optional, and leaving it blank will not count against you. If you share an account, we may look at what you have posted publicly.',
     'f.social.placeholder': '@yourname',
@@ -124,7 +127,7 @@ TulusI18n.register({
     'social.tiktok': 'TulusSG on TikTok',
     'social.youtube': 'TulusSG on YouTube',
     'f.story.chars': 'characters',
-    'err.story_too_long': 'Your story is too long. Please keep it under 1,000 characters.',
+    'err.story_too_long': 'Your story is too long. Please keep it under 2,000 characters.',
     'f.after.title': 'What happens after you send this form?',
     'f.after.p1': 'We will read every form and may contact you on WhatsApp to learn more about your experience. Only a small number of people will be selected.',
     'f.after.p2': 'Sending this form does not mean you agree to be filmed or to have your story published. If you are selected, we will explain the production and ask for your separate written permission before any filming or recording. You decide whether to take part.',
@@ -154,7 +157,7 @@ TulusI18n.register({
   id: {
     'meta.title': 'Share Your Story | TulusSG',
     'meta.description': 'TulusSG mencari empat pekerja rumah tangga di Singapura untuk membagikan cerita mereka dalam produksi media yang akan datang.',
-    'hero.tag': 'Proyek cerita TulusSG',
+    'hero.tag': 'Share Your Story · Proyek cerita TulusSG',
     'hero.title': 'Bagikan cerita Anda',
     'hero.lead': 'Kami mencari 4 pekerja rumah tangga di Singapura untuk membagikan cerita mereka dalam produksi media TulusSG yang akan datang.',
     'hero.line1': 'Bukan cerita yang sempurna.',
@@ -177,7 +180,7 @@ TulusI18n.register({
     'form.title': 'Tertarik? Ceritakan sedikit tentang kisah Anda.',
     'f.name': 'Nama',
     'f.phone': 'Nomor WhatsApp',
-    'f.phone.help': 'Pilih kode negara Anda, lalu ketik nomor Anda.',
+    'f.phone.help': 'Pilih kode negara Anda, lalu ketik nomor Anda. Jika negara Anda tidak ada dalam daftar, ketik nomor lengkap Anda yang diawali dengan + dan kode negara.',
     'f.phone.placeholder': 'misalnya 9123 4567',
     'f.phone.code': 'Kode negara',
     'f.nationality': 'Kewarganegaraan',
@@ -197,7 +200,7 @@ TulusI18n.register({
     'lang.my': 'Bahasa Myanmar (Burma)',
     'lang.other': 'Lainnya',
     'f.story': 'Cerita Anda',
-    'f.story.help': 'Ceritakan sedikit tentang pengalaman yang ingin Anda bagikan. Beberapa kalimat saja sudah cukup, dan Anda boleh menulis dalam bahasa apa pun yang nyaman bagi Anda. Anda juga boleh mengosongkan kolom ini dan menceritakan kisah Anda saat kami menghubungi Anda. Mohon jangan mencantumkan nama atau alamat majikan Anda, atau data pribadi orang lain.',
+    'f.story.help': 'Ceritakan sedikit tentang pengalaman yang ingin Anda bagikan. Beberapa kalimat saja sudah cukup, dan Anda boleh menulis dalam bahasa apa pun yang nyaman bagi Anda. Anda juga boleh mengosongkan kolom ini. Anda dapat menceritakan lebih banyak tentang kisah Anda jika kami menghubungi Anda. Mohon jangan mencantumkan nama atau alamat majikan Anda, atau data pribadi orang lain.',
     'f.social': 'Media sosial Anda',
     'f.social.help': 'Pilih platformnya, lalu ketik nama pengguna Anda. Ini tidak wajib, dan mengosongkannya tidak akan merugikan Anda. Jika Anda mencantumkan akun, kami mungkin melihat apa yang Anda unggah secara publik.',
     'f.social.placeholder': '@namaanda',
@@ -237,7 +240,7 @@ TulusI18n.register({
     'social.tiktok': 'TulusSG di TikTok',
     'social.youtube': 'TulusSG di YouTube',
     'f.story.chars': 'karakter',
-    'err.story_too_long': 'Cerita Anda terlalu panjang. Mohon buat kurang dari 1.000 karakter.',
+    'err.story_too_long': 'Cerita Anda terlalu panjang. Mohon buat kurang dari 2.000 karakter.',
     'f.after.title': 'Apa yang terjadi setelah Anda mengirim formulir ini?',
     'f.after.p1': 'Kami akan membaca setiap formulir dan mungkin menghubungi Anda lewat WhatsApp untuk mengenal pengalaman Anda lebih jauh. Hanya sedikit orang yang akan terpilih.',
     'f.after.p2': 'Mengirim formulir ini tidak berarti Anda setuju untuk difilmkan atau agar cerita Anda dipublikasikan. Jika Anda terpilih, kami akan menjelaskan produksinya dan meminta izin tertulis Anda secara terpisah sebelum pengambilan gambar atau perekaman apa pun. Anda yang memutuskan apakah akan ikut serta.',
@@ -290,7 +293,7 @@ TulusI18n.register({
     'form.title': 'Interesado? Ikuwento sa amin nang kaunti ang iyong kuwento.',
     'f.name': 'Pangalan',
     'f.phone': 'WhatsApp number',
-    'f.phone.help': 'Piliin ang country code mo, saka i-type ang number mo.',
+    'f.phone.help': 'Piliin ang country code mo, saka i-type ang number mo. Kung wala sa listahan ang bansa mo, i-type ang buong number mo na nagsisimula sa + at country code.',
     'f.phone.placeholder': 'hal. 9123 4567',
     'f.phone.code': 'Country code',
     'f.nationality': 'Nasyonalidad',
@@ -310,7 +313,7 @@ TulusI18n.register({
     'lang.my': 'Burmese',
     'lang.other': 'Iba pa',
     'f.story': 'Ang kuwento mo',
-    'f.story.help': 'Ikuwento sa amin nang kaunti ang karanasang gusto mong ibahagi. Sapat na ang ilang pangungusap, at puwede kang sumulat sa kahit anong wikang komportable ka. Puwede mo ring iwanang blangko ito at ikuwento sa amin kapag kinontak ka namin. Huwag isama ang pangalan o address ng employer mo, o personal na detalye ng ibang tao.',
+    'f.story.help': 'Ikuwento sa amin nang kaunti ang karanasang gusto mong ibahagi. Sapat na ang ilang pangungusap, at puwede kang sumulat sa kahit anong wikang komportable ka. Puwede mo ring iwanang blangko ito. Kung kokontakin ka namin, puwede mong ikuwento sa amin nang mas detalyado. Huwag isama ang pangalan o address ng employer mo, o personal na detalye ng ibang tao.',
     'f.social': 'Ang social media mo',
     'f.social.help': 'Piliin ang platform, saka i-type ang username mo. Opsyonal ito, at hindi makakabawas sa tsansa mong mapili kung iiwan mo itong blangko. Kung magbabahagi ka ng account, maaari naming tingnan ang mga pinost mo nang publiko.',
     'f.social.placeholder': '@pangalanmo',
@@ -350,7 +353,7 @@ TulusI18n.register({
     'social.tiktok': 'TulusSG sa TikTok',
     'social.youtube': 'TulusSG sa YouTube',
     'f.story.chars': 'character',
-    'err.story_too_long': 'Masyadong mahaba ang kuwento mo. Pakipaikliin ito nang mas mababa sa 1,000 character.',
+    'err.story_too_long': 'Masyadong mahaba ang kuwento mo. Pakipaikliin ito nang mas mababa sa 2,000 character.',
     'f.after.title': 'Ano ang mangyayari pagkatapos mong ipadala ang form na ito?',
     'f.after.p1': 'Babasahin namin ang bawat form at maaari ka naming kontakin sa WhatsApp para mas makilala ang karanasan mo. Iilang tao lang ang mapipili.',
     'f.after.p2': 'Ang pagpapadala ng form na ito ay hindi nangangahulugang pumapayag kang ma-film, o pumapayag kang ma-publish ang kuwento mo. Kung mapili ka, ipapaliwanag namin ang production at hihingi kami ng hiwalay mong nakasulat na pahintulot bago ang anumang filming o recording. Ikaw ang magpapasya kung sasali ka.',
@@ -403,7 +406,7 @@ TulusI18n.register({
     'form.title': 'စိတ်ဝင်စားပါသလား။ သင့်ဇာတ်လမ်းအကြောင်း အနည်းငယ် ပြောပြပါ။',
     'f.name': 'အမည်',
     'f.phone': 'WhatsApp နံပါတ်',
-    'f.phone.help': 'နိုင်ငံကုဒ်ကို ရွေးပြီး သင့်ဖုန်းနံပါတ်ကို ရိုက်ထည့်ပါ။',
+    'f.phone.help': 'နိုင်ငံကုဒ်ကို ရွေးပြီး သင့်ဖုန်းနံပါတ်ကို ရိုက်ထည့်ပါ။ သင့်နိုင်ငံ စာရင်းတွင် မပါပါက + နှင့် နိုင်ငံကုဒ်ဖြင့် စသော ဖုန်းနံပါတ် အပြည့်အစုံကို ရိုက်ထည့်ပါ။',
     'f.phone.placeholder': 'ဥပမာ 9123 4567',
     'f.phone.code': 'နိုင်ငံကုဒ်',
     'f.nationality': 'နိုင်ငံသား',
@@ -423,7 +426,7 @@ TulusI18n.register({
     'lang.my': 'မြန်မာ',
     'lang.other': 'အခြား',
     'f.story': 'သင့်ဇာတ်လမ်း',
-    'f.story.help': 'သင် မျှဝေလိုသော အတွေ့အကြုံအကြောင်း အနည်းငယ် ပြောပြပါ။ စာကြောင်းအနည်းငယ်ဆိုလျှင် လုံလောက်ပြီး သင်အဆင်ပြေသော မည်သည့်ဘာသာစကားဖြင့်မဆို ရေးနိုင်ပါသည်။ ဤအကွက်ကို ကွက်လပ်ထားခဲ့ပြီး ကျွန်ုပ်တို့ ဆက်သွယ်ပါက သင့်ဇာတ်လမ်းကို ပြောပြနိုင်ပါသည်။ သင့်အလုပ်ရှင်၏ အမည် သို့မဟုတ် လိပ်စာ၊ သို့မဟုတ် အခြားသူများ၏ ကိုယ်ရေးအချက်အလက်များကို မထည့်ပါနှင့်။',
+    'f.story.help': 'သင် မျှဝေလိုသော အတွေ့အကြုံအကြောင်း အနည်းငယ် ပြောပြပါ။ စာကြောင်းအနည်းငယ်ဆိုလျှင် လုံလောက်ပြီး သင်အဆင်ပြေသော မည်သည့်ဘာသာစကားဖြင့်မဆို ရေးနိုင်ပါသည်။ ဤအကွက်ကို ကွက်လပ်ထားခဲ့နိုင်ပါသည်။ ကျွန်ုပ်တို့က သင့်ကို ဆက်သွယ်ပါက သင့်ဇာတ်လမ်းအကြောင်း သင် ပိုမို ပြောပြနိုင်ပါသည်။ သင့်အလုပ်ရှင်၏ အမည် သို့မဟုတ် လိပ်စာ၊ သို့မဟုတ် အခြားသူများ၏ ကိုယ်ရေးအချက်အလက်များကို မထည့်ပါနှင့်။',
     'f.social': 'သင့် ဆိုရှယ်မီဒီယာ',
     'f.social.help': 'ပလက်ဖောင်းကို ရွေးပြီး သင့် username ကို ရိုက်ထည့်ပါ။ ဤအချက်ကို မဖြည့်လည်း ရပါသည်။ ကွက်လပ်ထားခဲ့ခြင်းသည် သင် ရွေးချယ်ခံရနိုင်ခြေကို မထိခိုက်ပါ။ အကောင့်ကို ပေးထားပါက သင် အများမြင်အောင် တင်ထားသည်များကို ကျွန်ုပ်တို့ ကြည့်နိုင်ပါသည်။',
     'f.social.placeholder': '@yourname',
@@ -463,7 +466,7 @@ TulusI18n.register({
     'social.tiktok': 'TikTok တွင် TulusSG',
     'social.youtube': 'YouTube တွင် TulusSG',
     'f.story.chars': 'စာလုံး',
-    'err.story_too_long': 'သင့်ဇာတ်လမ်း ရှည်လွန်းပါသည်။ စာလုံး 1,000 အောက်သာ ရေးပါ။',
+    'err.story_too_long': 'သင့်ဇာတ်လမ်း ရှည်လွန်းပါသည်။ စာလုံး 2,000 အောက်သာ ရေးပါ။',
     'f.after.title': 'ဤဖောင်ကို ပို့ပြီးနောက် ဘာဆက်ဖြစ်မည်နည်း။',
     'f.after.p1': 'ဖောင်တိုင်းကို ကျွန်ုပ်တို့ ဖတ်ပြီး သင့်အတွေ့အကြုံအကြောင်း ပိုသိရန် WhatsApp မှတစ်ဆင့် ဆက်သွယ်နိုင်ပါသည်။ လူအနည်းငယ်ကိုသာ ရွေးချယ်ပါမည်။',
     'f.after.p2': 'ဤဖောင်ကို ပို့ခြင်းသည် သင့်ကို ရိုက်ကူးရန် သို့မဟုတ် သင့်ဇာတ်လမ်းကို ထုတ်ဝေရန် သဘောတူသည်ဟု မဆိုလိုပါ။ သင် ရွေးချယ်ခံရပါက ထုတ်လုပ်မှုအကြောင်း ရှင်းပြပြီး ရိုက်ကူးခြင်း သို့မဟုတ် အသံဖမ်းခြင်း မပြုမီ သီးခြား စာဖြင့်ရေးသားထားသော ခွင့်ပြုချက်ကို တောင်းပါမည်။ ပါဝင်မပါဝင်ကို သင်ကိုယ်တိုင် ဆုံးဖြတ်ပါသည်။',

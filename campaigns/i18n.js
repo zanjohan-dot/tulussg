@@ -5,7 +5,7 @@
  */
 TulusI18n.register({
   name: 'campaigns-hub',
-  review: { en: 'source', id: 'accepted-by-owner-2026-10-05', tl: 'accepted-by-owner-2026-10-05', my: 'accepted-by-owner-2026-10-05' },
+  review: { en: 'source', id: 'ai-audited-2026-10-15-accepted-by-owner', tl: 'ai-audited-2026-10-15-accepted-by-owner', my: 'ai-audited-2026-10-15-accepted-by-owner' },
 
   en: {
     'meta.title': 'Campaigns | TulusSG',

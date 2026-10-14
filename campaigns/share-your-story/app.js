@@ -6,7 +6,17 @@
 (function () {
   'use strict';
 
-  var STORY_MAX = 1000;
+  // Story limit: 2,000 user-perceived characters (grapheme clusters), so scripts such as Burmese, where one
+  // visible letter is often 2-4 Unicode code points, are not penalised. Mirrors storyLength() in the API.
+  // The textarea's maxlength (6000) is only a safety cap; the API also refuses more than 6000 code points.
+  var STORY_MAX = 2000;
+  var segmenter = (typeof Intl !== 'undefined' && Intl.Segmenter) ? new Intl.Segmenter(undefined, { granularity: 'grapheme' }) : null;
+  function storyLength(s) {
+    if (!segmenter) return Array.from(s).length; // older browsers: code points (stricter, never looser)
+    var n = 0, it = segmenter.segment(s)[Symbol.iterator]();
+    while (!it.next().done) n++;
+    return n;
+  }
   var SOCIAL_ROWS_MAX = 4;
 
   // The country-code dropdown and the number box are sent to the API as ONE international number
@@ -116,7 +126,7 @@
       if (v.nationality === 'other' && !v.nationalityOther.trim()) e.nationalityOther = 'required';
       if (!v.preferredLanguage) e.preferredLanguage = 'required';
       if (v.preferredLanguage === 'other' && !v.preferredLanguageOther.trim()) e.preferredLanguageOther = 'required';
-      if (v.story.length > STORY_MAX) e.story = 'story_too_long';
+      if (storyLength(v.story) > STORY_MAX) e.story = 'story_too_long';
       var badSocial = v.socialAccounts.filter(function (a) { return a.handle && !a.platform; }).length;
       if (badSocial) e.socialLinks = 'social_platform';
       if (v.emailCopy) {
@@ -130,7 +140,7 @@
     render: function (v) {
       document.querySelector('[data-field="nationalityOther"]').hidden = v.nationality !== 'other';
       document.querySelector('[data-field="preferredLanguageOther"]').hidden = v.preferredLanguage !== 'other';
-      document.getElementById('story-count').textContent = String(v.story.length);
+      document.getElementById('story-count').textContent = String(storyLength(v.story)).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
       document.getElementById('copy-email-box').hidden = !v.emailCopy;
     },
 
