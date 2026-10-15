@@ -45,8 +45,8 @@ TulusI18n.register({
   },
 
   en: {
-    'meta.title': 'Share Your Story | TulusSG',
-    'meta.description': 'TulusSG is looking for four domestic helpers in Singapore to share their stories in an upcoming media production.',
+    'meta.title': 'Share Your Story | Domestic Helpers in Singapore | TulusSG',
+    'meta.description': 'Every domestic helper has a story worth sharing. TulusSG invites 4 domestic helpers in Singapore to share theirs in an upcoming media production.',
     'hero.tag': 'A TulusSG story project',
     'hero.title': 'Share your story',
     'hero.lead': 'We\'re looking for 4 domestic helpers in Singapore to share their stories in an upcoming TulusSG media production.',
