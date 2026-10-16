@@ -63,6 +63,8 @@ a{color:var(--terra-d)}
 .tag{display:inline-flex;align-items:center;gap:8px;margin:14px 0 4px;font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--terra-d)} /* D8 */
 .tag::after{content:'';width:24px;height:1px;background:var(--terra);opacity:0.5}
 h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,9.6vw,72px);line-height:1;margin:0 0 10px;letter-spacing:-0.01em}
+/* Campaign name on two lines: "Share Your Story:" / audience (16 Oct 2026) */
+.h1-aud{display:block;margin-top:0.08em;font-size:0.72em;color:var(--terra-d)}
 .period{display:inline-block;margin:0 0 10px;padding:4px 12px;border:1px solid rgba(196,98,45,0.3);border-radius:100px;background:var(--white);color:var(--terra-d);font-size:14px;font-weight:600;line-height:1.4}
 .lead{margin:0 0 10px;font-size:16px;line-height:1.5}
 .lines{margin:0 0 16px;font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.2}
@@ -295,7 +297,7 @@ html[lang="my"] .card-body h3{font-size:23px;line-height:1.4}
 .cal-day.is-empty{background:none}
 .cal-day.is-today{box-shadow:inset 0 0 0 2px var(--terra)}
 .cal-num{font-size:13px;font-weight:600}
-.cal-chip{display:block;width:8px;height:8px;border-radius:50%;background:var(--terra-d);overflow:hidden}
+.cal-chip{display:block;width:8px;height:8px;border-radius:50%;background:var(--terra-d);overflow:hidden;pointer-events:none} /* phones: dots only; the list below the grid has the links */
 .cal-chip-text{display:none}
 .cal-chip.kind-event{background:#2F6B4F}
 .cal-chip.st-completed,.cal-chip.st-closed{background:#9C8E80}
@@ -323,7 +325,7 @@ html[lang="my"] .card-body h3{font-size:23px;line-height:1.4}
   .cal{padding:22px}
   .cal-day{align-items:stretch;min-height:92px;padding:6px}
   .cal-num{align-self:flex-start}
-  .cal-chip{width:auto;height:auto;padding:3px 6px;border-radius:6px;background:rgba(154,72,32,0.12);color:var(--terra-dd);font-size:12px;font-weight:600;line-height:1.25;text-decoration:none}
+  .cal-chip{pointer-events:auto;width:auto;height:auto;padding:3px 6px;border-radius:6px;background:rgba(154,72,32,0.12);color:var(--terra-dd);font-size:12px;font-weight:600;line-height:1.25;text-decoration:none}
   .cal-chip-text{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .cal-chip.kind-event{background:#DCEBE2;color:#1F4A36}
   .cal-chip.st-completed,.cal-chip.st-closed{background:#EDE7DF;color:#6B5C4E}

@@ -4,7 +4,7 @@
  * the date word order for each language are below (date.*).
  * Every language must have exactly the same keys (checked by _tests/check-i18n.mjs).
  * REVIEW: id, tl and my: the original hub text was AI-audited and accepted by the owner (14 Oct 2026). The directory
- * text added 16 Oct 2026 (view.*, filter.*, cat.*, sec.*, card.*, aud.*, cal.*, kind.*, date.*) is AI-translated and
+ * text added 16 Oct 2026 (campaign.share-your-story.title rename, view.*, filter.*, cat.*, sec.*, card.*, aud.*, cal.*, kind.*, date.*) is AI-translated and
  * PENDING native-speaker review, including the short Burmese weekday names.
  */
 TulusI18n.register({
@@ -50,7 +50,7 @@ TulusI18n.register({
     'date.short': '{d} {M}',
     'date.month': '{M} {Y}',
     'date.range': '{s1} – {f2}',
-    'campaign.share-your-story.title': 'Share Your Story',
+    'campaign.share-your-story.title': 'Share Your Story: Migrant Domestic Workers',
     'campaign.share-your-story.alt': 'A smiling woman sitting by Marina Bay in Singapore',
     'campaign.share-your-story-migrant-workers.title': 'Share Your Story: Migrant Workers',
     'campaign.share-your-story-migrant-workers.alt': 'Three men smiling and talking in a park in Singapore',
@@ -97,7 +97,7 @@ TulusI18n.register({
     'date.short': '{d} {M}',
     'date.month': '{M} {Y}',
     'date.range': '{s1} – {f2}',
-    'campaign.share-your-story.title': 'Share Your Story',
+    'campaign.share-your-story.title': 'Share Your Story: Pekerja Rumah Tangga Migran',
     'campaign.share-your-story.alt': 'Seorang perempuan tersenyum sambil duduk di dekat Marina Bay, Singapura',
     'campaign.share-your-story-migrant-workers.title': 'Share Your Story: Pekerja Migran',
     'campaign.share-your-story-migrant-workers.alt': 'Tiga pria tersenyum dan mengobrol di sebuah taman di Singapura',
@@ -144,7 +144,7 @@ TulusI18n.register({
     'date.short': '{d} {M}',
     'date.month': '{M} {Y}',
     'date.range': '{s1} – {f2}',
-    'campaign.share-your-story.title': 'Share Your Story',
+    'campaign.share-your-story.title': 'Share Your Story: Mga Migrant Domestic Worker',
     'campaign.share-your-story.alt': 'Isang nakangiting babae na nakaupo malapit sa Marina Bay sa Singapore',
     'campaign.share-your-story-migrant-workers.title': 'Share Your Story: Mga Migrant Worker',
     'campaign.share-your-story-migrant-workers.alt': 'Tatlong lalaking nakangiti at nag-uusap sa isang park sa Singapore',
@@ -191,7 +191,7 @@ TulusI18n.register({
     'date.short': '{M} {d} ရက်',
     'date.month': '{Y} ခုနှစ် {M}',
     'date.range': '{f1} – {s2}',
-    'campaign.share-your-story.title': 'Share Your Story',
+    'campaign.share-your-story.title': 'Share Your Story: ရွှေ့ပြောင်းအိမ်အကူများ',
     'campaign.share-your-story.alt': 'စင်္ကာပူ မရီနာဘေးအနီးတွင် ပြုံးရွှင်စွာ ထိုင်နေသော အမျိုးသမီးတစ်ဦး',
     'campaign.share-your-story-migrant-workers.title': 'Share Your Story: ရွှေ့ပြောင်းအလုပ်သမားများ',
     'campaign.share-your-story-migrant-workers.alt': 'စင်္ကာပူရှိ ပန်းခြံတစ်ခုတွင် ပြုံးရွှင်စွာ စကားပြောနေကြသော အမျိုးသား သုံးဦး',

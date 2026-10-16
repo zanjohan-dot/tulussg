@@ -86,7 +86,7 @@
     body.appendChild(meta);
     body.appendChild(el('h3', null, t('campaign.' + c.slug + '.title')));
     body.appendChild(el('p', 'card-date', dateLine(c)));
-    if (c.audience && c.audience.length === 1) body.appendChild(el('p', 'card-aud', t('aud.' + c.audience[0])));
+    // Audience is in the register (for a future filter); the card titles already name who each campaign is for.
     body.appendChild(el('span', c.pub === 'open' ? 'btn' : 'btn btn-outline', t('card.view')));
     box.appendChild(body);
     li.appendChild(box);
