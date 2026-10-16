@@ -24,7 +24,7 @@ TulusI18n.register({
     'campaign.sports-carnival.date': "Sunday, 10 January 2027",
     'campaign.sports-carnival.desc': "Five sports. Five experiences. A chance to try something new. Venue and time to be confirmed.",
     'campaign.sports-carnival.details': "See details",
-    'campaign.sports-carnival.alt': "TulusSG logo",
+    'campaign.sports-carnival.alt': "Illustration: people trying different sports in a park in Singapore",
   },
 
   id: {
@@ -43,7 +43,7 @@ TulusI18n.register({
     'campaign.sports-carnival.date': "Minggu, 10 Januari 2027",
     'campaign.sports-carnival.desc': "Lima olahraga. Lima pengalaman. Kesempatan mencoba hal baru. Tempat dan waktu akan dikonfirmasi.",
     'campaign.sports-carnival.details': "Lihat detail",
-    'campaign.sports-carnival.alt': "Logo TulusSG",
+    'campaign.sports-carnival.alt': "Ilustrasi: orang-orang mencoba berbagai olahraga di taman di Singapura",
   },
 
   tl: {
@@ -62,7 +62,7 @@ TulusI18n.register({
     'campaign.sports-carnival.date': "Linggo, 10 Enero 2027",
     'campaign.sports-carnival.desc': "Limang sport. Limang karanasan. Pagkakataong sumubok ng bago. Iaanunsyo pa ang lugar at oras.",
     'campaign.sports-carnival.details': "Tingnan ang detalye",
-    'campaign.sports-carnival.alt': "Logo ng TulusSG",
+    'campaign.sports-carnival.alt': "Ilustrasyon: mga taong sumusubok ng iba't ibang sport sa isang park sa Singapore",
   },
 
   my: {
@@ -81,6 +81,6 @@ TulusI18n.register({
     'campaign.sports-carnival.date': "2027 ခုနှစ် ဇန်နဝါရီ 10 ရက် (တနင်္ဂနွေ)",
     'campaign.sports-carnival.desc': "အားကစား ငါးမျိုး။ အတွေ့အကြုံ ငါးမျိုး။ အသစ်တစ်ခုကို စမ်းကြည့်ရန် အခွင့်အရေး။ နေရာနှင့် အချိန်ကို နောက်မှ အတည်ပြုပါမည်။",
     'campaign.sports-carnival.details': "အသေးစိတ်ကြည့်ရန်",
-    'campaign.sports-carnival.alt': "TulusSG လိုဂို",
+    'campaign.sports-carnival.alt': "သရုပ်ဖော်ပုံ - စင်္ကာပူရှိ ပန်းခြံတစ်ခုတွင် အားကစားအမျိုးမျိုး ကစားကြည့်နေကြသူများ",
   },
 });
