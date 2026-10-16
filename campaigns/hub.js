@@ -1,6 +1,7 @@
 /*
  * /campaigns/ hub — builds one card per campaign from /campaigns/campaigns.js, in the chosen language.
- * Hidden campaigns are never shown. Only 'active' campaigns get a call-to-action link.
+ * Hidden campaigns are never shown. Only 'active' campaigns get a registration call-to-action; information pages
+ * (form: false) get a "See details" link instead.
  */
 (function () {
   'use strict';
@@ -21,11 +22,13 @@
 
   function card(c) {
     var active = c.status === 'active';
+    // Information pages (form: false) link to their page even when not open for registration.
+    var linked = active || c.form === false;
     var key = 'campaign.' + c.slug + '.';
     var li = el('li');
     // Active cards are one big link; others are plain cards with no registration call-to-action.
-    var box = el(active ? 'a' : 'div', 'campaign-card' + (active ? '' : ' is-' + c.status));
-    if (active) box.href = TulusI18n.withLang('/campaigns/' + c.slug + '/');
+    var box = el(linked ? 'a' : 'div', 'campaign-card' + (active ? '' : ' is-' + c.status));
+    if (linked) box.href = TulusI18n.withLang('/campaigns/' + c.slug + '/');
 
     var media = el('div', 'card-img');
     var picture = el('picture');
@@ -44,8 +47,10 @@
     var body = el('div', 'card-body');
     body.appendChild(el('span', 'status-pill status-' + c.status, t('status.' + c.status)));
     body.appendChild(el('h2', null, t(key + 'title')));
+    if (t(key + 'date') !== key + 'date') body.appendChild(el('p', 'card-date', t(key + 'date')));
     body.appendChild(el('p', null, t(key + 'desc')));
     if (active) body.appendChild(el('span', 'btn', t(key + 'cta')));
+    else if (linked) body.appendChild(el('span', 'btn btn-outline', t(key + 'details')));
 
     box.appendChild(media);
     box.appendChild(body);

@@ -32,7 +32,13 @@ if (window.top !== window.self) {
     id: { htmlLang: 'id' },
     tl: { htmlLang: 'fil' },
     my: { htmlLang: 'my' },
+    // Extra languages (16 Oct 2026). A page offers them only if its language menu (#lang-select) lists them, so
+    // pages that do not (e.g. Share Your Story) are unchanged and fall back to English.
+    bn: { htmlLang: 'bn' },
+    ta: { htmlLang: 'ta' },
+    zh: { htmlLang: 'zh-Hans' },
   };
+  var CORE = ['en', 'id', 'tl', 'my'];
 
   /*
    * Privacy policy versions that have been LEGALLY REVIEWED and published. English is the authoritative draft.
@@ -44,7 +50,17 @@ if (window.top !== window.self) {
   var dictionaries = [];
   var listeners = [];
   var lang = 'en';
-  function known(code) { return typeof code === 'string' && Object.prototype.hasOwnProperty.call(LANGS, code); }
+  // Languages this page offers: the options of its language menu, or the four core languages.
+  function pageLangs() {
+    var select = document.getElementById('lang-select');
+    if (!select) return CORE;
+    var list = [];
+    for (var i = 0; i < select.options.length; i++) list.push(select.options[i].value);
+    return list;
+  }
+  function known(code) {
+    return typeof code === 'string' && Object.prototype.hasOwnProperty.call(LANGS, code) && pageLangs().indexOf(code) !== -1;
+  }
 
   function register(dict) {
     dictionaries.push(dict);
@@ -155,6 +171,6 @@ if (window.top !== window.self) {
     lang: function () { return lang; },
     onChange: function (fn) { listeners.push(fn); },
     withLang: withLang,
-    languages: Object.keys(LANGS),
+    languages: CORE.slice(),
   };
 })();
