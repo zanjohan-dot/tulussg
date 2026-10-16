@@ -8,7 +8,7 @@
   --ease:cubic-bezier(0.25,1,0.5,1);
   --error:#A3261A;
   --line:rgba(44,32,21,0.42);
-  --serif:'Cormorant Garant','Noto Sans Myanmar','Noto Sans Bengali','Noto Sans Tamil','Noto Sans SC',Georgia,serif;
+  --serif:'Cormorant Garamond',Georgia,'Noto Sans Myanmar','Noto Sans Bengali','Noto Sans Tamil','Noto Sans SC',serif;
   --sans:'Plus Jakarta Sans','Noto Sans Myanmar','Noto Sans Bengali','Noto Sans Tamil','Noto Sans SC',system-ui,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box}
