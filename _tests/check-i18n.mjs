@@ -67,7 +67,8 @@ for (const c of campaigns) {
   hubKeys.add(`status.${c.status}`);
   ['title', 'desc', 'alt'].forEach((k) => hubKeys.add(`campaign.${c.slug}.${k}`));
   if (c.status === 'active') hubKeys.add(`campaign.${c.slug}.cta`);
-  else if (c.form === false) hubKeys.add(`campaign.${c.slug}.details`);
+  if (c.status !== 'active' && c.form === false) hubKeys.add(`campaign.${c.slug}.details`);
+  if (c.opensAt) { hubKeys.add(`campaign.${c.slug}.details`); hubKeys.add(`campaign.${c.slug}.cta`); hubKeys.add('status.coming-soon'); hubKeys.add('status.closed'); }
 }
 resolve(hub.dicts, hubKeys, 'campaigns/index.html (hub)');
 

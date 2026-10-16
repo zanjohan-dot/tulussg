@@ -71,11 +71,14 @@
 
     // ------------------------------------------------------------ campaign status (public config)
     var entry = (window.TULUS_CAMPAIGNS || []).filter(function (c) { return c.slug === campaign; })[0];
-    var status = entry ? entry.status : 'closed';
+    var status = window.TULUS_CAMPAIGN_STATE ? window.TULUS_CAMPAIGN_STATE(entry) : (entry ? entry.status : 'closed');
     if (status !== 'active') {
       var state = status === 'closed' ? 'closed' : 'coming-soon'; // hidden campaigns aren't open either
       formView.hidden = true;
       statusView.hidden = false;
+      // Not open (yet, or any more): no "Share my story" button that leads to a closed form.
+      var heroBtn = document.querySelector('#hero-cta .btn');
+      if (heroBtn) heroBtn.style.display = 'none';
       document.getElementById('status-title').setAttribute('data-i18n', 'state.' + state + '.title');
       document.getElementById('status-body').setAttribute('data-i18n', 'state.' + state + '.body');
     }

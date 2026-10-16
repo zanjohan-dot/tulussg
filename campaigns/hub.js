@@ -10,6 +10,7 @@
   var grid = document.getElementById('campaign-grid');
   var empty = document.getElementById('hub-empty');
   var campaigns = (window.TULUS_CAMPAIGNS || [])
+    .map(function (c) { return Object.assign({}, c, { status: window.TULUS_CAMPAIGN_STATE ? window.TULUS_CAMPAIGN_STATE(c) : c.status }); })
     .filter(function (c) { return c.status !== 'hidden'; })
     .sort(function (a, b) { return (a.order || 0) - (b.order || 0); });
 
@@ -23,7 +24,8 @@
   function card(c) {
     var active = c.status === 'active';
     // Information pages (form: false) link to their page even when not open for registration.
-    var linked = active || c.form === false;
+    // Scheduled campaigns keep their page reachable before opening and after closing.
+    var linked = active || c.form === false || !!c.opensAt;
     var key = 'campaign.' + c.slug + '.';
     var li = el('li');
     // Active cards are one big link; others are plain cards with no registration call-to-action.
