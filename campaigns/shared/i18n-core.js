@@ -39,7 +39,7 @@ if (window.top !== window.self) {
    * When a reviewed translation is published (e.g. /privacy/id/index.html), add it here — e.g. id: '/privacy/id/'.
    * Until then, other languages link to the English policy with a translated "(in English)" note.
    */
-  var PRIVACY_PAGES = { en: '/privacy/' };
+  var PRIVACY_PAGES = { en: 'https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-16-v2/privacy/index.html' };
 
   var dictionaries = [];
   var listeners = [];
