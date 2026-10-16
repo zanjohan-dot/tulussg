@@ -78,7 +78,17 @@ for (const c of campaigns) {
   const page = load([...shared, `${dir}/i18n.js`]);
   checkDict(page.dicts[1], `${dir}/i18n.js`);
   if (c.form === false) { // information page: no form, so no form keys or fields list
-    resolve(page.dicts, new Set([...htmlKeys(`${dir}/index.html`), ...CORE_KEYS]), `${dir}/index.html`);
+    const keys = new Set([...htmlKeys(`${dir}/index.html`), ...CORE_KEYS]);
+    resolve(page.dicts, keys, `${dir}/index.html`);
+    // Extra languages offered by this page's language menu (e.g. bn, ta, zh): every key on the page must exist in
+    // that language (page file or shared file), so nothing silently falls back to English.
+    const html = fs.readFileSync(path.join(root, dir, 'index.html'), 'utf8');
+    const offered = [...html.matchAll(/<option value="([a-z]{2})"/g)].map((m) => m[1]);
+    for (const l of offered.filter((x) => !LANGS.includes(x))) {
+      const missing = [...keys].filter((k) => !page.dicts.some((d) => d[l] && Object.prototype.hasOwnProperty.call(d[l], k)));
+      if (missing.length) problems.push(`${dir}/index.html [${l}] untranslated: ${missing.join(', ')}`);
+      else ok.push(`${dir}/index.html [${l}]: all ${keys.size} keys translated`);
+    }
     continue;
   }
   const app = fs.readFileSync(path.join(root, dir, 'app.js'), 'utf8');

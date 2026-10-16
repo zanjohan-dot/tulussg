@@ -13,6 +13,10 @@
 <link rel="alternate" hreflang="id" href="https://www.tulussg.com/campaigns/sports-carnival/?lang=id">
 <link rel="alternate" hreflang="fil" href="https://www.tulussg.com/campaigns/sports-carnival/?lang=tl">
 <link rel="alternate" hreflang="my" href="https://www.tulussg.com/campaigns/sports-carnival/?lang=my">
+<link rel="alternate" hreflang="bn" href="https://www.tulussg.com/campaigns/sports-carnival/?lang=bn">
+<link rel="alternate" hreflang="ta" href="https://www.tulussg.com/campaigns/sports-carnival/?lang=ta">
+<link rel="alternate" hreflang="zh-Hans" href="https://www.tulussg.com/campaigns/sports-carnival/?lang=zh">
+<link rel="alternate" hreflang="x-default" href="https://www.tulussg.com/campaigns/sports-carnival/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TulusSG">
 <meta property="og:title" content="TulusSG Sports Carnival | Sunday, 10 January 2027">
@@ -27,24 +31,21 @@
 <meta name="twitter:title" content="TulusSG Sports Carnival | Sunday, 10 January 2027">
 <meta name="twitter:description" content="Five sports. Five experiences. A chance to try something new. Venue and time to be confirmed. Registration coming soon.">
 <meta name="twitter:image" content="https://www.tulussg.com/campaigns/sports-carnival/card.png">
-<!-- Structured data: only confirmed details. Date is confirmed; venue and time are not, so no street address or start
-     time is given. When the venue is set, replace the Place below with its real name and address. -->
+<!-- Structured data: WebPage and breadcrumbs only. Event markup is left out until the venue and time are confirmed
+     (Google requires a location for events). Add it then, with the real venue name and address. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Event",
-      "@id": "https://www.tulussg.com/campaigns/sports-carnival/#event",
-      "name": "TulusSG Sports Carnival",
-      "description": "Beginner-friendly activity stations introducing five sports commonly played in Singapore. No prior sporting experience is required. Venue and time to be confirmed; registration coming soon.",
-      "startDate": "2027-01-10",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "location": { "@type": "Place", "name": "Venue to be confirmed", "address": { "@type": "PostalAddress", "addressCountry": "SG" } },
-      "organizer": { "@type": "Organization", "@id": "https://www.tulussg.com/#organization", "name": "TulusSG", "url": "https://www.tulussg.com/" },
-      "image": "https://www.tulussg.com/campaigns/sports-carnival/card.png",
-      "url": "https://www.tulussg.com/campaigns/sports-carnival/"
+      "@type": "WebPage",
+      "@id": "https://www.tulussg.com/campaigns/sports-carnival/#webpage",
+      "url": "https://www.tulussg.com/campaigns/sports-carnival/",
+      "name": "TulusSG Sports Carnival | Sunday, 10 January 2027",
+      "description": "TulusSG Sports Carnival on Sunday, 10 January 2027: try five sports at beginner-friendly activity stations. Venue and time to be confirmed. Registration coming soon.",
+      "inLanguage": "en",
+      "isPartOf": { "@type": "WebSite", "@id": "https://www.tulussg.com/#website", "name": "TulusSG", "url": "https://www.tulussg.com/" },
+      "publisher": { "@type": "Organization", "@id": "https://www.tulussg.com/#organization", "name": "TulusSG", "url": "https://www.tulussg.com/" }
     },
     {
       "@type": "BreadcrumbList",
@@ -61,7 +62,7 @@
 <link rel="apple-touch-icon" href="/assets/share/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+Myanmar:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+Myanmar:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&family=Noto+Sans+SC:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/campaigns/shared/campaign.css">
 </head>
 <body data-campaign="sports-carnival">
@@ -80,6 +81,9 @@
             <option value="id" lang="id">Bahasa Indonesia</option>
             <option value="tl" lang="fil">Filipino / Tagalog</option>
             <option value="my" lang="my">မြန်မာဘာသာ</option>
+            <option value="bn" lang="bn">বাংলা</option>
+            <option value="ta" lang="ta">தமிழ்</option>
+            <option value="zh" lang="zh-Hans">简体中文</option>
           </select>
         </div>
         <p class="lang-note" id="lang-note" data-i18n="lang.notice">This page is available in English, Bahasa Indonesia, Filipino and Burmese. Each version is meant to say the same thing. If anything is unclear, please ask us at admin@tulussg.com before you submit. You can also tell us there if a translation seems wrong.</p>
