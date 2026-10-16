@@ -1,6 +1,8 @@
 /*
  * TulusSG campaigns — PUBLIC list for the website (no secrets, no Sheet IDs).
  *
+ * form: false  → information page only (no registration form); its card links to the page with a "See details" button.
+ *
  * status:
  *   'active'       card + CTA on /campaigns/; the page shows its form
  *   'coming-soon'  card with "Coming soon", no CTA; the page shows a "coming soon" message instead of the form
@@ -23,5 +25,15 @@ window.TULUS_CAMPAIGNS = [
     image: '/campaigns/share-your-story/hero-640.webp',
     imageFallback: '/campaigns/share-your-story/hero-640.jpg',
     imageFocus: '50% 30%',
+  },
+  {
+    slug: 'sports-carnival',
+    // COMING SOON (Zan, 16 Oct 2026): date Sunday 10 Jan 2027 confirmed; venue, time and registration not yet.
+    // form: false = information page only. The card links to the page ("See details") but offers no registration.
+    status: 'coming-soon',
+    form: false,
+    order: 2,
+    image: '/campaigns/sports-carnival/card-640.png',
+    imageFocus: '50% 50%',
   },
 ];

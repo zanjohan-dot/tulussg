@@ -67,6 +67,7 @@ for (const c of campaigns) {
   hubKeys.add(`status.${c.status}`);
   ['title', 'desc', 'alt'].forEach((k) => hubKeys.add(`campaign.${c.slug}.${k}`));
   if (c.status === 'active') hubKeys.add(`campaign.${c.slug}.cta`);
+  else if (c.form === false) hubKeys.add(`campaign.${c.slug}.details`);
 }
 resolve(hub.dicts, hubKeys, 'campaigns/index.html (hub)');
 
@@ -76,6 +77,20 @@ for (const c of campaigns) {
   if (!fs.existsSync(path.join(root, dir, 'i18n.js'))) { problems.push(`${dir}/i18n.js missing`); continue; }
   const page = load([...shared, `${dir}/i18n.js`]);
   checkDict(page.dicts[1], `${dir}/i18n.js`);
+  if (c.form === false) { // information page: no form, so no form keys or fields list
+    const keys = new Set([...htmlKeys(`${dir}/index.html`), ...CORE_KEYS]);
+    resolve(page.dicts, keys, `${dir}/index.html`);
+    // Extra languages offered by this page's language menu (e.g. bn, ta, zh): every key on the page must exist in
+    // that language (page file or shared file), so nothing silently falls back to English.
+    const html = fs.readFileSync(path.join(root, dir, 'index.html'), 'utf8');
+    const offered = [...html.matchAll(/<option value="([a-z]{2})"/g)].map((m) => m[1]);
+    for (const l of offered.filter((x) => !LANGS.includes(x))) {
+      const missing = [...keys].filter((k) => !page.dicts.some((d) => d[l] && Object.prototype.hasOwnProperty.call(d[l], k)));
+      if (missing.length) problems.push(`${dir}/index.html [${l}] untranslated: ${missing.join(', ')}`);
+      else ok.push(`${dir}/index.html [${l}]: all ${keys.size} keys translated`);
+    }
+    continue;
+  }
   const app = fs.readFileSync(path.join(root, dir, 'app.js'), 'utf8');
   const fields = (app.match(/fields:\s*\[([^\]]*)\]/)?.[1] ?? '').match(/'([^']+)'/g)?.map((f) => f.slice(1, -1)) ?? [];
   if (!fields.length) problems.push(`${dir}/app.js: could not read the fields list`);
