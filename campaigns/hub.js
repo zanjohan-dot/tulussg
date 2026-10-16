@@ -30,7 +30,7 @@
     var li = el('li');
     // Active cards are one big link; others are plain cards with no registration call-to-action.
     var box = el(linked ? 'a' : 'div', 'campaign-card' + (active ? '' : ' is-' + c.status));
-    if (linked) box.href = TulusI18n.withLang('/campaigns/' + c.slug + '/');
+    if (linked) box.href = TulusI18n.withLang('https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-16-v4/campaigns/' + c.slug + '/index.html');
 
     var media = el('div', 'card-img');
     var picture = el('picture');
