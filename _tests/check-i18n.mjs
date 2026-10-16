@@ -129,6 +129,44 @@ for (const c of campaigns) {
   checkLanguages(dir, page.dicts, keys);
 }
 
+// ---- translation approval register (campaigns/translations.js)
+{
+  const ctx = { window: {} }; vm.createContext(ctx);
+  vm.runInContext(fs.readFileSync(path.join(root, 'campaigns/translations.js'), 'utf8'), ctx);
+  const REG = ctx.window.TULUS_TRANSLATIONS || {};
+  const NAMES = { en: 'English', id: 'Bahasa Indonesia', tl: 'Filipino', my: 'Burmese', bn: 'Bengali', ta: 'Tamil', zh: 'Chinese' };
+  const pages = [['campaigns', 'campaigns/index.html', null], ...campaigns.map((c) => [c.slug, `campaigns/${c.slug}/index.html`, c])];
+  for (const [key, file, c] of pages) {
+    const reg = REG[key];
+    if (!reg) { problems.push(`translations.js: no entry for "${key}"`); continue; }
+    const html = fs.readFileSync(path.join(root, file), 'utf8');
+    if (!html.includes('/campaigns/translations.js')) problems.push(`${file}: does not load /campaigns/translations.js`);
+    const offered = [...html.matchAll(/<option value="([a-z]{2})"/g)].map((m) => m[1]).filter((v, i, a) => a.indexOf(v) === i && Object.keys(NAMES).includes(v));
+    for (const l of offered) {
+      const e = reg.languages[l];
+      if (!e) { problems.push(`translations.js [${key}]: no entry for language "${l}"`); continue; }
+      if (e.public !== (e.status === 'source' || e.status === 'owner-approved')) problems.push(`translations.js [${key}] ${l}: public must be true exactly when status is source/owner-approved`);
+      if (l !== 'en' && !['ai-reviewed', 'native-verified'].includes(e.verification)) problems.push(`translations.js [${key}] ${l}: verification must be ai-reviewed or native-verified`);
+      if (e.verification === 'native-verified' && !(e.history || []).some((h) => /native/i.test(h))) problems.push(`translations.js [${key}] ${l}: native-verified needs a history line naming the native-speaker review`);
+    }
+    // The page's consent wording version must be the one the register's approvals refer to.
+    if (c && c.form !== false) {
+      const app = fs.readFileSync(path.join(root, 'campaigns', c.slug, 'app.js'), 'utf8');
+      const v = app.match(/consentVersion:\s*'([^']+)'/)?.[1];
+      if (v !== reg.consentVersion) problems.push(`translations.js [${key}]: consentVersion ${reg.consentVersion} but the page uses ${v}`);
+    }
+    // The "This page is available in ..." note must name exactly the public languages (skipped when only English shows: the note is hidden then).
+    const pub = offered.filter((l) => reg.languages[l] && reg.languages[l].public);
+    if (pub.length > 1) {
+      const page = load([...shared, ...(key === 'campaigns' ? ['campaigns/i18n.js'] : [`campaigns/${key}/i18n.js`])]);
+      const note = lookup([...page.dicts].reverse(), 'en', 'lang.notice') || ''; // the page's own text wins over the shared text
+      const wrong = Object.keys(NAMES).filter((l) => note.includes(NAMES[l]) !== pub.includes(l));
+      if (wrong.length) problems.push(`${file}: English language note does not match the public languages (${wrong.join(', ')})`);
+    }
+    ok.push(`${file}: public languages ${pub.join(', ')} (register checked)`);
+  }
+}
+
 console.log(ok.map((l) => `PASS  ${l}`).join('\n'));
 if (problems.length) {
   console.log(problems.map((l) => `FAIL  ${l}`).join('\n'));

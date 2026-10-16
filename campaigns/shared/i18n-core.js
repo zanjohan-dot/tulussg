@@ -61,11 +61,25 @@ if (window.top !== window.self) {
       return sessionStorage.getItem('tulus-review') === '1';
     } catch (e) { return q === '1'; }
   }
-  (function hidePendingLanguages() {
+  // Which languages this page may show the public comes from the translation approval register
+  // (/campaigns/translations.js): only public: true. Without a register entry, options marked data-pending-review
+  // are hidden. Review mode shows everything.
+  function pageKey() { return (document.body && document.body.getAttribute('data-campaign')) || 'campaigns'; }
+  (function hideUnapprovedLanguages() {
     var select = document.getElementById('lang-select');
     if (!select || reviewMode()) return;
-    var pending = select.querySelectorAll('option[data-pending-review]');
-    for (var i = 0; i < pending.length; i++) pending[i].parentNode.removeChild(pending[i]);
+    var reg = window.TULUS_TRANSLATIONS && window.TULUS_TRANSLATIONS[pageKey()];
+    for (var i = select.options.length - 1; i >= 0; i--) {
+      var o = select.options[i];
+      var entry = reg && reg.languages && reg.languages[o.value];
+      var hide = reg ? !(entry && entry.public === true) : o.hasAttribute('data-pending-review');
+      if (hide && o.value !== 'en') select.removeChild(o);
+    }
+    // Only English available: no menu and no "available in ..." note (it would list languages the page does not offer).
+    if (select.options.length === 1) {
+      var wrap = select.closest('.lang'); if (wrap) wrap.style.display = 'none';
+      var n = document.getElementById('lang-note'); if (n) n.style.display = 'none';
+    }
   })();
 
   // Said in the visitor's own language when the language they chose elsewhere on the site is not (yet) available on
@@ -87,7 +101,26 @@ if (window.top !== window.self) {
     p.className = 'lang-note lang-missing';
     p.setAttribute('role', 'status');
     p.lang = LANGS[code] ? LANGS[code].htmlLang : code;
-    p.textContent = msg;
+    p.textContent = msg + ' ';
+    // Offer the languages this page does have, so the visitor chooses instead of being switched silently.
+    var select = document.getElementById('lang-select');
+    if (select && select.options.length > 1) {
+      for (var i = 0; i < select.options.length; i++) {
+        (function (o) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'lang-choice';
+          b.lang = o.getAttribute('lang') || o.value;
+          b.textContent = o.textContent;
+          b.addEventListener('click', function () {
+            select.value = o.value;
+            select.dispatchEvent(new Event('change'));
+            p.parentNode.removeChild(p);
+          });
+          p.appendChild(b);
+        })(select.options[i]);
+      }
+    }
     note.parentNode.insertBefore(p, note);
   }
 
