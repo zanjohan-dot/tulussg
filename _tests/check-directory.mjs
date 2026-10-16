@@ -51,6 +51,9 @@ const expect = [
   ['2026-11-27T00:00:00', 'share-your-story-migrant-workers', 'completed', 'past'],
   ['2027-01-10T18:00:00', 'sports-carnival', 'coming-soon', 'upcoming'],
   ['2027-01-11T00:00:00', 'sports-carnival', 'completed', 'past'],
+  // D1 (16 Oct 2026): the domestic workers campaign closes by itself at 16 Nov 00:00 SGT
+  ['2026-11-15T23:59:59', 'share-your-story', 'open', 'upcoming'],
+  ['2026-11-16T00:00:00', 'share-your-story', 'completed', 'past'],
 ];
 for (const [time, slug, status, section] of expect) {
   const c = find(slug);

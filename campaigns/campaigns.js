@@ -39,11 +39,12 @@
 window.TULUS_CAMPAIGNS = [
   {
     slug: 'share-your-story',
-    // OPEN since 14 Oct 2026 (Zan approved Milestone 2b). No automatic close yet: to close, 'closed' here AND in the
-    // API's src/config.js (or add closesAt to both).
+    // OPEN since 14 Oct 2026 (Zan approved Milestone 2b). Closes BY ITSELF at the end of the campaign period
+    // (Zan, 16 Oct 2026, D1): last day 15 Nov 2026; same closesAt in the API's src/config.js.
     category: 'stories',
     audience: ['mdw'],
     status: 'active',
+    closesAt: '2026-11-16T00:00:00+08:00',
     period: { start: '2026-10-15', end: '2026-11-15' },
     order: 1,
     image: '/campaigns/share-your-story/hero-640.webp',
