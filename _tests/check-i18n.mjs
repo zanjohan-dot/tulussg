@@ -60,15 +60,21 @@ const hub = load([...shared, 'campaigns/campaigns.js', 'campaigns/i18n.js']);
 hub.dicts.forEach((d, i) => checkDict(d, [...shared, 'campaigns/i18n.js'][i]));
 const campaigns = hub.window.TULUS_CAMPAIGNS ?? [];
 const hubKeys = new Set([...htmlKeys('campaigns/index.html'), ...CORE_KEYS]);
+// Text the directory script (campaigns/hub.js) uses in code.
+['view.label', 'view.cards', 'view.calendar', 'filter.label', 'filter.all', 'sec.upcoming', 'sec.soon', 'sec.past',
+  'status.active', 'status.coming-soon', 'status.closed', 'status.completed', 'card.view', 'card.dateTbc', 'hub.empty',
+  'cal.prev', 'cal.next', 'cal.empty', 'cal.note', 'date.months', 'date.weekdays', 'date.full', 'date.short', 'date.month',
+  'date.range', ...['starts', 'ends', 'regOpens', 'regCloses', 'event'].map((k) => `kind.${k}`)].forEach((k) => hubKeys.add(k));
+const CATEGORIES = ['sports', 'stories', 'learning', 'community'];
 for (const c of campaigns) {
   if (!STATUSES.includes(c.status)) problems.push(`campaigns.js: "${c.slug}" has unknown status "${c.status}"`);
   if (!fs.existsSync(path.join(root, 'campaigns', c.slug, 'index.html'))) problems.push(`campaigns.js: /campaigns/${c.slug}/index.html does not exist`);
+  if (!CATEGORIES.includes(c.category)) problems.push(`campaigns.js: "${c.slug}" needs a category (${CATEGORIES.join(' / ')})`);
+  if (!Array.isArray(c.audience) || c.audience.some((a) => !['mdw', 'mw'].includes(a))) problems.push(`campaigns.js: "${c.slug}" audience must be a list of 'mdw' / 'mw' (or [])`);
   if (c.status === 'hidden') continue;
-  hubKeys.add(`status.${c.status}`);
-  ['title', 'desc', 'alt'].forEach((k) => hubKeys.add(`campaign.${c.slug}.${k}`));
-  if (c.status === 'active') hubKeys.add(`campaign.${c.slug}.cta`);
-  if (c.status !== 'active' && c.form === false) hubKeys.add(`campaign.${c.slug}.details`);
-  if (c.opensAt) { hubKeys.add(`campaign.${c.slug}.details`); hubKeys.add(`campaign.${c.slug}.cta`); hubKeys.add('status.coming-soon'); hubKeys.add('status.closed'); }
+  hubKeys.add(`cat.${c.category}`);
+  (c.audience || []).forEach((a) => hubKeys.add(`aud.${a}`));
+  ['title', 'alt'].forEach((k) => hubKeys.add(`campaign.${c.slug}.${k}`));
 }
 resolve(hub.dicts, hubKeys, 'campaigns/index.html (hub)');
 
