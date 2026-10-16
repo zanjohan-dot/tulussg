@@ -73,30 +73,60 @@ for (const c of campaigns) {
 resolve(hub.dicts, hubKeys, 'campaigns/index.html (hub)');
 
 // ---- each campaign page
+// Every language a page offers (its language menu, including languages still awaiting review) must translate every
+// key the page uses, in the page file or the shared file; nothing may silently fall back to English.
+const lookup = (dicts, l, k) => { for (const d of dicts) if (d[l] && Object.prototype.hasOwnProperty.call(d[l], k)) return d[l][k]; return undefined; };
+// Words that are meant to stay in Latin script in any language (names, brands, codes).
+const KEEP_LATIN = new Set(['TulusSG', 'Share', 'Your', 'Story', 'WhatsApp', 'Facebook', 'Instagram', 'TikTok', 'Telegram',
+  'YouTube', 'X', 'Twitter', 'The', 'Digital', 'Systems', 'Architect', 'FIN', 'admin', 'tulussg', 'com', 'English', 'Bahasa',
+  'Indonesia', 'Filipino', 'Tagalog', 'Sports', 'Carnival', 'Zan', 'J', 'Private', 'Limited', 'UEN', 'link', 'spam', 'junk',
+  'Bengali', 'Tamil', 'Thai', 'Burmese', 'Chinese', 'Indonesian', 'yourname', 'SG', 'PDPA', 'DRUMS', 'UP', 'Menu',
+  // loanwords Burmese readers use as they appear in the apps
+  'Channel', 'follow', 'Follow', 'mailing', 'list']);
+const NON_LATIN = ['my', 'bn', 'ta', 'zh'];
+// Numbers in a text, whatever digits the language writes them in (Bengali and Burmese digits included).
+const numbers = (v) => (String(v).replace(/[০-৯]/g, (d) => '০১২৩৪৫৬৭৮৯'.indexOf(d)).replace(/[၀-၉]/g, (d) => '၀၁၂၃၄၅၆၇၈၉'.indexOf(d))
+  .match(/\d+/g) || []).map((n) => String(Number(n)));
+function checkLanguages(dir, dicts, keys) {
+  const html = fs.readFileSync(path.join(root, dir, 'index.html'), 'utf8');
+  const offered = [...html.matchAll(/<option value="([a-z]{2})"/g)].map((m) => m[1]);
+  for (const l of offered.filter((x) => x !== 'en')) {
+    const missing = [...keys].filter((k) => lookup(dicts, l, k) === undefined);
+    if (missing.length) { problems.push(`${dir} [${l}] not translated: ${missing.join(', ')}`); continue; }
+    const english = [], dates = [];
+    for (const k of keys) {
+      const v = lookup(dicts, l, k), en = lookup(dicts, 'en', k);
+      if (NON_LATIN.includes(l)) {
+        const words = (v.replace(/https?:\S+|\S+@\S+|\{\w+\}/g, '').match(/[A-Za-z][A-Za-z'’-]*/g) || []).map((w) => w.replace(/[-'’]+$/, ''));
+        if (words.filter((w) => !KEEP_LATIN.has(w)).length >= 2) english.push(k);
+      } else if (v === en && v.length > 25 && /[a-z]{3,} [a-z]{3,}/.test(v)) english.push(k);
+      // The same dates and numbers as English (campaign periods, limits), whatever digits the language uses.
+      // (Every number in the English must appear; a translation may add the month as a number.)
+      // and no other number except a month (1–12).
+      if (/\b20\d\d\b/.test(en) && (numbers(en).some((n) => !numbers(v).includes(n))
+        || numbers(v).some((n) => !numbers(en).includes(n) && !(Number(n) >= 1 && Number(n) <= 12)))) dates.push(k);
+    }
+    if (english.length) problems.push(`${dir} [${l}] looks untranslated (still English): ${english.join(', ')}`);
+    if (dates.length) problems.push(`${dir} [${l}] dates differ from English: ${dates.join(', ')}`);
+    if (!english.length && !dates.length) ok.push(`${dir} [${l}]: all ${keys.size} keys translated, dates match English`);
+  }
+}
 for (const c of campaigns) {
   const dir = `campaigns/${c.slug}`;
   if (!fs.existsSync(path.join(root, dir, 'i18n.js'))) { problems.push(`${dir}/i18n.js missing`); continue; }
   const page = load([...shared, `${dir}/i18n.js`]);
   checkDict(page.dicts[1], `${dir}/i18n.js`);
+  let keys;
   if (c.form === false) { // information page: no form, so no form keys or fields list
-    const keys = new Set([...htmlKeys(`${dir}/index.html`), ...CORE_KEYS]);
-    resolve(page.dicts, keys, `${dir}/index.html`);
-    // Extra languages offered by this page's language menu (e.g. bn, ta, zh): every key on the page must exist in
-    // that language (page file or shared file), so nothing silently falls back to English.
-    const html = fs.readFileSync(path.join(root, dir, 'index.html'), 'utf8');
-    const offered = [...html.matchAll(/<option value="([a-z]{2})"/g)].map((m) => m[1]);
-    for (const l of offered.filter((x) => !LANGS.includes(x))) {
-      const missing = [...keys].filter((k) => !page.dicts.some((d) => d[l] && Object.prototype.hasOwnProperty.call(d[l], k)));
-      if (missing.length) problems.push(`${dir}/index.html [${l}] untranslated: ${missing.join(', ')}`);
-      else ok.push(`${dir}/index.html [${l}]: all ${keys.size} keys translated`);
-    }
-    continue;
+    keys = new Set([...htmlKeys(`${dir}/index.html`), ...CORE_KEYS]);
+  } else {
+    const app = fs.readFileSync(path.join(root, dir, 'app.js'), 'utf8');
+    const fields = (app.match(/fields:\s*\[([^\]]*)\]/)?.[1] ?? '').match(/'([^']+)'/g)?.map((f) => f.slice(1, -1)) ?? [];
+    if (!fields.length) problems.push(`${dir}/app.js: could not read the fields list`);
+    keys = new Set([...htmlKeys(`${dir}/index.html`), ...CORE_KEYS, ...FORM_KEYS, ...fields.map((f) => `err.${f}`)]);
   }
-  const app = fs.readFileSync(path.join(root, dir, 'app.js'), 'utf8');
-  const fields = (app.match(/fields:\s*\[([^\]]*)\]/)?.[1] ?? '').match(/'([^']+)'/g)?.map((f) => f.slice(1, -1)) ?? [];
-  if (!fields.length) problems.push(`${dir}/app.js: could not read the fields list`);
-  const keys = new Set([...htmlKeys(`${dir}/index.html`), ...CORE_KEYS, ...FORM_KEYS, ...fields.map((f) => `err.${f}`)]);
   resolve(page.dicts, keys, `${dir}/index.html`);
+  checkLanguages(dir, page.dicts, keys);
 }
 
 console.log(ok.map((l) => `PASS  ${l}`).join('\n'));
