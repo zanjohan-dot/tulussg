@@ -32,7 +32,13 @@ if (window.top !== window.self) {
     id: { htmlLang: 'id' },
     tl: { htmlLang: 'fil' },
     my: { htmlLang: 'my' },
+    // Extra languages (16 Oct 2026). A page offers them only if its language menu (#lang-select) lists them, so
+    // pages that do not (e.g. Share Your Story) are unchanged and fall back to English.
+    bn: { htmlLang: 'bn' },
+    ta: { htmlLang: 'ta' },
+    zh: { htmlLang: 'zh-Hans' },
   };
+  var CORE = ['en', 'id', 'tl', 'my'];
 
   /*
    * Privacy policy versions that have been LEGALLY REVIEWED and published. English is the authoritative draft.
@@ -44,7 +50,57 @@ if (window.top !== window.self) {
   var dictionaries = [];
   var listeners = [];
   var lang = 'en';
-  function known(code) { return typeof code === 'string' && Object.prototype.hasOwnProperty.call(LANGS, code); }
+  // Languages this page offers: the options of its language menu, or the four core languages.
+  // Languages awaiting native-speaker verification (option has data-pending-review) are hidden from the public. They
+  // appear only in review mode: open any campaign page once with ?review=1 (ends with ?review=0 or the browser session).
+  function reviewMode() {
+    var q = new URLSearchParams(location.search).get('review');
+    try {
+      if (q === '1') sessionStorage.setItem('tulus-review', '1');
+      if (q === '0') sessionStorage.removeItem('tulus-review');
+      return sessionStorage.getItem('tulus-review') === '1';
+    } catch (e) { return q === '1'; }
+  }
+  (function hidePendingLanguages() {
+    var select = document.getElementById('lang-select');
+    if (!select || reviewMode()) return;
+    var pending = select.querySelectorAll('option[data-pending-review]');
+    for (var i = 0; i < pending.length; i++) pending[i].parentNode.removeChild(pending[i]);
+  })();
+
+  // Said in the visitor's own language when the language they chose elsewhere on the site is not (yet) available on
+  // this page, so the switch to English is never silent.
+  var NOT_AVAILABLE = {
+    bn: 'এই পৃষ্ঠাটি এখনও বাংলায় পাওয়া যাচ্ছে না, তাই ইংরেজিতে দেখানো হচ্ছে।',
+    ta: 'இந்தப் பக்கம் இன்னும் தமிழில் கிடைக்கவில்லை, எனவே ஆங்கிலத்தில் காட்டப்படுகிறது.',
+    zh: '本页暂未提供中文版本，现以英文显示。',
+    id: 'Halaman ini belum tersedia dalam Bahasa Indonesia, jadi ditampilkan dalam bahasa Inggris.',
+    tl: 'Hindi pa available sa Filipino ang pahinang ito, kaya nasa English ito.',
+    my: 'ဤစာမျက်နှာကို မြန်မာဘာသာဖြင့် မရရှိသေးသဖြင့် အင်္ဂလိပ်ဘာသာဖြင့် ပြသထားပါသည်။',
+  };
+  function showNotAvailable(code) {
+    var msg = NOT_AVAILABLE[code];
+    var note = document.getElementById('lang-note');
+    if (!msg || !note || document.getElementById('lang-missing')) return;
+    var p = document.createElement('p');
+    p.id = 'lang-missing';
+    p.className = 'lang-note lang-missing';
+    p.setAttribute('role', 'status');
+    p.lang = LANGS[code] ? LANGS[code].htmlLang : code;
+    p.textContent = msg;
+    note.parentNode.insertBefore(p, note);
+  }
+
+  function pageLangs() {
+    var select = document.getElementById('lang-select');
+    if (!select) return CORE;
+    var list = [];
+    for (var i = 0; i < select.options.length; i++) list.push(select.options[i].value);
+    return list;
+  }
+  function known(code) {
+    return typeof code === 'string' && Object.prototype.hasOwnProperty.call(LANGS, code) && pageLangs().indexOf(code) !== -1;
+  }
 
   function register(dict) {
     dictionaries.push(dict);
@@ -135,6 +191,8 @@ if (window.top !== window.self) {
   function start() {
     var fromUrl = new URLSearchParams(location.search).get('lang');
     var initial = (known(fromUrl) && fromUrl) || (known(saved()) && saved()) || 'en';
+    var wanted = fromUrl || saved();
+    if (wanted && initial === 'en' && wanted !== 'en' && Object.prototype.hasOwnProperty.call(LANGS, wanted) && !known(wanted)) showNotAvailable(wanted);
     // A ?lang= link is an explicit choice: remember it for the other campaign pages and later visits.
     if (known(fromUrl)) save(fromUrl);
     var select = document.getElementById('lang-select');
@@ -155,6 +213,6 @@ if (window.top !== window.self) {
     lang: function () { return lang; },
     onChange: function (fn) { listeners.push(fn); },
     withLang: withLang,
-    languages: Object.keys(LANGS),
+    languages: CORE.slice(),
   };
 })();
