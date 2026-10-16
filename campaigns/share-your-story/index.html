@@ -45,20 +45,33 @@
     <a class="top-logo" href="/" data-i18n-attr="aria-label:nav.home" aria-label="TulusSG home">
       <img src="/assets/card/tulussg-logo.png" alt="TulusSG" width="517" height="539">
     </a>
-    <div class="lang-wrap">
-      <div class="lang">
-        <label for="lang-select" class="sr-only" data-i18n="nav.language">Language</label>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        <select id="lang-select" aria-describedby="lang-note">
-          <option value="en" lang="en">English</option>
-          <option value="id" lang="id">Bahasa Indonesia</option>
-          <option value="tl" lang="fil">Filipino / Tagalog</option>
-          <option value="my" lang="my">မြန်မာဘာသာ</option>
-        </select>
+    <div class="top-right">
+      <div class="lang-wrap">
+        <div class="lang">
+          <label for="lang-select" class="sr-only" data-i18n="nav.language">Language</label>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <select id="lang-select" aria-describedby="lang-note">
+            <option value="en" lang="en">English</option>
+            <option value="id" lang="id">Bahasa Indonesia</option>
+            <option value="tl" lang="fil">Filipino / Tagalog</option>
+            <option value="my" lang="my">မြန်မာဘာသာ</option>
+          </select>
+        </div>
+        <p class="lang-note" id="lang-note" data-i18n="lang.notice">This page is available in English, Bahasa Indonesia, Filipino and Burmese. Each version is meant to say the same thing. If anything is unclear, please ask us at admin@tulussg.com before you submit. You can also tell us there if a translation seems wrong.</p>
       </div>
-      <p class="lang-note" id="lang-note" data-i18n="lang.notice">This page is available in English, Bahasa Indonesia, Filipino and Burmese. Each version is meant to say the same thing. If anything is unclear, please ask us at admin@tulussg.com before you submit. You can also tell us there if a translation seems wrong.</p>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle-bars" aria-hidden="true"></span><span class="nav-toggle-text" data-i18n="nav.menu">Menu</span></button>
     </div>
   </header>
+  <nav id="site-nav" class="site-nav" data-i18n-attr="aria-label:nav.main" aria-label="Main menu">
+    <ul>
+      <li><a href="/" data-i18n="nav.mission">Mission</a></li>
+      <li><a href="/#people" data-i18n="nav.people">Our People</a></li>
+      <li><a href="/#activities" data-i18n="nav.activities">Activities</a></li>
+      <li><a href="/#get-involved" data-i18n="nav.getInvolved">Get Involved</a></li>
+      <li><a href="/#connect" data-i18n="nav.connect">Connect</a></li>
+      <li><a href="/campaigns/" data-keep-lang data-i18n="nav.campaigns">Campaigns</a></li>
+    </ul>
+  </nav>
 
   <main>
     <section class="hero">
@@ -332,5 +345,6 @@
 <script src="i18n.js"></script>
 <script src="/campaigns/shared/form-core.js"></script>
 <script src="app.js"></script>
+<script src="/campaigns/shared/site-nav.js"></script>
 </body>
 </html>

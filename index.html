@@ -778,6 +778,12 @@ function goTo(idx){
   },380);
 }
 function nextSection(){goTo(cur<sections.length-1?cur+1:0);}
+// Deep links (16 Oct 2026): /#people, /#activities, /#get-involved and /#connect open that section,
+// so the campaign pages' menu can link to the same places as this menu.
+const SEC_HASH={mission:0,people:1,activities:2,'get-involved':3,connect:4};
+function goToHash(){const i=SEC_HASH[location.hash.slice(1)];if(i!==undefined)goTo(i);}
+window.addEventListener('hashchange',goToHash);
+goToHash();
 document.addEventListener('keydown',e=>{
   if(['ArrowRight','ArrowDown',' '].includes(e.key)){e.preventDefault();if(cur<4)goTo(cur+1);}
   if(['ArrowLeft','ArrowUp'].includes(e.key)){e.preventDefault();if(cur>0)goTo(cur-1);}

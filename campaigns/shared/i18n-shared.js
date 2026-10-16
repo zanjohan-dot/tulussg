@@ -4,6 +4,7 @@
  * TRANSLATION STATUS: id, tl and my AI-audited 14 Oct 2026 and accepted for launch by Zan Johan on 14 Oct 2026
  * (AI-reviewed, NOT independently human-certified). lang.notice: neutral language notice (consent v7, no "English
  * prevails"); 14 Oct 2026 it also invites participants to report a translation problem.
+ * 16 Oct 2026: site-menu keys (nav.main, nav.menu, nav.mission … nav.connect) added; id/tl/my AI-translated, pending owner review.
  */
 TulusI18n.register({
   name: 'shared',
@@ -30,6 +31,14 @@ TulusI18n.register({
     'privacy.linkEnglishOnly': 'Privacy Policy',
     'nav.campaigns': 'Campaigns',
     'nav.allCampaigns': 'All campaigns',
+    // Site menu, added 16 Oct 2026. AI-translated; NOT yet reviewed by the owner.
+    'nav.main': 'Main menu',
+    'nav.menu': 'Menu',
+    'nav.mission': 'Mission',
+    'nav.people': 'Our People',
+    'nav.activities': 'Activities',
+    'nav.getInvolved': 'Get Involved',
+    'nav.connect': 'Connect',
     'err.campaign_closed': 'Registrations for this campaign are closed, so your registration was NOT sent.',
     'err.form_outdated': 'This page has been updated. Please reload the page, check your answers and send again. Your registration was NOT sent.',
     'status.active': 'Open',
@@ -63,6 +72,14 @@ TulusI18n.register({
     'privacy.linkEnglishOnly': 'Kebijakan Privasi (dalam bahasa Inggris)',
     'nav.campaigns': 'Kampanye',
     'nav.allCampaigns': 'Semua kampanye',
+    // Site menu, added 16 Oct 2026. AI-translated; NOT yet reviewed by the owner.
+    'nav.main': 'Menu utama',
+    'nav.menu': 'Menu',
+    'nav.mission': 'Misi',
+    'nav.people': 'Tim Kami',
+    'nav.activities': 'Kegiatan',
+    'nav.getInvolved': 'Ikut Serta',
+    'nav.connect': 'Hubungi Kami',
     'err.campaign_closed': 'Pendaftaran untuk kampanye ini sudah ditutup, jadi pendaftaran Anda TIDAK terkirim.',
     'err.form_outdated': 'Halaman ini telah diperbarui. Mohon muat ulang halaman, periksa jawaban Anda, lalu kirim lagi. Pendaftaran Anda TIDAK terkirim.',
     'status.active': 'Dibuka',
@@ -96,6 +113,14 @@ TulusI18n.register({
     'privacy.linkEnglishOnly': 'Privacy Policy (sa English)',
     'nav.campaigns': 'Mga Campaign',
     'nav.allCampaigns': 'Lahat ng campaign',
+    // Site menu, added 16 Oct 2026. AI-translated; NOT yet reviewed by the owner.
+    'nav.main': 'Pangunahing menu',
+    'nav.menu': 'Menu',
+    'nav.mission': 'Misyon',
+    'nav.people': 'Ang Aming Team',
+    'nav.activities': 'Mga Aktibidad',
+    'nav.getInvolved': 'Makilahok',
+    'nav.connect': 'Makipag-ugnayan',
     'err.campaign_closed': 'Sarado na ang registration para sa campaign na ito, kaya HINDI naipadala ang iyong registration.',
     'err.form_outdated': 'Na-update ang page na ito. Paki-reload ang page, tingnan ang iyong mga sagot at ipadala muli. HINDI naipadala ang iyong registration.',
     'status.active': 'Bukas',
@@ -129,6 +154,14 @@ TulusI18n.register({
     'privacy.linkEnglishOnly': 'ကိုယ်ရေးအချက်အလက် မူဝါဒ (အင်္ဂလိပ်ဘာသာဖြင့်သာ)',
     'nav.campaigns': 'အစီအစဉ်များ',
     'nav.allCampaigns': 'အစီအစဉ်အားလုံး',
+    // Site menu, added 16 Oct 2026. AI-translated; NOT yet reviewed by the owner.
+    'nav.main': 'ပင်မမီနူး',
+    'nav.menu': 'မီနူး',
+    'nav.mission': 'ရည်မှန်းချက်',
+    'nav.people': 'ကျွန်ုပ်တို့အဖွဲ့',
+    'nav.activities': 'လှုပ်ရှားမှုများ',
+    'nav.getInvolved': 'ပါဝင်ရန်',
+    'nav.connect': 'ဆက်သွယ်ရန်',
     'err.campaign_closed': 'ဤအစီအစဉ်အတွက် စာရင်းသွင်းခြင်း ပိတ်သွားပြီဖြစ်သောကြောင့် သင့်စာရင်းသွင်းမှုကို ပေးပို့ခြင်း မရှိပါ။',
     'err.form_outdated': 'ဤစာမျက်နှာကို အပ်ဒိတ်လုပ်ထားပါသည်။ စာမျက်နှာကို ပြန်ဖွင့်ပြီး သင့်အဖြေများကို စစ်ဆေးကာ ထပ်မံ ပေးပို့ပါ။ သင့်စာရင်းသွင်းမှုကို ပေးပို့ခြင်း မရှိပါ။',
     'status.active': 'ဖွင့်ထားသည်',
