@@ -67,6 +67,7 @@ for (const c of campaigns) {
   hubKeys.add(`status.${c.status}`);
   ['title', 'desc', 'alt'].forEach((k) => hubKeys.add(`campaign.${c.slug}.${k}`));
   if (c.status === 'active') hubKeys.add(`campaign.${c.slug}.cta`);
+  else if (c.form === false) hubKeys.add(`campaign.${c.slug}.details`);
 }
 resolve(hub.dicts, hubKeys, 'campaigns/index.html (hub)');
 
@@ -76,6 +77,10 @@ for (const c of campaigns) {
   if (!fs.existsSync(path.join(root, dir, 'i18n.js'))) { problems.push(`${dir}/i18n.js missing`); continue; }
   const page = load([...shared, `${dir}/i18n.js`]);
   checkDict(page.dicts[1], `${dir}/i18n.js`);
+  if (c.form === false) { // information page: no form, so no form keys or fields list
+    resolve(page.dicts, new Set([...htmlKeys(`${dir}/index.html`), ...CORE_KEYS]), `${dir}/index.html`);
+    continue;
+  }
   const app = fs.readFileSync(path.join(root, dir, 'app.js'), 'utf8');
   const fields = (app.match(/fields:\s*\[([^\]]*)\]/)?.[1] ?? '').match(/'([^']+)'/g)?.map((f) => f.slice(1, -1)) ?? [];
   if (!fields.length) problems.push(`${dir}/app.js: could not read the fields list`);
