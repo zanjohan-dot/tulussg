@@ -22,8 +22,8 @@ window.TULUS_CAMPAIGNS = [
     // OPEN since 14 Oct 2026 (Zan approved Milestone 2b). To close: 'closed' here AND in the API's src/config.js.
     status: 'active',
     order: 1,
-    image: '/campaigns/share-your-story/hero-640.webp',
-    imageFallback: '/campaigns/share-your-story/hero-640.jpg',
+    image: 'https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-16/campaigns/share-your-story/hero-640.webp',
+    imageFallback: 'https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-16/campaigns/share-your-story/hero-640.jpg',
     imageFocus: '50% 30%',
   },
   {
@@ -33,7 +33,7 @@ window.TULUS_CAMPAIGNS = [
     status: 'coming-soon',
     form: false,
     order: 2,
-    image: '/campaigns/sports-carnival/card-640.png',
+    image: 'https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-16/campaigns/sports-carnival/card-640.png',
     imageFocus: '50% 50%',
   },
 ];
