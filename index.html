@@ -92,8 +92,28 @@ a.h-stat:focus-visible { outline:2px solid var(--terra); outline-offset:2px; }
 .hero-focus .h-stat-n { font-size:22px !important; line-height:1.1; }
 @media (min-width:1400px){ .hero-focus .h-stat-n { font-size:28px !important; } }
 @media (max-width:480px){ .hero-focus .h-stat-n { font-size:16px !important; } .hero-focus .h-stat{ padding:8px 10px; } .hero-focus .h-stat:first-child{ padding-left:0; } }
-/* Activities note link (Sports Carnival) and small-phone layout for slides 03/04 (16 Oct 2026). */
+/* Activities as calendar pages (16 Oct 2026): TBA tiles for activities being explored; one dated tile for the
+   confirmed Sports Carnival. */
+.act-grid.cal { grid-template-columns:repeat(6,1fr); }
+.act-grid.cal .act figcaption { font-size:clamp(7px,1.05vw,12px); padding-left:3px; padding-right:3px; }
+.act .cal-band { position:absolute; top:0; left:0; right:0; z-index:1; height:18px; display:flex; align-items:center; justify-content:center; background:rgba(44,32,21,0.72); color:var(--white); font-size:9px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; }
+.act-date { grid-row:span 2; aspect-ratio:auto; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; padding:22px 6px 10px; background:var(--white); border:1px solid rgba(196,98,45,0.3); color:var(--ink); text-decoration:none; text-align:center; transition:border-color 0.3s,transform 0.3s; }
+.act-date:hover, .act-date:focus-visible { border-color:var(--terra); transform:translateY(-2px); }
+.act-date:focus-visible { outline:2px solid var(--terra); outline-offset:2px; }
+.act-date .cal-band { background:var(--terra); }
+.act-date .cal-day { font-family:'Cormorant Garant',serif; font-size:64px; font-weight:600; line-height:0.95; color:var(--terra); }
+.act-date .cal-mon { font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink); }
+.act-date .cal-cap { margin-top:8px; font-size:12px; font-weight:600; color:var(--muted); line-height:1.3; }
+@media (max-width:768px) {
+  .act .cal-band { height:11px; font-size:6px; letter-spacing:0.08em; }
+  .act-date { padding:14px 2px 6px; }
+  .act-date .cal-day { font-size:34px; }
+  .act-date .cal-mon { font-size:7px; letter-spacing:0.04em; }
+  .act-date .cal-cap { margin-top:4px; font-size:8px; }
+}
+/* Activities note link and small-phone layout for slides 03/04 (16 Oct 2026). */
 .act-note a { color:var(--terra); font-weight:600; text-decoration:underline; text-underline-offset:3px; }
+@media (max-width:360px){ #s3 { align-items:flex-start !important; padding-top:68px !important; } }
 @media (max-width:340px){ #s2,#s3 { align-items:flex-start !important; padding-top:68px !important; } #s2 .tag { font-size:8px; letter-spacing:0.12em; } #s2 .display { font-size:34px !important; margin-bottom:8px; } #s3 .inv-display { font-size:21px; margin-bottom:8px; } #s3 .inv-desc { min-height:0; } }
 @media (max-width:340px){ .hero-focus .h-stat-l { display:none; } .hero-focus .h-stat-n { font-size:14px !important; } #s0 .body-text { font-size:11px; line-height:1.5; } #s0 .hero-stats { margin-top:8px; } #s0 .campaign-link { font-size:10px; padding-left:10px; padding-right:10px; gap:6px; margin-top:6px; } #s0 .display, #s0 .body-text, #s0 .tag { margin-bottom:6px; } }
 .h-stat-n { font-family:'Cormorant Garant',serif; font-size:30px; font-weight:400; color:var(--terra); line-height:1; }
@@ -591,29 +611,30 @@ a.person-link:focus-visible { outline:2px solid var(--terra); outline-offset:3px
     <section class="section" id="s2">
       <div class="blob blob-a"></div>
       <div class="s-inner">
-        <div class="tag anim">Activities we're exploring for migrant communities</div>
+        <div class="tag anim">Activities we're exploring</div>
         <h2 class="display anim" style="font-size:50px;">Let's get <em>moving.</em></h2>
-        <div class="act-grid anim">
-          <figure class="act"><img src="assets/activities/kayaking.jpg" alt="Illustration: women kayaking on a reservoir" loading="lazy"><figcaption>Kayaking</figcaption></figure>
-          <figure class="act"><img src="assets/activities/football.jpg" alt="Illustration: women playing football on a field" loading="lazy"><figcaption>Football</figcaption></figure>
-          <figure class="act"><img src="assets/activities/floorball.jpg" alt="Illustration: women playing floorball indoors" loading="lazy"><figcaption>Floorball</figcaption></figure>
-          <figure class="act"><img src="assets/activities/pickleball.jpg" alt="Illustration: women playing pickleball" loading="lazy"><figcaption>Pickleball</figcaption></figure>
-          <figure class="act"><img src="assets/activities/piloxing.jpg" alt="Illustration: women in a piloxing class" loading="lazy"><figcaption>Piloxing</figcaption></figure>
-          <figure class="act"><img src="assets/activities/drums-up.jpg" alt="Illustration: women drumming on exercise balls" loading="lazy"><figcaption>DRUMS UP</figcaption></figure>
-          <figure class="act"><img src="assets/activities/badminton.jpg" alt="Illustration: women playing badminton" loading="lazy"><figcaption>Badminton</figcaption></figure>
-          <figure class="act"><img src="assets/activities/basketball.jpg" alt="Illustration: women playing basketball" loading="lazy"><figcaption>Basketball</figcaption></figure>
-          <figure class="act"><img src="assets/activities/netball.jpg" alt="Illustration: women playing netball" loading="lazy"><figcaption>Netball</figcaption></figure>
-          <figure class="act"><img src="assets/activities/singing.jpg" alt="Illustration: women singing together with a guitar" loading="lazy"><figcaption>Singing</figcaption></figure>
+        <div class="act-grid cal anim">
+          <a class="act act-date" href="/campaigns/sports-carnival/" aria-label="TulusSG Sports Carnival, Sunday 10 January 2027"><span class="cal-band">Sun</span><span class="cal-day">10</span><span class="cal-mon">Jan 2027</span><span class="cal-cap">Sports Carnival</span></a>
+          <figure class="act"><span class="cal-band" title="Date to be announced">TBA</span><img src="assets/activities/kayaking.jpg" alt="Illustration: women kayaking on a reservoir" loading="lazy"><figcaption>Kayaking</figcaption></figure>
+          <figure class="act"><span class="cal-band" title="Date to be announced">TBA</span><img src="assets/activities/football.jpg" alt="Illustration: women playing football on a field" loading="lazy"><figcaption>Football</figcaption></figure>
+          <figure class="act"><span class="cal-band" title="Date to be announced">TBA</span><img src="assets/activities/floorball.jpg" alt="Illustration: women playing floorball indoors" loading="lazy"><figcaption>Floorball</figcaption></figure>
+          <figure class="act"><span class="cal-band" title="Date to be announced">TBA</span><img src="assets/activities/pickleball.jpg" alt="Illustration: women playing pickleball" loading="lazy"><figcaption>Pickleball</figcaption></figure>
+          <figure class="act"><span class="cal-band" title="Date to be announced">TBA</span><img src="assets/activities/piloxing.jpg" alt="Illustration: women in a piloxing class" loading="lazy"><figcaption>Piloxing</figcaption></figure>
+          <figure class="act"><span class="cal-band" title="Date to be announced">TBA</span><img src="assets/activities/drums-up.jpg" alt="Illustration: women drumming on exercise balls" loading="lazy"><figcaption>DRUMS UP</figcaption></figure>
+          <figure class="act"><span class="cal-band" title="Date to be announced">TBA</span><img src="assets/activities/badminton.jpg" alt="Illustration: women playing badminton" loading="lazy"><figcaption>Badminton</figcaption></figure>
+          <figure class="act"><span class="cal-band" title="Date to be announced">TBA</span><img src="assets/activities/basketball.jpg" alt="Illustration: women playing basketball" loading="lazy"><figcaption>Basketball</figcaption></figure>
+          <figure class="act"><span class="cal-band" title="Date to be announced">TBA</span><img src="assets/activities/netball.jpg" alt="Illustration: women playing netball" loading="lazy"><figcaption>Netball</figcaption></figure>
+          <figure class="act"><span class="cal-band" title="Date to be announced">TBA</span><img src="assets/activities/singing.jpg" alt="Illustration: women singing together with a guitar" loading="lazy"><figcaption>Singing</figcaption></figure>
         </div>
-        <p class="act-note anim">Illustrations only. Each activity is planned for a specific community, and its announcement will say who can take part. <a href="/campaigns/sports-carnival/">TulusSG Sports Carnival: Sunday, 10 January 2027 &#x2192;</a></p>
+        <p class="act-note anim">Illustrations only. Event details to be announced in <a href="/campaigns/">campaign pages</a>.</p>
       </div>
     </section>
 
     <!-- 3: GET INVOLVED -->
     <section class="section" id="s3">
       <div class="s-inner">
-        <div class="tag anim" style="color:rgba(196,98,45,0.65);">Get involved</div>
-        <h2 class="inv-display anim">1,000 of us.<br>Our domestic worker<br><strong>community goal.</strong></h2>
+        <div class="tag anim" style="color:rgba(196,98,45,0.65);">How to take part</div>
+        <h2 class="inv-display anim">Stay in touch.<br>Take part.<br><strong>Get involved.</strong></h2>
         <p style="font-size:11px;color:rgba(255,255,255,0.35);margin-bottom:14px;font-weight:300;letter-spacing:0.05em;" class="anim">WHO ARE YOU?</p>
         <div class="audience-tags anim">
           <button class="a-tag sel" onclick="pick(this,'worker')">Domestic Worker</button>
@@ -623,7 +644,7 @@ a.person-link:focus-visible { outline:2px solid var(--terra); outline-offset:3px
           <button class="a-tag" onclick="pick(this,'org')">Organisation</button>
           <button class="a-tag" onclick="pick(this,'tech')">Coach / Facilitator</button>
         </div>
-        <div class="inv-desc anim" id="inv-desc">Join our WhatsApp community for domestic workers. Meet new friends and hear about activities. Help us reach 1,000.</div>
+        <div class="inv-desc anim" id="inv-desc">Join our WhatsApp community for domestic workers. Meet new friends and hear about activities.</div>
         <div class="cta-row anim">
           <a href="https://chat.whatsapp.com/F4tFULkpAh7EIJkxRVet8q?mode=gi_t" target="_blank" rel="noopener" class="cta-btn" id="inv-cta">Join our WhatsApp community &#x2192;</a>
           <button class="cta-ghost" id="inv-ghost" onclick="goTo(4)">Send a message</button>
@@ -754,9 +775,9 @@ const FAB_LABELS=['Our People','Activities','Get Involved','Connect','&#x21A9; S
 const SEC_NUMS=['01','02','03','04','05'];
 const PROGRESS=['20%','40%','60%','80%','100%'];
 const AUDIENCE={
-  worker:'Join our WhatsApp community for domestic workers. Meet new friends and hear about activities. Help us reach 1,000.',
+  worker:'Join our WhatsApp community for domestic workers. Meet new friends and hear about activities.',
   mw:"Follow our WhatsApp Channel for news about activities for migrant workers, or send us a message to tell us what you'd enjoy.",
-  family:'Tell your helper or your workers about TulusSG. Rest days are for friends, fresh air and fun.',
+  family:'Follow our WhatsApp Channel for updates, and share it with your helper or your workers.',
   vol:"Like sport? Like people? Help us run a session.",
   org:"Want to do something together? We'd love to talk.",
   tech:"Can you coach a sport or lead a class? We'd love to hear from you."
@@ -772,11 +793,11 @@ function setCta(type){
     a.innerHTML='Send us a message &#x2192;';
     a.onclick=e=>{e.preventDefault(); document.querySelector('#cForm select[name=role]').value=MSG_ROLE[type]; goTo(4);};
     g.style.display='none';
-  } else if(type==='mw'){
+  } else if(type==='mw'||type==='family'){
     a.href=CHANNEL_URL; a.target='_blank'; a.rel='noopener';
     a.innerHTML='Follow our WhatsApp Channel &#x2192;';
     a.onclick=null; g.style.display='';
-    g.onclick=()=>{document.querySelector('#cForm select[name=role]').value='Migrant Worker (non-domestic)'; goTo(4);};
+    g.onclick=()=>{document.querySelector('#cForm select[name=role]').value=(type==='family'?'Employer':'Migrant Worker (non-domestic)'); goTo(4);};
   } else {
     a.href=INVITE_URL; a.target='_blank'; a.rel='noopener';
     a.innerHTML='Join our WhatsApp community &#x2192;';
