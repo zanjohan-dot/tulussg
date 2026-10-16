@@ -32,6 +32,8 @@ a{color:var(--terra-d)}
 .top-logo img{height:46px;width:auto}
 .lang-wrap{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
 .lang-note{margin:0;max-width:200px;font-size:12px;line-height:1.35;color:var(--muted);text-align:right}
+html:is([lang="my"],[lang="bn"],[lang="ta"]) .lang-note{line-height:1.6} /* audit 16 Oct: tall scripts were cramped */
+h1,.facts dd,.chip{overflow-wrap:break-word} /* audit 16 Oct: long words at 200% text size */
 .lang{position:relative;display:flex;align-items:center}
 .lang svg{position:absolute;left:12px;width:18px;height:18px;color:var(--terra);pointer-events:none}
 .lang select{appearance:none;-webkit-appearance:none;min-height:44px;max-width:190px;padding:0 34px 0 38px;border:1px solid rgba(196,98,45,0.3);border-radius:100px;background:var(--white);color:var(--ink);font:600 15px var(--sans);cursor:pointer;text-overflow:ellipsis}
