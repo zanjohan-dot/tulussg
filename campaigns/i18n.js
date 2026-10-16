@@ -2,6 +2,7 @@
  * /campaigns/ hub — page text and campaign card text (one block of keys per campaign: campaign.<slug>.*).
  * Every language must have exactly the same keys (checked by _tests/check-i18n.mjs).
  * REVIEW: id, tl and my are PENDING NATIVE-SPEAKER REVIEW. Do not launch publicly until reviewed.
+ * 16 Oct 2026: campaign.sports-carnival.* added (AI-translated, pending review).
  */
 TulusI18n.register({
   name: 'campaigns-hub',
@@ -19,6 +20,11 @@ TulusI18n.register({
     'campaign.share-your-story.desc': "We're inviting domestic helpers in Singapore to share their experiences for an upcoming TulusSG media production. 15 October – 15 November 2026.",
     'campaign.share-your-story.cta': 'Learn more',
     'campaign.share-your-story.alt': 'A smiling woman sitting by Marina Bay in Singapore',
+    'campaign.sports-carnival.title': "TulusSG Sports Carnival",
+    'campaign.sports-carnival.date': "Sunday, 10 January 2027",
+    'campaign.sports-carnival.desc': "Five sports. Five experiences. A chance to try something new. Venue and time to be confirmed.",
+    'campaign.sports-carnival.details': "See details",
+    'campaign.sports-carnival.alt': "TulusSG logo",
   },
 
   id: {
@@ -33,6 +39,11 @@ TulusI18n.register({
     'campaign.share-your-story.desc': "Kami mengundang pekerja rumah tangga di Singapura untuk membagikan pengalaman mereka untuk produksi media TulusSG yang akan datang. 15 Oktober – 15 November 2026.",
     'campaign.share-your-story.cta': 'Selengkapnya',
     'campaign.share-your-story.alt': 'Seorang perempuan tersenyum sambil duduk di dekat Marina Bay, Singapura',
+    'campaign.sports-carnival.title': "TulusSG Sports Carnival",
+    'campaign.sports-carnival.date': "Minggu, 10 Januari 2027",
+    'campaign.sports-carnival.desc': "Lima olahraga. Lima pengalaman. Kesempatan mencoba hal baru. Tempat dan waktu akan dikonfirmasi.",
+    'campaign.sports-carnival.details': "Lihat detail",
+    'campaign.sports-carnival.alt': "Logo TulusSG",
   },
 
   tl: {
@@ -47,6 +58,11 @@ TulusI18n.register({
     'campaign.share-your-story.desc': "Inaanyayahan namin ang mga kasambahay sa Singapore na ibahagi ang kanilang mga karanasan para sa isang paparating na media production ng TulusSG. 15 Oktubre – 15 Nobyembre 2026.",
     'campaign.share-your-story.cta': 'Alamin pa',
     'campaign.share-your-story.alt': 'Isang nakangiting babae na nakaupo malapit sa Marina Bay sa Singapore',
+    'campaign.sports-carnival.title': "TulusSG Sports Carnival",
+    'campaign.sports-carnival.date': "Linggo, 10 Enero 2027",
+    'campaign.sports-carnival.desc': "Limang sport. Limang karanasan. Pagkakataong sumubok ng bago. Iaanunsyo pa ang lugar at oras.",
+    'campaign.sports-carnival.details': "Tingnan ang detalye",
+    'campaign.sports-carnival.alt': "Logo ng TulusSG",
   },
 
   my: {
@@ -61,5 +77,10 @@ TulusI18n.register({
     'campaign.share-your-story.desc': "လာမည့် TulusSG မီဒီယာထုတ်လုပ်မှုအတွက် ကိုယ့်အတွေ့အကြုံများကို မျှဝေရန် စင်္ကာပူရှိ အိမ်အကူများကို ဖိတ်ခေါ်ပါသည်။ 2026 ခုနှစ် အောက်တိုဘာ 15 ရက် – နိုဝင်ဘာ 15 ရက်။",
     'campaign.share-your-story.cta': 'ပိုမိုသိရှိရန်',
     'campaign.share-your-story.alt': 'စင်္ကာပူ မရီနာဘေးအနီးတွင် ပြုံးရွှင်စွာ ထိုင်နေသော အမျိုးသမီးတစ်ဦး',
+    'campaign.sports-carnival.title': "TulusSG Sports Carnival",
+    'campaign.sports-carnival.date': "2027 ခုနှစ် ဇန်နဝါရီ 10 ရက် (တနင်္ဂနွေ)",
+    'campaign.sports-carnival.desc': "အားကစား ငါးမျိုး။ အတွေ့အကြုံ ငါးမျိုး။ အသစ်တစ်ခုကို စမ်းကြည့်ရန် အခွင့်အရေး။ နေရာနှင့် အချိန်ကို နောက်မှ အတည်ပြုပါမည်။",
+    'campaign.sports-carnival.details': "အသေးစိတ်ကြည့်ရန်",
+    'campaign.sports-carnival.alt': "TulusSG လိုဂို",
   },
 });
