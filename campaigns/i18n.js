@@ -25,6 +25,12 @@ TulusI18n.register({
     'campaign.sports-carnival.desc': "Five sports. Five experiences. A chance to try something new. Venue and time to be confirmed.",
     'campaign.sports-carnival.details': "See details",
     'campaign.sports-carnival.alt': "TulusSG logo",
+    'campaign.share-your-story-migrant-workers.title': "Share Your Story: Migrant Workers",
+    'campaign.share-your-story-migrant-workers.date': "26 October – 26 November 2026",
+    'campaign.share-your-story-migrant-workers.desc': "We're inviting migrant workers in Singapore to share their journeys and experiences for an upcoming TulusSG media production.",
+    'campaign.share-your-story-migrant-workers.cta': "Learn more",
+    'campaign.share-your-story-migrant-workers.details': "See details",
+    'campaign.share-your-story-migrant-workers.alt': "TulusSG logo",
   },
 
   id: {
@@ -44,6 +50,12 @@ TulusI18n.register({
     'campaign.sports-carnival.desc': "Lima olahraga. Lima pengalaman. Kesempatan mencoba hal baru. Tempat dan waktu akan dikonfirmasi.",
     'campaign.sports-carnival.details': "Lihat detail",
     'campaign.sports-carnival.alt': "Logo TulusSG",
+    'campaign.share-your-story-migrant-workers.title': "Share Your Story: Pekerja Migran",
+    'campaign.share-your-story-migrant-workers.date': "26 Oktober – 26 November 2026",
+    'campaign.share-your-story-migrant-workers.desc': "Kami mengundang pekerja migran di Singapura untuk membagikan perjalanan dan pengalaman mereka untuk produksi media TulusSG yang akan datang.",
+    'campaign.share-your-story-migrant-workers.cta': "Selengkapnya",
+    'campaign.share-your-story-migrant-workers.details': "Lihat detail",
+    'campaign.share-your-story-migrant-workers.alt': "Logo TulusSG",
   },
 
   tl: {
@@ -63,6 +75,12 @@ TulusI18n.register({
     'campaign.sports-carnival.desc': "Limang sport. Limang karanasan. Pagkakataong sumubok ng bago. Iaanunsyo pa ang lugar at oras.",
     'campaign.sports-carnival.details': "Tingnan ang detalye",
     'campaign.sports-carnival.alt': "Logo ng TulusSG",
+    'campaign.share-your-story-migrant-workers.title': "Share Your Story: Mga Migrant Worker",
+    'campaign.share-your-story-migrant-workers.date': "26 Oktubre – 26 Nobyembre 2026",
+    'campaign.share-your-story-migrant-workers.desc': "Inaanyayahan namin ang mga migrant worker sa Singapore na ibahagi ang kanilang paglalakbay at mga karanasan para sa isang paparating na media production ng TulusSG.",
+    'campaign.share-your-story-migrant-workers.cta': "Alamin pa",
+    'campaign.share-your-story-migrant-workers.details': "Tingnan ang detalye",
+    'campaign.share-your-story-migrant-workers.alt': "Logo ng TulusSG",
   },
 
   my: {
@@ -82,5 +100,11 @@ TulusI18n.register({
     'campaign.sports-carnival.desc': "အားကစား ငါးမျိုး။ အတွေ့အကြုံ ငါးမျိုး။ အသစ်တစ်ခုကို စမ်းကြည့်ရန် အခွင့်အရေး။ နေရာနှင့် အချိန်ကို နောက်မှ အတည်ပြုပါမည်။",
     'campaign.sports-carnival.details': "အသေးစိတ်ကြည့်ရန်",
     'campaign.sports-carnival.alt': "TulusSG လိုဂို",
+    'campaign.share-your-story-migrant-workers.title': "Share Your Story: ရွှေ့ပြောင်းအလုပ်သမားများ",
+    'campaign.share-your-story-migrant-workers.date': "2026 ခုနှစ် အောက်တိုဘာ 26 ရက် – နိုဝင်ဘာ 26 ရက်",
+    'campaign.share-your-story-migrant-workers.desc': "လာမည့် TulusSG မီဒီယာထုတ်လုပ်မှုအတွက် ကိုယ့်ခရီးနှင့် အတွေ့အကြုံများကို မျှဝေရန် စင်္ကာပူရှိ ရွှေ့ပြောင်းအလုပ်သမားများကို ဖိတ်ခေါ်ပါသည်။",
+    'campaign.share-your-story-migrant-workers.cta': "ပိုမိုသိရှိရန်",
+    'campaign.share-your-story-migrant-workers.details': "အသေးစိတ်ကြည့်ရန်",
+    'campaign.share-your-story-migrant-workers.alt': "TulusSG လိုဂို",
   },
 });

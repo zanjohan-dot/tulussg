@@ -250,6 +250,7 @@ html[lang="my"] .card-body h2{font-size:25px}
 }
 /* Per-campaign hero focus (kept in CSS, not a style attribute, so the page works under its Content Security Policy) */
 [data-campaign="share-your-story"] .hero-photo{--hero-focus:50% 30%}
+[data-campaign="share-your-story-migrant-workers"] .hero-photo{--hero-focus:50% 40%}
 
 /* ---------------------------------------------------------------- information pages (e.g. Sports Carnival), 16 Oct 2026 */
 .card-date{margin:-4px 0 0!important;font-weight:700;color:var(--terra-d)}
