@@ -1,5 +1,8 @@
 /*
- * Share Your Story — page text. English is the source; every language must have exactly the same keys
+ * Share Your Story: Migrant Domestic Workers — page text.
+ * 16 Oct 2026 (Zan): title renamed to "Share Your Story: Migrant Domestic Workers" (hero.title + hero.audience, meta.title);
+ *   id/tl/my wording of the new title is AI-translated, pending native review.
+ * English is the source; every language must have exactly the same keys
  * (checked by _tests/check-i18n.mjs). Shared text (navigation, footer, generic errors) is in
  * /campaigns/shared/i18n-shared.js.
  *
@@ -46,10 +49,11 @@ TulusI18n.register({
   },
 
   en: {
-    'meta.title': 'Share Your Story | Domestic Helpers in Singapore | TulusSG',
+    'meta.title': 'Share Your Story: Migrant Domestic Workers in Singapore | TulusSG',
     'meta.description': "TulusSG invites domestic helpers in Singapore to share their stories for an upcoming media production. Campaign period: 15 October – 15 November 2026.",
     'hero.tag': 'A TulusSG story project',
-    'hero.title': 'Share your story',
+    'hero.title': 'Share Your Story:',
+    'hero.audience': 'Migrant Domestic Workers',
     'hero.lead': "We're inviting domestic helpers in Singapore to share their stories for an upcoming TulusSG media production.",
     'hero.period': "Campaign period: 15 October – 15 November 2026",
     'hero.line1': 'Not a perfect story.',
@@ -163,10 +167,11 @@ TulusI18n.register({
   },
 
   id: {
-    'meta.title': 'Share Your Story | TulusSG',
+    'meta.title': 'Share Your Story: Pekerja Rumah Tangga Migran di Singapura | TulusSG',
     'meta.description': "TulusSG mengundang pekerja rumah tangga di Singapura untuk membagikan cerita mereka untuk produksi media yang akan datang. Periode kampanye: 15 Oktober – 15 November 2026.",
-    'hero.tag': 'Share Your Story · Proyek cerita TulusSG',
-    'hero.title': 'Bagikan cerita Anda',
+    'hero.tag': 'Proyek cerita TulusSG',
+    'hero.title': 'Share Your Story:',
+    'hero.audience': 'Pekerja Rumah Tangga Migran',
     'hero.lead': "Kami mengundang pekerja rumah tangga di Singapura untuk membagikan cerita mereka untuk produksi media TulusSG yang akan datang.",
     'hero.period': "Periode kampanye: 15 Oktober – 15 November 2026",
     'hero.line1': 'Bukan cerita yang sempurna.',
@@ -280,10 +285,11 @@ TulusI18n.register({
   },
 
   tl: {
-    'meta.title': 'Share Your Story | TulusSG',
+    'meta.title': 'Share Your Story: Mga Migrant Domestic Worker sa Singapore | TulusSG',
     'meta.description': "Inaanyayahan ng TulusSG ang mga kasambahay sa Singapore na ibahagi ang kanilang kuwento para sa isang paparating na media production. Panahon ng campaign: 15 Oktubre – 15 Nobyembre 2026.",
     'hero.tag': 'Isang story project ng TulusSG',
-    'hero.title': 'Ibahagi ang iyong kuwento',
+    'hero.title': 'Share Your Story:',
+    'hero.audience': 'Mga Migrant Domestic Worker',
     'hero.lead': "Inaanyayahan namin ang mga kasambahay sa Singapore na ibahagi ang kanilang kuwento para sa isang paparating na media production ng TulusSG.",
     'hero.period': "Panahon ng campaign: 15 Oktubre – 15 Nobyembre 2026",
     'hero.line1': 'Hindi perpektong kuwento.',
@@ -397,10 +403,11 @@ TulusI18n.register({
   },
 
   my: {
-    'meta.title': 'Share Your Story | TulusSG',
+    'meta.title': 'Share Your Story: စင်္ကာပူရှိ ရွှေ့ပြောင်းအိမ်အကူများ | TulusSG',
     'meta.description': "လာမည့် မီဒီယာထုတ်လုပ်မှုအတွက် ကိုယ့်ဇာတ်လမ်းကို မျှဝေရန် စင်္ကာပူရှိ အိမ်အကူများကို TulusSG က ဖိတ်ခေါ်ပါသည်။ အစီအစဉ်ကာလ: 2026 ခုနှစ် အောက်တိုဘာ 15 ရက် – နိုဝင်ဘာ 15 ရက်။",
     'hero.tag': 'TulusSG ဇာတ်လမ်း စီမံကိန်း',
-    'hero.title': 'သင့်ဇာတ်လမ်းကို မျှဝေပါ',
+    'hero.title': 'Share Your Story:',
+    'hero.audience': 'ရွှေ့ပြောင်းအိမ်အကူများ',
     'hero.lead': "လာမည့် TulusSG မီဒီယာထုတ်လုပ်မှုအတွက် ကိုယ့်ဇာတ်လမ်းကို မျှဝေရန် စင်္ကာပူရှိ အိမ်အကူများကို ကျွန်ုပ်တို့ ဖိတ်ခေါ်ပါသည်။",
     'hero.period': "အစီအစဉ်ကာလ: 2026 ခုနှစ် အောက်တိုဘာ 15 ရက် – နိုဝင်ဘာ 15 ရက်",
     'hero.line1': 'ပြီးပြည့်စုံသော ဇာတ်လမ်း မလိုပါ။',

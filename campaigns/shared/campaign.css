@@ -63,6 +63,8 @@ a{color:var(--terra-d)}
 .tag{display:inline-flex;align-items:center;gap:8px;margin:14px 0 4px;font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--terra-d)} /* D8 */
 .tag::after{content:'';width:24px;height:1px;background:var(--terra);opacity:0.5}
 h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,9.6vw,72px);line-height:1;margin:0 0 10px;letter-spacing:-0.01em}
+/* Campaign name on two lines: "Share Your Story:" / audience (16 Oct 2026) */
+.h1-aud{display:block;margin-top:0.08em;font-size:0.72em;color:var(--terra-d)}
 .period{display:inline-block;margin:0 0 10px;padding:4px 12px;border:1px solid rgba(196,98,45,0.3);border-radius:100px;background:var(--white);color:var(--terra-d);font-size:14px;font-weight:600;line-height:1.4}
 .lead{margin:0 0 10px;font-size:16px;line-height:1.5}
 .lines{margin:0 0 16px;font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.2}
