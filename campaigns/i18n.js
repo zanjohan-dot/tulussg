@@ -135,7 +135,7 @@ TulusI18n.register({
     'cal.note': 'Mga petsa sa Singapore. Mga kumpirmadong petsa lang ang ipinapakita.',
     'kind.starts': 'Simula ng campaign',
     'kind.ends': 'Huling araw ng campaign',
-    'kind.regOpens': 'Bukas na ang registration',
+    'kind.regOpens': "Pagbubukas ng registration",
     'kind.regCloses': 'Huling araw ng registration',
     'kind.event': 'Araw ng event',
     'date.months': 'Enero,Pebrero,Marso,Abril,Mayo,Hunyo,Hulyo,Agosto,Setyembre,Oktubre,Nobyembre,Disyembre',
