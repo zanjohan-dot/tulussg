@@ -60,13 +60,21 @@ const hub = load([...shared, 'campaigns/campaigns.js', 'campaigns/i18n.js']);
 hub.dicts.forEach((d, i) => checkDict(d, [...shared, 'campaigns/i18n.js'][i]));
 const campaigns = hub.window.TULUS_CAMPAIGNS ?? [];
 const hubKeys = new Set([...htmlKeys('campaigns/index.html'), ...CORE_KEYS]);
+// Text the directory script (campaigns/hub.js) uses in code.
+['view.label', 'view.cards', 'view.calendar', 'filter.label', 'filter.all', 'sec.upcoming', 'sec.soon', 'sec.past',
+  'status.active', 'status.coming-soon', 'status.closed', 'status.completed', 'card.view', 'card.dateTbc', 'hub.empty',
+  'cal.prev', 'cal.next', 'cal.empty', 'cal.note', 'date.months', 'date.weekdays', 'date.full', 'date.short', 'date.month',
+  'date.range', ...['starts', 'ends', 'regOpens', 'regCloses', 'event'].map((k) => `kind.${k}`)].forEach((k) => hubKeys.add(k));
+const CATEGORIES = ['sports', 'stories', 'learning', 'community'];
 for (const c of campaigns) {
   if (!STATUSES.includes(c.status)) problems.push(`campaigns.js: "${c.slug}" has unknown status "${c.status}"`);
   if (!fs.existsSync(path.join(root, 'campaigns', c.slug, 'index.html'))) problems.push(`campaigns.js: /campaigns/${c.slug}/index.html does not exist`);
+  if (!CATEGORIES.includes(c.category)) problems.push(`campaigns.js: "${c.slug}" needs a category (${CATEGORIES.join(' / ')})`);
+  if (!Array.isArray(c.audience) || c.audience.some((a) => !['mdw', 'mw'].includes(a))) problems.push(`campaigns.js: "${c.slug}" audience must be a list of 'mdw' / 'mw' (or [])`);
   if (c.status === 'hidden') continue;
-  hubKeys.add(`status.${c.status}`);
-  ['title', 'desc', 'alt'].forEach((k) => hubKeys.add(`campaign.${c.slug}.${k}`));
-  if (c.status === 'active') hubKeys.add(`campaign.${c.slug}.cta`);
+  hubKeys.add(`cat.${c.category}`);
+  (c.audience || []).forEach((a) => hubKeys.add(`aud.${a}`));
+  ['title', 'alt'].forEach((k) => hubKeys.add(`campaign.${c.slug}.${k}`));
 }
 resolve(hub.dicts, hubKeys, 'campaigns/index.html (hub)');
 
@@ -76,6 +84,20 @@ for (const c of campaigns) {
   if (!fs.existsSync(path.join(root, dir, 'i18n.js'))) { problems.push(`${dir}/i18n.js missing`); continue; }
   const page = load([...shared, `${dir}/i18n.js`]);
   checkDict(page.dicts[1], `${dir}/i18n.js`);
+  if (c.form === false) { // information page: no form, so no form keys or fields list
+    const keys = new Set([...htmlKeys(`${dir}/index.html`), ...CORE_KEYS]);
+    resolve(page.dicts, keys, `${dir}/index.html`);
+    // Extra languages offered by this page's language menu (e.g. bn, ta, zh): every key on the page must exist in
+    // that language (page file or shared file), so nothing silently falls back to English.
+    const html = fs.readFileSync(path.join(root, dir, 'index.html'), 'utf8');
+    const offered = [...html.matchAll(/<option value="([a-z]{2})"/g)].map((m) => m[1]);
+    for (const l of offered.filter((x) => !LANGS.includes(x))) {
+      const missing = [...keys].filter((k) => !page.dicts.some((d) => d[l] && Object.prototype.hasOwnProperty.call(d[l], k)));
+      if (missing.length) problems.push(`${dir}/index.html [${l}] untranslated: ${missing.join(', ')}`);
+      else ok.push(`${dir}/index.html [${l}]: all ${keys.size} keys translated`);
+    }
+    continue;
+  }
   const app = fs.readFileSync(path.join(root, dir, 'app.js'), 'utf8');
   const fields = (app.match(/fields:\s*\[([^\]]*)\]/)?.[1] ?? '').match(/'([^']+)'/g)?.map((f) => f.slice(1, -1)) ?? [];
   if (!fields.length) problems.push(`${dir}/app.js: could not read the fields list`);
