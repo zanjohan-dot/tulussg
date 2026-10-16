@@ -38,7 +38,7 @@ if (window.top !== window.self) {
     ta: { htmlLang: 'ta' },
     zh: { htmlLang: 'zh-Hans' },
   };
-  var CORE = ['en', 'id', 'tl', 'my'];
+  var CORE = ['en', 'id', 'tl', 'my', 'bn', 'ta', 'zh'];
 
   /*
    * Privacy policy versions that have been LEGALLY REVIEWED and published. English is the authoritative draft.

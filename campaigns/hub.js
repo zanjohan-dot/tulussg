@@ -25,9 +25,14 @@
 
   // ---- dates in the chosen language (month names and word order come from /campaigns/i18n.js)
   function parts(ymd) { var p = ymd.split('-'); return { Y: p[0], m: +p[1], d: +p[2] }; }
+  // Numbers in the language's own digits when it has them (date.digits: ten characters, e.g. Bengali); else 0-9.
+  function num(n) {
+    var dg = t('date.digits');
+    return dg && dg.length === 10 ? String(n).replace(/[0-9]/g, function (c) { return dg.charAt(+c); }) : String(n);
+  }
   function fill(pattern, ymd) {
     var p = parts(ymd);
-    return pattern.replace('{Y}', p.Y).replace('{M}', t('date.months').split(',')[p.m - 1]).replace('{d}', String(p.d));
+    return pattern.replace('{Y}', num(p.Y)).replace('{M}', t('date.months').split(',')[p.m - 1]).replace('{d}', num(p.d));
   }
   function full(ymd) { return fill(t('date.full'), ymd); }
   function short(ymd) { return fill(t('date.short'), ymd); }
@@ -180,7 +185,7 @@
     for (var d = 1; d <= days; d++) {
       var ymd = ym + '-' + (d < 10 ? '0' : '') + d;
       var cell = el('div', 'cal-day' + (ymd === today ? ' is-today' : ''));
-      cell.appendChild(el('span', 'cal-num', String(d)));
+      cell.appendChild(el('span', 'cal-num', num(d)));
       ms.filter(function (x) { return x.day === ymd; }).forEach(function (x) {
         var chip = el('a', 'cal-chip kind-' + x.kind + ' st-' + x.c.pub);
         chip.href = href(x.c);
@@ -204,7 +209,7 @@
         var day = el('span', 'cal-item-date');
         var dow = new Date(Date.parse(x.day + 'T00:00:00Z')).getUTCDay();
         day.appendChild(el('span', 'cal-item-dow', t('date.weekdays').split(',')[dow]));
-        day.appendChild(el('span', 'cal-item-num', String(parts(x.day).d)));
+        day.appendChild(el('span', 'cal-item-num', num(parts(x.day).d)));
         a.appendChild(day);
         var txt = el('span', 'cal-item-text');
         txt.appendChild(el('span', 'cal-item-kind', t('kind.' + x.kind)));

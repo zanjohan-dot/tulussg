@@ -6,7 +6,7 @@ import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..'); // works on Windows too
-const LANGS = ['en', 'id', 'tl', 'my'];
+const LANGS = ['en', 'id', 'tl', 'my', 'bn', 'ta', 'zh']; // every dictionary file provides all seven
 const STATUSES = ['active', 'coming-soon', 'closed', 'hidden'];
 const problems = [];
 const ok = [];
@@ -31,7 +31,6 @@ function checkDict(d, file) {
     if (extra.length) problems.push(`${file} [${l}] not in English: ${extra.join(', ')}`);
     if (empty.length) problems.push(`${file} [${l}] empty: ${empty.join(', ')}`);
   }
-  if (!d.review || LANGS.some((l) => !d.review[l])) problems.push(`${file}: review status missing for some languages`);
   ok.push(`${file}: ${en.length} keys × ${LANGS.length} languages`);
 }
 
@@ -151,9 +150,14 @@ for (const c of campaigns) {
     for (const l of offered) {
       const e = reg.languages[l];
       if (!e) { problems.push(`translations.js [${key}]: no entry for language "${l}"`); continue; }
-      if (e.public !== (e.status === 'source' || e.status === 'owner-approved')) problems.push(`translations.js [${key}] ${l}: public must be true exactly when status is source/owner-approved`);
-      if (l !== 'en' && !['ai-reviewed', 'native-verified'].includes(e.verification)) problems.push(`translations.js [${key}] ${l}: verification must be ai-reviewed or native-verified`);
-      if (e.verification === 'native-verified' && !(e.history || []).some((h) => /native/i.test(h))) problems.push(`translations.js [${key}] ${l}: native-verified needs a history line naming the native-speaker review`);
+      if (!['complete', 'incomplete'].includes(e.translation)) problems.push(`translations.js [${key}] ${l}: translation must be complete or incomplete`);
+      if (!['none', 'ai-reviewed', 'human-verified'].includes(e.verification)) problems.push(`translations.js [${key}] ${l}: verification must be none, ai-reviewed or human-verified`);
+      if (!['approved', 'pending', 'held'].includes(e.release)) problems.push(`translations.js [${key}] ${l}: release must be approved, pending or held`);
+      const shouldBePublic = l === 'en' || (e.release === 'approved' && e.translation === 'complete');
+      if (e.public !== shouldBePublic) problems.push(`translations.js [${key}] ${l}: public must be true exactly when release is approved and the translation is complete`);
+      if (l !== 'en' && e.release === 'approved' && e.verification === 'none') problems.push(`translations.js [${key}] ${l}: approved for release without any review`);
+      if (e.verification === 'human-verified' && !(e.history || []).some((h) => /human|native/i.test(h))) problems.push(`translations.js [${key}] ${l}: human-verified needs a history line naming the reviewer and date`);
+      if (e.release === 'held' && !(e.history || []).some((h) => /held|hold/i.test(h))) problems.push(`translations.js [${key}] ${l}: held needs a history line saying why`);
     }
     // The page's consent wording version must be the one the register's approvals refer to.
     if (c && c.form !== false) {
@@ -170,6 +174,31 @@ for (const c of campaigns) {
       if (wrong.length) problems.push(`${file}: English language note does not match the public languages (${wrong.join(', ')})`);
     }
     ok.push(`${file}: public languages ${pub.join(', ')} (register checked)`);
+  }
+}
+
+
+// ---- English source lock: when approved English text changes, the translations of those lines need review.
+// _tests/i18n-source-lock.json holds a fingerprint of every English line; `--update-lock` records the current text
+// (run it only after the translations of the changed lines have been updated and reviewed).
+{
+  const crypto = await import('node:crypto');
+  const files = ['campaigns/shared/i18n-shared.js', 'campaigns/i18n.js', ...campaigns.map((c) => `campaigns/${c.slug}/i18n.js`)];
+  const now = {};
+  for (const f of files) {
+    const d = load([f]).dicts[0];
+    now[f] = Object.fromEntries(Object.entries(d.en).map(([k, v]) => [k, crypto.createHash('sha256').update(v).digest('hex').slice(0, 12)]));
+  }
+  const lockFile = path.join(root, '_tests/i18n-source-lock.json');
+  if (process.argv.includes('--update-lock')) { fs.writeFileSync(lockFile, JSON.stringify(now, null, 1) + '\n'); ok.push('English source lock updated'); }
+  else {
+    const lockData = fs.existsSync(lockFile) ? JSON.parse(fs.readFileSync(lockFile, 'utf8')) : {};
+    for (const f of files) {
+      const was = lockData[f] || {};
+      const changed = Object.keys(now[f]).filter((k) => was[k] !== now[f][k]);
+      if (changed.length) problems.push(`${f}: English changed or added since the translations were last reviewed (review these lines in every language, then run --update-lock): ${changed.join(', ')}`);
+      else ok.push(`${f}: English unchanged since last translation review`);
+    }
   }
 }
 

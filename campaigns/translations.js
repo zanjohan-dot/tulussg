@@ -1,75 +1,95 @@
 /*
- * TulusSG TRANSLATION APPROVAL REGISTER (17 Oct 2026). One place that says, for every campaign page and language:
- * whether it may be shown to the public, how it was checked, and which English consent wording it translates.
+ * TulusSG TRANSLATION APPROVAL REGISTER. One place that says, for every page and language: whether the translation is
+ * complete, how it was really checked, and whether the owner approved it for public release.
  *
- * The language menu shows ONLY languages with public: true. Others stay hidden (they appear only in review mode:
- * open a page once with ?review=1). A visitor who chose a hidden language elsewhere is told, in their language, that
- * this page is shown in English, and is offered the available languages. Registration works in every case.
+ * The language menu shows ONLY languages with public: true. Others stay hidden (visible only in review mode: open a
+ * page once with ?review=1; ?review=0 ends it). A visitor who chose a hidden language elsewhere is told, in their
+ * language, that the page is shown in English and is offered the available languages. Registration works in every case.
  *
- * Fields
- *   consentVersion   the approved English consent wording this page's translations correspond to (must equal the
- *                    page's app.js and the API; checked by _tests/check-i18n.mjs)
- *   status           'source' (English) | 'owner-approved' (Zan approved it for publication) | 'pending-approval'
- *   public           true only for 'source' and 'owner-approved'
- *   verification     what checking has REALLY happened:
- *                      'ai-reviewed'     reviewed by AI (incl. back-translation of consent lines); NOT a human check
- *                      'native-verified' checked by a qualified native speaker (record who and when in `history`)
+ * Fields (one entry per page and language)
+ *   consentVersion  page level: the approved English consent wording the translations correspond to (must equal the
+ *                   page's app.js and the API; checked by _tests/check-i18n.mjs)
+ *   translation     'complete' | 'incomplete'          every key translated? (also enforced by the checks)
+ *   verification    'none' | 'ai-reviewed' | 'human-verified'
+ *                     ai-reviewed     independent AI review (meaning, naturalness, terminology, blind back-translation
+ *                                     of consent and privacy lines). NOT a human check.
+ *                     human-verified  checked by a qualified human reviewer; history must name who and when.
+ *   release         'approved' | 'pending' | 'held'
+ *                     approved  the owner approved this translation for public use (separate from verification:
+ *                               a translation can be AI-reviewed and approved without being human-verified)
+ *                     pending   awaiting the owner's decision
+ *                     held      kept back because of a known material issue (see history)
+ *   public          true exactly when release is 'approved' and translation 'complete' (English: always true)
  *   translationVersion  date of the last change to this language's text on this page
- *   history          dated log of reviews, approvals and changes (needed to map consent records to the exact wording:
- *                    a registration's "Website language" + submission time + consent version identify the text shown)
+ *   history         dated log of translations, reviews, approvals and corrections (with the change log in the API repo,
+ *                   docs/consent-docs/translation-change-log.md, this maps a registration's "Website language" +
+ *                   submission time + consent version to the exact wording shown)
  *
- * TO APPROVE A LANGUAGE: after the native-speaker check, set status 'owner-approved', public true, verification
- * 'native-verified', add a history line (date, reviewer, scope). Never set public: true for a language whose consent
- * wording has not been approved by the owner.
+ * When the approved ENGLISH text changes, _tests/check-i18n.mjs lists the changed lines (it compares against
+ * _tests/i18n-source-lock.json): update the translations, re-review them, then run
+ * `node _tests/check-i18n.mjs --update-lock`.
  */
-window.TULUS_TRANSLATIONS = {
-  'share-your-story': {
-    consentVersion: 'share-your-story-v7.3-2026-10-14',
-    languages: {
-      en: { status: 'source', public: true },
-      id: { status: 'owner-approved', public: true, verification: 'ai-reviewed', translationVersion: '2026-10-17', history: [
-        '2026-10-14 AI-audited; accepted by owner for publication (live since 14 Oct 2026 ~18:24 SGT)',
-        '2026-10-17 independent AI review; withdrawal sentence: "kapan saja" moved first (meaning unchanged); awaiting owner sign-off of the 17 Oct changes'] },
-      tl: { status: 'owner-approved', public: true, verification: 'ai-reviewed', translationVersion: '2026-10-17', history: [
-        '2026-10-14 AI-audited; accepted by owner for publication (live since 14 Oct 2026 ~18:24 SGT)',
-        '2026-10-17 independent AI review; withdrawal sentence: "anumang oras" moved first so it clearly covers withdrawal; social-media help clarified; awaiting owner sign-off of the 17 Oct changes'] },
-      my: { status: 'owner-approved', public: true, verification: 'ai-reviewed', translationVersion: '2026-10-17', history: [
-        '2026-10-14 AI-audited; accepted by owner for publication (live since 14 Oct 2026 ~18:24 SGT)',
-        '2026-10-17 independent AI review; "if any" filming, username label, channel wording; awaiting owner sign-off of the 17 Oct changes'] },
+(function () {
+  var AI = 'ai-reviewed';
+  function lang(release, version, history) {
+    return { translation: 'complete', verification: AI, release: release, public: release === 'approved', translationVersion: version, history: history };
+  }
+  var SOURCE = { translation: 'complete', verification: 'none', release: 'approved', public: true };
+
+  window.TULUS_TRANSLATIONS = {
+    'share-your-story': {
+      consentVersion: 'share-your-story-v7.3-2026-10-14',
+      languages: {
+        en: SOURCE,
+        id: lang('approved', '2026-10-17', [
+          '2026-10-14 AI-audited; approved by owner for publication (live since 14 Oct 2026 ~18:24 SGT)',
+          '2026-10-17 independent AI review; withdrawal sentence: "kapan saja" moved first (meaning unchanged; see change log)', '2026-10-17 final AI review (second round); corrections applied (see change log)']),
+        tl: lang('approved', '2026-10-17', [
+          '2026-10-14 AI-audited; approved by owner for publication (live since 14 Oct 2026 ~18:24 SGT)',
+          '2026-10-17 independent AI review; withdrawal sentence: "anumang oras" moved first so it clearly covers withdrawal; social-media help clarified (see change log)', '2026-10-17 final AI review (second round); corrections applied (see change log)']),
+        my: lang('approved', '2026-10-17', [
+          '2026-10-14 AI-audited; approved by owner for publication (live since 14 Oct 2026 ~18:24 SGT)',
+          '2026-10-17 independent AI review; "if any" filming, username label, channel wording (see change log)', '2026-10-17 final AI review (second round); corrections applied (see change log)']),
+        bn: lang('pending', '2026-10-17', ['2026-10-17 added (owner: seven languages on every campaign page); shared lines reuse the AI-reviewed Migrant Workers text', '2026-10-17 final AI review (blind back-translation + independent review + adjudication); corrections applied; no unresolved material translation ambiguity; READY FOR OWNER APPROVAL']),
+        ta: lang('pending', '2026-10-17', ['2026-10-17 added (owner: seven languages on every campaign page); shared lines reuse the AI-reviewed Migrant Workers text', '2026-10-17 final AI review (blind back-translation + independent review + adjudication); corrections applied; no unresolved material translation ambiguity; READY FOR OWNER APPROVAL']),
+        zh: lang('pending', '2026-10-17', ['2026-10-17 added (owner: seven languages on every campaign page); shared lines reuse the AI-reviewed Migrant Workers text', '2026-10-17 final AI review (blind back-translation + independent review + adjudication); corrections applied; no unresolved material translation ambiguity; READY FOR OWNER APPROVAL']),
+      },
     },
-  },
-  'share-your-story-migrant-workers': {
-    consentVersion: 'share-your-story-mw-v1-2026-10-16',
-    languages: {
-      en: { status: 'source', public: true },
-      // Not yet approved by the owner: the campaign opens in English until each language is approved.
-      id: { status: 'pending-approval', public: false, verification: 'ai-reviewed', translationVersion: '2026-10-17', history: ['2026-10-16 AI translation (MW lines)', '2026-10-17 independent AI review + third-pass contextual review'] },
-      tl: { status: 'pending-approval', public: false, verification: 'ai-reviewed', translationVersion: '2026-10-17', history: ['2026-10-16 AI translation (MW lines)', '2026-10-17 independent AI review + third-pass contextual review'] },
-      my: { status: 'pending-approval', public: false, verification: 'ai-reviewed', translationVersion: '2026-10-17', history: ['2026-10-16 AI translation (MW lines)', '2026-10-17 independent AI review + third-pass contextual review'] },
-      bn: { status: 'pending-approval', public: false, verification: 'ai-reviewed', translationVersion: '2026-10-17', history: ['2026-10-16 AI translation (whole page)', '2026-10-17 independent AI review + third-pass contextual review'] },
-      ta: { status: 'pending-approval', public: false, verification: 'ai-reviewed', translationVersion: '2026-10-17', history: ['2026-10-16 AI translation (whole page)', '2026-10-17 independent AI review (terms: வெளிநாட்டு ஊழியர்கள், இயக்கம், ஒலிப்பதிவு) + third-pass contextual review'] },
-      zh: { status: 'pending-approval', public: false, verification: 'ai-reviewed', translationVersion: '2026-10-17', history: ['2026-10-16 AI translation (whole page)', '2026-10-17 independent AI review + third-pass contextual review'] },
+    'share-your-story-migrant-workers': {
+      consentVersion: 'share-your-story-mw-v1-2026-10-16',
+      languages: {
+        en: SOURCE,
+        id: lang('pending', '2026-10-17', ['2026-10-16 AI translation (MW lines)', '2026-10-17 independent AI review + third-pass contextual review', '2026-10-17 final AI review (blind back-translation + independent review + adjudication); corrections applied; no unresolved material translation ambiguity; READY FOR OWNER APPROVAL']),
+        tl: lang('pending', '2026-10-17', ['2026-10-16 AI translation (MW lines)', '2026-10-17 independent AI review + third-pass contextual review', '2026-10-17 final AI review (blind back-translation + independent review + adjudication); corrections applied; no unresolved material translation ambiguity; READY FOR OWNER APPROVAL']),
+        my: lang('pending', '2026-10-17', ['2026-10-16 AI translation (MW lines)', '2026-10-17 independent AI review + third-pass contextual review', '2026-10-17 final AI review (blind back-translation + independent review + adjudication); corrections applied; no unresolved material translation ambiguity; READY FOR OWNER APPROVAL']),
+        bn: lang('pending', '2026-10-17', ['2026-10-16 AI translation (whole page)', '2026-10-17 independent AI review + third-pass contextual review', '2026-10-17 final AI review (blind back-translation + independent review + adjudication); corrections applied; no unresolved material translation ambiguity; READY FOR OWNER APPROVAL']),
+        ta: lang('pending', '2026-10-17', ['2026-10-16 AI translation (whole page)', '2026-10-17 independent AI review (terms: வெளிநாட்டு ஊழியர்கள், இயக்கம், ஒலிப்பதிவு) + third-pass contextual review', '2026-10-17 final AI review (blind back-translation + independent review + adjudication); corrections applied; no unresolved material translation ambiguity; READY FOR OWNER APPROVAL']),
+        zh: lang('pending', '2026-10-17', ['2026-10-16 AI translation (whole page)', '2026-10-17 independent AI review + third-pass contextual review', '2026-10-17 final AI review (blind back-translation + independent review + adjudication); corrections applied; no unresolved material translation ambiguity; READY FOR OWNER APPROVAL']),
+      },
     },
-  },
-  'sports-carnival': {
-    consentVersion: null, // information page: no form, no consent wording
-    languages: {
-      en: { status: 'source', public: true },
-      id: { status: 'owner-approved', public: true, verification: 'ai-reviewed', translationVersion: '2026-10-17', history: ['2026-10-16 owner asked for the page in these languages', '2026-10-17 independent AI review'] },
-      tl: { status: 'owner-approved', public: true, verification: 'ai-reviewed', translationVersion: '2026-10-17', history: ['2026-10-16 owner asked for the page in these languages', '2026-10-17 independent AI review'] },
-      my: { status: 'owner-approved', public: true, verification: 'ai-reviewed', translationVersion: '2026-10-17', history: ['2026-10-16 owner asked for the page in these languages', '2026-10-17 independent AI review'] },
-      bn: { status: 'owner-approved', public: true, verification: 'ai-reviewed', translationVersion: '2026-10-17', history: ['2026-10-16 owner asked for Bengali, Tamil and Chinese on this page', '2026-10-17 independent AI review'] },
-      ta: { status: 'owner-approved', public: true, verification: 'ai-reviewed', translationVersion: '2026-10-17', history: ['2026-10-16 owner asked for Bengali, Tamil and Chinese on this page', '2026-10-17 independent AI review'] },
-      zh: { status: 'owner-approved', public: true, verification: 'ai-reviewed', translationVersion: '2026-10-17', history: ['2026-10-16 owner asked for Bengali, Tamil and Chinese on this page', '2026-10-17 independent AI review'] },
+    'sports-carnival': {
+      consentVersion: null, // information page: no form, no consent wording
+      languages: {
+        en: SOURCE,
+        id: lang('approved', '2026-10-17', ['2026-10-16 owner asked for the page in seven languages', '2026-10-17 independent AI review', '2026-10-17 final AI review (second round); corrections applied (see change log)']),
+        tl: lang('approved', '2026-10-17', ['2026-10-16 owner asked for the page in seven languages', '2026-10-17 independent AI review', '2026-10-17 final AI review (second round); corrections applied (see change log)']),
+        my: lang('approved', '2026-10-17', ['2026-10-16 owner asked for the page in seven languages', '2026-10-17 independent AI review', '2026-10-17 final AI review (second round); corrections applied (see change log)']),
+        bn: lang('approved', '2026-10-17', ['2026-10-16 owner asked for Bengali, Tamil and Chinese on this page', '2026-10-17 independent AI review', '2026-10-17 final AI review (second round); corrections applied (see change log)']),
+        ta: lang('approved', '2026-10-17', ['2026-10-16 owner asked for Bengali, Tamil and Chinese on this page', '2026-10-17 independent AI review', '2026-10-17 final AI review (second round); corrections applied (see change log)']),
+        zh: lang('approved', '2026-10-17', ['2026-10-16 owner asked for Bengali, Tamil and Chinese on this page', '2026-10-17 independent AI review', '2026-10-17 final AI review (second round); corrections applied (see change log)']),
+      },
     },
-  },
-  campaigns: { // the /campaigns/ directory
-    consentVersion: null,
-    languages: {
-      en: { status: 'source', public: true },
-      id: { status: 'owner-approved', public: true, verification: 'ai-reviewed', translationVersion: '2026-10-17', history: ['2026-10-14 hub text accepted by owner', '2026-10-16 directory text added (AI)', '2026-10-17 independent AI review'] },
-      tl: { status: 'owner-approved', public: true, verification: 'ai-reviewed', translationVersion: '2026-10-17', history: ['2026-10-14 hub text accepted by owner', '2026-10-16 directory text added (AI)', '2026-10-17 independent AI review'] },
-      my: { status: 'owner-approved', public: true, verification: 'ai-reviewed', translationVersion: '2026-10-17', history: ['2026-10-14 hub text accepted by owner', '2026-10-16 directory text added (AI)', '2026-10-17 independent AI review'] },
+    campaigns: { // the /campaigns/ directory
+      consentVersion: null,
+      languages: {
+        en: SOURCE,
+        id: lang('approved', '2026-10-17', ['2026-10-14 hub text approved by owner', '2026-10-16 directory text added (AI)', '2026-10-17 independent AI review', '2026-10-17 final AI review (second round); corrections applied (see change log)']),
+        tl: lang('approved', '2026-10-17', ['2026-10-14 hub text approved by owner', '2026-10-16 directory text added (AI)', '2026-10-17 independent AI review', '2026-10-17 final AI review (second round); corrections applied (see change log)']),
+        my: lang('approved', '2026-10-17', ['2026-10-14 hub text approved by owner', '2026-10-16 directory text added (AI)', '2026-10-17 independent AI review', '2026-10-17 final AI review (second round); corrections applied (see change log)']),
+        bn: lang('pending', '2026-10-17', ['2026-10-17 added (owner: seven languages on the directory)', '2026-10-17 final AI review (blind back-translation + independent review + adjudication); corrections applied; no unresolved material translation ambiguity; READY FOR OWNER APPROVAL']),
+        ta: lang('pending', '2026-10-17', ['2026-10-17 added (owner: seven languages on the directory)', '2026-10-17 final AI review (blind back-translation + independent review + adjudication); corrections applied; no unresolved material translation ambiguity; READY FOR OWNER APPROVAL']),
+        zh: lang('pending', '2026-10-17', ['2026-10-17 added (owner: seven languages on the directory)', '2026-10-17 final AI review (blind back-translation + independent review + adjudication); corrections applied; no unresolved material translation ambiguity; READY FOR OWNER APPROVAL']),
+      },
     },
-  },
-};
+  };
+})();
