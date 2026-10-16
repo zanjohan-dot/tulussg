@@ -30,7 +30,7 @@ TulusI18n.register({
     'campaign.share-your-story-migrant-workers.desc': "We're inviting migrant workers in Singapore to share their journeys and experiences for an upcoming TulusSG media production.",
     'campaign.share-your-story-migrant-workers.cta': "Learn more",
     'campaign.share-your-story-migrant-workers.details': "See details",
-    'campaign.share-your-story-migrant-workers.alt': "TulusSG logo",
+    'campaign.share-your-story-migrant-workers.alt': "Three men smiling and talking in a park in Singapore",
   },
 
   id: {
@@ -55,7 +55,7 @@ TulusI18n.register({
     'campaign.share-your-story-migrant-workers.desc': "Kami mengundang pekerja migran di Singapura untuk membagikan perjalanan dan pengalaman mereka untuk produksi media TulusSG yang akan datang.",
     'campaign.share-your-story-migrant-workers.cta': "Selengkapnya",
     'campaign.share-your-story-migrant-workers.details': "Lihat detail",
-    'campaign.share-your-story-migrant-workers.alt': "Logo TulusSG",
+    'campaign.share-your-story-migrant-workers.alt': "Tiga pria tersenyum dan mengobrol di sebuah taman di Singapura",
   },
 
   tl: {
@@ -80,7 +80,7 @@ TulusI18n.register({
     'campaign.share-your-story-migrant-workers.desc': "Inaanyayahan namin ang mga migrant worker sa Singapore na ibahagi ang kanilang paglalakbay at mga karanasan para sa isang paparating na media production ng TulusSG.",
     'campaign.share-your-story-migrant-workers.cta': "Alamin pa",
     'campaign.share-your-story-migrant-workers.details': "Tingnan ang detalye",
-    'campaign.share-your-story-migrant-workers.alt': "Logo ng TulusSG",
+    'campaign.share-your-story-migrant-workers.alt': "Tatlong lalaking nakangiti at nag-uusap sa isang park sa Singapore",
   },
 
   my: {
@@ -105,6 +105,6 @@ TulusI18n.register({
     'campaign.share-your-story-migrant-workers.desc': "လာမည့် TulusSG မီဒီယာထုတ်လုပ်မှုအတွက် ကိုယ့်ခရီးနှင့် အတွေ့အကြုံများကို မျှဝေရန် စင်္ကာပူရှိ ရွှေ့ပြောင်းအလုပ်သမားများကို ဖိတ်ခေါ်ပါသည်။",
     'campaign.share-your-story-migrant-workers.cta': "ပိုမိုသိရှိရန်",
     'campaign.share-your-story-migrant-workers.details': "အသေးစိတ်ကြည့်ရန်",
-    'campaign.share-your-story-migrant-workers.alt': "TulusSG လိုဂို",
+    'campaign.share-your-story-migrant-workers.alt': "စင်္ကာပူရှိ ပန်းခြံတစ်ခုတွင် ပြုံးရွှင်စွာ စကားပြောနေကြသော အမျိုးသား သုံးဦး",
   },
 });

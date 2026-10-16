@@ -50,7 +50,7 @@ window.TULUS_CAMPAIGNS = [
     order: 3,
     image: '/campaigns/share-your-story-migrant-workers/hero-640.webp',
     imageFallback: '/campaigns/share-your-story-migrant-workers/hero-640.jpg',
-    imageFocus: '50% 40%',
+    imageFocus: '50% 35%',
   },
 ];
 
