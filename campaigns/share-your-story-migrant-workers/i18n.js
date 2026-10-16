@@ -554,6 +554,7 @@ TulusI18n.register({
   // Bengali: AI-translated 16 Oct 2026 (complete: page + shared text + form messages). PENDING native-speaker
   // verification, above all the consent and privacy lines. Offered only in review mode until verified (see index.html).
   bn: {
+    "footer.copyright": "© 2026 TulusSG। আমাদের অনুমতি ছাড়া এই পৃষ্ঠার ছবি বা লেখা আবার ব্যবহার করবেন না।",
     "nav.language": "ভাষা",
     "lang.notice": "এই পৃষ্ঠাটি ইংরেজি, বাহাসা ইন্দোনেশিয়া, ফিলিপিনো, বার্মিজ, বাংলা, তামিল ও চীনা ভাষায় পাওয়া যায়। প্রতিটি ভাষায় একই কথা বলাই উদ্দেশ্য। কিছু বুঝতে অসুবিধা হলে, ফর্ম পাঠানোর আগে admin@tulussg.com-এ আমাদের জিজ্ঞেস করুন। কোনো অনুবাদ ভুল মনে হলে সেখানেও আমাদের জানাতে পারেন।",
     "nav.home": "TulusSG হোম",
@@ -718,6 +719,7 @@ TulusI18n.register({
   // Tamil: AI-translated 16 Oct 2026 (complete: page + shared text + form messages). PENDING native-speaker
   // verification, above all the consent and privacy lines. Offered only in review mode until verified (see index.html).
   ta: {
+    "footer.copyright": "© 2026 TulusSG. எங்கள் அனுமதியின்றி இந்தப் பக்கத்தில் உள்ள புகைப்படங்களையோ உரையையோ மீண்டும் பயன்படுத்த வேண்டாம்.",
     "nav.language": "மொழி",
     "lang.notice": "இந்தப் பக்கம் ஆங்கிலம், பஹாசா இந்தோனேசியா, ஃபிலிப்பினோ, பர்மியம், வங்காளம், தமிழ், சீனம் ஆகிய மொழிகளில் உள்ளது. ஒவ்வொரு மொழியிலும் ஒரே பொருள் தரும்படி எழுதப்பட்டுள்ளது. ஏதேனும் புரியவில்லை என்றால், அனுப்புவதற்கு முன் admin@tulussg.com என்ற முகவரியில் எங்களிடம் கேளுங்கள். மொழிபெயர்ப்பில் தவறு இருப்பதாகத் தோன்றினாலும் அங்கே எங்களுக்குத் தெரிவிக்கலாம்.",
     "nav.home": "TulusSG முகப்பு",
@@ -882,6 +884,7 @@ TulusI18n.register({
   // Simplified Chinese: AI-translated 16 Oct 2026 (complete: page + shared text + form messages). PENDING native-speaker
   // verification, above all the consent and privacy lines. Offered only in review mode until verified (see index.html).
   zh: {
+    "footer.copyright": "© 2026 TulusSG。未经我们许可，请勿转用本页的照片或文字。",
     "nav.language": "语言",
     "lang.notice": "本页面提供英文、印尼文、菲律宾文、缅甸文、孟加拉文、泰米尔文和中文版本。各版本旨在表达相同的内容。如有任何不清楚的地方，请在提交前发邮件至 admin@tulussg.com 询问我们。如果您觉得翻译有误，也可以通过该邮箱告诉我们。",
     "nav.home": "TulusSG 首页",

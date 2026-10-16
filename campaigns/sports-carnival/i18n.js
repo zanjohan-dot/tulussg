@@ -130,6 +130,7 @@ TulusI18n.register({
   // bn: AI-translated 16 Oct 2026, PENDING native-speaker review. Also carries the shared menu/footer/status
   // text for this language (the shared file only has en/id/tl/my).
   bn: {
+    "footer.copyright": "© 2026 TulusSG। আমাদের অনুমতি ছাড়া এই পৃষ্ঠার ছবি বা লেখা আবার ব্যবহার করবেন না।",
     'meta.title': "TulusSG স্পোর্টস কার্নিভাল | রবিবার, ১০ জানুয়ারি ২০২৭",
     'meta.description': "রবিবার, ১০ জানুয়ারি ২০২৭ তারিখে TulusSG স্পোর্টস কার্নিভাল: নতুনদের উপযোগী স্টেশনে পাঁচটি খেলা চেষ্টা করুন। স্থান ও সময় পরে জানানো হবে। নিবন্ধন শীঘ্রই শুরু হবে।",
     'hero.tag': "TulusSG-এর একটি আয়োজন",
@@ -176,6 +177,7 @@ TulusI18n.register({
   // ta: AI-translated 16 Oct 2026, PENDING native-speaker review. Also carries the shared menu/footer/status
   // text for this language (the shared file only has en/id/tl/my).
   ta: {
+    "footer.copyright": "© 2026 TulusSG. எங்கள் அனுமதியின்றி இந்தப் பக்கத்தில் உள்ள புகைப்படங்களையோ உரையையோ மீண்டும் பயன்படுத்த வேண்டாம்.",
     'meta.title': "TulusSG விளையாட்டுத் திருவிழா | ஞாயிறு, 10 ஜனவரி 2027",
     'meta.description': "TulusSG விளையாட்டுத் திருவிழா, ஞாயிறு 10 ஜனவரி 2027: தொடக்கநிலையினருக்கான மையங்களில் ஐந்து விளையாட்டுகளை முயற்சிக்கலாம். இடமும் நேரமும் பின்னர் அறிவிக்கப்படும். பதிவு விரைவில் தொடங்கும்.",
     'hero.tag': "TulusSG நிகழ்வு",
@@ -222,6 +224,7 @@ TulusI18n.register({
   // zh: AI-translated 16 Oct 2026, PENDING native-speaker review. Also carries the shared menu/footer/status
   // text for this language (the shared file only has en/id/tl/my).
   zh: {
+    "footer.copyright": "© 2026 TulusSG。未经我们许可，请勿转用本页的照片或文字。",
     'meta.title': "TulusSG 运动嘉年华 | 2027年1月10日（星期日）",
     'meta.description': "TulusSG 运动嘉年华，2027年1月10日（星期日）：在适合初学者的活动站体验五项运动。地点和时间待定，报名即将开始。",
     'hero.tag': "TulusSG 活动",
