@@ -2,22 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.tulussg.com/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.tulussg.com/domestic-worker-support-singapore/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.tulussg.com/migrant-worker-community-singapore/</loc>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tulussg.com/caregiver-support-singapore/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tulussg.com/community-resources-singapore/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -34,7 +39,7 @@
   </url>
   <url>
     <loc>https://www.tulussg.com/faq/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
