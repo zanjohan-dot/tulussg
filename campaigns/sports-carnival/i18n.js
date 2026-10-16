@@ -36,6 +36,8 @@ TulusI18n.register({
     'notice.p': 'We will announce the venue, time and how to register when arrangements are finalised.',
     'notice.cta': 'Follow our WhatsApp Channel for updates',
     'lang.notice': "This page is available in English, Bahasa Indonesia, Filipino, Burmese, Bengali, Tamil and Chinese. Each version is meant to say the same thing. If anything is unclear, or a translation seems wrong, please tell us at admin@tulussg.com.",
+    'banner.alt': "Illustration: people trying football, badminton, basketball, floorball and table tennis in a park in Singapore",
+    'banner.note': "Illustration only.",
   },
 
   id: {
@@ -63,6 +65,8 @@ TulusI18n.register({
     'notice.p': 'Kami akan mengumumkan tempat, waktu, dan cara mendaftar setelah persiapan selesai.',
     'notice.cta': 'Ikuti Saluran WhatsApp kami untuk kabar terbaru',
     'lang.notice': "Halaman ini tersedia dalam bahasa Inggris, Bahasa Indonesia, Filipino, Burma, Bengali, Tamil, dan Mandarin. Setiap versi dimaksudkan untuk menyampaikan hal yang sama. Jika ada yang kurang jelas atau terjemahan tampak keliru, mohon beri tahu kami di admin@tulussg.com.",
+    'banner.alt': "Ilustrasi: orang-orang mencoba sepak bola, bulu tangkis, bola basket, floorball, dan tenis meja di sebuah taman di Singapura",
+    'banner.note': "Hanya ilustrasi.",
   },
 
   tl: {
@@ -90,6 +94,8 @@ TulusI18n.register({
     'notice.p': 'Iaanunsyo namin ang lugar, oras at paraan ng pag-register kapag naayos na ang mga detalye.',
     'notice.cta': 'Sundan ang aming WhatsApp Channel para sa mga update',
     'lang.notice': "Available ang page na ito sa English, Bahasa Indonesia, Filipino, Burmese, Bengali, Tamil at Chinese. Pareho ang ibig sabihin ng bawat bersyon. Kung may hindi malinaw o mukhang mali ang translation, sabihin sa amin sa admin@tulussg.com.",
+    'banner.alt': "Ilustrasyon: mga taong sumusubok ng football, badminton, basketball, floorball at table tennis sa isang park sa Singapore",
+    'banner.note': "Ilustrasyon lamang.",
   },
 
   my: {
@@ -117,6 +123,8 @@ TulusI18n.register({
     'notice.p': 'အစီအစဉ်များ အတည်ဖြစ်သည့်အခါ နေရာ၊ အချိန်နှင့် စာရင်းသွင်းပုံကို ကြေညာပါမည်။',
     'notice.cta': 'နောက်ဆုံးသတင်းများအတွက် ကျွန်ုပ်တို့၏ WhatsApp Channel ကို Follow လုပ်ပါ',
     'lang.notice': "ဤစာမျက်နှာကို အင်္ဂလိပ်၊ အင်ဒိုနီးရှား၊ ဖိလစ်ပိုင်၊ မြန်မာ၊ ဘင်္ဂါလီ၊ တမီးလ်နှင့် တရုတ် ဘာသာများဖြင့် ဖတ်ရှုနိုင်ပါသည်။ ဗားရှင်းတိုင်းသည် အဓိပ္ပာယ်တူညီစေရန် ရည်ရွယ်ပါသည်။ နားမလည်သည်များ ရှိပါက သို့မဟုတ် ဘာသာပြန် မှားနေပုံရပါက admin@tulussg.com သို့ အကြောင်းကြားပေးပါ။",
+    'banner.alt': "သရုပ်ဖော်ပုံ - စင်္ကာပူရှိ ပန်းခြံတစ်ခုတွင် ဘောလုံး၊ ကြက်တောင်၊ ဘတ်စကက်ဘော၊ ဖလောဘောနှင့် စားပွဲတင်တင်းနစ် ကစားကြည့်နေကြသူများ",
+    'banner.note': "သရုပ်ဖော်ပုံသာ ဖြစ်ပါသည်။",
   },
 
   // bn: AI-translated 16 Oct 2026, PENDING native-speaker review. Also carries the shared menu/footer/status
@@ -161,6 +169,8 @@ TulusI18n.register({
     'privacy.link': "গোপনীয়তা নীতি",
     'privacy.linkEnglishOnly': "গোপনীয়তা নীতি (ইংরেজিতে)",
     'status.coming-soon': "শীঘ্রই আসছে",
+    'banner.alt': "চিত্রণ: সিঙ্গাপুরের একটি পার্কে লোকজন ফুটবল, ব্যাডমিন্টন, বাস্কেটবল, ফ্লোরবল ও টেবিল টেনিস খেলে দেখছেন",
+    'banner.note': "শুধু চিত্রণ।",
   },
 
   // ta: AI-translated 16 Oct 2026, PENDING native-speaker review. Also carries the shared menu/footer/status
@@ -205,6 +215,8 @@ TulusI18n.register({
     'privacy.link': "தனியுரிமைக் கொள்கை",
     'privacy.linkEnglishOnly': "தனியுரிமைக் கொள்கை (ஆங்கிலத்தில்)",
     'status.coming-soon': "விரைவில்",
+    'banner.alt': "விளக்கப்படம்: சிங்கப்பூரில் ஒரு பூங்காவில் கால்பந்து, பூப்பந்து, கூடைப்பந்து, ஃப்ளோர்பால், மேசைப்பந்து விளையாடிப் பார்க்கும் மக்கள்",
+    'banner.note': "விளக்கப்படம் மட்டுமே.",
   },
 
   // zh: AI-translated 16 Oct 2026, PENDING native-speaker review. Also carries the shared menu/footer/status
@@ -249,5 +261,7 @@ TulusI18n.register({
     'privacy.link': "隐私政策",
     'privacy.linkEnglishOnly': "隐私政策（英文）",
     'status.coming-soon': "即将推出",
+    'banner.alt': "示意图：人们在新加坡的公园里尝试足球、羽毛球、篮球、地板球和乒乓球",
+    'banner.note': "仅为示意图。",
   },
 });

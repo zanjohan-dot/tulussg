@@ -37,7 +37,7 @@ window.TULUS_CAMPAIGNS = [
     status: 'coming-soon',
     form: false,
     order: 2,
-    image: '/campaigns/sports-carnival/card-640.png',
+    image: '/campaigns/sports-carnival/card-640.jpg',
     imageFocus: '50% 50%',
   },
   {
