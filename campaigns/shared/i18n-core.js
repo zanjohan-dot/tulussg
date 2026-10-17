@@ -131,7 +131,8 @@ if (window.top !== window.self) {
         })(select.options[i]);
       }
     }
-    note.parentNode.insertBefore(p, note);
+    var place = document.getElementById('lang-note-place') || note;
+    place.parentNode.insertBefore(p, place);
   }
 
   function pageLangs() {
@@ -215,6 +216,9 @@ if (window.top !== window.self) {
     document.querySelectorAll('[data-i18n-rich]').forEach(function (el) {
       renderRich(el, t(el.getAttribute('data-i18n-rich')));
     });
+    linkEmail(document.getElementById('lang-note'));
+    var info = document.getElementById('lang-info');
+    if (info) info.setAttribute('aria-label', INFO_LABEL[lang] || INFO_LABEL.en);
     document.querySelectorAll('[data-i18n-attr]').forEach(function (el) {
       el.getAttribute('data-i18n-attr').split(';').forEach(function (pair) {
         var parts = pair.split(':');
@@ -256,7 +260,86 @@ if (window.top !== window.self) {
     listeners.forEach(function (fn) { fn(lang); });
   }
 
+  // Language notice (17 Oct 2026, owner): no longer shown permanently. A small (i) button beside the language menu
+  // opens it in a popover: click/tap or Enter/Space to open; click the button again, click outside or press Escape
+  // to close. The notice text is unchanged and translated as before; the email address in it becomes a link.
+  var INFO_LABEL = {
+    en: 'Language information', id: 'Informasi bahasa', tl: 'Impormasyon tungkol sa wika',
+    my: 'ဘာသာစကားဆိုင်ရာ အချက်အလက်', bn: 'ভাষা সম্পর্কিত তথ্য', ta: 'மொழி தொடர்பான தகவல்', zh: '语言说明',
+  };
+  var EMAIL = 'admin@tulussg.com';
+  function linkEmail(el) {
+    if (!el || el.querySelector('a')) return;
+    var text = el.textContent, i = text.indexOf(EMAIL);
+    if (i < 0) return;
+    var a = document.createElement('a');
+    a.href = 'mailto:' + EMAIL;
+    a.textContent = EMAIL;
+    el.textContent = '';
+    el.appendChild(document.createTextNode(text.slice(0, i)));
+    el.appendChild(a);
+    el.appendChild(document.createTextNode(text.slice(i + EMAIL.length)));
+  }
+  function buildLangInfo() {
+    var note = document.getElementById('lang-note');
+    var select = document.getElementById('lang-select');
+    if (!note || !select || document.getElementById('lang-info')) return;
+    var wrap = select.closest('.lang') || select.parentNode;
+    if (wrap.style.display === 'none' || note.style.display === 'none') return; // English-only page: nothing to explain
+    var place = document.createElement('span');
+    place.id = 'lang-note-place';
+    place.hidden = true;
+    note.parentNode.insertBefore(place, note);
+
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.id = 'lang-info';
+    btn.className = 'lang-info';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-controls', 'lang-note');
+    var NS = 'http://www.w3.org/2000/svg', svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('aria-hidden', 'true');
+    svg.setAttribute('focusable', 'false');
+    [['circle', { cx: 12, cy: 12, r: 10, fill: 'none', stroke: 'currentColor', 'stroke-width': 2 }],
+     ['line', { x1: 12, y1: 11, x2: 12, y2: 17, stroke: 'currentColor', 'stroke-width': 2, 'stroke-linecap': 'round' }],
+     ['circle', { cx: 12, cy: 7.5, r: 1.3, fill: 'currentColor' }]].forEach(function (d) {
+      var e = document.createElementNS(NS, d[0]);
+      Object.keys(d[1]).forEach(function (k) { e.setAttribute(k, d[1][k]); });
+      svg.appendChild(e);
+    });
+    btn.appendChild(svg);
+
+    if (getComputedStyle(wrap).position === 'static') wrap.classList.add('lang-info-anchor');
+    wrap.classList.add('has-lang-info');
+    wrap.appendChild(btn);
+    wrap.appendChild(note);
+    note.classList.remove('sr-only');
+    note.classList.add('lang-pop');
+    note.hidden = true;
+
+    function place_() {
+      note.style.left = ''; note.style.right = ''; note.style.top = ''; note.style.bottom = '';
+      var r = note.getBoundingClientRect(), w = document.documentElement.clientWidth, h = window.innerHeight;
+      if (r.left < 8) { note.style.right = 'auto'; note.style.left = '0px'; r = note.getBoundingClientRect(); }
+      if (r.right > w - 8) { note.style.left = 'auto'; note.style.right = '0px'; r = note.getBoundingClientRect(); }
+      if (r.left < 8) { note.style.left = (8 - wrap.getBoundingClientRect().left) + 'px'; note.style.right = 'auto'; }
+      if (r.bottom > h - 8 && wrap.getBoundingClientRect().top > r.height + 16) { note.style.top = 'auto'; note.style.bottom = 'calc(100% + 6px)'; }
+    }
+    function open() { note.hidden = false; btn.setAttribute('aria-expanded', 'true'); place_(); }
+    function close(focus) {
+      if (note.hidden) return;
+      note.hidden = true; btn.setAttribute('aria-expanded', 'false');
+      if (focus) btn.focus();
+    }
+    btn.addEventListener('click', function (e) { e.stopPropagation(); if (note.hidden) open(); else close(false); });
+    document.addEventListener('click', function (e) { if (!note.hidden && !note.contains(e.target) && e.target !== btn) close(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !note.hidden) close(true); });
+    window.addEventListener('resize', function () { if (!note.hidden) place_(); });
+  }
+
   function start() {
+    buildLangInfo();
     var fromUrl = new URLSearchParams(location.search).get('lang');
     var initial = (known(fromUrl) && fromUrl) || (known(saved()) && saved()) || 'en';
     var wanted = fromUrl || saved();
