@@ -143,6 +143,7 @@ fieldset{border:0;margin:0 0 22px;padding:0;min-width:0}
 .consent-note{margin-top:10px;font-size:14px;line-height:1.55;color:var(--muted)}
 .consent-note p{margin:0 0 6px}
 .consent-note a{color:var(--terra-d);font-weight:600}
+.consent-note .consent-note-title{margin:0 0 2px;color:var(--ink)}
 /* Notices before the consent box (consent v7, Document 1 items 8-9) */
 .form-info{margin:22px 0 14px;padding:14px 16px;border-radius:10px;background:var(--cream);border:1px solid var(--warm)}
 .form-info h3{font-family:var(--sans);font-size:15px;font-weight:700;margin:0 0 6px;color:var(--ink)}
@@ -391,4 +392,5 @@ html[lang="ta"] h1{font-size:clamp(26px,6.4vw,46px)}
 
 /* Discourage saving photos (16 Oct 2026; see shared/protect.js). Text stays selectable and copyable. */
 img{-webkit-user-drag:none;-webkit-touch-callout:none}
-.footer-copy{flex-basis:100%;margin:6px 0 0;font-size:12px;color:var(--muted)}
+.footer-copy{flex-basis:100%;margin:6px 0 0;font-size:10px;line-height:1.55;color:var(--muted)}
+html:is([lang="my"],[lang="bn"],[lang="ta"]) .footer-copy{font-size:10.5px;line-height:1.65}
