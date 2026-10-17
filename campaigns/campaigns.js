@@ -47,8 +47,8 @@ window.TULUS_CAMPAIGNS = [
     closesAt: '2026-11-16T00:00:00+08:00',
     period: { start: '2026-10-15', end: '2026-11-15' },
     order: 1,
-    image: '/campaigns/share-your-story/hero-640.webp',
-    imageFallback: '/campaigns/share-your-story/hero-640.jpg',
+    image: 'https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-17-v12/campaigns/share-your-story/hero-640.webp',
+    imageFallback: 'https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-17-v12/campaigns/share-your-story/hero-640.jpg',
     imageFocus: '50% 30%',
   },
   {
@@ -62,8 +62,8 @@ window.TULUS_CAMPAIGNS = [
     closesAt: '2026-11-27T00:00:00+08:00',
     period: { start: '2026-10-26', end: '2026-11-26' },
     order: 2,
-    image: '/campaigns/share-your-story-migrant-workers/hero-640.webp',
-    imageFallback: '/campaigns/share-your-story-migrant-workers/hero-640.jpg',
+    image: 'https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-17-v12/campaigns/share-your-story-migrant-workers/hero-640.webp',
+    imageFallback: 'https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-17-v12/campaigns/share-your-story-migrant-workers/hero-640.jpg',
     imageFocus: '50% 35%',
   },
   {
@@ -76,7 +76,7 @@ window.TULUS_CAMPAIGNS = [
     form: false,
     eventDate: '2027-01-10',
     order: 3,
-    image: '/campaigns/sports-carnival/card-640.jpg',
+    image: 'https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-17-v12/campaigns/sports-carnival/card-640.jpg',
     imageFocus: '50% 50%',
   },
 ];
