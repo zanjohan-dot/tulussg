@@ -2,49 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.tulussg.com/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.tulussg.com/domestic-worker-support-singapore/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.tulussg.com/migrant-worker-community-singapore/</loc>
+    <lastmod>2026-10-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tulussg.com/caregiver-support-singapore/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tulussg.com/community-resources-singapore/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tulussg.com/campaigns/</loc>
+    <lastmod>2026-10-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tulussg.com/campaigns/share-your-story/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.tulussg.com/campaigns/share-your-story-migrant-workers/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.tulussg.com/campaigns/sports-carnival/</loc>
+    <lastmod>2026-10-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tulussg.com/privacy/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.tulussg.com/privacy/id/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.tulussg.com/privacy/tl/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.tulussg.com/privacy/my/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.tulussg.com/privacy/bn/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.tulussg.com/privacy/ta/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.tulussg.com/privacy/zh/</loc>
+    <lastmod>2026-10-17</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.tulussg.com/faq/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.tulussg.com/zan/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.tulussg.com/vijai/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.5</priority>
   </url>
 </urlset>

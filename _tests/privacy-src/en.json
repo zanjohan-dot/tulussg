@@ -1,0 +1,459 @@
+{
+ "lang": "en",
+ "htmlLang": "en",
+ "dir": "ltr",
+ "ui": {
+  "title": "Privacy Policy | TulusSG",
+  "description": "How TulusSG collects, uses and protects personal information, including for the Share Your Story campaigns.",
+  "ogDescription": "How TulusSG collects, uses and protects personal information.",
+  "back": "Campaigns",
+  "h1": "Privacy Policy",
+  "updated": "Last updated: 17 October 2026",
+  "languages": "Languages",
+  "translationNote": "",
+  "contents": "Contents",
+  "questions": "Questions?",
+  "dpo": "Data Protection Officer",
+  "email": "Email",
+  "website": "Website",
+  "homeLabel": "TulusSG home"
+ },
+ "blocks": [
+  {
+   "t": "p",
+   "cls": "intro",
+   "h": "TulusSG is committed to handling personal information responsibly and respectfully."
+  },
+  {
+   "t": "p",
+   "h": "TulusSG is a ground-up community initiative of <strong>Zan J Private Limited (UEN: 202616105R)</strong>. The Share Your Story campaigns are run by TulusSG."
+  },
+  {
+   "t": "p",
+   "h": "Zan J Private Limited, which operates TulusSG, is responsible for the collection and use of the personal information you provide. In this Privacy Policy, references to “we”, “us” and “TulusSG” mean Zan J Private Limited acting through its initiatives and brands."
+  },
+  {
+   "t": "p",
+   "h": "This Privacy Policy explains what information we may collect, why we collect it, how we use it, and the choices available to you."
+  },
+  {
+   "t": "toc"
+  },
+  {
+   "t": "h2",
+   "id": "collect",
+   "n": "1",
+   "h": "Information we may collect"
+  },
+  {
+   "t": "p",
+   "h": "Depending on how you interact with TulusSG, we may collect information such as:"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "your name;",
+    "mobile or WhatsApp number;",
+    "email address, where provided;",
+    "nationality;",
+    "preferred language;",
+    "information you choose to share with us about your experiences, interests or circumstances;",
+    "event or programme registration information;",
+    "information relating to your participation in TulusSG activities;",
+    "communications you send to us; and",
+    "basic technical information generated when you use our website."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "We only ask for information that is reasonably required for the relevant TulusSG activity, service, programme or enquiry."
+  },
+  {
+   "t": "h2",
+   "id": "why",
+   "n": "2",
+   "h": "Why we collect your information"
+  },
+  {
+   "t": "p",
+   "h": "We may use your personal information to:"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "respond to your enquiries;",
+    "process registrations and expressions of interest;",
+    "contact you about TulusSG programmes, events or opportunities you have expressed interest in;",
+    "administer community activities and participation;",
+    "communicate important information relating to your registration or participation;",
+    "understand the needs and interests of the communities we work with;",
+    "improve TulusSG programmes, services and digital platforms;",
+    "maintain appropriate records for operational, safety or administrative purposes; and",
+    "comply with applicable legal or regulatory requirements."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "We will not use your personal information for purposes that are materially different from those for which it was collected without an appropriate basis or further consent where required."
+  },
+  {
+   "t": "h2",
+   "id": "share-your-story",
+   "n": "3",
+   "h": "Share Your Story campaigns"
+  },
+  {
+   "t": "p",
+   "h": "TulusSG runs two Share Your Story campaigns: <strong>Share Your Story: Migrant Domestic Workers</strong> (registrations open 15 October to 15 November 2026) and <strong>Share Your Story: Migrant Workers</strong> (registrations open 26 October to 26 November 2026). Both work in the same way, in two stages. Each campaign’s registrations are kept in its own separate spreadsheet."
+  },
+  {
+   "t": "h3",
+   "h": "Stage 1: Registering your interest"
+  },
+  {
+   "t": "p",
+   "h": "If you fill in the registration form, we collect: your name, WhatsApp number, nationality and preferred language; the story you choose to share, if any; the social media accounts you choose to share, if any; your email address, only if you ask for a copy of your form; and your agreement, with the date and time, the version of the wording you agreed to, and the language the page was shown in. We also give your registration a reference number."
+  },
+  {
+   "t": "p",
+   "h": "We use this information to review your submission, to understand the profile of campaign participants, and to contact you about the campaign you registered for. We do not use it for marketing or for other campaigns unless you separately agree."
+  },
+  {
+   "t": "p",
+   "h": "Your registration can be seen only by people authorised by TulusSG to manage the campaign, and by the service providers that run our registration system (see <a href=\"#providers\">section 6</a>). If your story includes personal or sensitive experiences, we treat it with particular care (see <a href=\"#stories\">section 4</a>)."
+  },
+  {
+   "t": "p",
+   "h": "During selection, we may speak with you by WhatsApp or telephone to learn more about your story. These conversations are not recorded for publication, and you do not need to sign anything to take part in them."
+  },
+  {
+   "t": "p",
+   "h": "Registering does not mean you will be selected. It does not allow us to film, photograph or record you, or to publish your story or personal information."
+  },
+  {
+   "t": "h3",
+   "h": "Stage 2: If you are selected"
+  },
+  {
+   "t": "p",
+   "h": "We will explain the proposed production. We will ask for your separate written permission before filming, photography, audio or video recording, or any interview intended for media production or publication. The written permission will explain how your story, name, image, voice and recordings may be used, including how you wish to be identified, the intended publication channels, whether the content may remain available indefinitely, and the arrangements for withdrawing permission."
+  },
+  {
+   "t": "p",
+   "h": "People or organisations working on the production for TulusSG will receive only the personal information reasonably necessary for their agreed work."
+  },
+  {
+   "t": "p",
+   "h": "<strong>Copy of your form.</strong> If you ask for a copy, we first email a link to the address you give, to check that it is yours. We use that address only to send the copy."
+  },
+  {
+   "t": "h3",
+   "id": "contact-form",
+   "h": "Contact form"
+  },
+  {
+   "t": "p",
+   "h": "If you write to us through the contact form on our home page, we receive your name, email address, the role you choose and your message. We use them to reply to you and to follow up on what you asked about, for example volunteering or working with us. We do not add them to campaign registrations or use them for marketing. <a href=\"#retention\">Section 7</a> explains how long we keep them."
+  },
+  {
+   "t": "h2",
+   "id": "stories",
+   "n": "4",
+   "h": "Sensitive or personal stories"
+  },
+  {
+   "t": "p",
+   "h": "Some people may choose to share personal experiences with TulusSG. You should only provide information that you are comfortable sharing with us."
+  },
+  {
+   "t": "p",
+   "h": "Please avoid submitting unnecessary confidential information such as passport numbers, FIN numbers, bank account information, passwords, detailed residential addresses, or other information that is not required for the relevant TulusSG activity."
+  },
+  {
+   "t": "p",
+   "h": "Where personal stories are provided to us, we will treat them with appropriate care and use them only for the purpose for which they were submitted, unless further permission is obtained."
+  },
+  {
+   "t": "h2",
+   "id": "access",
+   "n": "5",
+   "h": "Who may access your information"
+  },
+  {
+   "t": "p",
+   "h": "Personal information may be accessed by authorised persons who require it for legitimate TulusSG purposes, which may include:"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "members of the TulusSG team;",
+    "authorised administrative personnel;",
+    "technology or service providers supporting TulusSG systems;",
+    "programme partners where this is necessary for the relevant activity and appropriate safeguards are in place; and",
+    "professional advisers where reasonably necessary."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "We do not sell your personal information. We do not publish your personal information merely because you submitted a registration or expression of interest."
+  },
+  {
+   "t": "h2",
+   "id": "providers",
+   "n": "6",
+   "h": "Service providers and overseas processing"
+  },
+  {
+   "t": "p",
+   "h": "We use service providers to run our website, registration system and communications. They process personal information only on our instructions."
+  },
+  {
+   "t": "p",
+   "h": "Providers that hold the information you give us:"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "<strong>Google (Google Workspace and Google Cloud).</strong> Our registration server runs on Google Cloud in Singapore. Registrations are stored in private Google Sheets, a separate one for each campaign, and our emails, including the copy of your form if you ask for one, are sent and kept in Gmail.",
+    "<strong>Google Apps Script.</strong> Delivers messages sent through the contact form on our home page to our email.",
+    "<strong>WhatsApp (Meta).</strong> If we speak with you on WhatsApp, the conversation is handled by WhatsApp under its own terms."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Providers that only see that you visited our website: <strong>GitHub</strong>, which hosts the website, and <strong>Google Fonts</strong>, which supplies the lettering. Like any website, they receive technical information such as your device’s IP address. They do not receive your form answers. YouTube is covered in <a href=\"#website\">section 12A</a>."
+  },
+  {
+   "t": "p",
+   "h": "Some of this information may be stored or processed outside Singapore, in the providers’ data centres. Where this happens, we rely on our agreements with these providers, which include data protection and security obligations, to make sure the information receives a standard of protection comparable to that under Singapore’s Personal Data Protection Act."
+  },
+  {
+   "t": "p",
+   "h": "We remain responsible for the personal information our providers process for us."
+  },
+  {
+   "t": "h2",
+   "id": "retention",
+   "n": "7",
+   "h": "How long we keep information"
+  },
+  {
+   "t": "p",
+   "h": "We keep personal information only for as long as we need it for the reason we collected it, or as the law requires. Different records are kept for different periods. Nothing is deleted automatically: we review records by the dates below and delete what is no longer needed."
+  },
+  {
+   "t": "table",
+   "head": [
+    "Record",
+    "How long we keep it"
+   ],
+   "rows": [
+    [
+     "Share Your Story registrations that are not selected, with their selection notes and WhatsApp messages",
+     "Reviewed and deleted after selection is completed, by <strong>28 February 2027</strong> (Migrant Domestic Workers) and <strong>31 March 2027</strong> (Migrant Workers), unless a matter is still open"
+    ],
+    [
+     "Records of participants whose stories are selected",
+     "Moved to a restricted participant record and kept as your separate written agreement explains"
+    ],
+    [
+     "Signed media agreements, and the consent and withdrawal records linked to them",
+     "As your separate written agreement explains"
+    ],
+    [
+     "Published stories and production records",
+     "As your separate written agreement allows, subject to your right to withdraw (<a href=\"#choices\">section 9</a>)"
+    ],
+    [
+     "Your working records, if you withdraw or ask us to delete your information",
+     "Deleted, normally within 30 days; we keep a short record of your request for up to 2 years to show how it was handled"
+    ],
+    [
+     "Your email address, if you asked for a copy of your form",
+     "Removed once the copy has been sent, or about a week after the link expires if it was not used"
+    ],
+    [
+     "Copies of the emails we send about registrations",
+     "Deleted within about a month"
+    ],
+    [
+     "Messages sent through the contact form on our home page",
+     "12 months after our last substantive exchange with you; longer only while your enquiry is unresolved, while a collaboration it started continues, or where the law requires"
+    ],
+    [
+     "Technical logs on our systems (they do not contain your answers)",
+     "About 30 days"
+    ],
+    [
+     "Information the law requires us to keep",
+     "Only for as long as the law requires"
+    ]
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Each campaign’s registration spreadsheet keeps a version history that may hold earlier information, including information removed from the current spreadsheet. Access is restricted to authorised personnel. The version history is removed when the campaign’s spreadsheet is deleted after its review date."
+  },
+  {
+   "t": "p",
+   "h": "Deleted information may remain for a short time in our service providers’ deleted-items folders or backups before it is removed."
+  },
+  {
+   "t": "h2",
+   "id": "security",
+   "n": "8",
+   "h": "Security"
+  },
+  {
+   "t": "p",
+   "h": "We take reasonable administrative and technical measures to protect personal information against unauthorised access, misuse, loss, disclosure and inappropriate alteration. In particular:"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "registrations are kept in private spreadsheets that only authorised TulusSG accounts can open;",
+    "information you send through our forms travels over encrypted connections (HTTPS);",
+    "our registration server checks every form and limits repeated or automated submissions; and",
+    "our forms do not ask for your FIN, passport or bank details."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "However, no internet transmission or electronic storage system can be guaranteed to be completely secure."
+  },
+  {
+   "t": "h2",
+   "id": "choices",
+   "n": "9",
+   "h": "Your choices"
+  },
+  {
+   "t": "p",
+   "h": "You can contact us at <a href=\"mailto:admin@tulussg.com\">admin@tulussg.com</a> to:"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "ask for access to the personal information we hold about you, and how it has been used or disclosed in the past year;",
+    "ask us to correct information that is wrong;",
+    "withdraw from a campaign, or ask us to stop contacting you;",
+    "withdraw your consent to our use of your personal information, or a permission you have given;",
+    "ask us to delete your personal information; or",
+    "raise a concern about how we have handled your information."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "<strong>Withdrawing from a campaign.</strong> If you withdraw from a campaign, we will stop your participation and related communications. Your personal information will be handled in accordance with the retention and deletion arrangements described in <a href=\"#retention\">section 7</a>."
+  },
+  {
+   "t": "p",
+   "h": "<strong>Withdrawing consent.</strong> We tell you what this means for you, for example that you can no longer take part, and we stop collecting, using and disclosing your personal information for that purpose, unless the law requires or permits otherwise. Withdrawing does not affect what was done before your request."
+  },
+  {
+   "t": "p",
+   "h": "<strong>Deletion.</strong> You may request deletion of your personal information. We will assess and act on your request in accordance with applicable law and our retention policy. Where information must be retained, we will explain what is retained and why."
+  },
+  {
+   "t": "p",
+   "h": "Where your request concerns photographs, recordings or published media, we will also explain how it affects any separate media agreement you have signed. A media agreement does not take away your rights under data protection law."
+  },
+  {
+   "t": "p",
+   "h": "You do not need your registration reference, but it helps us find your information. We may ask you to confirm who you are before acting on a request. We aim to acknowledge requests within five working days and to respond as soon as reasonably possible. If we cannot respond to an access or correction request within 30 days, we will tell you in writing when we expect to respond. We do not ordinarily charge for privacy-related requests; if the law permits a fee and we intend to charge it, we will tell you the amount before proceeding."
+  },
+  {
+   "t": "h2",
+   "id": "children",
+   "n": "10",
+   "h": "Children and young persons"
+  },
+  {
+   "t": "p",
+   "h": "TulusSG does not intend to collect personal information from children through forms designed for adult participants unless the relevant programme specifically involves children and appropriate consent arrangements have been established."
+  },
+  {
+   "t": "p",
+   "h": "If you believe that personal information relating to a child has been submitted to us inappropriately, please contact us."
+  },
+  {
+   "t": "h2",
+   "id": "media",
+   "n": "11",
+   "h": "Photos, videos and media"
+  },
+  {
+   "t": "p",
+   "h": "<strong>TulusSG events and activities.</strong> We may take photos and videos at our events and activities to show what the community does, for example on our website and social media. We will let you know when photography or filming is taking place. If you have concerns about a photo or recording of you, please contact us at <a href=\"mailto:admin@tulussg.com\">admin@tulussg.com</a>. We will review your request and act in line with the law, any permission you gave, and the circumstances of the photo or recording. Where you withdraw consent that we rely on, we will comply with our legal obligations, including stopping further use where the law requires it."
+  },
+  {
+   "t": "p",
+   "h": "<strong>Media productions, such as Share Your Story.</strong> These are different. We will only film, photograph, record or interview you for a media production with your separate written permission. That permission sets out how the content may be used and how withdrawal works. <a href=\"#share-your-story\">Section 3</a> explains the process."
+  },
+  {
+   "t": "h2",
+   "id": "links",
+   "n": "12",
+   "h": "External links"
+  },
+  {
+   "t": "p",
+   "h": "The TulusSG website may contain links to websites, platforms or services operated by other organisations. Their privacy practices are governed by their own policies, and TulusSG is not responsible for how those third-party services handle information."
+  },
+  {
+   "t": "h2",
+   "id": "website",
+   "n": "12A",
+   "h": "Our website, cookies and embedded content"
+  },
+  {
+   "t": "p",
+   "h": "Our website does not use advertising or analytics cookies, and our campaign pages set no cookies."
+  },
+  {
+   "t": "p",
+   "h": "Our home page has a background music player provided by YouTube (Google). When you open the home page, your browser connects to YouTube to load the player; YouTube may receive your device’s IP address and set its own cookies, under Google’s privacy policy. The music starts when you first click or tap the page, and you can pause it with the music button. We do not receive any information about you from YouTube."
+  },
+  {
+   "t": "p",
+   "h": "The language you choose on our pages is remembered in your browser so that the next page opens in the same language. It is not sent to us, except that the registration form records the language the page was shown in."
+  },
+  {
+   "t": "h2",
+   "id": "changes",
+   "n": "13",
+   "h": "Changes to this policy"
+  },
+  {
+   "t": "p",
+   "h": "We may update this Privacy Policy from time to time as TulusSG develops its services, programmes or digital systems. The latest version will be published on the TulusSG website with its updated date."
+  },
+  {
+   "t": "h2",
+   "id": "languages",
+   "n": "14",
+   "h": "Languages"
+  },
+  {
+   "t": "p",
+   "h": "Our pages are written in English and translated into Bahasa Indonesia, Filipino, Burmese, Bengali, Tamil and Simplified Chinese. We have tried to make every version say the same thing, and English is the version we use to prepare the translations. If a translation says something different, we will not rely on the difference to your disadvantage, and we will correct the translation."
+  },
+  {
+   "t": "p",
+   "h": "This Privacy Policy is available in the same languages. If anything in it is unclear, you can ask us at <a href=\"mailto:admin@tulussg.com\">admin@tulussg.com</a> to explain it in your language."
+  },
+  {
+   "t": "h2",
+   "id": "contact",
+   "n": "15",
+   "h": "Contact us"
+  },
+  {
+   "t": "p",
+   "h": "Zan J Private Limited (UEN: 202616105R), which operates TulusSG, is responsible for the collection and use of the personal information described in this policy. If you have questions about this policy, or want to make a request under <a href=\"#choices\">section 9</a>, please contact our Data Protection Officer:"
+  },
+  {
+   "t": "contact"
+  }
+ ]
+}

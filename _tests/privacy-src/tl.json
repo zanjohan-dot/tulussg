@@ -1,0 +1,459 @@
+{
+ "lang": "tl",
+ "htmlLang": "fil",
+ "dir": "ltr",
+ "ui": {
+  "title": "Privacy Policy | TulusSG",
+  "description": "Kung paano kinokolekta, ginagamit at pinoprotektahan ng TulusSG ang personal na impormasyon, kasama na para sa mga Share Your Story campaign.",
+  "ogDescription": "Kung paano kinokolekta, ginagamit at pinoprotektahan ng TulusSG ang personal na impormasyon.",
+  "back": "Mga Campaign",
+  "h1": "Privacy Policy",
+  "updated": "Huling na-update: 17 Oktubre 2026",
+  "languages": "Mga Wika",
+  "translationNote": "",
+  "contents": "Nilalaman",
+  "questions": "May tanong?",
+  "dpo": "Data Protection Officer",
+  "email": "Email",
+  "website": "Website",
+  "homeLabel": "TulusSG home"
+ },
+ "blocks": [
+  {
+   "t": "p",
+   "cls": "intro",
+   "h": "Nakatuon ang TulusSG sa responsable at magalang na paghawak ng personal na impormasyon."
+  },
+  {
+   "t": "p",
+   "h": "Ang TulusSG ay isang ground-up community initiative ng <strong>Zan J Private Limited (UEN: 202616105R)</strong>. Pinapatakbo ng TulusSG ang mga Share Your Story campaign."
+  },
+  {
+   "t": "p",
+   "h": "Ang Zan J Private Limited, na nagpapatakbo sa TulusSG, ang responsable sa pagkolekta at paggamit ng personal na impormasyong ibinibigay mo. Sa Privacy Policy na ito, ang “kami”, “namin”, “amin” at “TulusSG” ay tumutukoy sa Zan J Private Limited na kumikilos sa pamamagitan ng mga initiative at brand nito."
+  },
+  {
+   "t": "p",
+   "h": "Ipinapaliwanag ng Privacy Policy na ito kung anong impormasyon ang maaari naming kolektahin, kung bakit namin ito kinokolekta, kung paano namin ito ginagamit, at ang mga pagpipiliang mayroon ka."
+  },
+  {
+   "t": "toc"
+  },
+  {
+   "t": "h2",
+   "id": "collect",
+   "n": "1",
+   "h": "Impormasyong maaari naming kolektahin"
+  },
+  {
+   "t": "p",
+   "h": "Depende sa kung paano ka nakikipag-ugnayan sa TulusSG, maaari kaming mangolekta ng impormasyon tulad ng:"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "ang iyong pangalan;",
+    "mobile o WhatsApp number;",
+    "email address, kung ibinigay;",
+    "nasyonalidad;",
+    "wikang mas gusto mo;",
+    "impormasyong pinili mong ibahagi sa amin tungkol sa iyong mga karanasan, interes o kalagayan;",
+    "impormasyon sa registration para sa event o programa;",
+    "impormasyong may kaugnayan sa iyong paglahok sa mga aktibidad ng TulusSG;",
+    "mga mensaheng ipinapadala mo sa amin; at",
+    "pangunahing teknikal na impormasyong nabubuo kapag ginagamit mo ang aming website."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Hinihingi lang namin ang impormasyong makatwirang kailangan para sa kaugnay na aktibidad, serbisyo, programa o inquiry ng TulusSG."
+  },
+  {
+   "t": "h2",
+   "id": "why",
+   "n": "2",
+   "h": "Bakit namin kinokolekta ang iyong impormasyon"
+  },
+  {
+   "t": "p",
+   "h": "Maaari naming gamitin ang iyong personal na impormasyon para:"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "sagutin ang iyong mga tanong;",
+    "iproseso ang mga registration at pagpapahayag ng interes;",
+    "kontakin ka tungkol sa mga programa, event o oportunidad ng TulusSG na pinakitaan mo ng interes;",
+    "pangasiwaan ang mga aktibidad ng komunidad at ang paglahok dito;",
+    "ipaalam ang mahahalagang impormasyon na may kaugnayan sa iyong registration o paglahok;",
+    "maunawaan ang mga pangangailangan at interes ng mga komunidad na nakakatrabaho namin;",
+    "pagbutihin ang mga programa, serbisyo at digital platform ng TulusSG;",
+    "magtago ng angkop na mga record para sa operasyon, kaligtasan o administrasyon; at",
+    "sumunod sa mga naaangkop na legal o regulatory na kinakailangan."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Hindi namin gagamitin ang iyong personal na impormasyon para sa mga layuning malaki ang pagkakaiba sa mga layunin kung bakit ito kinolekta, nang walang angkop na batayan o karagdagang pagpayag kung kinakailangan."
+  },
+  {
+   "t": "h2",
+   "id": "share-your-story",
+   "n": "3",
+   "h": "Mga Share Your Story campaign"
+  },
+  {
+   "t": "p",
+   "h": "May dalawang Share Your Story campaign ang TulusSG: <strong>Share Your Story: Mga Migrant Domestic Worker</strong> (bukas ang registration mula 15 Oktubre hanggang 15 Nobyembre 2026) at <strong>Share Your Story: Migrant Workers</strong> (bukas ang registration mula 26 Oktubre hanggang 26 Nobyembre 2026). Pareho ang paraan ng dalawa, sa dalawang yugto. Nakatago ang mga registration ng bawat campaign sa sarili nitong hiwalay na spreadsheet."
+  },
+  {
+   "t": "h3",
+   "h": "Yugto 1: Pag-register ng iyong interes"
+  },
+  {
+   "t": "p",
+   "h": "Kung sasagutan mo ang registration form, kinokolekta namin ang: iyong pangalan, WhatsApp number, nasyonalidad at wikang mas gusto mo; ang kuwentong pinili mong ibahagi, kung mayroon; ang mga social media account na pinili mong ibahagi, kung mayroon; ang iyong email address, kung hihingi ka lang ng kopya ng iyong form; at ang iyong pagpayag, kasama ang petsa at oras, ang bersyon ng wording na pinayagan mo, at ang wika kung saan ipinakita ang page. Binibigyan din namin ng reference number ang iyong registration."
+  },
+  {
+   "t": "p",
+   "h": "Ginagamit namin ang impormasyong ito para suriin ang iyong isinumite, maunawaan ang profile ng mga kalahok sa campaign, at kontakin ka tungkol sa campaign kung saan ka nag-register. Hindi namin ito ginagamit para sa marketing o para sa ibang campaign maliban kung hiwalay kang pumayag."
+  },
+  {
+   "t": "p",
+   "h": "Ang iyong registration ay makikita lamang ng mga taong awtorisado ng TulusSG na mamahala sa campaign, at ng mga service provider na nagpapatakbo ng aming registration system (tingnan ang <a href=\"#providers\">seksyon 6</a>). Kung may kasamang personal o sensitibong karanasan ang iyong kuwento, lalo namin itong iniingatan (tingnan ang <a href=\"#stories\">seksyon 4</a>)."
+  },
+  {
+   "t": "p",
+   "h": "Sa panahon ng pagpili, maaari ka naming kausapin sa WhatsApp o telepono para mas makilala ang iyong kuwento. Hindi nire-record ang mga usapang ito para i-publish, at hindi mo kailangang pumirma ng anuman para makasali sa mga ito."
+  },
+  {
+   "t": "p",
+   "h": "Ang pag-register ay hindi nangangahulugang mapipili ka. Hindi rin nito kami pinapayagang i-film ka, kunan ka ng litrato o i-record ka, o i-publish ang iyong kuwento o personal na impormasyon."
+  },
+  {
+   "t": "h3",
+   "h": "Yugto 2: Kung mapili ka"
+  },
+  {
+   "t": "p",
+   "h": "Ipapaliwanag namin ang iminumungkahing production. Hihingi kami ng hiwalay mong nakasulat na pahintulot bago ang anumang filming, pagkuha ng litrato, audio o video recording, o anumang interview na para sa media production o publication. Ipapaliwanag ng nakasulat na pahintulot kung paano maaaring gamitin ang iyong kuwento, pangalan, larawan, boses at mga recording, kasama na kung paano mo gustong makilala, ang mga channel kung saan ito balak i-publish, kung maaaring manatiling available ang content nang walang katapusan, at ang mga patakaran sa pagbawi ng pahintulot."
+  },
+  {
+   "t": "p",
+   "h": "Ang mga tao o organisasyong nagtatrabaho sa production para sa TulusSG ay makakatanggap lamang ng personal na impormasyong makatwirang kailangan para sa trabahong napagkasunduan."
+  },
+  {
+   "t": "p",
+   "h": "<strong>Kopya ng iyong form.</strong> Kung hihingi ka ng kopya, mag-e-email muna kami ng link sa address na ibibigay mo, para matiyak na sa iyo ito. Ginagamit lang namin ang address na iyon para ipadala ang kopya."
+  },
+  {
+   "t": "h3",
+   "id": "contact-form",
+   "h": "Contact form"
+  },
+  {
+   "t": "p",
+   "h": "Kung susulat ka sa amin gamit ang contact form sa aming home page, natatanggap namin ang iyong pangalan, email address, ang role na pinili mo at ang iyong mensahe. Ginagamit namin ang mga ito para sumagot sa iyo at para i-follow up ang tinanong mo, halimbawa ang pag-volunteer o pakikipagtulungan sa amin. Hindi namin isinasama ang mga ito sa mga registration ng campaign o ginagamit para sa marketing. Ipinapaliwanag ng <a href=\"#retention\">Seksyon 7</a> kung gaano katagal namin itinatago ang mga ito."
+  },
+  {
+   "t": "h2",
+   "id": "stories",
+   "n": "4",
+   "h": "Sensitibo o personal na mga kuwento"
+  },
+  {
+   "t": "p",
+   "h": "Maaaring piliin ng ilang tao na ibahagi sa TulusSG ang kanilang personal na karanasan. Ibigay lamang ang impormasyong komportable kang ibahagi sa amin."
+  },
+  {
+   "t": "p",
+   "h": "Pakiiwasang magsumite ng hindi kinakailangang kumpidensyal na impormasyon tulad ng passport number, FIN number, impormasyon ng bank account, password, detalyadong address ng tirahan, o iba pang impormasyong hindi kailangan para sa kaugnay na aktibidad ng TulusSG."
+  },
+  {
+   "t": "p",
+   "h": "Kapag may ibinigay sa aming personal na kuwento, iingatan namin ito nang angkop at gagamitin lamang para sa layunin kung bakit ito isinumite, maliban kung may makuhang karagdagang pahintulot."
+  },
+  {
+   "t": "h2",
+   "id": "access",
+   "n": "5",
+   "h": "Sino ang maaaring maka-access sa iyong impormasyon"
+  },
+  {
+   "t": "p",
+   "h": "Maaaring ma-access ang personal na impormasyon ng mga awtorisadong tao na nangangailangan nito para sa mga lehitimong layunin ng TulusSG, na maaaring kabilang ang:"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "mga miyembro ng TulusSG team;",
+    "mga awtorisadong tauhan sa administrasyon;",
+    "mga technology o service provider na sumusuporta sa mga system ng TulusSG;",
+    "mga partner sa programa, kung kailangan ito para sa kaugnay na aktibidad at may nakalagay na angkop na mga proteksyon; at",
+    "mga propesyonal na tagapayo, kung makatwirang kailangan."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Hindi namin ibinebenta ang iyong personal na impormasyon. Hindi namin inilalathala ang iyong personal na impormasyon dahil lamang nagsumite ka ng registration o pagpapahayag ng interes."
+  },
+  {
+   "t": "h2",
+   "id": "providers",
+   "n": "6",
+   "h": "Mga service provider at pagproseso sa ibang bansa"
+  },
+  {
+   "t": "p",
+   "h": "Gumagamit kami ng mga service provider para patakbuhin ang aming website, registration system at komunikasyon. Pinoproseso lang nila ang personal na impormasyon ayon sa aming mga tagubilin."
+  },
+  {
+   "t": "p",
+   "h": "Mga provider na may hawak ng impormasyong ibinibigay mo sa amin:"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "<strong>Google (Google Workspace at Google Cloud).</strong> Tumatakbo ang aming registration server sa Google Cloud sa Singapore. Nakatago ang mga registration sa mga pribadong Google Sheets, isang hiwalay para sa bawat campaign, at ang aming mga email, kasama ang kopya ng iyong form kung hihingi ka nito, ay ipinapadala at itinatago sa Gmail.",
+    "<strong>Google Apps Script.</strong> Inihahatid nito sa aming email ang mga mensaheng ipinadala gamit ang contact form sa aming home page.",
+    "<strong>WhatsApp (Meta).</strong> Kung kakausapin ka namin sa WhatsApp, ang usapan ay hinahawakan ng WhatsApp sa ilalim ng sarili nitong mga tuntunin."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Mga provider na nakakakita lang na binisita mo ang aming website: <strong>GitHub</strong>, na nagho-host ng website, at <strong>Google Fonts</strong>, na nagbibigay ng istilo ng mga letra sa website. Gaya ng anumang website, nakakatanggap sila ng teknikal na impormasyon tulad ng IP address ng iyong device. Hindi nila natatanggap ang iyong mga sagot sa form. Tinatalakay ang YouTube sa <a href=\"#website\">seksyon 12A</a>."
+  },
+  {
+   "t": "p",
+   "h": "Maaaring itago o iproseso ang ilan sa impormasyong ito sa labas ng Singapore, sa mga data centre ng mga provider. Kapag nangyari ito, umaasa kami sa aming mga kasunduan sa mga provider na ito, na may kasamang mga obligasyon sa data protection at seguridad, para matiyak na makakatanggap ang impormasyon ng antas ng proteksyong maihahambing sa proteksyon sa ilalim ng Personal Data Protection Act ng Singapore."
+  },
+  {
+   "t": "p",
+   "h": "Kami pa rin ang responsable sa personal na impormasyong pinoproseso ng aming mga provider para sa amin."
+  },
+  {
+   "t": "h2",
+   "id": "retention",
+   "n": "7",
+   "h": "Gaano katagal namin itinatago ang impormasyon"
+  },
+  {
+   "t": "p",
+   "h": "Itinatago lang namin ang personal na impormasyon hangga't kailangan namin ito para sa dahilan kung bakit namin ito kinolekta, o ayon sa hinihingi ng batas. Iba-iba ang tagal ng pagtatago sa iba't ibang record. Walang awtomatikong nabubura: sinusuri namin ang mga record pagsapit ng mga petsa sa ibaba at binubura ang hindi na kailangan."
+  },
+  {
+   "t": "table",
+   "head": [
+    "Record",
+    "Gaano katagal namin ito itinatago"
+   ],
+   "rows": [
+    [
+     "Mga registration sa Share Your Story na hindi napili, kasama ang kanilang mga selection note at mensahe sa WhatsApp",
+     "Sinusuri at binubura pagkatapos makumpleto ang pagpili, pagsapit ng <strong>28 Pebrero 2027</strong> (Mga Migrant Domestic Worker) at <strong>31 Marso 2027</strong> (Mga Migrant Worker), maliban kung may usaping bukas pa"
+    ],
+    [
+     "Mga record ng mga kalahok na napili ang kuwento",
+     "Inililipat sa isang restricted na participant record at itinatago ayon sa paliwanag ng hiwalay mong nakasulat na kasunduan"
+    ],
+    [
+     "Mga pinirmahang media agreement, at ang mga record ng pagpayag at pagbawi na naka-link sa mga ito",
+     "Ayon sa paliwanag ng hiwalay mong nakasulat na kasunduan"
+    ],
+    [
+     "Mga na-publish na kuwento at mga record ng production",
+     "Ayon sa pinapayagan ng hiwalay mong nakasulat na kasunduan, napapailalim sa iyong karapatang bumawi (<a href=\"#choices\">seksyon 9</a>)"
+    ],
+    [
+     "Ang iyong mga working record, kung babawi ka o hihilingin mong burahin namin ang iyong impormasyon",
+     "Binubura, karaniwan sa loob ng 30 araw; nagtatago kami ng maikling record ng iyong kahilingan nang hanggang 2 taon para maipakita kung paano ito inasikaso"
+    ],
+    [
+     "Ang iyong email address, kung humingi ka ng kopya ng iyong form",
+     "Inaalis kapag naipadala na ang kopya, o mga isang linggo pagkatapos mag-expire ang link kung hindi ito nagamit"
+    ],
+    [
+     "Mga kopya ng mga email na ipinapadala namin tungkol sa mga registration",
+     "Binubura sa loob ng mga isang buwan"
+    ],
+    [
+     "Mga mensaheng ipinadala gamit ang contact form sa aming home page",
+     "12 buwan pagkatapos ng huli naming makabuluhang palitan ng mensahe sa iyo; mas matagal lang habang hindi pa nareresolba ang iyong inquiry, habang nagpapatuloy ang pakikipagtulungang nagsimula rito, o kung hinihingi ng batas"
+    ],
+    [
+     "Mga technical log sa aming mga system (hindi nakalagay sa mga ito ang iyong mga sagot)",
+     "Mga 30 araw"
+    ],
+    [
+     "Impormasyong hinihingi ng batas na itago namin",
+     "Hangga't hinihingi lang ng batas"
+    ]
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Ang registration spreadsheet ng bawat campaign ay may version history na maaaring maglaman ng mas naunang impormasyon, kasama ang impormasyong inalis na sa kasalukuyang spreadsheet. Ang mga awtorisadong tauhan lang ang may access dito. Inaalis ang version history kapag binura na ang spreadsheet ng campaign pagkatapos ng petsa ng pagsusuri nito."
+  },
+  {
+   "t": "p",
+   "h": "Maaaring manatili nang maikling panahon ang binurang impormasyon sa mga deleted-items folder o backup ng aming mga service provider bago ito tuluyang maalis."
+  },
+  {
+   "t": "h2",
+   "id": "security",
+   "n": "8",
+   "h": "Seguridad"
+  },
+  {
+   "t": "p",
+   "h": "Gumagawa kami ng makatwirang administratibo at teknikal na hakbang para protektahan ang personal na impormasyon laban sa hindi awtorisadong access, maling paggamit, pagkawala, pagbubunyag at hindi angkop na pagbabago. Sa partikular:"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "nakatago ang mga registration sa mga pribadong spreadsheet na mabubuksan lang ng mga awtorisadong TulusSG account;",
+    "ang impormasyong ipinapadala mo gamit ang aming mga form ay dumadaan sa mga encrypted na koneksyon (HTTPS);",
+    "sinusuri ng aming registration server ang bawat form at nililimitahan ang paulit-ulit o awtomatikong pagsusumite; at",
+    "hindi hinihingi ng aming mga form ang iyong FIN, passport o detalye ng bangko."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Gayunpaman, walang pagpapadala sa internet o electronic storage system ang magagarantiyang ganap na ligtas."
+  },
+  {
+   "t": "h2",
+   "id": "choices",
+   "n": "9",
+   "h": "Ang iyong mga pagpipilian"
+  },
+  {
+   "t": "p",
+   "h": "Maaari mo kaming kontakin sa <a href=\"mailto:admin@tulussg.com\">admin@tulussg.com</a> para:"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "humingi ng access sa personal na impormasyong hawak namin tungkol sa iyo, at kung paano ito ginamit o ibinunyag sa nakalipas na isang taon;",
+    "hilingin sa aming itama ang maling impormasyon;",
+    "umatras sa isang campaign, o hilingin sa aming itigil na ang pagkontak sa iyo;",
+    "bawiin ang iyong pagpayag sa paggamit namin ng iyong personal na impormasyon, o ang isang pahintulot na ibinigay mo;",
+    "hilingin sa aming burahin ang iyong personal na impormasyon; o",
+    "magpahayag ng alalahanin tungkol sa paraan ng paghawak namin sa iyong impormasyon."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "<strong>Pag-atras sa isang campaign.</strong> Kung aatras ka sa isang campaign, ititigil namin ang iyong paglahok at ang mga kaugnay na komunikasyon. Hahawakan ang iyong personal na impormasyon alinsunod sa mga patakaran sa pagtatago at pagbura na inilarawan sa <a href=\"#retention\">seksyon 7</a>."
+  },
+  {
+   "t": "p",
+   "h": "<strong>Pagbawi ng pagpayag.</strong> Sinasabi namin sa iyo kung ano ang ibig sabihin nito para sa iyo, halimbawa na hindi ka na makakasali, at itinitigil namin ang pagkolekta, paggamit at pagbubunyag ng iyong personal na impormasyon para sa layuning iyon, maliban kung iba ang hinihingi o pinapayagan ng batas. Hindi naaapektuhan ng pagbawi ang mga nagawa na bago ang iyong kahilingan."
+  },
+  {
+   "t": "p",
+   "h": "<strong>Pagbura.</strong> Maaari mong hilinging burahin ang iyong personal na impormasyon. Susuriin at aaksyunan namin ang iyong kahilingan alinsunod sa naaangkop na batas at sa aming retention policy. Kung may impormasyong kailangang itago, ipapaliwanag namin kung ano ang itinatago at kung bakit."
+  },
+  {
+   "t": "p",
+   "h": "Kung ang iyong kahilingan ay tungkol sa mga litrato, recording o na-publish na media, ipapaliwanag din namin kung paano ito nakakaapekto sa anumang hiwalay na media agreement na pinirmahan mo. Hindi inaalis ng isang media agreement ang iyong mga karapatan sa ilalim ng batas sa data protection."
+  },
+  {
+   "t": "p",
+   "h": "Hindi mo kailangan ang iyong registration reference, pero makakatulong ito para mahanap namin ang iyong impormasyon. Maaari ka naming hilinging kumpirmahin kung sino ka bago namin aksyunan ang isang kahilingan. Sinisikap naming kumpirmahing natanggap namin ang mga kahilingan sa loob ng limang working day at sumagot sa lalong madaling panahon hangga't makatwirang posible. Kung hindi kami makakasagot sa kahilingan para sa access o pagtatama sa loob ng 30 araw, sasabihin namin sa iyo nang nakasulat kung kailan namin inaasahang makakasagot. Karaniwan, hindi kami naniningil para sa mga kahilingang may kaugnayan sa privacy; kung pinapayagan ng batas ang isang bayad at balak namin itong singilin, sasabihin namin sa iyo ang halaga bago kami magpatuloy."
+  },
+  {
+   "t": "h2",
+   "id": "children",
+   "n": "10",
+   "h": "Mga bata at kabataan"
+  },
+  {
+   "t": "p",
+   "h": "Hindi layunin ng TulusSG na mangolekta ng personal na impormasyon mula sa mga bata gamit ang mga form na ginawa para sa mga kalahok na nasa hustong gulang, maliban kung partikular na may kinalaman sa mga bata ang kaugnay na programa at may naitatag nang angkop na mga patakaran sa pagpayag."
+  },
+  {
+   "t": "p",
+   "h": "Kung naniniwala kang may personal na impormasyon tungkol sa isang bata na naisumite sa amin nang hindi angkop, pakikontak kami."
+  },
+  {
+   "t": "h2",
+   "id": "media",
+   "n": "11",
+   "h": "Mga litrato, video at media"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Mga event at aktibidad ng TulusSG.</strong> Maaari kaming kumuha ng mga litrato at video sa aming mga event at aktibidad para ipakita ang ginagawa ng komunidad, halimbawa sa aming website at social media. Ipapaalam namin sa iyo kapag may kinukunang litrato o video. Kung may alalahanin ka tungkol sa isang litrato o recording mo, pakikontak kami sa <a href=\"mailto:admin@tulussg.com\">admin@tulussg.com</a>. Susuriin namin ang iyong kahilingan at kikilos kami ayon sa batas, sa anumang pahintulot na ibinigay mo, at sa mga pangyayaring kaugnay ng litrato o recording. Kapag binawi mo ang pagpayag na pinagbabatayan namin, susundin namin ang aming mga legal na obligasyon, kasama ang pagtigil sa karagdagang paggamit kung hinihingi ito ng batas."
+  },
+  {
+   "t": "p",
+   "h": "<strong>Mga media production, tulad ng Share Your Story.</strong> Iba ang mga ito. Para sa isang media production, kukunan ka lang namin ng video o litrato, ire-record o iinterbyuhin kung nagbigay ka ng hiwalay na nakasulat na pahintulot. Nakasaad sa pahintulot na iyon kung paano maaaring gamitin ang content at kung paano gumagana ang pagbawi. Ipinapaliwanag ng <a href=\"#share-your-story\">Seksyon 3</a> ang proseso."
+  },
+  {
+   "t": "h2",
+   "id": "links",
+   "n": "12",
+   "h": "Mga external link"
+  },
+  {
+   "t": "p",
+   "h": "Maaaring may mga link ang website ng TulusSG papunta sa mga website, platform o serbisyong pinapatakbo ng ibang organisasyon. Ang kanilang mga privacy practice ay sakop ng sarili nilang mga patakaran, at hindi responsable ang TulusSG sa paraan ng paghawak ng mga third-party service na iyon sa impormasyon."
+  },
+  {
+   "t": "h2",
+   "id": "website",
+   "n": "12A",
+   "h": "Ang aming website, cookies at naka-embed na content"
+  },
+  {
+   "t": "p",
+   "h": "Hindi gumagamit ang aming website ng advertising o analytics cookies, at walang cookies na inilalagay ang aming mga campaign page."
+  },
+  {
+   "t": "p",
+   "h": "May background music player sa aming home page na mula sa YouTube (Google). Kapag binuksan mo ang home page, kumokonekta ang iyong browser sa YouTube para i-load ang player; maaaring matanggap ng YouTube ang IP address ng iyong device at maglagay ito ng sarili nitong cookies, sa ilalim ng privacy policy ng Google. Nagsisimula ang musika sa unang beses na i-click o i-tap mo ang page, at puwede mo itong i-pause gamit ang music button. Wala kaming natatanggap na anumang impormasyon tungkol sa iyo mula sa YouTube."
+  },
+  {
+   "t": "p",
+   "h": "Ang wikang pinipili mo sa aming mga page ay naaalala ng iyong browser para magbukas ang susunod na page sa parehong wika. Hindi ito ipinapadala sa amin, maliban na itinatala ng registration form ang wika kung saan ipinakita ang page."
+  },
+  {
+   "t": "h2",
+   "id": "changes",
+   "n": "13",
+   "h": "Mga pagbabago sa patakarang ito"
+  },
+  {
+   "t": "p",
+   "h": "Maaari naming i-update paminsan-minsan ang Privacy Policy na ito habang pinapaunlad ng TulusSG ang mga serbisyo, programa o digital system nito. Ipa-publish ang pinakabagong bersyon sa website ng TulusSG kasama ang petsa ng pag-update nito."
+  },
+  {
+   "t": "h2",
+   "id": "languages",
+   "n": "14",
+   "h": "Mga Wika"
+  },
+  {
+   "t": "p",
+   "h": "Nakasulat sa English ang aming mga page at isinalin sa Bahasa Indonesia, Filipino, Burmese, Bengali, Tamil at Simplified Chinese. Sinikap naming pareho ang sinasabi ng bawat bersyon, at English ang bersyong ginagamit namin sa paghahanda ng mga salin. Kung may salin na iba ang sinasabi, hindi kami aasa sa pagkakaibang iyon sa paraang makakasama sa iyo, at itatama namin ang salin."
+  },
+  {
+   "t": "p",
+   "h": "Available ang Privacy Policy na ito sa parehong mga wika. Kung may hindi malinaw dito, puwede mo kaming hilingin sa <a href=\"mailto:admin@tulussg.com\">admin@tulussg.com</a> na ipaliwanag ito sa iyong wika."
+  },
+  {
+   "t": "h2",
+   "id": "contact",
+   "n": "15",
+   "h": "Kontakin kami"
+  },
+  {
+   "t": "p",
+   "h": "Ang Zan J Private Limited (UEN: 202616105R), na nagpapatakbo sa TulusSG, ang responsable sa pagkolekta at paggamit ng personal na impormasyong inilarawan sa patakarang ito. Kung may tanong ka tungkol sa patakarang ito, o gusto mong gumawa ng kahilingan sa ilalim ng <a href=\"#choices\">seksyon 9</a>, pakikontak ang aming Data Protection Officer:"
+  },
+  {
+   "t": "contact"
+  }
+ ]
+}

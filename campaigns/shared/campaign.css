@@ -8,8 +8,8 @@
   --ease:cubic-bezier(0.25,1,0.5,1);
   --error:#A3261A;
   --line:rgba(44,32,21,0.42);
-  --serif:'Cormorant Garant','Noto Sans Myanmar',Georgia,serif;
-  --sans:'Plus Jakarta Sans','Noto Sans Myanmar',system-ui,sans-serif;
+  --serif:'Cormorant Garamond',Georgia,'Noto Sans Myanmar','Noto Sans Bengali','Noto Sans Tamil','Noto Sans SC',serif;
+  --sans:'Plus Jakarta Sans','Noto Sans Myanmar','Noto Sans Bengali','Noto Sans Tamil','Noto Sans SC',system-ui,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
@@ -32,10 +32,34 @@ a{color:var(--terra-d)}
 .top-logo img{height:46px;width:auto}
 .lang-wrap{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
 .lang-note{margin:0;max-width:200px;font-size:12px;line-height:1.35;color:var(--muted);text-align:right}
+html:is([lang="my"],[lang="bn"],[lang="ta"]) .lang-note{line-height:1.6} /* audit 16 Oct: tall scripts were cramped */
+h1,.facts dd,.chip{overflow-wrap:break-word} /* audit 16 Oct: long words at 200% text size */
+.lang-missing{margin-bottom:6px;color:var(--terra-d);font-weight:600}
+.lang-choice{display:inline-block;margin:4px 0 0 6px;min-height:32px;padding:4px 10px;border:1px solid rgba(154,72,32,0.4);border-radius:100px;background:var(--white);color:var(--terra-d);font:600 13px/1.2 var(--sans);cursor:pointer}
+.lang-choice:hover{background:var(--warm)}
 .lang{position:relative;display:flex;align-items:center}
 .lang svg{position:absolute;left:12px;width:18px;height:18px;color:var(--terra);pointer-events:none}
 .lang select{appearance:none;-webkit-appearance:none;min-height:44px;max-width:190px;padding:0 34px 0 38px;border:1px solid rgba(196,98,45,0.3);border-radius:100px;background:var(--white);color:var(--ink);font:600 15px var(--sans);cursor:pointer;text-overflow:ellipsis}
 .lang::after{content:'';position:absolute;right:15px;width:7px;height:7px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:translateY(-2px) rotate(45deg);pointer-events:none}
+
+/* Site menu (16 Oct 2026): same items as the homepage menu. Phones: Menu button opens a list under the header.
+   880px and wider: always visible as one row under the header. */
+.top-right{display:flex;align-items:flex-start;gap:10px;margin-left:auto}
+.nav-toggle{display:inline-flex;align-items:center;justify-content:center;gap:8px;flex-shrink:0;min-width:44px;min-height:44px;padding:0 14px;border:1px solid rgba(196,98,45,0.3);border-radius:100px;background:var(--white);color:var(--ink);font:600 15px var(--sans);cursor:pointer}
+.nav-toggle-bars{position:relative;display:block;width:18px;height:2px;background:var(--terra);border-radius:2px;transition:background 0.2s}
+.nav-toggle-bars::before,.nav-toggle-bars::after{content:'';position:absolute;left:0;width:18px;height:2px;background:var(--terra);border-radius:2px;transition:transform 0.2s var(--ease)}
+.nav-toggle-bars::before{top:-6px}
+.nav-toggle-bars::after{top:6px}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bars{background:transparent}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bars::before{transform:translateY(6px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bars::after{transform:translateY(-6px) rotate(-45deg)}
+.site-nav{display:none;margin:0 0 12px;border:1px solid rgba(196,98,45,0.18);border-radius:12px;background:var(--white)}
+.site-nav.open{display:block}
+.site-nav ul{margin:0;padding:6px;list-style:none}
+.site-nav a{display:flex;align-items:center;min-height:44px;padding:0 14px;border-radius:8px;color:var(--ink);font-size:16px;font-weight:600;text-decoration:none}
+.site-nav a:hover{background:var(--warm)}
+.site-nav a[aria-current="page"]{color:var(--terra-d)}
+@media (max-width:420px){.nav-toggle-text{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.nav-toggle{padding:0}}
 
 /* Hero */
 .hero{padding:2px 0 36px}
@@ -44,6 +68,9 @@ a{color:var(--terra-d)}
 .tag{display:inline-flex;align-items:center;gap:8px;margin:14px 0 4px;font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--terra-d)} /* D8 */
 .tag::after{content:'';width:24px;height:1px;background:var(--terra);opacity:0.5}
 h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,9.6vw,72px);line-height:1;margin:0 0 10px;letter-spacing:-0.01em}
+/* Campaign name on two lines: "Share Your Story:" / audience (16 Oct 2026) */
+.h1-aud{display:block;margin-top:0.08em;font-size:0.72em;color:var(--terra-d)}
+.period{display:inline-block;margin:0 0 10px;padding:4px 12px;border:1px solid rgba(196,98,45,0.3);border-radius:100px;background:var(--white);color:var(--terra-d);font-size:14px;font-weight:600;line-height:1.4}
 .lead{margin:0 0 10px;font-size:16px;line-height:1.5}
 .lines{margin:0 0 16px;font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.2}
 .lines span{display:block;color:var(--muted)}
@@ -60,6 +87,9 @@ h2{font-family:var(--serif);font-weight:600;font-size:34px;line-height:1.1;margi
 .chips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
 .chip{display:flex;align-items:center;gap:10px;min-height:64px;padding:12px 14px;border-radius:12px;font-weight:600;font-size:15px;line-height:1.3;min-width:0;overflow-wrap:break-word;hyphens:auto}
 @media (max-width:359px){.chip{flex-direction:column;align-items:flex-start;gap:6px}}
+.chip>span:not(.emoji){min-width:0}
+/* Tamil and Burmese words are long: on phones put the emoji above the text so a single word never overflows (17 Oct 2026). */
+@media (max-width:420px){html:is([lang="ta"],[lang="my"]) .chip{flex-direction:column;align-items:flex-start;gap:6px}}
 .chip .emoji{font-size:24px;line-height:1}
 .chip:nth-child(1){background:#FBE3D4}
 .chip:nth-child(2){background:#F9ECD2}
@@ -113,6 +143,7 @@ fieldset{border:0;margin:0 0 22px;padding:0;min-width:0}
 .consent-note{margin-top:10px;font-size:14px;line-height:1.55;color:var(--muted)}
 .consent-note p{margin:0 0 6px}
 .consent-note a{color:var(--terra-d);font-weight:600}
+.consent-note .consent-note-title{margin:0 0 2px;color:var(--ink)}
 /* Notices before the consent box (consent v7, Document 1 items 8-9) */
 .form-info{margin:22px 0 14px;padding:14px 16px;border-radius:10px;background:var(--cream);border:1px solid var(--warm)}
 .form-info h3{font-family:var(--sans);font-size:15px;font-weight:700;margin:0 0 6px;color:var(--ink)}
@@ -179,6 +210,10 @@ html[lang="my"] .footer-campaigns{letter-spacing:normal}
   .wrap{padding:0 32px}
   .top{padding:18px 0}
   .top-logo img{height:64px}
+  .nav-toggle{display:none}
+  .site-nav,.site-nav.open{display:block;margin:0 0 8px;border:0;border-top:1px solid rgba(196,98,45,0.15);border-bottom:1px solid rgba(196,98,45,0.15);border-radius:0;background:none}
+  .site-nav ul{display:flex;flex-wrap:wrap;gap:4px 8px;padding:6px 0}
+  .site-nav a{min-height:40px;padding:0 12px;font-size:14px;letter-spacing:0.02em}
   .hero{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;padding:10px 0 56px}
   .hero-photo{order:2;height:600px;border-radius:20px}
   .hero-text{order:1}
@@ -209,7 +244,7 @@ a.campaign-card:focus-visible{outline:3px solid var(--terra);outline-offset:3px}
 .card-img{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--warm)}
 .card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .card-body{display:flex;flex-direction:column;gap:8px;flex:1;padding:18px 18px 20px}
-.card-body h2{font-size:30px;margin:2px 0 0}
+.card-body h3{font-size:28px;line-height:1.1;margin:2px 0 0}
 .card-body p{margin:0 0 10px;font-size:16px;line-height:1.55}
 .campaign-card .btn{margin-top:auto;width:100%}
 .status-pill{align-self:flex-start;padding:4px 10px;border-radius:100px;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase}
@@ -219,10 +254,143 @@ a.campaign-card:focus-visible{outline:3px solid var(--terra);outline-offset:3px}
 .campaign-card.is-closed .card-img{filter:grayscale(0.6);opacity:0.85}
 .hub-empty{padding:24px;border-radius:12px;background:var(--white);border:1px solid rgba(196,98,45,0.15)}
 html[lang="my"] .status-pill{letter-spacing:normal}
-html[lang="my"] .card-body h2{font-size:25px}
+html[lang="my"] .card-body h3{font-size:23px;line-height:1.4}
 @media (min-width:880px){
   .hub-hero{padding:32px 0 16px}
   .hub-list{padding:16px 0 64px}
 }
+/* ---------------------------------------------------------------- Campaigns & Events directory (16 Oct 2026) */
+.directory-static ul{padding-left:20px;line-height:1.7}
+.dir-bar{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:4px 0 18px}
+.dir-toggle{display:flex;flex-wrap:wrap;gap:6px}
+.dir-btn{min-height:44px;padding:8px 16px;border:1px solid rgba(154,72,32,0.35);border-radius:100px;background:var(--white);color:var(--ink);font:600 14px/1.2 var(--sans);cursor:pointer}
+.dir-btn:hover{background:var(--warm)}
+.dir-btn[aria-pressed="true"]{background:var(--terra-d);border-color:var(--terra-d);color:var(--white)}
+.dir-toggle:first-child{padding-right:18px;border-right:1px solid rgba(196,98,45,0.25)}
+.dir-section{margin:0 0 30px}
+.dir-heading{margin:0 0 14px;font-size:30px;line-height:1.15}
+.card-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+.card-cat{font-size:13px;font-weight:600;color:var(--muted)}
+.card-aud{margin:0!important;font-size:15px!important;color:var(--muted)}
+.campaign-card .btn{margin-top:auto;min-height:48px}
+.card-body{gap:6px}
+.card-body .card-aud + .btn,.card-body .card-date + .btn{margin-top:auto}
+.campaign-card.is-completed .card-img{filter:grayscale(0.6);opacity:0.85}
+.status-open{background:rgba(196,98,45,0.12);color:var(--terra-d)}
+.status-completed{background:#EDE7DF;color:#6B5C4E}
+/* Past: compact, expandable list */
+.archive{border-top:1px solid rgba(196,98,45,0.2);padding-top:14px}
+.archive summary{display:flex;align-items:center;gap:8px;min-height:44px;cursor:pointer;list-style:none}
+.archive summary::-webkit-details-marker{display:none}
+.archive summary::before{content:'';width:8px;height:8px;margin-right:4px;border-right:2px solid var(--terra);border-bottom:2px solid var(--terra);transform:rotate(-45deg);transition:transform 0.2s}
+.archive[open] summary::before{transform:rotate(45deg)}
+.archive-count{font-family:var(--sans);font-size:16px;color:var(--muted)}
+.archive-list{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:8px}
+.archive-row{display:flex;align-items:center;gap:12px;padding:8px;border:1px solid rgba(196,98,45,0.15);border-radius:12px;background:var(--white);color:inherit;text-decoration:none}
+.archive-row:hover{background:var(--cream)}
+.archive-img{position:relative;flex:0 0 72px;height:48px;border-radius:8px;overflow:hidden;background:var(--warm)}
+.archive-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(0.5)}
+.archive-text{display:flex;flex-direction:column;flex:1;min-width:0}
+.archive-title{font-weight:700}
+.archive-date{font-size:14px;color:var(--muted)}
+/* Calendar */
+.cal{background:var(--white);border:1px solid rgba(196,98,45,0.15);border-radius:16px;padding:14px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
+.cal-title{margin:0;font-size:28px;text-align:center}
+.cal-title:focus{outline:none}
+.cal-nav{width:44px;height:44px;border:1px solid rgba(154,72,32,0.35);border-radius:50%;background:var(--white);color:var(--terra-d);font-size:24px;line-height:1;cursor:pointer}
+.cal-nav:disabled{opacity:0.35;cursor:default}
+.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px}
+.cal-wd{padding:4px 0;font-size:12px;font-weight:700;text-align:center;color:var(--muted)}
+.cal-day{display:flex;flex-direction:column;align-items:center;gap:3px;min-height:46px;padding:4px 2px;border-radius:8px;background:var(--cream)}
+.cal-day.is-empty{background:none}
+.cal-day.is-today{box-shadow:inset 0 0 0 2px var(--terra)}
+.cal-num{font-size:13px;font-weight:600}
+.cal-chip{display:block;width:8px;height:8px;border-radius:50%;background:var(--terra-d);overflow:hidden;pointer-events:none} /* phones: dots only; the list below the grid has the links */
+.cal-chip-text{display:none}
+.cal-chip.kind-event{background:#2F6B4F}
+.cal-chip.st-completed,.cal-chip.st-closed{background:#9C8E80}
+.cal-agenda{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px}
+.cal-item{display:flex;align-items:center;gap:12px;padding:10px;border-radius:12px;border:1px solid rgba(196,98,45,0.15);color:inherit;text-decoration:none}
+.cal-item:hover{background:var(--cream)}
+.cal-item-date{display:flex;flex-direction:column;align-items:center;flex:0 0 48px;padding:4px 0;border-radius:8px;background:var(--warm)}
+.cal-item-dow{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--terra-d)}
+.cal-item-num{font-size:22px;font-weight:700;line-height:1.1}
+.cal-item-text{display:flex;flex-direction:column;flex:1;min-width:0}
+.cal-item-kind{font-size:13px;font-weight:600;color:var(--muted)}
+.cal-item-title{font-weight:700;overflow-wrap:break-word}
+.cal-item.kind-event .cal-item-date{background:#DCEBE2}
+.cal-item.kind-event .cal-item-dow{color:#2F6B4F}
+.cal-empty{margin:14px 0 0;color:var(--muted)}
+@media (max-width:440px){
+  .dir-toggle:first-child{padding-right:0;border-right:0}
+  .dir-btn{padding:8px 13px;font-size:13px}
+  .cal-item{display:grid;grid-template-columns:48px minmax(0,1fr);column-gap:12px;row-gap:6px}
+  .cal-item-date{grid-row:span 2}
+  .cal-item .status-pill{justify-self:start}
+}
+@media (min-width:880px){
+  .cal{padding:22px}
+  .cal-day{align-items:stretch;min-height:92px;padding:6px}
+  .cal-num{align-self:flex-start}
+  .cal-chip{pointer-events:auto;width:auto;height:auto;padding:3px 6px;border-radius:6px;background:rgba(154,72,32,0.12);color:var(--terra-dd);font-size:12px;font-weight:600;line-height:1.25;text-decoration:none}
+  .cal-chip-text{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .cal-chip.kind-event{background:#DCEBE2;color:#1F4A36}
+  .cal-chip.st-completed,.cal-chip.st-closed{background:#EDE7DF;color:#6B5C4E}
+}
+html:is([lang="bn"],[lang="ta"],[lang="zh-Hans"],[lang="my"]) .cal-item-dow{text-transform:none}
 /* Per-campaign hero focus (kept in CSS, not a style attribute, so the page works under its Content Security Policy) */
 [data-campaign="share-your-story"] .hero-photo{--hero-focus:50% 30%}
+/* Landscape group photo: keep all three people in view (frame follows the photo instead of a tall portrait crop). */
+[data-campaign="share-your-story-migrant-workers"] .hero-photo{--hero-focus:50% 35%}
+@media (min-width:880px){[data-campaign="share-your-story-migrant-workers"] .hero-photo{height:auto;aspect-ratio:16/9}}
+
+/* ---------------------------------------------------------------- information pages (e.g. Sports Carnival), 16 Oct 2026 */
+.card-date{margin:0!important;font-weight:700;color:var(--terra-d)}
+.btn-outline{background:var(--white);color:var(--terra-d);border:1px solid rgba(154,72,32,0.45)}
+a.campaign-card:hover .btn-outline{background:var(--warm)}
+.event-hero .hero-text{display:flex;flex-direction:column;align-items:flex-start}
+.facts{display:flex;flex-direction:column;gap:12px;margin-top:8px;padding:20px;background:var(--white);border:1px solid rgba(196,98,45,0.18);border-radius:16px}
+.facts dl{margin:0;display:grid;gap:0}
+.facts dl>div{display:grid;grid-template-columns:minmax(96px,auto) minmax(0,1fr);gap:12px;padding:12px 0;border-top:1px solid rgba(196,98,45,0.15)}
+.facts dl>div:first-child{border-top:0;padding-top:4px}
+.facts dt{font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:0;font-size:17px;font-weight:600;color:var(--ink)}
+html[lang="my"] .facts dt{letter-spacing:normal;text-transform:none}
+.steps{margin:0;padding-left:20px;display:grid;gap:8px;font-size:16px;line-height:1.5}
+.event-block p{font-size:16px;line-height:1.55;margin:0}
+.notice{display:grid;gap:12px;padding:22px;background:var(--warm);border-radius:16px}
+.notice h2{margin:0}
+.notice p{margin:0;font-size:16px;line-height:1.5}
+@media (min-width:880px){
+  .event-hero{grid-template-columns:1.1fr 1fr;align-items:start}
+  .event-hero .facts{order:2}
+  .facts{margin-top:0;padding:28px}
+  .notice-block{display:block}
+  .notice{max-width:720px}
+  .notice .btn{justify-self:start}
+}
+
+/* Bengali, Tamil and Chinese (Sports Carnival page): no uppercase/letter-spacing, sans headings, more line height. */
+html:is([lang="bn"],[lang="ta"],[lang="zh-Hans"]) :is(.tag,.status-pill,.facts dt,.footer-campaigns,.btn){letter-spacing:normal;text-transform:none}
+html:is([lang="bn"],[lang="ta"]) :is(.lead,.steps,.event-block p,.notice p,.facts dd){line-height:1.7}
+html:is([lang="bn"],[lang="ta"],[lang="zh-Hans"]) h1{font-family:var(--sans);font-size:clamp(30px,7.6vw,56px);line-height:1.2}
+html:is([lang="bn"],[lang="ta"],[lang="zh-Hans"]) h2{font-family:var(--sans);font-size:26px;line-height:1.3}
+html:is([lang="bn"],[lang="ta"],[lang="zh-Hans"]) .lines{font-family:var(--sans);font-style:normal;font-size:18px;line-height:1.5}
+html[lang="ta"] h1{font-size:clamp(26px,6.4vw,46px)}
+/* Phones: event details label above value, so long words (Tamil, Burmese) and dates never overflow. */
+.facts dd{overflow-wrap:anywhere}
+@media (max-width:440px){.facts dl>div{grid-template-columns:minmax(0,1fr);gap:2px}}
+.event-block{display:grid;gap:28px}
+@media (min-width:880px){.event-block{gap:48px}}
+
+/* Event banner (Sports Carnival): wide illustration above the event details. */
+.event-banner{position:relative;margin:4px 0 18px;border-radius:16px;overflow:hidden;background:var(--warm)}
+.event-banner img{display:block;width:100%;height:auto;aspect-ratio:8/3;object-fit:cover}
+.event-banner figcaption{position:absolute;right:10px;bottom:8px;padding:2px 9px;border-radius:100px;background:rgba(44,32,21,0.62);color:var(--white);font-size:11px;font-weight:600}
+@media (min-width:880px){.event-banner{margin:10px 0 32px;border-radius:20px}}
+
+/* Discourage saving photos (16 Oct 2026; see shared/protect.js). Text stays selectable and copyable. */
+img{-webkit-user-drag:none;-webkit-touch-callout:none}
+.footer-copy{flex-basis:100%;margin:6px 0 0;font-size:10px;line-height:1.55;color:var(--muted)}
+html:is([lang="my"],[lang="bn"],[lang="ta"]) .footer-copy{font-size:10.5px;line-height:1.65}
