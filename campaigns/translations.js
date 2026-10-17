@@ -41,7 +41,7 @@
     'share-your-story': {
       consentVersion: 'share-your-story-v7.4-2026-10-17',
       // Page-level wording changes (all languages). Earlier records keep the version they were given.
-      changes: ['2026-10-14 v7.3 live', '2026-10-17 owner: employer-contact sentence (f.after.p3) removed in every language -> v7.4 (takes effect on deployment)'],
+      changes: ['2026-10-14 v7.3 live', '2026-10-17 owner: employer-contact sentence (f.after.p3) removed in every language -> v7.4 (takes effect on deployment)', '2026-10-17 owner D3/D4: new f.use.responsible (Zan J Private Limited responsible for collection and use); f.withdraw and success.withdraw deletion wording aligned with the withdrawal procedure; all languages translated and independently AI-checked (blind back-translation); part of the same version'],
       languages: {
         en: SOURCE,
         id: lang('approved', '2026-10-17', [
@@ -60,7 +60,7 @@
     },
     'share-your-story-migrant-workers': {
       consentVersion: 'share-your-story-mw-v1.1-2026-10-17',
-      changes: ['2026-10-16 mw-v1 (never public)', '2026-10-17 owner: employer-contact sentence (f.after.p3) removed in every language -> mw-v1.1 (before opening)'],
+      changes: ['2026-10-16 mw-v1 (never public)', '2026-10-17 owner: employer-contact sentence (f.after.p3) removed in every language -> mw-v1.1 (before opening)', '2026-10-17 owner D3/D4: new f.use.responsible (Zan J Private Limited responsible for collection and use); f.withdraw and success.withdraw deletion wording aligned with the withdrawal procedure; all languages translated and independently AI-checked (blind back-translation); part of the same version'],
       languages: {
         en: SOURCE,
         id: lang('pending', '2026-10-17', ['2026-10-16 AI translation (MW lines)', '2026-10-17 independent AI review + third-pass contextual review', '2026-10-17 final AI review (blind back-translation + independent review + adjudication); corrections applied; no unresolved material translation ambiguity; READY FOR OWNER APPROVAL']),
