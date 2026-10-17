@@ -10,7 +10,6 @@ TulusI18n.register({
   en: {
     "meta.title": "TulusSG | Supporting Migrant Communities in Singapore",
     "meta.description": "TulusSG serves migrant domestic workers and migrant workers in Singapore: widening access to meaningful activities, creating space for their stories and connecting them with community support.",
-    "a11y.music": "Play or pause background music",
     "a11y.logo": "TulusSG logo",
     "a11y.closeMenu": "Close menu",
     "a11y.focus": "Our three areas of focus",
@@ -126,7 +125,6 @@ TulusI18n.register({
   id: {
     "meta.title": "TulusSG | Mendukung Komunitas Migran di Singapura",
     "meta.description": "TulusSG melayani pekerja rumah tangga migran dan pekerja migran di Singapura: memperluas akses ke kegiatan yang bermakna, memberi ruang bagi cerita mereka, dan menghubungkan mereka dengan dukungan komunitas.",
-    "a11y.music": "Putar atau jeda musik latar",
     "a11y.logo": "Logo TulusSG",
     "a11y.closeMenu": "Tutup menu",
     "a11y.focus": "Tiga bidang fokus kami",
@@ -242,7 +240,6 @@ TulusI18n.register({
   tl: {
     "meta.title": "TulusSG | Sumusuporta sa mga Migrant Community sa Singapore",
     "meta.description": "Naglilingkod ang TulusSG sa mga migrant domestic worker at migrant worker sa Singapore: pinalalawak ang access sa makabuluhang aktibidad, lumilikha ng espasyo para sa kanilang mga kuwento, at iniuugnay sila sa suporta ng komunidad.",
-    "a11y.music": "I-play o i-pause ang background music",
     "a11y.logo": "Logo ng TulusSG",
     "a11y.closeMenu": "Isara ang menu",
     "a11y.focus": "Ang aming tatlong pinagtutuunan",
@@ -358,7 +355,6 @@ TulusI18n.register({
   my: {
     "meta.title": "TulusSG | စင်္ကာပူရှိ ရွှေ့ပြောင်းအသိုင်းအဝိုင်းများကို ကူညီပံ့ပိုးခြင်း",
     "meta.description": "TulusSG သည် စင်္ကာပူရှိ ရွှေ့ပြောင်းအိမ်အကူများနှင့် ရွှေ့ပြောင်းအလုပ်သမားများအတွက် ဆောင်ရွက်ပါသည် - အဓိပ္ပာယ်ရှိသော လှုပ်ရှားမှုများတွင် ပါဝင်နိုင်ခွင့်ကို ချဲ့ထွင်ခြင်း၊ သူတို့၏ ဘဝဇာတ်လမ်းများအတွက် နေရာပေးခြင်းနှင့် အသိုင်းအဝိုင်း အကူအညီများနှင့် ချိတ်ဆက်ပေးခြင်း။",
-    "a11y.music": "နောက်ခံဂီတ ဖွင့်ရန် သို့မဟုတ် ရပ်ရန်",
     "a11y.logo": "TulusSG လိုဂို",
     "a11y.closeMenu": "မီနူး ပိတ်ရန်",
     "a11y.focus": "ကျွန်ုပ်တို့ အဓိကထားသော နယ်ပယ် သုံးခု",
@@ -474,7 +470,6 @@ TulusI18n.register({
   bn: {
     "meta.title": "TulusSG | সিঙ্গাপুরে প্রবাসী কমিউনিটির পাশে",
     "meta.description": "TulusSG সিঙ্গাপুরের প্রবাসী গৃহকর্মী ও প্রবাসী শ্রমিকদের জন্য কাজ করে: অর্থবহ কার্যক্রমে অংশ নেওয়ার সুযোগ বাড়ানো, তাঁদের গল্পের জন্য জায়গা তৈরি করা এবং তাঁদের কমিউনিটি সহায়তার সঙ্গে যুক্ত করা।",
-    "a11y.music": "পটভূমির গান চালু বা বন্ধ করুন",
     "a11y.logo": "TulusSG লোগো",
     "a11y.closeMenu": "মেনু বন্ধ করুন",
     "a11y.focus": "আমাদের তিনটি মূল কাজের ক্ষেত্র",
@@ -590,7 +585,6 @@ TulusI18n.register({
   ta: {
     "meta.title": "TulusSG | சிங்கப்பூரில் வெளிநாட்டுப் பணியாளர் சமூகங்களுக்குத் துணையாக",
     "meta.description": "TulusSG சிங்கப்பூரில் உள்ள வெளிநாட்டு வீட்டுப் பணியாளர்களுக்கும் வெளிநாட்டு ஊழியர்களுக்கும் சேவை செய்கிறது: அர்த்தமுள்ள செயல்பாடுகளில் பங்கேற்கும் வாய்ப்புகளை விரிவுபடுத்துதல், அவர்களின் கதைகளுக்கு இடம் அளித்தல், சமூக ஆதரவுடன் அவர்களை இணைத்தல்.",
-    "a11y.music": "பின்னணி இசையை ஒலிக்கச் செய்ய அல்லது நிறுத்த",
     "a11y.logo": "TulusSG சின்னம்",
     "a11y.closeMenu": "மெனுவை மூடு",
     "a11y.focus": "நாங்கள் கவனம் செலுத்தும் மூன்று பகுதிகள்",
@@ -706,7 +700,6 @@ TulusI18n.register({
   zh: {
     "meta.title": "TulusSG | 在新加坡支持外籍劳工社群",
     "meta.description": "TulusSG 服务新加坡的外籍家庭帮佣和客工：扩大他们参与有意义活动的机会，为他们的故事创造空间，并将他们与社区支援联系起来。",
-    "a11y.music": "播放或暂停背景音乐",
     "a11y.logo": "TulusSG 标志",
     "a11y.closeMenu": "关闭菜单",
     "a11y.focus": "我们的三大重点",
