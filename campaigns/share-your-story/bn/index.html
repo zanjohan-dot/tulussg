@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
-<meta content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://tulussg-api-451117268823.asia-southeast1.run.app; form-action 'self'; base-uri 'self'; object-src 'none'" http-equiv="Content-Security-Policy"/>
+<meta content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://tulussg-api-451117268823.asia-southeast1.run.app; form-action 'self'; base-uri 'self'; object-src 'none'" http-equiv="Content-Security-Policy"/>
 <meta content="strict-origin-when-cross-origin" name="referrer"/>
 <title>Share Your Story: সিঙ্গাপুরের প্রবাসী গৃহকর্মী | TulusSG</title>
 <meta content="আসন্ন একটি মিডিয়া প্রোডাকশনের জন্য TulusSG সিঙ্গাপুরের গৃহকর্মীদের তাঁদের গল্প শেয়ার করার আমন্ত্রণ জানাচ্ছে। ক্যাম্পেইনের সময়: ১৫ অক্টোবর – ১৫ নভেম্বর ২০২৬।" name="description"/>
@@ -109,8 +109,8 @@
   ]
 }
 </script>
-<link href="/assets/share/favicon-64.png" rel="icon" type="image/png"/>
-<link href="/assets/share/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/assets/share/favicon-64.png" rel="icon" type="image/png"/>
+<link href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/assets/share/apple-touch-icon.png" rel="apple-touch-icon"/>
 <!-- Registration API base (not a secret). The page never talks to Google Sheets directly and never knows a Sheet ID:
      it posts to /api/campaigns/<campaign>/interest and the API decides where the registration is stored. -->
 <meta content="https://tulussg-api-451117268823.asia-southeast1.run.app" name="tulussg-api"/>
@@ -118,15 +118,17 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <!-- Site fonts, plus Noto Sans Myanmar (its unicode-range means it only downloads when Burmese text is shown). -->
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Noto+Sans+Myanmar:wght@400;600;700&amp;family=Noto+Sans+Bengali:wght@400;600;700&amp;family=Noto+Sans+Tamil:wght@400;600;700&amp;family=Noto+Sans+SC:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<link as="image" href="/campaigns/share-your-story/hero-640.webp" imagesizes="(min-width: 880px) 45vw, 100vw" imagesrcset="hero-640.webp 640w, hero-1069.webp 1069w" rel="preload"/>
-<link href="/campaigns/shared/campaign.css" rel="stylesheet"/>
-<link href="/campaigns/shared/lang-info.css" rel="stylesheet"/>
+<link as="image" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/share-your-story/hero-640.webp" imagesizes="(min-width: 880px) 45vw, 100vw" imagesrcset="hero-640.webp 640w, hero-1069.webp 1069w" rel="preload"/>
+<link href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/shared/campaign.css" rel="stylesheet"/>
+<link href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/shared/lang-info.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/_preview.css">
+<script src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/_preview-clock.js"></script>
 </head>
-<body data-analytics="share_story" data-campaign="share-your-story">
+<body data-analytics="share_story" data-campaign="share-your-story"><div class="tulus-preview-banner" role="note">PREVIEW for review only. Not the live website. Forms are switched off.</div>
 <div class="wrap">
 <header class="top">
-<a aria-label="TulusSG হোম" class="top-logo" data-i18n-attr="aria-label:nav.home" href="/bn/">
-<img alt="TulusSG" height="192" src="/campaigns/shared/tulussg-logo-192.png" width="184"/>
+<a aria-label="TulusSG হোম" class="top-logo" data-i18n-attr="aria-label:nav.home" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/bn/index.html">
+<img alt="TulusSG" height="192" src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/shared/tulussg-logo-192.png" width="184"/>
 </a>
 <div class="top-right">
 <div class="lang-wrap">
@@ -150,12 +152,12 @@
 </header>
 <nav aria-label="প্রধান মেনু" class="site-nav" data-i18n-attr="aria-label:nav.main" id="site-nav">
 <ul>
-<li><a data-i18n="nav.mission" href="/bn/">লক্ষ্য</a></li>
-<li><a data-i18n="nav.people" href="/bn/#people">আমাদের দল</a></li>
-<li><a data-i18n="nav.activities" href="/bn/#activities">কার্যক্রম</a></li>
-<li><a data-i18n="nav.getInvolved" href="/bn/#get-involved">যুক্ত হোন</a></li>
-<li><a data-i18n="nav.connect" href="/bn/#connect">যোগাযোগ</a></li>
-<li><a data-i18n="nav.campaigns" data-keep-lang="" href="/campaigns/bn/">ক্যাম্পেইনসমূহ</a></li>
+<li><a data-i18n="nav.mission" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/bn/index.html">লক্ষ্য</a></li>
+<li><a data-i18n="nav.people" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/bn/index.html#people">আমাদের দল</a></li>
+<li><a data-i18n="nav.activities" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/bn/index.html#activities">কার্যক্রম</a></li>
+<li><a data-i18n="nav.getInvolved" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/bn/index.html#get-involved">যুক্ত হোন</a></li>
+<li><a data-i18n="nav.connect" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/bn/index.html#connect">যোগাযোগ</a></li>
+<li><a data-i18n="nav.campaigns" data-keep-lang="" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/bn/index.html">ক্যাম্পেইনসমূহ</a></li>
 </ul>
 </nav>
 <main>
@@ -172,7 +174,7 @@
 <div class="hero-photo">
 <picture>
 <source sizes="(min-width: 880px) 45vw, 100vw" srcset="/campaigns/share-your-story/hero-640.webp 640w, /campaigns/share-your-story/hero-1069.webp 1069w" type="image/webp"/>
-<img alt="সিঙ্গাপুরের মেরিনা বে-র ধারে বসে হাসছেন এক নারী" data-i18n-attr="alt:hero.alt" fetchpriority="high" height="1472" sizes="(min-width: 880px) 45vw, 100vw" src="/campaigns/share-your-story/hero-640.jpg" srcset="/campaigns/share-your-story/hero-640.jpg 640w, /campaigns/share-your-story/hero-1069.jpg 1069w" width="1069"/>
+<img alt="সিঙ্গাপুরের মেরিনা বে-র ধারে বসে হাসছেন এক নারী" data-i18n-attr="alt:hero.alt" fetchpriority="high" height="1472" sizes="(min-width: 880px) 45vw, 100vw" src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/share-your-story/hero-640.jpg" srcset="/campaigns/share-your-story/hero-640.jpg 640w, /campaigns/share-your-story/hero-1069.jpg 1069w" width="1069"/>
 </picture>
 </div>
 <div class="hero-text">
@@ -327,7 +329,7 @@
 <p data-i18n="f.after.p2">আপনি বাছাই হলে, আমরা আপনাকে সবকিছু বুঝিয়ে বলব এবং কোনো চিত্রধারণ বা রেকর্ডিংয়ের আগে আপনার লিখিত অনুমতি নেব। অংশ নেবেন কি না, তা আপনি নিজেই ঠিক করতে পারবেন।</p>
 <h3 data-i18n="f.use.title">আপনার গোপনীয়তা</h3>
 <p data-i18n="f.use.p1">আপনার তথ্য আপনার জমা দেওয়া বিষয়বস্তু পর্যালোচনা করতে এবং Share Your Story ক্যাম্পেইন সম্পর্কে আপনার সঙ্গে যোগাযোগ করতে ব্যবহার করা হবে।</p>
-<p data-i18n-link="f.use.privacy" data-privacy-anchor="share-your-story">আমাদের <a href="/privacy/bn/#share-your-story">গোপনীয়তা নীতি</a> পড়ুন</p>
+<p data-i18n-link="f.use.privacy" data-privacy-anchor="share-your-story">আমাদের <a href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/privacy/bn/index.html#share-your-story">গোপনীয়তা নীতি</a> পড়ুন</p>
 </div>
 <div class="field" data-field="consentContact">
 <label class="consent">
@@ -338,7 +340,7 @@
 <div class="consent-note" id="consent-note">
 <p class="consent-note-title"><strong data-i18n="f.withdrawTitle">নিবন্ধন প্রত্যাহার ও গোপনীয়তা</strong></p>
 <p data-i18n-rich="f.withdraw">প্রযোজ্য আইনি বাধ্যবাধকতা সাপেক্ষে, <a href="mailto:admin@tulussg.com">admin@tulussg.com</a>-এ ইমেইল করে আপনি আপনার নিবন্ধন প্রত্যাহার করতে বা আপনার তথ্য মুছে ফেলার অনুরোধ করতে পারেন।</p>
-<p data-i18n-link="f.consentAck" data-privacy-anchor="share-your-story">এই ফর্ম পাঠানোর মাধ্যমে আপনি স্বীকার করছেন যে আপনি আমাদের <a href="/privacy/bn/#share-your-story">গোপনীয়তা নীতি</a> সম্পর্কে অবগত।</p>
+<p data-i18n-link="f.consentAck" data-privacy-anchor="share-your-story">এই ফর্ম পাঠানোর মাধ্যমে আপনি স্বীকার করছেন যে আপনি আমাদের <a href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/privacy/bn/index.html#share-your-story">গোপনীয়তা নীতি</a> সম্পর্কে অবগত।</p>
 </div>
 </div>
 <!-- Honeypot: hidden from people and screen readers; bots tend to fill it. -->
@@ -354,7 +356,7 @@
 <div class="success" hidden="" id="status-view">
 <h2 data-i18n="state.closed.title" id="status-title" tabindex="-1">এই ক্যাম্পেইন বন্ধ হয়ে গেছে</h2>
 <p data-i18n="state.closed.body" id="status-body">আগ্রহ দেখানোর জন্য ধন্যবাদ। এই ক্যাম্পেইনের নিবন্ধন আর চালু নেই।</p>
-<a class="btn" data-i18n="state.backToCampaigns" data-keep-lang="" href="/campaigns/bn/">সব ক্যাম্পেইন দেখুন</a>
+<a class="btn" data-i18n="state.backToCampaigns" data-keep-lang="" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/bn/index.html">সব ক্যাম্পেইন দেখুন</a>
 </div>
 <div class="success" hidden="" id="success-view">
 <div aria-hidden="true" class="heart">🤍</div>
@@ -390,31 +392,31 @@
 <a aria-label="YouTube-এ TulusSG" class="ty-social" data-i18n-attr="aria-label:social.youtube;title:social.youtube" href="https://www.youtube.com/@TulusSG" rel="noopener" target="_blank" title="YouTube-এ TulusSG"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg></a>
 </div>
 </div>
-<a class="ty-back" data-i18n="success.back" href="/bn/">TulusSG-এ ফিরে যান</a>
+<a class="ty-back" data-i18n="success.back" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/bn/index.html">TulusSG-এ ফিরে যান</a>
 </div>
 </section>
 </main>
 </div>
 <footer>
 <div class="wrap">
-<a aria-label="TulusSG হোম" data-i18n-attr="aria-label:nav.home" href="/bn/"><img alt="TulusSG" height="192" src="/campaigns/shared/tulussg-logo-192.png" width="184"/></a>
+<a aria-label="TulusSG হোম" data-i18n-attr="aria-label:nav.home" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/bn/index.html"><img alt="TulusSG" height="192" src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/shared/tulussg-logo-192.png" width="184"/></a>
 <span><span data-i18n="footer.questions">কোনো প্রশ্ন আছে?</span> <a href="mailto:admin@tulussg.com">admin@tulussg.com</a></span>
-<a data-privacy-link="" href="/privacy/bn/">গোপনীয়তা নীতি</a>
-<a class="footer-campaigns" data-i18n="nav.allCampaigns" data-keep-lang="" href="/campaigns/bn/">সব ক্যাম্পেইন</a>
+<a data-privacy-link="" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/privacy/bn/index.html">গোপনীয়তা নীতি</a>
+<a class="footer-campaigns" data-i18n="nav.allCampaigns" data-keep-lang="" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/bn/index.html">সব ক্যাম্পেইন</a>
 <p class="footer-copy"><span data-i18n="footer.copyright">© 2026 TulusSG। সর্বস্বত্ব সংরক্ষিত।</span><br/><span data-i18n="footer.rights">আইন দ্বারা অনুমোদিত ক্ষেত্র ছাড়া, পূর্ব লিখিত অনুমতি ছাড়া ওয়েবসাইটের বিষয়বস্তু ও মৌলিক নকশা পুনরুৎপাদন বা অভিযোজন করা যাবে না।</span><br/><span data-i18n-rich="footer.credit">ডিজিটাল সিস্টেমগুলোর নকশা ও উন্নয়ন করেছে <a href="https://digi-architect.studio" rel="noopener" target="_blank">The Digital Systems Architect</a>।</span></p>
 </div>
 </footer>
 <div aria-hidden="true" class="sticky" id="sticky">
 <a class="btn" data-cta="sticky" href="#register" tabindex="-1"><span data-i18n="hero.cta">আমার গল্প শেয়ার করব</span></a>
 </div>
-<script src="/campaigns/translations.js"></script>
-<script src="/campaigns/shared/i18n-core.js"></script>
-<script src="/campaigns/shared/i18n-shared.js"></script>
-<script src="/campaigns/campaigns.js"></script>
-<script src="/campaigns/share-your-story/i18n.js"></script>
-<script src="/campaigns/shared/form-core.js"></script>
-<script src="/campaigns/share-your-story/app.js"></script>
-<script src="/campaigns/shared/site-nav.js"></script>
-<script src="/campaigns/shared/protect.js"></script>
+<script src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/translations.js"></script>
+<script src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/shared/i18n-core.js"></script>
+<script src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/shared/i18n-shared.js"></script>
+<script src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/campaigns.js"></script>
+<script src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/share-your-story/i18n.js"></script>
+<script src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/shared/form-core.js"></script>
+<script src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/share-your-story/app.js"></script>
+<script src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/shared/site-nav.js"></script>
+<script src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/shared/protect.js"></script>
 </body>
 </html>

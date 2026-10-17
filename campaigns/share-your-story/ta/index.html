@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
-<meta content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://tulussg-api-451117268823.asia-southeast1.run.app; form-action 'self'; base-uri 'self'; object-src 'none'" http-equiv="Content-Security-Policy"/>
+<meta content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://tulussg-api-451117268823.asia-southeast1.run.app; form-action 'self'; base-uri 'self'; object-src 'none'" http-equiv="Content-Security-Policy"/>
 <meta content="strict-origin-when-cross-origin" name="referrer"/>
 <title>Share Your Story: சிங்கப்பூரில் வெளிநாட்டு வீட்டுப் பணியாளர்கள் | TulusSG</title>
 <meta content="வரவிருக்கும் ஒரு ஊடகத் தயாரிப்புக்காக, சிங்கப்பூரில் உள்ள வீட்டுப் பணியாளர்கள் தங்கள் கதைகளைப் பகிர TulusSG அழைக்கிறது. திட்டக் காலம்: 15 அக்டோபர் – 15 நவம்பர் 2026." name="description"/>
@@ -109,8 +109,8 @@
   ]
 }
 </script>
-<link href="/assets/share/favicon-64.png" rel="icon" type="image/png"/>
-<link href="/assets/share/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/assets/share/favicon-64.png" rel="icon" type="image/png"/>
+<link href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/assets/share/apple-touch-icon.png" rel="apple-touch-icon"/>
 <!-- Registration API base (not a secret). The page never talks to Google Sheets directly and never knows a Sheet ID:
      it posts to /api/campaigns/<campaign>/interest and the API decides where the registration is stored. -->
 <meta content="https://tulussg-api-451117268823.asia-southeast1.run.app" name="tulussg-api"/>
@@ -118,15 +118,17 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <!-- Site fonts, plus Noto Sans Myanmar (its unicode-range means it only downloads when Burmese text is shown). -->
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Noto+Sans+Myanmar:wght@400;600;700&amp;family=Noto+Sans+Bengali:wght@400;600;700&amp;family=Noto+Sans+Tamil:wght@400;600;700&amp;family=Noto+Sans+SC:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<link as="image" href="/campaigns/share-your-story/hero-640.webp" imagesizes="(min-width: 880px) 45vw, 100vw" imagesrcset="hero-640.webp 640w, hero-1069.webp 1069w" rel="preload"/>
-<link href="/campaigns/shared/campaign.css" rel="stylesheet"/>
-<link href="/campaigns/shared/lang-info.css" rel="stylesheet"/>
+<link as="image" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/share-your-story/hero-640.webp" imagesizes="(min-width: 880px) 45vw, 100vw" imagesrcset="hero-640.webp 640w, hero-1069.webp 1069w" rel="preload"/>
+<link href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/shared/campaign.css" rel="stylesheet"/>
+<link href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/shared/lang-info.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/_preview.css">
+<script src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/_preview-clock.js"></script>
 </head>
-<body data-analytics="share_story" data-campaign="share-your-story">
+<body data-analytics="share_story" data-campaign="share-your-story"><div class="tulus-preview-banner" role="note">PREVIEW for review only. Not the live website. Forms are switched off.</div>
 <div class="wrap">
 <header class="top">
-<a aria-label="TulusSG முகப்பு" class="top-logo" data-i18n-attr="aria-label:nav.home" href="/ta/">
-<img alt="TulusSG" height="192" src="/campaigns/shared/tulussg-logo-192.png" width="184"/>
+<a aria-label="TulusSG முகப்பு" class="top-logo" data-i18n-attr="aria-label:nav.home" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/ta/index.html">
+<img alt="TulusSG" height="192" src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/shared/tulussg-logo-192.png" width="184"/>
 </a>
 <div class="top-right">
 <div class="lang-wrap">
@@ -150,12 +152,12 @@
 </header>
 <nav aria-label="முதன்மை மெனு" class="site-nav" data-i18n-attr="aria-label:nav.main" id="site-nav">
 <ul>
-<li><a data-i18n="nav.mission" href="/ta/">நோக்கம்</a></li>
-<li><a data-i18n="nav.people" href="/ta/#people">எங்கள் குழு</a></li>
-<li><a data-i18n="nav.activities" href="/ta/#activities">செயல்பாடுகள்</a></li>
-<li><a data-i18n="nav.getInvolved" href="/ta/#get-involved">பங்கேற்க</a></li>
-<li><a data-i18n="nav.connect" href="/ta/#connect">தொடர்புகொள்ள</a></li>
-<li><a data-i18n="nav.campaigns" data-keep-lang="" href="/campaigns/ta/">திட்டங்கள்</a></li>
+<li><a data-i18n="nav.mission" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/ta/index.html">நோக்கம்</a></li>
+<li><a data-i18n="nav.people" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/ta/index.html#people">எங்கள் குழு</a></li>
+<li><a data-i18n="nav.activities" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/ta/index.html#activities">செயல்பாடுகள்</a></li>
+<li><a data-i18n="nav.getInvolved" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/ta/index.html#get-involved">பங்கேற்க</a></li>
+<li><a data-i18n="nav.connect" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/ta/index.html#connect">தொடர்புகொள்ள</a></li>
+<li><a data-i18n="nav.campaigns" data-keep-lang="" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/ta/index.html">திட்டங்கள்</a></li>
 </ul>
 </nav>
 <main>
@@ -172,7 +174,7 @@
 <div class="hero-photo">
 <picture>
 <source sizes="(min-width: 880px) 45vw, 100vw" srcset="/campaigns/share-your-story/hero-640.webp 640w, /campaigns/share-your-story/hero-1069.webp 1069w" type="image/webp"/>
-<img alt="சிங்கப்பூரில் மரினா பே அருகே புன்னகையுடன் அமர்ந்திருக்கும் ஒரு பெண்" data-i18n-attr="alt:hero.alt" fetchpriority="high" height="1472" sizes="(min-width: 880px) 45vw, 100vw" src="/campaigns/share-your-story/hero-640.jpg" srcset="/campaigns/share-your-story/hero-640.jpg 640w, /campaigns/share-your-story/hero-1069.jpg 1069w" width="1069"/>
+<img alt="சிங்கப்பூரில் மரினா பே அருகே புன்னகையுடன் அமர்ந்திருக்கும் ஒரு பெண்" data-i18n-attr="alt:hero.alt" fetchpriority="high" height="1472" sizes="(min-width: 880px) 45vw, 100vw" src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/share-your-story/hero-640.jpg" srcset="/campaigns/share-your-story/hero-640.jpg 640w, /campaigns/share-your-story/hero-1069.jpg 1069w" width="1069"/>
 </picture>
 </div>
 <div class="hero-text">
@@ -327,7 +329,7 @@
 <p data-i18n="f.after.p2">நீங்கள் தேர்ந்தெடுக்கப்பட்டால், எல்லாவற்றையும் உங்களுக்கு விளக்குவோம்; எந்தப் படப்பிடிப்பு அல்லது ஒலிப்பதிவுக்கும் முன் உங்கள் எழுத்துப்பூர்வ அனுமதியைக் கேட்போம். பங்கேற்பதா வேண்டாமா என்பதை நீங்களே முடிவு செய்யலாம்.</p>
 <h3 data-i18n="f.use.title">உங்கள் தனியுரிமை</h3>
 <p data-i18n="f.use.p1">நீங்கள் சமர்ப்பித்ததைப் பரிசீலிக்கவும், Share Your Story திட்டம் தொடர்பாக உங்களைத் தொடர்பு கொள்ளவும் உங்கள் தகவல்கள் பயன்படுத்தப்படும்.</p>
-<p data-i18n-link="f.use.privacy" data-privacy-anchor="share-your-story">எங்கள் <a href="/privacy/ta/#share-your-story">தனியுரிமைக் கொள்கை</a> ஆவணத்தைப் படியுங்கள்</p>
+<p data-i18n-link="f.use.privacy" data-privacy-anchor="share-your-story">எங்கள் <a href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/privacy/ta/index.html#share-your-story">தனியுரிமைக் கொள்கை</a> ஆவணத்தைப் படியுங்கள்</p>
 </div>
 <div class="field" data-field="consentContact">
 <label class="consent">
@@ -338,7 +340,7 @@
 <div class="consent-note" id="consent-note">
 <p class="consent-note-title"><strong data-i18n="f.withdrawTitle">பதிவைத் திரும்பப் பெறுதலும் தனியுரிமையும்</strong></p>
 <p data-i18n-rich="f.withdraw">பொருந்தும் சட்டத் தேவைகளுக்கு உட்பட்டு, <a href="mailto:admin@tulussg.com">admin@tulussg.com</a> என்ற முகவரிக்கு மின்னஞ்சல் அனுப்பி உங்கள் பதிவைத் திரும்பப் பெறலாம் அல்லது உங்கள் தகவல்களை நீக்கக் கோரலாம்.</p>
-<p data-i18n-link="f.consentAck" data-privacy-anchor="share-your-story">இந்தப் படிவத்தை அனுப்புவதன் மூலம், எங்கள் <a href="/privacy/ta/#share-your-story">தனியுரிமைக் கொள்கை</a> பற்றி நீங்கள் அறிந்திருப்பதை உறுதிசெய்கிறீர்கள்.</p>
+<p data-i18n-link="f.consentAck" data-privacy-anchor="share-your-story">இந்தப் படிவத்தை அனுப்புவதன் மூலம், எங்கள் <a href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/privacy/ta/index.html#share-your-story">தனியுரிமைக் கொள்கை</a> பற்றி நீங்கள் அறிந்திருப்பதை உறுதிசெய்கிறீர்கள்.</p>
 </div>
 </div>
 <!-- Honeypot: hidden from people and screen readers; bots tend to fill it. -->
@@ -354,7 +356,7 @@
 <div class="success" hidden="" id="status-view">
 <h2 data-i18n="state.closed.title" id="status-title" tabindex="-1">இந்தத் திட்டம் முடிந்துவிட்டது</h2>
 <p data-i18n="state.closed.body" id="status-body">உங்கள் ஆர்வத்திற்கு நன்றி. இந்தத் திட்டத்திற்கான பதிவு முடிந்துவிட்டது.</p>
-<a class="btn" data-i18n="state.backToCampaigns" data-keep-lang="" href="/campaigns/ta/">அனைத்துத் திட்டங்களையும் பாருங்கள்</a>
+<a class="btn" data-i18n="state.backToCampaigns" data-keep-lang="" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/ta/index.html">அனைத்துத் திட்டங்களையும் பாருங்கள்</a>
 </div>
 <div class="success" hidden="" id="success-view">
 <div aria-hidden="true" class="heart">🤍</div>
@@ -390,31 +392,31 @@
 <a aria-label="YouTube-இல் TulusSG" class="ty-social" data-i18n-attr="aria-label:social.youtube;title:social.youtube" href="https://www.youtube.com/@TulusSG" rel="noopener" target="_blank" title="YouTube-இல் TulusSG"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg></a>
 </div>
 </div>
-<a class="ty-back" data-i18n="success.back" href="/ta/">TulusSG-க்குத் திரும்ப</a>
+<a class="ty-back" data-i18n="success.back" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/ta/index.html">TulusSG-க்குத் திரும்ப</a>
 </div>
 </section>
 </main>
 </div>
 <footer>
 <div class="wrap">
-<a aria-label="TulusSG முகப்பு" data-i18n-attr="aria-label:nav.home" href="/ta/"><img alt="TulusSG" height="192" src="/campaigns/shared/tulussg-logo-192.png" width="184"/></a>
+<a aria-label="TulusSG முகப்பு" data-i18n-attr="aria-label:nav.home" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/ta/index.html"><img alt="TulusSG" height="192" src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/shared/tulussg-logo-192.png" width="184"/></a>
 <span><span data-i18n="footer.questions">கேள்விகள் உள்ளதா?</span> <a href="mailto:admin@tulussg.com">admin@tulussg.com</a></span>
-<a data-privacy-link="" href="/privacy/ta/">தனியுரிமைக் கொள்கை</a>
-<a class="footer-campaigns" data-i18n="nav.allCampaigns" data-keep-lang="" href="/campaigns/ta/">அனைத்துத் திட்டங்களும்</a>
+<a data-privacy-link="" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/privacy/ta/index.html">தனியுரிமைக் கொள்கை</a>
+<a class="footer-campaigns" data-i18n="nav.allCampaigns" data-keep-lang="" href="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/ta/index.html">அனைத்துத் திட்டங்களும்</a>
 <p class="footer-copy"><span data-i18n="footer.copyright">© 2026 TulusSG. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</span><br/><span data-i18n="footer.rights">சட்டம் அனுமதிக்கும் சூழல்களைத் தவிர, முன் எழுத்துப்பூர்வ அனுமதியின்றி இணையதள உள்ளடக்கத்தையும் அசல் வடிவமைப்பையும் மறுஉருவாக்கம் செய்யவோ தழுவி மாற்றவோ கூடாது.</span><br/><span data-i18n-rich="footer.credit">டிஜிட்டல் அமைப்புகளை வடிவமைத்து உருவாக்கியது <a href="https://digi-architect.studio" rel="noopener" target="_blank">The Digital Systems Architect</a>.</span></p>
 </div>
 </footer>
 <div aria-hidden="true" class="sticky" id="sticky">
 <a class="btn" data-cta="sticky" href="#register" tabindex="-1"><span data-i18n="hero.cta">என் கதையைப் பகிர</span></a>
 </div>
-<script src="/campaigns/translations.js"></script>
-<script src="/campaigns/shared/i18n-core.js"></script>
-<script src="/campaigns/shared/i18n-shared.js"></script>
-<script src="/campaigns/campaigns.js"></script>
-<script src="/campaigns/share-your-story/i18n.js"></script>
-<script src="/campaigns/shared/form-core.js"></script>
-<script src="/campaigns/share-your-story/app.js"></script>
-<script src="/campaigns/shared/site-nav.js"></script>
-<script src="/campaigns/shared/protect.js"></script>
+<script src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/translations.js"></script>
+<script src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/shared/i18n-core.js"></script>
+<script src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/shared/i18n-shared.js"></script>
+<script src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/campaigns.js"></script>
+<script src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/share-your-story/i18n.js"></script>
+<script src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/shared/form-core.js"></script>
+<script src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/share-your-story/app.js"></script>
+<script src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/shared/site-nav.js"></script>
+<script src="https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-18-v20/campaigns/shared/protect.js"></script>
 </body>
 </html>
