@@ -13,7 +13,7 @@ SITE = 'https://www.tulussg.com'
 LANGS = [  # code, html lang, hreflang, native name, path, Noto font for the script (None = Latin)
     ('en', 'en', 'en', 'English', '/privacy/', None),
     ('id', 'id', 'id', 'Bahasa Indonesia', '/privacy/id/', None),
-    ('tl', 'fil', 'fil', 'Filipino', '/privacy/tl/', None),
+    ('tl', 'fil', 'tl', 'Filipino', '/privacy/tl/', None),
     ('my', 'my', 'my', 'မြန်မာဘာသာ', '/privacy/my/', 'Noto+Sans+Myanmar'),
     ('bn', 'bn', 'bn', 'বাংলা', '/privacy/bn/', 'Noto+Sans+Bengali'),
     ('ta', 'ta', 'ta', 'தமிழ்', '/privacy/ta/', 'Noto+Sans+Tamil'),
