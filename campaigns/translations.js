@@ -20,6 +20,7 @@
  *                     pending   awaiting the owner's decision
  *                     held      kept back because of a known material issue (see history)
  *   public          true exactly when release is 'approved' and translation 'complete' (English: always true)
+ *   changes         page level: dated English wording changes that apply to every language (consent version history)
  *   translationVersion  date of the last change to this language's text on this page
  *   history         dated log of translations, reviews, approvals and corrections (with the change log in the API repo,
  *                   docs/consent-docs/translation-change-log.md, this maps a registration's "Website language" +
@@ -38,7 +39,9 @@
 
   window.TULUS_TRANSLATIONS = {
     'share-your-story': {
-      consentVersion: 'share-your-story-v7.3-2026-10-14',
+      consentVersion: 'share-your-story-v7.4-2026-10-17',
+      // Page-level wording changes (all languages). Earlier records keep the version they were given.
+      changes: ['2026-10-14 v7.3 live', '2026-10-17 owner: employer-contact sentence (f.after.p3) removed in every language -> v7.4 (takes effect on deployment)'],
       languages: {
         en: SOURCE,
         id: lang('approved', '2026-10-17', [
@@ -56,7 +59,8 @@
       },
     },
     'share-your-story-migrant-workers': {
-      consentVersion: 'share-your-story-mw-v1-2026-10-16',
+      consentVersion: 'share-your-story-mw-v1.1-2026-10-17',
+      changes: ['2026-10-16 mw-v1 (never public)', '2026-10-17 owner: employer-contact sentence (f.after.p3) removed in every language -> mw-v1.1 (before opening)'],
       languages: {
         en: SOURCE,
         id: lang('pending', '2026-10-17', ['2026-10-16 AI translation (MW lines)', '2026-10-17 independent AI review + third-pass contextual review', '2026-10-17 final AI review (blind back-translation + independent review + adjudication); corrections applied; no unresolved material translation ambiguity; READY FOR OWNER APPROVAL']),
