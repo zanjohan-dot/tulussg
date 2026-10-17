@@ -577,7 +577,7 @@ html:is([lang="my"],[lang="bn"],[lang="ta"]) .sidebar-foot{font-size:10.5px;line
 
 <!-- EQ Music Toggle -->
 <div class="eq-wrap">
-  <div class="eq-btn" id="eq-btn" onclick="toggleMusic()" role="button" tabindex="0" aria-label="Play or pause background music">
+  <div class="eq-btn" id="eq-btn" onclick="toggleMusic()">
     <div class="eq-bar" style="height:6px"></div>
     <div class="eq-bar" style="height:12px"></div>
     <div class="eq-bar" style="height:8px"></div>
@@ -998,7 +998,7 @@ function toggleMob(){
   if(open){const c=o.querySelector('.mob-close');if(c)setTimeout(()=>c.focus(),50);}else if(b&&b.offsetParent)b.focus();
 }
 // Keyboard: Enter/Space on the menu and music buttons; Escape closes the menu.
-document.querySelectorAll('.mob-menu,#eq-btn').forEach(el=>el.addEventListener('keydown',e=>{
+document.querySelectorAll('.mob-menu').forEach(el=>el.addEventListener('keydown',e=>{
   if(e.key==='Enter'||e.key===' '){e.preventDefault();el.click();}
 }));
 document.addEventListener('keydown',e=>{
