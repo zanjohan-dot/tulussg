@@ -1,7 +1,7 @@
 {
  "campaigns/shared/i18n-shared.js": {
   "nav.language": "a4fe65264ef7",
-  "lang.notice": "2f4f6b571316",
+  "lang.notice": "fa44bfebd000",
   "nav.home": "aef1479beb6f",
   "form.required": "d0a3630555bb",
   "form.optional": "ec91fdd9256c",
@@ -84,7 +84,8 @@
   "campaign.share-your-story-migrant-workers.alt": "742433a38dcb",
   "campaign.sports-carnival.title": "699092e611af",
   "campaign.sports-carnival.alt": "4857ea4f81a5",
-  "date.digits": "84d89877f0d4"
+  "date.digits": "84d89877f0d4",
+  "lang.notice": "500a87e74d36"
  },
  "campaigns/share-your-story/i18n.js": {
   "meta.title": "4a01db6f9223",
