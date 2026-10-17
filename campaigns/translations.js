@@ -169,5 +169,17 @@
         zh: lang('approved', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL', "2026-10-17 owner (Zan Johan) approved all seven languages for public release in chat (decision D2): approved for public release (AI-reviewed, not human-verified)", '2026-10-17 shared texts (owner): new copyright footer (footer.copyright, footer.rights, footer.credit) and the language-information button label; AI translation + independent blind back-translation review; id and ta legal line corrected after review']),
       },
     },
+    'privacy': { // /privacy/ and /privacy/<lang>/ (static pages built by _tests/privacy-src/build.py)
+      consentVersion: null,
+      languages: {
+        en: SOURCE,
+        id: lang('approved', '2026-10-17', ['2026-10-17 owner approved the English text (with two section 9 refinements)', '2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review: blind back-translation of the legal sections + full comparison; corrections applied (see _tests/privacy-src/review-id.md)', 'not human-verified']),
+        tl: lang('approved', '2026-10-17', ['2026-10-17 owner approved the English text (with two section 9 refinements)', '2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review: blind back-translation of the legal sections + full comparison; corrections applied (see _tests/privacy-src/review-tl.md)', 'not human-verified']),
+        my: lang('approved', '2026-10-17', ['2026-10-17 owner approved the English text (with two section 9 refinements)', '2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review: blind back-translation of the legal sections + full comparison; corrections applied (see _tests/privacy-src/review-my.md)', 'not human-verified']),
+        bn: lang('approved', '2026-10-17', ['2026-10-17 owner approved the English text (with two section 9 refinements)', '2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review: blind back-translation of the legal sections + full comparison; corrections applied (see _tests/privacy-src/review-bn.md)', 'not human-verified']),
+        ta: lang('approved', '2026-10-17', ['2026-10-17 owner approved the English text (with two section 9 refinements)', '2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review: blind back-translation of the legal sections + full comparison; corrections applied (see _tests/privacy-src/review-ta.md)', 'not human-verified']),
+        zh: lang('approved', '2026-10-17', ['2026-10-17 owner approved the English text (with two section 9 refinements)', '2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review: blind back-translation of the legal sections + full comparison; corrections applied (see _tests/privacy-src/review-zh.md)', 'not human-verified']),
+      },
+    },
   };
 })();

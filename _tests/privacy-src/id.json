@@ -1,0 +1,459 @@
+{
+ "lang": "id",
+ "htmlLang": "id",
+ "dir": "ltr",
+ "ui": {
+  "title": "Kebijakan Privasi | TulusSG",
+  "description": "Cara TulusSG mengumpulkan, menggunakan, dan melindungi informasi pribadi, termasuk untuk kampanye Share Your Story.",
+  "ogDescription": "Cara TulusSG mengumpulkan, menggunakan, dan melindungi informasi pribadi.",
+  "back": "Kampanye",
+  "h1": "Kebijakan Privasi",
+  "updated": "Terakhir diperbarui: 17 Oktober 2026",
+  "languages": "Bahasa",
+  "translationNote": "",
+  "contents": "Daftar Isi",
+  "questions": "Ada pertanyaan?",
+  "dpo": "Petugas Perlindungan Data",
+  "email": "Email",
+  "website": "Situs web",
+  "homeLabel": "Beranda TulusSG"
+ },
+ "blocks": [
+  {
+   "t": "p",
+   "cls": "intro",
+   "h": "TulusSG berkomitmen menangani informasi pribadi secara bertanggung jawab dan dengan penuh rasa hormat."
+  },
+  {
+   "t": "p",
+   "h": "TulusSG adalah inisiatif komunitas akar rumput dari <strong>Zan J Private Limited (UEN: 202616105R)</strong>. Kedua kampanye Share Your Story diselenggarakan oleh TulusSG."
+  },
+  {
+   "t": "p",
+   "h": "Zan J Private Limited, yang mengelola TulusSG, bertanggung jawab atas pengumpulan dan penggunaan informasi pribadi yang Anda berikan. Dalam Kebijakan Privasi ini, sebutan “kami” dan “TulusSG” berarti Zan J Private Limited yang bertindak melalui inisiatif dan mereknya."
+  },
+  {
+   "t": "p",
+   "h": "Kebijakan Privasi ini menjelaskan informasi apa saja yang mungkin kami kumpulkan, mengapa kami mengumpulkannya, bagaimana kami menggunakannya, dan pilihan apa saja yang tersedia bagi Anda."
+  },
+  {
+   "t": "toc"
+  },
+  {
+   "t": "h2",
+   "id": "collect",
+   "n": "1",
+   "h": "Informasi yang mungkin kami kumpulkan"
+  },
+  {
+   "t": "p",
+   "h": "Tergantung pada cara Anda berinteraksi dengan TulusSG, kami mungkin mengumpulkan informasi seperti:"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "nama Anda;",
+    "nomor ponsel atau WhatsApp;",
+    "alamat email, jika diberikan;",
+    "kewarganegaraan;",
+    "bahasa yang Anda pilih;",
+    "informasi yang Anda pilih untuk dibagikan kepada kami tentang pengalaman, minat, atau keadaan Anda;",
+    "informasi pendaftaran acara atau program;",
+    "informasi yang berkaitan dengan keikutsertaan Anda dalam kegiatan TulusSG;",
+    "komunikasi yang Anda kirimkan kepada kami; dan",
+    "informasi teknis dasar yang timbul saat Anda menggunakan situs web kami."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Kami hanya meminta informasi yang secara wajar diperlukan untuk kegiatan, layanan, program, atau pertanyaan TulusSG yang bersangkutan."
+  },
+  {
+   "t": "h2",
+   "id": "why",
+   "n": "2",
+   "h": "Mengapa kami mengumpulkan informasi Anda"
+  },
+  {
+   "t": "p",
+   "h": "Kami mungkin menggunakan informasi pribadi Anda untuk:"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "menjawab pertanyaan Anda;",
+    "memproses pendaftaran dan pernyataan minat;",
+    "menghubungi Anda tentang program, acara, atau kesempatan TulusSG yang Anda minati;",
+    "mengelola kegiatan komunitas dan keikutsertaan di dalamnya;",
+    "menyampaikan informasi penting yang berkaitan dengan pendaftaran atau keikutsertaan Anda;",
+    "memahami kebutuhan dan minat komunitas yang bekerja sama dengan kami;",
+    "meningkatkan program, layanan, dan platform digital TulusSG;",
+    "menyimpan catatan yang sesuai untuk keperluan operasional, keselamatan, atau administrasi; dan",
+    "mematuhi ketentuan hukum atau peraturan yang berlaku."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Kami tidak akan menggunakan informasi pribadi Anda untuk tujuan yang secara material berbeda dari tujuan pengumpulannya tanpa dasar yang sesuai atau persetujuan tambahan jika diperlukan."
+  },
+  {
+   "t": "h2",
+   "id": "share-your-story",
+   "n": "3",
+   "h": "Kampanye Share Your Story"
+  },
+  {
+   "t": "p",
+   "h": "TulusSG menyelenggarakan dua kampanye Share Your Story: <strong>Share Your Story: Pekerja Rumah Tangga Migran</strong> (pendaftaran dibuka 15 Oktober hingga 15 November 2026) dan <strong>Share Your Story: Pekerja Migran</strong> (pendaftaran dibuka 26 Oktober hingga 26 November 2026). Keduanya berjalan dengan cara yang sama, dalam dua tahap. Pendaftaran setiap kampanye disimpan dalam lembar kerja (spreadsheet) tersendiri yang terpisah."
+  },
+  {
+   "t": "h3",
+   "h": "Tahap 1: Mendaftarkan minat Anda"
+  },
+  {
+   "t": "p",
+   "h": "Jika Anda mengisi formulir pendaftaran, kami mengumpulkan: nama, nomor WhatsApp, kewarganegaraan, dan bahasa yang Anda pilih; cerita yang Anda pilih untuk dibagikan, jika ada; akun media sosial yang Anda pilih untuk dibagikan, jika ada; alamat email Anda, hanya jika Anda meminta salinan formulir Anda; dan persetujuan Anda, beserta tanggal dan waktunya, versi kata-kata yang Anda setujui, serta bahasa yang digunakan halaman saat ditampilkan. Kami juga memberikan nomor referensi untuk pendaftaran Anda."
+  },
+  {
+   "t": "p",
+   "h": "Kami menggunakan informasi ini untuk meninjau kiriman Anda, memahami gambaran umum para peserta kampanye, dan menghubungi Anda tentang kampanye tempat Anda mendaftar. Kami tidak menggunakannya untuk pemasaran atau untuk kampanye lain kecuali Anda menyetujuinya secara terpisah."
+  },
+  {
+   "t": "p",
+   "h": "Pendaftaran Anda hanya dapat dilihat oleh orang-orang yang diberi wewenang oleh TulusSG untuk mengelola kampanye, dan oleh penyedia layanan yang menjalankan sistem pendaftaran kami (lihat <a href=\"#providers\">bagian 6</a>). Jika cerita Anda memuat pengalaman pribadi atau sensitif, kami memperlakukannya dengan sangat hati-hati (lihat <a href=\"#stories\">bagian 4</a>)."
+  },
+  {
+   "t": "p",
+   "h": "Selama proses seleksi, kami mungkin berbicara dengan Anda lewat WhatsApp atau telepon untuk mengenal cerita Anda lebih jauh. Percakapan ini tidak direkam untuk dipublikasikan, dan Anda tidak perlu menandatangani apa pun untuk mengikutinya."
+  },
+  {
+   "t": "p",
+   "h": "Mendaftar tidak berarti Anda akan terpilih. Pendaftaran tidak memberi kami izin untuk merekam video, memotret, atau merekam Anda, atau untuk memublikasikan cerita maupun informasi pribadi Anda."
+  },
+  {
+   "t": "h3",
+   "h": "Tahap 2: Jika Anda terpilih"
+  },
+  {
+   "t": "p",
+   "h": "Kami akan menjelaskan rencana produksinya. Kami akan meminta izin tertulis Anda secara terpisah sebelum syuting, pemotretan, perekaman audio atau video, atau wawancara apa pun yang ditujukan untuk produksi media atau publikasi. Izin tertulis tersebut akan menjelaskan bagaimana cerita, nama, gambar, suara, dan rekaman Anda dapat digunakan, termasuk bagaimana Anda ingin dikenali, saluran publikasi yang direncanakan, apakah konten tersebut dapat tetap tersedia tanpa batas waktu, dan pengaturan untuk menarik kembali izin."
+  },
+  {
+   "t": "p",
+   "h": "Orang atau organisasi yang mengerjakan produksi untuk TulusSG hanya akan menerima informasi pribadi yang secara wajar diperlukan untuk pekerjaan yang telah disepakati."
+  },
+  {
+   "t": "p",
+   "h": "<strong>Salinan formulir Anda.</strong> Jika Anda meminta salinan, kami lebih dulu mengirim tautan melalui email ke alamat yang Anda berikan, untuk memastikan alamat itu memang milik Anda. Kami menggunakan alamat tersebut hanya untuk mengirim salinan."
+  },
+  {
+   "t": "h3",
+   "id": "contact-form",
+   "h": "Formulir kontak"
+  },
+  {
+   "t": "p",
+   "h": "Jika Anda menulis kepada kami melalui formulir kontak di beranda kami, kami menerima nama, alamat email, peran yang Anda pilih, dan pesan Anda. Kami menggunakannya untuk membalas Anda dan menindaklanjuti hal yang Anda tanyakan, misalnya tentang menjadi relawan atau bekerja sama dengan kami. Kami tidak menambahkannya ke pendaftaran kampanye atau menggunakannya untuk pemasaran. <a href=\"#retention\">Bagian 7</a> menjelaskan berapa lama kami menyimpannya."
+  },
+  {
+   "t": "h2",
+   "id": "stories",
+   "n": "4",
+   "h": "Cerita yang sensitif atau pribadi"
+  },
+  {
+   "t": "p",
+   "h": "Sebagian orang mungkin memilih untuk membagikan pengalaman pribadi kepada TulusSG. Sebaiknya Anda hanya memberikan informasi yang Anda merasa nyaman untuk dibagikan kepada kami."
+  },
+  {
+   "t": "p",
+   "h": "Mohon jangan mengirimkan informasi rahasia yang tidak diperlukan, seperti nomor paspor, nomor FIN, informasi rekening bank, kata sandi, alamat tempat tinggal yang terperinci, atau informasi lain yang tidak diperlukan untuk kegiatan TulusSG yang bersangkutan."
+  },
+  {
+   "t": "p",
+   "h": "Jika cerita pribadi diberikan kepada kami, kami akan memperlakukannya dengan kehati-hatian yang sepatutnya dan menggunakannya hanya untuk tujuan cerita itu dikirimkan, kecuali jika izin tambahan telah diperoleh."
+  },
+  {
+   "t": "h2",
+   "id": "access",
+   "n": "5",
+   "h": "Siapa yang dapat mengakses informasi Anda"
+  },
+  {
+   "t": "p",
+   "h": "Informasi pribadi dapat diakses oleh orang-orang yang berwenang dan memerlukannya untuk keperluan TulusSG yang sah, yang dapat mencakup:"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "anggota tim TulusSG;",
+    "staf administrasi yang berwenang;",
+    "penyedia teknologi atau layanan yang mendukung sistem TulusSG;",
+    "mitra program, jika hal ini diperlukan untuk kegiatan yang bersangkutan dan perlindungan yang memadai telah tersedia; dan",
+    "penasihat profesional, jika secara wajar diperlukan."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Kami tidak menjual informasi pribadi Anda. Kami tidak memublikasikan informasi pribadi Anda hanya karena Anda telah mengirimkan pendaftaran atau pernyataan minat."
+  },
+  {
+   "t": "h2",
+   "id": "providers",
+   "n": "6",
+   "h": "Penyedia layanan dan pemrosesan di luar negeri"
+  },
+  {
+   "t": "p",
+   "h": "Kami menggunakan penyedia layanan untuk menjalankan situs web, sistem pendaftaran, dan komunikasi kami. Mereka memproses informasi pribadi hanya berdasarkan instruksi kami."
+  },
+  {
+   "t": "p",
+   "h": "Penyedia yang menyimpan informasi yang Anda berikan kepada kami:"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "<strong>Google (Google Workspace dan Google Cloud).</strong> Server pendaftaran kami berjalan di Google Cloud di Singapura. Pendaftaran disimpan di Google Sheets yang bersifat privat, satu lembar kerja tersendiri untuk setiap kampanye, dan email kami, termasuk salinan formulir Anda jika Anda memintanya, dikirim dan disimpan di Gmail.",
+    "<strong>Google Apps Script.</strong> Meneruskan pesan yang dikirim melalui formulir kontak di beranda kami ke email kami.",
+    "<strong>WhatsApp (Meta).</strong> Jika kami berbicara dengan Anda di WhatsApp, percakapan tersebut ditangani oleh WhatsApp berdasarkan ketentuannya sendiri."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Penyedia yang hanya mengetahui bahwa Anda mengunjungi situs web kami: <strong>GitHub</strong>, yang menjadi tempat situs web kami di-hosting, dan <strong>Google Fonts</strong>, yang menyediakan jenis huruf. Seperti situs web pada umumnya, mereka menerima informasi teknis seperti alamat IP perangkat Anda. Mereka tidak menerima jawaban formulir Anda. YouTube dibahas di <a href=\"#website\">bagian 12A</a>."
+  },
+  {
+   "t": "p",
+   "h": "Sebagian informasi ini mungkin disimpan atau diproses di luar Singapura, di pusat data milik para penyedia. Jika hal ini terjadi, kami mengandalkan perjanjian kami dengan para penyedia tersebut, yang mencakup kewajiban perlindungan data dan keamanan, untuk memastikan informasi tersebut mendapat tingkat perlindungan yang sebanding dengan perlindungan berdasarkan Undang-Undang Perlindungan Data Pribadi (Personal Data Protection Act) Singapura."
+  },
+  {
+   "t": "p",
+   "h": "Kami tetap bertanggung jawab atas informasi pribadi yang diproses oleh para penyedia kami untuk kami."
+  },
+  {
+   "t": "h2",
+   "id": "retention",
+   "n": "7",
+   "h": "Berapa lama kami menyimpan informasi"
+  },
+  {
+   "t": "p",
+   "h": "Kami menyimpan informasi pribadi hanya selama kami memerlukannya untuk tujuan pengumpulannya, atau selama diwajibkan oleh hukum. Catatan yang berbeda disimpan untuk jangka waktu yang berbeda. Tidak ada yang dihapus secara otomatis: kami meninjau catatan paling lambat pada tanggal-tanggal di bawah ini dan menghapus apa yang tidak lagi diperlukan."
+  },
+  {
+   "t": "table",
+   "head": [
+    "Catatan",
+    "Berapa lama kami menyimpannya"
+   ],
+   "rows": [
+    [
+     "Pendaftaran Share Your Story yang tidak terpilih, beserta catatan seleksi dan pesan WhatsApp-nya",
+     "Ditinjau dan dihapus setelah seleksi selesai, paling lambat <strong>28 Februari 2027</strong> (Pekerja Rumah Tangga Migran) dan <strong>31 Maret 2027</strong> (Pekerja Migran), kecuali jika masih ada urusan yang belum selesai"
+    ],
+    [
+     "Catatan peserta yang ceritanya terpilih",
+     "Dipindahkan ke catatan peserta yang aksesnya dibatasi dan disimpan sesuai penjelasan dalam perjanjian tertulis Anda yang terpisah"
+    ],
+    [
+     "Perjanjian media yang telah ditandatangani, beserta catatan persetujuan dan penarikan yang terkait dengannya",
+     "Sesuai penjelasan dalam perjanjian tertulis Anda yang terpisah"
+    ],
+    [
+     "Cerita yang telah dipublikasikan dan catatan produksi",
+     "Sesuai yang diizinkan oleh perjanjian tertulis Anda yang terpisah, dengan tetap memperhatikan hak Anda untuk menarik kembali izin Anda (<a href=\"#choices\">bagian 9</a>)"
+    ],
+    [
+     "Catatan kerja tentang Anda, jika Anda membatalkan keikutsertaan atau meminta kami menghapus informasi Anda",
+     "Dihapus, biasanya dalam 30 hari; kami menyimpan catatan singkat tentang permintaan Anda hingga 2 tahun untuk menunjukkan bagaimana permintaan itu ditangani"
+    ],
+    [
+     "Alamat email Anda, jika Anda meminta salinan formulir Anda",
+     "Dihapus setelah salinan terkirim, atau sekitar satu minggu setelah tautan kedaluwarsa jika tautan itu tidak digunakan"
+    ],
+    [
+     "Salinan email yang kami kirim terkait pendaftaran",
+     "Dihapus dalam waktu sekitar satu bulan"
+    ],
+    [
+     "Pesan yang dikirim melalui formulir kontak di beranda kami",
+     "12 bulan setelah komunikasi substantif terakhir kami dengan Anda; lebih lama hanya selama pertanyaan Anda belum terselesaikan, selama kerja sama yang berawal dari pesan itu masih berlangsung, atau jika diwajibkan oleh hukum"
+    ],
+    [
+     "Log teknis di sistem kami (tidak memuat jawaban Anda)",
+     "Sekitar 30 hari"
+    ],
+    [
+     "Informasi yang wajib kami simpan menurut hukum",
+     "Hanya selama diwajibkan oleh hukum"
+    ]
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Lembar kerja pendaftaran setiap kampanye menyimpan riwayat versi yang mungkin memuat informasi lama, termasuk informasi yang sudah dihapus dari lembar kerja yang sekarang. Aksesnya dibatasi hanya untuk staf yang berwenang. Riwayat versi tersebut ikut terhapus ketika lembar kerja kampanye dihapus setelah tanggal peninjauannya."
+  },
+  {
+   "t": "p",
+   "h": "Informasi yang telah dihapus mungkin masih tersimpan untuk waktu singkat di folder item terhapus atau cadangan (backup) milik penyedia layanan kami sebelum benar-benar dihapus."
+  },
+  {
+   "t": "h2",
+   "id": "security",
+   "n": "8",
+   "h": "Keamanan"
+  },
+  {
+   "t": "p",
+   "h": "Kami mengambil langkah-langkah administratif dan teknis yang wajar untuk melindungi informasi pribadi dari akses tanpa izin, penyalahgunaan, kehilangan, pengungkapan, dan perubahan yang tidak semestinya. Secara khusus:"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "pendaftaran disimpan dalam lembar kerja privat yang hanya dapat dibuka oleh akun TulusSG yang berwenang;",
+    "informasi yang Anda kirim melalui formulir kami dikirimkan lewat koneksi terenkripsi (HTTPS);",
+    "server pendaftaran kami memeriksa setiap formulir dan membatasi pengiriman yang berulang atau otomatis; dan",
+    "formulir kami tidak meminta FIN, data paspor, atau data rekening bank Anda."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Namun, tidak ada pengiriman data melalui internet atau sistem penyimpanan elektronik yang dapat dijamin sepenuhnya aman."
+  },
+  {
+   "t": "h2",
+   "id": "choices",
+   "n": "9",
+   "h": "Pilihan Anda"
+  },
+  {
+   "t": "p",
+   "h": "Anda dapat menghubungi kami di <a href=\"mailto:admin@tulussg.com\">admin@tulussg.com</a> untuk:"
+  },
+  {
+   "t": "ul",
+   "items": [
+    "meminta akses ke informasi pribadi tentang Anda yang kami simpan, serta bagaimana informasi itu digunakan atau diungkapkan dalam satu tahun terakhir;",
+    "meminta kami memperbaiki informasi yang salah;",
+    "membatalkan keikutsertaan dalam kampanye, atau meminta kami berhenti menghubungi Anda;",
+    "menarik kembali persetujuan Anda atas penggunaan informasi pribadi Anda oleh kami, atau menarik kembali izin yang telah Anda berikan;",
+    "meminta kami menghapus informasi pribadi Anda; atau",
+    "menyampaikan kekhawatiran tentang cara kami menangani informasi Anda."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "<strong>Membatalkan keikutsertaan dalam kampanye.</strong> Jika Anda membatalkan keikutsertaan dalam kampanye, kami akan menghentikan keikutsertaan Anda dan komunikasi yang terkait. Informasi pribadi Anda akan ditangani sesuai dengan ketentuan penyimpanan dan penghapusan yang dijelaskan di <a href=\"#retention\">bagian 7</a>."
+  },
+  {
+   "t": "p",
+   "h": "<strong>Menarik kembali persetujuan.</strong> Kami memberi tahu Anda apa akibatnya bagi Anda, misalnya bahwa Anda tidak dapat lagi ikut serta, dan kami berhenti mengumpulkan, menggunakan, dan mengungkapkan informasi pribadi Anda untuk tujuan tersebut, kecuali jika hukum mewajibkan atau mengizinkan hal lain. Penarikan kembali persetujuan tidak memengaruhi apa yang telah dilakukan sebelum permintaan Anda."
+  },
+  {
+   "t": "p",
+   "h": "<strong>Penghapusan.</strong> Anda dapat meminta penghapusan informasi pribadi Anda. Kami akan menilai dan menindaklanjuti permintaan Anda sesuai dengan hukum yang berlaku dan kebijakan penyimpanan data kami. Jika ada informasi yang harus tetap disimpan, kami akan menjelaskan informasi apa yang disimpan dan alasannya."
+  },
+  {
+   "t": "p",
+   "h": "Jika permintaan Anda menyangkut foto, rekaman, atau media yang telah dipublikasikan, kami juga akan menjelaskan pengaruhnya terhadap perjanjian media terpisah yang telah Anda tandatangani, jika ada. Perjanjian media tidak menghilangkan hak-hak Anda berdasarkan hukum perlindungan data."
+  },
+  {
+   "t": "p",
+   "h": "Anda tidak wajib menyertakan nomor referensi pendaftaran, tetapi nomor itu membantu kami menemukan informasi Anda. Kami mungkin meminta Anda mengonfirmasi identitas Anda sebelum menindaklanjuti suatu permintaan. Kami berupaya mengonfirmasi penerimaan permintaan dalam lima hari kerja dan menanggapinya sesegera mungkin secara wajar. Jika kami tidak dapat menanggapi permintaan akses atau perbaikan dalam 30 hari, kami akan memberi tahu Anda secara tertulis kapan kami perkirakan dapat menanggapinya. Kami biasanya tidak memungut biaya untuk permintaan yang berkaitan dengan privasi; jika hukum mengizinkan pemungutan biaya dan kami bermaksud memungutnya, kami akan memberi tahu Anda jumlahnya sebelum melanjutkan."
+  },
+  {
+   "t": "h2",
+   "id": "children",
+   "n": "10",
+   "h": "Anak-anak dan remaja"
+  },
+  {
+   "t": "p",
+   "h": "TulusSG tidak bermaksud mengumpulkan informasi pribadi dari anak-anak melalui formulir yang dirancang untuk peserta dewasa, kecuali jika program yang bersangkutan memang secara khusus melibatkan anak-anak dan pengaturan persetujuan yang sesuai telah ditetapkan."
+  },
+  {
+   "t": "p",
+   "h": "Jika Anda yakin bahwa informasi pribadi yang berkaitan dengan seorang anak telah dikirimkan kepada kami secara tidak semestinya, mohon hubungi kami."
+  },
+  {
+   "t": "h2",
+   "id": "media",
+   "n": "11",
+   "h": "Foto, video, dan media"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Acara dan kegiatan TulusSG.</strong> Kami mungkin mengambil foto dan video di acara dan kegiatan kami untuk menunjukkan apa yang dilakukan komunitas, misalnya di situs web dan media sosial kami. Kami akan memberi tahu Anda saat pemotretan atau syuting sedang berlangsung. Jika Anda memiliki kekhawatiran tentang foto atau rekaman diri Anda, mohon hubungi kami di <a href=\"mailto:admin@tulussg.com\">admin@tulussg.com</a>. Kami akan meninjau permintaan Anda dan bertindak sesuai dengan hukum, izin apa pun yang telah Anda berikan, dan keadaan saat foto atau rekaman itu dibuat. Jika Anda menarik kembali persetujuan yang kami jadikan dasar, kami akan mematuhi kewajiban hukum kami, termasuk menghentikan penggunaan lebih lanjut jika diwajibkan oleh hukum."
+  },
+  {
+   "t": "p",
+   "h": "<strong>Produksi media, seperti Share Your Story.</strong> Hal ini berbeda. Kami hanya akan merekam video, memotret, merekam, atau mewawancarai Anda untuk produksi media dengan izin tertulis Anda secara terpisah. Izin tersebut menjelaskan bagaimana konten dapat digunakan dan bagaimana cara menarik kembali izin. <a href=\"#share-your-story\">Bagian 3</a> menjelaskan prosesnya."
+  },
+  {
+   "t": "h2",
+   "id": "links",
+   "n": "12",
+   "h": "Tautan eksternal"
+  },
+  {
+   "t": "p",
+   "h": "Situs web TulusSG mungkin memuat tautan ke situs web, platform, atau layanan yang dikelola oleh organisasi lain. Praktik privasi mereka diatur oleh kebijakan mereka sendiri, dan TulusSG tidak bertanggung jawab atas cara layanan pihak ketiga tersebut menangani informasi."
+  },
+  {
+   "t": "h2",
+   "id": "website",
+   "n": "12A",
+   "h": "Situs web kami, cookie, dan konten tersemat"
+  },
+  {
+   "t": "p",
+   "h": "Situs web kami tidak menggunakan cookie iklan atau cookie analitik, dan halaman kampanye kami tidak memasang cookie apa pun."
+  },
+  {
+   "t": "p",
+   "h": "Beranda kami memiliki pemutar musik latar yang disediakan oleh YouTube (Google). Saat Anda membuka beranda, browser Anda terhubung ke YouTube untuk memuat pemutar tersebut; YouTube mungkin menerima alamat IP perangkat Anda dan memasang cookie-nya sendiri, berdasarkan kebijakan privasi Google. Musik mulai diputar saat Anda pertama kali mengeklik atau mengetuk halaman, dan Anda dapat menjedanya dengan tombol musik. Kami tidak menerima informasi apa pun tentang Anda dari YouTube."
+  },
+  {
+   "t": "p",
+   "h": "Bahasa yang Anda pilih di halaman kami diingat oleh browser Anda agar halaman berikutnya terbuka dalam bahasa yang sama. Pilihan ini tidak dikirimkan kepada kami, kecuali bahwa formulir pendaftaran mencatat bahasa yang digunakan halaman saat ditampilkan."
+  },
+  {
+   "t": "h2",
+   "id": "changes",
+   "n": "13",
+   "h": "Perubahan pada kebijakan ini"
+  },
+  {
+   "t": "p",
+   "h": "Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu seiring TulusSG mengembangkan layanan, program, atau sistem digitalnya. Versi terbaru akan dipublikasikan di situs web TulusSG beserta tanggal pembaruannya."
+  },
+  {
+   "t": "h2",
+   "id": "languages",
+   "n": "14",
+   "h": "Bahasa"
+  },
+  {
+   "t": "p",
+   "h": "Halaman-halaman kami ditulis dalam bahasa Inggris dan diterjemahkan ke dalam Bahasa Indonesia, Filipino, Burma, Bengali, Tamil, dan Mandarin (aksara sederhana). Kami telah berusaha agar setiap versi menyampaikan hal yang sama, dan bahasa Inggris adalah versi yang kami gunakan sebagai dasar untuk menyiapkan terjemahan. Jika suatu terjemahan menyatakan sesuatu yang berbeda, kami tidak akan menggunakan perbedaan itu untuk merugikan Anda, dan kami akan memperbaiki terjemahan tersebut."
+  },
+  {
+   "t": "p",
+   "h": "Kebijakan Privasi ini tersedia dalam bahasa-bahasa yang sama. Jika ada bagian yang kurang jelas, Anda dapat meminta kami di <a href=\"mailto:admin@tulussg.com\">admin@tulussg.com</a> untuk menjelaskannya dalam bahasa Anda."
+  },
+  {
+   "t": "h2",
+   "id": "contact",
+   "n": "15",
+   "h": "Hubungi kami"
+  },
+  {
+   "t": "p",
+   "h": "Zan J Private Limited (UEN: 202616105R), yang mengelola TulusSG, bertanggung jawab atas pengumpulan dan penggunaan informasi pribadi yang dijelaskan dalam kebijakan ini. Jika Anda memiliki pertanyaan tentang kebijakan ini, atau ingin mengajukan permintaan berdasarkan <a href=\"#choices\">bagian 9</a>, mohon hubungi Petugas Perlindungan Data kami:"
+  },
+  {
+   "t": "contact"
+  }
+ ]
+}

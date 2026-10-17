@@ -52,7 +52,9 @@ if (window.top !== window.self) {
    * When a reviewed translation is published (e.g. /privacy/id/index.html), add it here — e.g. id: '/privacy/id/'.
    * Until then, other languages link to the English policy with a translated "(in English)" note.
    */
-  var PRIVACY_PAGES = { en: '/privacy/' };
+  // Privacy Policy in each language (17 Oct 2026; built by _tests/privacy-src/build.py). English is the approved text;
+  // the others are AI-translated and independently AI-reviewed, not human-verified.
+  var PRIVACY_PAGES = { en: '/privacy/', id: '/privacy/id/', tl: '/privacy/tl/', my: '/privacy/my/', bn: '/privacy/bn/', ta: '/privacy/ta/', zh: '/privacy/zh/' };
 
   var dictionaries = [];
   var listeners = [];
