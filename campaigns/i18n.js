@@ -57,6 +57,7 @@ TulusI18n.register({
     'campaign.sports-carnival.title': 'TulusSG Sports Carnival',
     'campaign.sports-carnival.alt': 'Illustration: people trying different sports in a park in Singapore',
     "date.digits": "0123456789",
+    "lang.notice": "This page is available in English, Bahasa Indonesia, Filipino, Burmese, Bengali, Tamil and Chinese. Each version is meant to say the same thing. If anything is unclear, or a translation seems wrong, please tell us at admin@tulussg.com.",
   },
 
   id: {
@@ -105,6 +106,7 @@ TulusI18n.register({
     'campaign.sports-carnival.title': 'TulusSG Sports Carnival',
     'campaign.sports-carnival.alt': 'Ilustrasi: orang-orang mencoba berbagai olahraga di taman di Singapura',
     "date.digits": "0123456789",
+    "lang.notice": "Halaman ini tersedia dalam bahasa Inggris, Bahasa Indonesia, Filipino, Burma, Bengali, Tamil, dan Mandarin. Setiap versi dimaksudkan untuk menyampaikan hal yang sama. Jika ada yang kurang jelas atau terjemahan tampak keliru, mohon beri tahu kami di admin@tulussg.com.",
   },
 
   tl: {
@@ -153,6 +155,7 @@ TulusI18n.register({
     'campaign.sports-carnival.title': 'TulusSG Sports Carnival',
     'campaign.sports-carnival.alt': "Ilustrasyon: mga taong sumusubok ng iba't ibang sport sa isang park sa Singapore",
     "date.digits": "0123456789",
+    "lang.notice": "Available ang page na ito sa English, Bahasa Indonesia, Filipino, Burmese, Bengali, Tamil at Chinese. Pareho dapat ang sinasabi ng bawat bersyon. Kung may hindi malinaw o mukhang mali ang translation, pakisabi sa amin sa admin@tulussg.com.",
   },
 
   my: {
@@ -201,6 +204,7 @@ TulusI18n.register({
     'campaign.sports-carnival.title': 'TulusSG Sports Carnival',
     'campaign.sports-carnival.alt': 'သရုပ်ဖော်ပုံ - စင်္ကာပူရှိ ပန်းခြံတစ်ခုတွင် အားကစားအမျိုးမျိုး ကစားကြည့်နေကြသူများ',
     "date.digits": "0123456789",
+    "lang.notice": "ဤစာမျက်နှာကို အင်္ဂလိပ်၊ အင်ဒိုနီးရှား၊ ဖိလစ်ပိုင်၊ မြန်မာ၊ ဘင်္ဂါလီ၊ တမီးလ်နှင့် တရုတ် ဘာသာများဖြင့် ဖတ်ရှုနိုင်ပါသည်။ ဗားရှင်းတိုင်းသည် အဓိပ္ပာယ်တူညီစေရန် ရည်ရွယ်ပါသည်။ နားမလည်သည်များ ရှိပါက သို့မဟုတ် ဘာသာပြန် မှားနေပုံရပါက admin@tulussg.com သို့ အကြောင်းကြားပေးပါ။",
   },
   // Bengali: AI-translated and AI-reviewed 17 Oct 2026. NOT native-verified.
   bn: {
@@ -249,6 +253,7 @@ TulusI18n.register({
     "campaign.share-your-story-migrant-workers.alt": "সিঙ্গাপুরের একটি পার্কে তিনজন পুরুষ হাসিমুখে কথা বলছেন",
     "campaign.sports-carnival.title": "TulusSG স্পোর্টস কার্নিভাল",
     "campaign.sports-carnival.alt": "চিত্রণ: সিঙ্গাপুরের একটি পার্কে লোকজন নানা রকম খেলা খেলে দেখছেন",
+    "lang.notice": "এই পৃষ্ঠাটি ইংরেজি, বাহাসা ইন্দোনেশিয়া, ফিলিপিনো, বার্মিজ, বাংলা, তামিল ও চীনা ভাষায় পাওয়া যায়। প্রতিটি ভাষায় একই কথা বলাই উদ্দেশ্য। কিছু বুঝতে অসুবিধা হলে বা অনুবাদে ভুল মনে হলে admin@tulussg.com-এ আমাদের জানান।",
   },
   // Tamil: AI-translated and AI-reviewed 17 Oct 2026. NOT native-verified.
   ta: {
@@ -297,6 +302,7 @@ TulusI18n.register({
     "campaign.share-your-story-migrant-workers.alt": "சிங்கப்பூரில் ஒரு பூங்காவில் சிரித்தபடி பேசிக்கொண்டிருக்கும் மூன்று ஆண்கள்",
     "campaign.sports-carnival.title": "TulusSG விளையாட்டுத் திருவிழா",
     "campaign.sports-carnival.alt": "விளக்கப்படம்: சிங்கப்பூரில் ஒரு பூங்காவில் பல்வேறு விளையாட்டுகளை விளையாடிப் பார்க்கும் மக்கள்",
+    "lang.notice": "இந்தப் பக்கம் ஆங்கிலம், பஹாசா இந்தோனேசியா, ஃபிலிப்பினோ, பர்மியம், வங்காளம், தமிழ், சீனம் ஆகிய மொழிகளில் உள்ளது. ஒவ்வொரு மொழியிலும் ஒரே பொருள் தரும்படி எழுதப்பட்டுள்ளது. ஏதேனும் புரியவில்லை என்றாலோ, மொழிபெயர்ப்பில் தவறு இருப்பதாகத் தோன்றினாலோ admin@tulussg.com என்ற முகவரியில் எங்களுக்குத் தெரிவியுங்கள்.",
   },
   // Simplified Chinese: AI-translated and AI-reviewed 17 Oct 2026. NOT native-verified.
   zh: {
@@ -345,5 +351,6 @@ TulusI18n.register({
     "campaign.share-your-story-migrant-workers.alt": "三名男子在新加坡的一个公园里微笑交谈",
     "campaign.sports-carnival.title": "TulusSG 运动嘉年华",
     "campaign.sports-carnival.alt": "插画：人们在新加坡的公园里尝试各种运动",
+    "lang.notice": "本页面提供英文、印尼文、菲律宾文、缅甸文、孟加拉文、泰米尔文和中文版本。各版本旨在表达相同的内容。如有不清楚的地方，或觉得翻译有误，请发邮件至 admin@tulussg.com 告诉我们。",
   },
 });

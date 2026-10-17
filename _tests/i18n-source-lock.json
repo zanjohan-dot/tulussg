@@ -1,7 +1,7 @@
 {
  "campaigns/shared/i18n-shared.js": {
   "nav.language": "a4fe65264ef7",
-  "lang.notice": "2f4f6b571316",
+  "lang.notice": "fa44bfebd000",
   "nav.home": "aef1479beb6f",
   "form.required": "d0a3630555bb",
   "form.optional": "ec91fdd9256c",
@@ -84,7 +84,8 @@
   "campaign.share-your-story-migrant-workers.alt": "742433a38dcb",
   "campaign.sports-carnival.title": "699092e611af",
   "campaign.sports-carnival.alt": "4857ea4f81a5",
-  "date.digits": "84d89877f0d4"
+  "date.digits": "84d89877f0d4",
+  "lang.notice": "500a87e74d36"
  },
  "campaigns/share-your-story/i18n.js": {
   "meta.title": "4a01db6f9223",
@@ -182,8 +183,9 @@
   "f.use.title": "d2a7115d0455",
   "f.use.p1": "7c3f1315acfe",
   "f.use.p2": "e1a3f7d512e9",
+  "f.use.responsible": "b583f620ea92",
   "f.use.privacy": "4d7b1a764054",
-  "f.withdraw": "c4cb94fb744c",
+  "f.withdraw": "b590cbcb74b4",
   "success.referenceHelp": "2ac87f6109db",
   "success.nextTitle": "c72895ba705e",
   "success.next1": "3d8d9620c674",
@@ -195,7 +197,7 @@
   "success.safe2": "6de291a1e99d",
   "success.safe3": "44def10545dc",
   "success.withdrawTitle": "8a3ab5d4315f",
-  "success.withdraw": "b5a07c7219a2",
+  "success.withdraw": "1024bab01410",
   "success.channelTitle": "3d36df6d99a4",
   "success.channelBody": "51c6e623ccaf",
   "success.channel": "ead987f8fb2b",
@@ -298,8 +300,9 @@
   "f.use.title": "d2a7115d0455",
   "f.use.p1": "7c3f1315acfe",
   "f.use.p2": "e1a3f7d512e9",
+  "f.use.responsible": "b583f620ea92",
   "f.use.privacy": "4d7b1a764054",
-  "f.withdraw": "c4cb94fb744c",
+  "f.withdraw": "b590cbcb74b4",
   "success.referenceHelp": "2ac87f6109db",
   "success.nextTitle": "c72895ba705e",
   "success.next1": "f2343c62b92c",
@@ -311,7 +314,7 @@
   "success.safe2": "6de291a1e99d",
   "success.safe3": "44def10545dc",
   "success.withdrawTitle": "8a3ab5d4315f",
-  "success.withdraw": "b5a07c7219a2",
+  "success.withdraw": "1024bab01410",
   "success.channelTitle": "3d36df6d99a4",
   "success.channelBody": "51c6e623ccaf",
   "success.channel": "ead987f8fb2b",
