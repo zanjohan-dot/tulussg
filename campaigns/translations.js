@@ -2,6 +2,7 @@
  * TulusSG TRANSLATION APPROVAL REGISTER. One place that says, for every page and language: whether the translation is
  * complete, how it was really checked, and whether the owner approved it for public release.
  *
+ * Covers the campaign pages AND the main website (main pages: body data-i18n-page).
  * The language menu shows ONLY languages with public: true. Others stay hidden (visible only in review mode: open a
  * page once with ?review=1; ?review=0 ends it). A visitor who chose a hidden language elsewhere is told, in their
  * language, that the page is shown in English and is offered the available languages. Registration works in every case.
@@ -89,6 +90,79 @@
         bn: lang('pending', '2026-10-17', ['2026-10-17 added (owner: seven languages on the directory)', '2026-10-17 final AI review (blind back-translation + independent review + adjudication); corrections applied; no unresolved material translation ambiguity; READY FOR OWNER APPROVAL']),
         ta: lang('pending', '2026-10-17', ['2026-10-17 added (owner: seven languages on the directory)', '2026-10-17 final AI review (blind back-translation + independent review + adjudication); corrections applied; no unresolved material translation ambiguity; READY FOR OWNER APPROVAL']),
         zh: lang('pending', '2026-10-17', ['2026-10-17 added (owner: seven languages on the directory)', '2026-10-17 final AI review (blind back-translation + independent review + adjudication); corrections applied; no unresolved material translation ambiguity; READY FOR OWNER APPROVAL']),
+      },
+    },
+    // ---- Main website (17 Oct 2026). No consent wording on these pages.
+    'home': { // the homepage (/)
+      consentVersion: null,
+      languages: {
+        en: SOURCE,
+        id: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        tl: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        my: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        bn: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        ta: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        zh: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+      },
+    },
+    'domestic-workers': { // /domestic-worker-support-singapore/
+      consentVersion: null,
+      languages: {
+        en: SOURCE,
+        id: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        tl: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        my: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        bn: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        ta: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        zh: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+      },
+    },
+    'migrant-workers': { // /migrant-worker-community-singapore/
+      consentVersion: null,
+      languages: {
+        en: SOURCE,
+        id: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        tl: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        my: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        bn: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        ta: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        zh: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+      },
+    },
+    'employers': { // /caregiver-support-singapore/
+      consentVersion: null,
+      languages: {
+        en: SOURCE,
+        id: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        tl: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        my: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        bn: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        ta: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        zh: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+      },
+    },
+    'community': { // /community-resources-singapore/
+      consentVersion: null,
+      languages: {
+        en: SOURCE,
+        id: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        tl: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        my: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        bn: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        ta: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        zh: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+      },
+    },
+    'faq': { // /faq/
+      consentVersion: null,
+      languages: {
+        en: SOURCE,
+        id: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        tl: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        my: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        bn: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        ta: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
+        zh: lang('pending', '2026-10-17', ['2026-10-17 AI translation from the approved English', '2026-10-17 independent AI review (meaning, naturalness, terminology vs campaign pages, back-translation of sensitive lines); corrections applied; no unresolved material ambiguity; READY FOR OWNER APPROVAL']),
       },
     },
   };

@@ -39,31 +39,53 @@
   "areaServed": "Singapore"
 }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;700&family=Noto+Sans+Bengali:wght@400;700&family=Noto+Sans+Tamil:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:Arial,sans-serif;color:#2c2015;background:#fdf6ec;line-height:1.7}main{max-width:980px;margin:auto;padding:48px 22px}a{color:#a84f25}header,section{margin-bottom:34px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:#c4622d;font-weight:700}h1{font-family:Georgia,serif;font-size:44px;line-height:1.1;margin:12px 0 18px}h2{font-family:Georgia,serif;font-size:28px;margin:0 0 12px}.lead{font-size:19px;color:#6f5f50;max-width:760px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}.card{background:#fff;border:1px solid #ead9c5;border-radius:8px;padding:22px}.nav{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}.nav a{background:#2c2015;color:#fff;text-decoration:none;padding:10px 14px;border-radius:6px;font-size:14px}@media(max-width:640px){h1{font-size:34px}main{padding-top:32px}}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.lang{display:inline-flex;align-items:center;gap:6px;margin-top:18px}.lang select{font:inherit;font-size:15px;padding:8px 10px;border:1px solid #c9b59d;border-radius:6px;background:#fff;color:#2c2015;max-width:100%}.lang-note{font-size:13px;color:#6f5f50;margin:8px 0 0}.lang-missing{background:#fff3e6;border:1px solid #e9c9a6;border-radius:6px;padding:10px 12px;color:#2c2015}.lang-choice{margin:6px 6px 0 0;font:inherit;font-size:14px;padding:6px 10px;border:1px solid #a84f25;border-radius:6px;background:#fff;color:#a84f25;cursor:pointer}html:is([lang=my],[lang=bn],[lang=ta],[lang=zh-Hans]) h1,html:is([lang=my],[lang=bn],[lang=ta],[lang=zh-Hans]) h2{font-family:Georgia,'Noto Sans Myanmar','Noto Sans Bengali','Noto Sans Tamil','Noto Sans SC',serif;line-height:1.3}h1,h2,p{overflow-wrap:break-word}
+
+body{margin:0;font-family:Arial,'Noto Sans Myanmar','Noto Sans Bengali','Noto Sans Tamil','Noto Sans SC',sans-serif;color:#2c2015;background:#fdf6ec;line-height:1.7}main{max-width:980px;margin:auto;padding:48px 22px}a{color:#a84f25}header,section{margin-bottom:34px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:#c4622d;font-weight:700}h1{font-family:Georgia,serif;font-size:44px;line-height:1.1;margin:12px 0 18px}h2{font-family:Georgia,serif;font-size:28px;margin:0 0 12px}.lead{font-size:19px;color:#6f5f50;max-width:760px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}.card{background:#fff;border:1px solid #ead9c5;border-radius:8px;padding:22px}.nav{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}.nav a{background:#2c2015;color:#fff;text-decoration:none;padding:10px 14px;border-radius:6px;font-size:14px}@media(max-width:640px){h1{font-size:34px}main{padding-top:32px}}
 </style>
 </head>
-<body>
+<body data-i18n-page="employers">
 <main>
 <header>
-<p class="eyebrow">TulusSG Singapore</p>
-<h1>For Employers and Families</h1>
-<p class="lead">TulusSG is a community initiative serving migrant communities in Singapore: migrant domestic workers and migrant workers. Here's how you can help.</p>
-<div class="nav"><a href="/">TulusSG home</a><a href="/domestic-worker-support-singapore/">For domestic workers</a><a href="/migrant-worker-community-singapore/">For migrant workers</a><a href="/community-resources-singapore/">Our community</a></div>
+<p class="eyebrow" data-i18n="site.eyebrow">TulusSG Singapore</p>
+<h1 data-i18n="h1">For Employers and Families</h1>
+<p class="lead" data-i18n="lead">TulusSG is a community initiative serving migrant communities in Singapore: migrant domestic workers and migrant workers. Here's how you can help.</p>
+<div class="nav"><a href="/" data-i18n="site.home">TulusSG home</a><a href="/domestic-worker-support-singapore/" data-i18n="site.forDomestic">For domestic workers</a><a href="/migrant-worker-community-singapore/" data-i18n="site.forMigrant">For migrant workers</a><a href="/community-resources-singapore/" data-i18n="site.community">Our community</a></div>
+<div class="lang"><label for="lang-select" data-i18n="nav.language">Language</label>
+<select id="lang-select" aria-describedby="lang-note">
+<option value="en" lang="en">English</option>
+<option value="id" lang="id">Bahasa Indonesia</option>
+<option value="tl" lang="fil">Filipino</option>
+<option value="my" lang="my">မြန်မာဘာသာ</option>
+<option value="bn" lang="bn">বাংলা</option>
+<option value="ta" lang="ta">தமிழ்</option>
+<option value="zh" lang="zh-Hans">简体中文</option>
+</select></div>
+<p id="lang-note" class="lang-note" data-i18n="site.langNote">This website is available in English, Bahasa Indonesia, Filipino, Burmese, Bengali, Tamil and Chinese. If anything is unclear, or a translation seems wrong, please tell us at admin@tulussg.com.</p>
 </header>
 <section>
-<h2>A good rest day</h2>
-<p>Rest days are a chance to meet friends and stay active. We plan simple, friendly activities for each of the communities we serve.</p>
+<h2 data-i18n="rest.h">A good rest day</h2>
+<p data-i18n="rest.p">Rest days are a chance to meet friends and stay active. We plan simple, friendly activities for each of the communities we serve.</p>
 </section>
 <section class="grid">
-<div class="card"><h2>Share</h2><p>Follow our <a href="https://whatsapp.com/channel/0029Vb8nWAZHLHQP94VdaV1b" target="_blank" rel="noopener">WhatsApp Channel</a> for updates, and share it with your helper or your workers.</p></div>
-<div class="card"><h2>Encourage</h2><p>Let them know they're welcome to join an activity on their rest day.</p></div>
-<div class="card"><h2>Ask</h2><p>Questions? Write to us any time.</p></div>
+<div class="card"><h2 data-i18n="c1.h">Share</h2><p data-i18n-rich="c1.p">Follow our <a href="https://whatsapp.com/channel/0029Vb8nWAZHLHQP94VdaV1b" target="_blank" rel="noopener">WhatsApp Channel</a> for updates, and share it with your helper or your workers.</p></div>
+<div class="card"><h2 data-i18n="c2.h">Encourage</h2><p data-i18n="c2.p">Let them know they're welcome to join an activity on their rest day.</p></div>
+<div class="card"><h2 data-i18n="c3.h">Ask</h2><p data-i18n="c3.p">Questions? Write to us any time.</p></div>
 </section>
 <section>
-<h2>Contact us</h2>
-<p>Email <a href="mailto:admin@tulussg.com">admin@tulussg.com</a>.</p>
+<h2 data-i18n="contact.h">Contact us</h2>
+<p data-i18n-rich="contact.p">Email <a href="mailto:admin@tulussg.com">admin@tulussg.com</a>.</p>
 </section>
 </main>
+<script src="/campaigns/translations.js"></script>
+<script src="/campaigns/shared/i18n-core.js"></script>
+<script src="/campaigns/shared/i18n-shared.js"></script>
+<script src="/assets/i18n/site.js"></script>
+<script src="/assets/i18n/employers.js"></script>
+<script src="/assets/i18n/site-start.js"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 /*
- * TulusSG campaigns — language engine (shared by /campaigns/ and every campaign page).
+ * TulusSG — language engine for the WHOLE website (17 Oct 2026: main pages too; it started on the campaign pages,
+ * hence its folder). Seven languages: en, id, tl, my, bn, ta, zh.
  *
  * - ONE language on screen at a time; one selector (#lang-select).
  * - Precedence: ?lang= in the link → the visitor's saved choice (localStorage "tulussg.lang") → English.
@@ -8,7 +9,10 @@
  *     /campaigns/shared/i18n-shared.js    navigation, footer, generic errors, statuses
  *     /campaigns/i18n.js                  the campaign hub
  *     /campaigns/<campaign>/i18n.js       one campaign page
- *   Later files win for the same key; every file must provide all four languages (see _tests/check-i18n.mjs).
+ *     /assets/i18n/<page>.js              one main-site page (home, faq, community, ...)
+ *   Later files win for the same key; every file must provide all seven languages (see _tests/check-i18n.mjs).
+ *   Which languages the public sees is set per page in /campaigns/translations.js (the approval register);
+ *   <body data-i18n-page="..."> (main pages) or data-campaign (campaign pages) names the page's register entry.
  *
  * Markup hooks:
  *   data-i18n="key"                 → textContent
@@ -17,6 +21,9 @@
  *                                     data-privacy-anchor is set (built with text nodes, never innerHTML)
  *   data-privacy-link               → the site-wide privacy policy link (text + href follow the language)
  *   data-keep-lang                  → internal link that carries ?lang= (backup for in-app browsers)
+ *   data-i18n-rich="key"            → text with a tiny SAFE markup: [em]…[/em] [strong]…[/strong] [br] and [a1]…[/a1],
+ *                                     [a2]…[/a2] (= the element's 1st, 2nd … original link, keeping its href). Built
+ *                                     with DOM nodes and textContent only: translations can never inject HTML.
  */
 // Anti-framing: GitHub Pages cannot send X-Frame-Options, so break out of (or hide inside) foreign frames.
 if (window.top !== window.self) {
@@ -64,7 +71,10 @@ if (window.top !== window.self) {
   // Which languages this page may show the public comes from the translation approval register
   // (/campaigns/translations.js): only public: true. Without a register entry, options marked data-pending-review
   // are hidden. Review mode shows everything.
-  function pageKey() { return (document.body && document.body.getAttribute('data-campaign')) || 'campaigns'; }
+  function pageKey() {
+    var b = document.body;
+    return (b && (b.getAttribute('data-i18n-page') || b.getAttribute('data-campaign'))) || 'campaigns';
+  }
   (function hideUnapprovedLanguages() {
     var select = document.getElementById('lang-select');
     if (!select || reviewMode()) return;
@@ -173,12 +183,37 @@ if (window.top !== window.self) {
     return t(PRIVACY_PAGES[lang] ? 'privacy.link' : 'privacy.linkEnglishOnly');
   }
 
+
+  // [em]..[/em] [strong]..[/strong] [br] [aN]..[/aN] -> DOM nodes (no innerHTML). Unknown tokens stay as plain text.
+  function renderRich(el, text, links) {
+    if (links) el._tulusLinks = links;
+    if (!el._tulusLinks) el._tulusLinks = Array.prototype.map.call(el.querySelectorAll('a'), function (a) { return a.cloneNode(false); });
+    var links = el._tulusLinks;
+    while (el.firstChild) el.removeChild(el.firstChild);
+    var stack = [el];
+    var re = /\[(\/?)(em|strong|br|a[1-9])\]/g, last = 0, m;
+    function top() { return stack[stack.length - 1]; }
+    while ((m = re.exec(text))) {
+      if (m.index > last) top().appendChild(document.createTextNode(text.slice(last, m.index)));
+      last = re.lastIndex;
+      var tag = m[2];
+      if (tag === 'br') { top().appendChild(document.createElement('br')); continue; }
+      if (m[1] === '/') { if (stack.length > 1) stack.pop(); continue; }
+      var node = tag.charAt(0) === 'a' ? (links[+tag.slice(1) - 1] || document.createElement('span')).cloneNode(false) : document.createElement(tag);
+      top().appendChild(node); stack.push(node);
+    }
+    if (last < text.length) top().appendChild(document.createTextNode(text.slice(last)));
+  }
+
   function apply(code, persist) {
     lang = known(code) ? code : 'en';
     document.documentElement.lang = LANGS[lang].htmlLang;
 
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       el.textContent = t(el.getAttribute('data-i18n'));
+    });
+    document.querySelectorAll('[data-i18n-rich]').forEach(function (el) {
+      renderRich(el, t(el.getAttribute('data-i18n-rich')));
     });
     document.querySelectorAll('[data-i18n-attr]').forEach(function (el) {
       el.getAttribute('data-i18n-attr').split(';').forEach(function (pair) {
@@ -208,7 +243,7 @@ if (window.top !== window.self) {
 
     document.title = t('meta.title');
     var desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute('content', t('meta.description'));
+    if (desc && lookup('en', 'meta.description') !== undefined) desc.setAttribute('content', t('meta.description'));
     var select = document.getElementById('lang-select');
     if (select) select.value = lang;
 
@@ -246,6 +281,7 @@ if (window.top !== window.self) {
     lang: function () { return lang; },
     onChange: function (fn) { listeners.push(fn); },
     withLang: withLang,
+    rich: renderRich, // renderRich(element, text, [optional link elements]) for texts a page's own script shows
     languages: CORE.slice(),
   };
 })();

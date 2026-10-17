@@ -30,6 +30,10 @@ function checkDict(d, file) {
     if (missing.length) problems.push(`${file} [${l}] missing: ${missing.join(', ')}`);
     if (extra.length) problems.push(`${file} [${l}] not in English: ${extra.join(', ')}`);
     if (empty.length) problems.push(`${file} [${l}] empty: ${empty.join(', ')}`);
+    // Safe-markup tokens ([em] [strong] [br] [aN]) must be exactly the English ones (data-i18n-rich).
+    const toks = (v) => (String(v).match(/\[\/?(?:em|strong|br|a[1-9])\]/g) || []).sort().join();
+    const badTok = keys.filter((k) => d.en[k] !== undefined && toks(d[l][k]) !== toks(d.en[k]));
+    if (badTok.length) problems.push(`${file} [${l}] markup tokens differ from English: ${badTok.join(', ')}`);
   }
   ok.push(`${file}: ${en.length} keys × ${LANGS.length} languages`);
 }
@@ -37,7 +41,7 @@ function checkDict(d, file) {
 function htmlKeys(file) {
   const html = fs.readFileSync(path.join(root, file), 'utf8');
   const keys = new Set();
-  for (const m of html.matchAll(/data-i18n(?:-link)?="([^"]+)"/g)) keys.add(m[1]);
+  for (const m of html.matchAll(/data-i18n(?:-link|-rich)?="([^"]+)"/g)) keys.add(m[1]);
   for (const m of html.matchAll(/data-i18n-attr="([^"]+)"/g)) m[1].split(';').forEach((p) => keys.add(p.split(':')[1]));
   return keys;
 }
@@ -87,7 +91,11 @@ const KEEP_LATIN = new Set(['TulusSG', 'Share', 'Your', 'Story', 'WhatsApp', 'Fa
   'Indonesia', 'Filipino', 'Tagalog', 'Sports', 'Carnival', 'Zan', 'J', 'Private', 'Limited', 'UEN', 'link', 'spam', 'junk',
   'Bengali', 'Tamil', 'Thai', 'Burmese', 'Chinese', 'Indonesian', 'yourname', 'SG', 'PDPA', 'DRUMS', 'UP', 'Menu',
   // loanwords Burmese readers use as they appear in the apps
-  'Channel', 'follow', 'Follow', 'mailing', 'list']);
+  'Channel', 'follow', 'Follow', 'mailing', 'list',
+  // main website: names, brands and sports kept in Latin script
+  'Johan', 'Vijaikumar', 'Rangabashayam', 'Vijai', 'SportSG', 'LinkedIn', 'Piloxing', 'Kahtel', 'Media', 'Outsidein',
+  'Motion', 'Facilitators', 'Project', 'Affirmative', 'People', 'asia', 'Floorball', 'Pickleball', 'Netball', 'floorball',
+  'pickleball', 'netball', 'piloxing', 'Kayak', 'Kayaking', 'Badminton', 'Basketball', 'Football', 'Singapore', 'Partners']);
 const NON_LATIN = ['my', 'bn', 'ta', 'zh'];
 // Numbers in a text, whatever digits the language writes them in (Bengali and Burmese digits included).
 const numbers = (v) => (String(v).replace(/[০-৯]/g, (d) => '০১২৩৪৫৬৭৮৯'.indexOf(d)).replace(/[၀-၉]/g, (d) => '၀၁၂၃၄၅၆၇၈၉'.indexOf(d))
@@ -102,7 +110,7 @@ function checkLanguages(dir, dicts, keys) {
     for (const k of keys) {
       const v = lookup(dicts, l, k), en = lookup(dicts, 'en', k);
       if (NON_LATIN.includes(l)) {
-        const words = (v.replace(/https?:\S+|\S+@\S+|\{\w+\}/g, '').match(/[A-Za-z][A-Za-z'’-]*/g) || []).map((w) => w.replace(/[-'’]+$/, ''));
+        const words = (v.replace(/https?:\S+|\S+@\S+|\{\w+\}|\[\/?(?:em|strong|br|a[1-9])\]/g, '').match(/[A-Za-z][A-Za-z'’-]*/g) || []).map((w) => w.replace(/[-'’]+$/, ''));
         if (words.filter((w) => !KEEP_LATIN.has(w)).length >= 2) english.push(k);
       } else if (v === en && v.length > 25 && /[a-z]{3,} [a-z]{3,}/.test(v)) english.push(k);
       // The same dates and numbers as English (campaign periods, limits), whatever digits the language uses.
@@ -134,13 +142,41 @@ for (const c of campaigns) {
   checkLanguages(dir, page.dicts, keys);
 }
 
+
+// ---- main website pages (17 Oct 2026): same rules as the campaign pages
+const MAIN = [['home', ''], ['domestic-workers', 'domestic-worker-support-singapore'], ['migrant-workers', 'migrant-worker-community-singapore'],
+  ['employers', 'caregiver-support-singapore'], ['community', 'community-resources-singapore'], ['faq', 'faq']];
+// Text the homepage's own script shows (index.html <script>).
+const HOME_SCRIPT_KEYS = ['nav.people', 'nav.activities', 'nav.getInvolved', 'nav.connect', 'fab.start', 'form.sending', 'form.send',
+  'form.sentTitle', 'form.sentText', 'form.failTitle', 'form.failText', 'inv.cta.message', 'inv.cta.channel', 'inv.cta.community',
+  ...['worker', 'mw', 'family', 'vol', 'org', 'tech'].map((t) => `inv.desc.${t}`)];
+{
+  const site = load(['assets/i18n/site.js']).dicts[0];
+  checkDict(site, 'assets/i18n/site.js');
+  for (const [key, dir] of MAIN) {
+    const file = `assets/i18n/${key}.js`;
+    if (!fs.existsSync(path.join(root, file))) { problems.push(`${file} missing`); continue; }
+    const page = load([...shared, 'assets/i18n/site.js', file]);
+    checkDict(page.dicts[2], file);
+    const html = fs.readFileSync(path.join(root, dir, 'index.html'), 'utf8');
+    if (!html.includes(`data-i18n-page="${key}"`)) problems.push(`${dir || '/'}index.html: <body data-i18n-page="${key}"> missing`);
+    for (const f of ['/campaigns/translations.js', '/campaigns/shared/i18n-core.js', '/campaigns/shared/i18n-shared.js', '/assets/i18n/site.js', `/${file}`])
+      if (!html.includes(`src="${f}"`)) problems.push(`${dir || '/'}index.html: does not load ${f}`);
+    const keys = new Set([...htmlKeys(path.join(dir, 'index.html')), ...CORE_KEYS, ...(key === 'home' ? HOME_SCRIPT_KEYS : [])]);
+    const dicts = [...page.dicts].reverse(); // the page's own text wins, as in the engine
+    resolve(dicts, keys, `${dir || '/'}index.html`);
+    checkLanguages(dir, dicts, keys);
+  }
+}
+
 // ---- translation approval register (campaigns/translations.js)
 {
   const ctx = { window: {} }; vm.createContext(ctx);
   vm.runInContext(fs.readFileSync(path.join(root, 'campaigns/translations.js'), 'utf8'), ctx);
   const REG = ctx.window.TULUS_TRANSLATIONS || {};
   const NAMES = { en: 'English', id: 'Bahasa Indonesia', tl: 'Filipino', my: 'Burmese', bn: 'Bengali', ta: 'Tamil', zh: 'Chinese' };
-  const pages = [['campaigns', 'campaigns/index.html', null], ...campaigns.map((c) => [c.slug, `campaigns/${c.slug}/index.html`, c])];
+  const pages = [['campaigns', 'campaigns/index.html', null], ...campaigns.map((c) => [c.slug, `campaigns/${c.slug}/index.html`, c]),
+    ...MAIN.map(([k, dir]) => [k, path.join(dir, 'index.html'), 'main'])];
   for (const [key, file, c] of pages) {
     const reg = REG[key];
     if (!reg) { problems.push(`translations.js: no entry for "${key}"`); continue; }
@@ -160,7 +196,7 @@ for (const c of campaigns) {
       if (e.release === 'held' && !(e.history || []).some((h) => /held|hold/i.test(h))) problems.push(`translations.js [${key}] ${l}: held needs a history line saying why`);
     }
     // The page's consent wording version must be the one the register's approvals refer to.
-    if (c && c.form !== false) {
+    if (c && c !== 'main' && c.form !== false) {
       const app = fs.readFileSync(path.join(root, 'campaigns', c.slug, 'app.js'), 'utf8');
       const v = app.match(/consentVersion:\s*'([^']+)'/)?.[1];
       if (v !== reg.consentVersion) problems.push(`translations.js [${key}]: consentVersion ${reg.consentVersion} but the page uses ${v}`);
@@ -168,8 +204,8 @@ for (const c of campaigns) {
     // The "This page is available in ..." note must name exactly the public languages (skipped when only English shows: the note is hidden then).
     const pub = offered.filter((l) => reg.languages[l] && reg.languages[l].public);
     if (pub.length > 1) {
-      const page = load([...shared, ...(key === 'campaigns' ? ['campaigns/i18n.js'] : [`campaigns/${key}/i18n.js`])]);
-      const note = lookup([...page.dicts].reverse(), 'en', 'lang.notice') || ''; // the page's own text wins over the shared text
+      const page = c === 'main' ? load(['assets/i18n/site.js']) : load([...shared, ...(key === 'campaigns' ? ['campaigns/i18n.js'] : [`campaigns/${key}/i18n.js`])]);
+      const note = lookup([...page.dicts].reverse(), 'en', c === 'main' ? 'site.langNote' : 'lang.notice') || ''; // the page's own text wins over the shared text
       const wrong = Object.keys(NAMES).filter((l) => note.includes(NAMES[l]) !== pub.includes(l));
       if (wrong.length) problems.push(`${file}: English language note does not match the public languages (${wrong.join(', ')})`);
     }
@@ -183,7 +219,8 @@ for (const c of campaigns) {
 // (run it only after the translations of the changed lines have been updated and reviewed).
 {
   const crypto = await import('node:crypto');
-  const files = ['campaigns/shared/i18n-shared.js', 'campaigns/i18n.js', ...campaigns.map((c) => `campaigns/${c.slug}/i18n.js`)];
+  const files = ['campaigns/shared/i18n-shared.js', 'campaigns/i18n.js', ...campaigns.map((c) => `campaigns/${c.slug}/i18n.js`),
+    'assets/i18n/site.js', ...MAIN.map(([k]) => `assets/i18n/${k}.js`)];
   const now = {};
   for (const f of files) {
     const d = load([f]).dicts[0];
