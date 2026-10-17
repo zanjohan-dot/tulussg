@@ -301,13 +301,12 @@ if (window.top !== window.self) {
     svg.setAttribute('viewBox', '0 0 24 24');
     svg.setAttribute('aria-hidden', 'true');
     svg.setAttribute('focusable', 'false');
-    [['circle', { cx: 12, cy: 12, r: 10, fill: 'none', stroke: 'currentColor', 'stroke-width': 2 }],
-     ['line', { x1: 12, y1: 11, x2: 12, y2: 17, stroke: 'currentColor', 'stroke-width': 2, 'stroke-linecap': 'round' }],
-     ['circle', { cx: 12, cy: 7.5, r: 1.3, fill: 'currentColor' }]].forEach(function (d) {
-      var e = document.createElementNS(NS, d[0]);
-      Object.keys(d[1]).forEach(function (k) { e.setAttribute(k, d[1][k]); });
-      svg.appendChild(e);
-    });
+    // The standard "info" symbol (Material Icons, Apache 2.0): a square dot clearly separated from the stem, so it
+    // stays legible at 20px instead of blurring into a figure.
+    var path = document.createElementNS(NS, 'path');
+    path.setAttribute('fill', 'currentColor');
+    path.setAttribute('d', 'M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z');
+    svg.appendChild(path);
     btn.appendChild(svg);
 
     if (getComputedStyle(wrap).position === 'static') wrap.classList.add('lang-info-anchor');

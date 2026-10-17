@@ -1,7 +1,7 @@
 /* Language notice in an (i) popover beside the language menu (17 Oct 2026). Built by i18n-core.js. */
 .lang-info-anchor{position:relative}
 .lang-info{flex:none;display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;margin:0 0 0 2px;padding:0;border:0;border-radius:50%;background:transparent;color:var(--terra,#C4622D);cursor:pointer;font:inherit}
-.lang-info svg{display:block !important;position:static;width:20px;height:20px;color:inherit;pointer-events:none}
+.lang-info svg{display:block !important;position:static;width:22px;height:22px;color:inherit;pointer-events:none}
 .lang-info:hover{background:rgba(196,98,45,0.08)}
 .lang-info:focus-visible{outline:2px solid var(--terra,#C4622D);outline-offset:2px}
 .lang-info[aria-expanded="true"]{background:rgba(196,98,45,0.14)}
@@ -14,3 +14,6 @@ html:is([lang="my"],[lang="bn"],[lang="ta"]) .lang-note.lang-pop{line-height:1.7
 .has-lang-info{max-width:100%;min-width:0;flex-shrink:1}
 .has-lang-info select{min-width:0;flex-shrink:1}
 .top-right,.lang-wrap{min-width:0}
+/* Campaign pages draw the menu's arrow at the right edge of .lang; keep it on the menu, left of the (i) button. */
+.has-lang-info::after{right:53px}
+@media (pointer:coarse){.has-lang-info::after{right:61px}}

@@ -557,6 +557,16 @@ html:is([lang="my"],[lang="bn"],[lang="ta"],[lang="zh-Hans"]) ::placeholder{lett
 .copy-credit{display:none}
 @media(max-width:768px){.copy-credit{display:inline}.site-copy{margin-top:10px !important;margin-bottom:8px !important;line-height:1.35}}
 @media(max-width:768px) and (max-height:700px){.site-copy{margin-top:6px !important;margin-bottom:4px !important;line-height:1.22}}
+/* Next button visibility (17 Oct 2026): a boundary of at least 3:1 against every slide background, existing palette only */
+.next-fab{border-color:var(--muted)}
+.next-fab:focus-visible{outline:2px solid var(--terra);outline-offset:3px}
+.next-fab:active{transform:scale(0.96)}
+body[data-sec="3"] .next-fab{color:var(--cream);border-color:#E08A55}
+body[data-sec="3"] .next-fab:hover{background:var(--terra);border-color:var(--terra);color:var(--white)}
+body[data-sec="3"] .next-fab:focus-visible{outline-color:#E08A55}
+@media(max-width:768px){body[data-sec="3"] .next-fab{border:2px solid #E08A55!important;box-shadow:0 0 0 3px rgba(224,138,85,0.18),0 8px 24px rgba(0,0,0,0.35)}}
+.sidebar.tight .v-nav-item{padding:5px 0}
+.sidebar.tight .logo-mark{margin-bottom:24px !important}
 </style>
 <link rel="stylesheet" href="/campaigns/shared/lang-info.css">
 </head>
@@ -1053,6 +1063,24 @@ document.addEventListener('keydown', e => {
   }
 });
 
+</script>
+<script>
+// Desktop: keep the fixed language menu just above the sidebar credit, whatever its length in each language.
+(function(){
+  var lang=document.querySelector('.site-lang'), foot=document.querySelector('.sidebar-foot');
+  if(!lang||!foot) return;
+  var side=document.querySelector('.sidebar'), items=document.querySelectorAll('.v-nav .v-nav-item');
+  function put(){ lang.style.bottom=Math.max(92, Math.round(innerHeight-foot.getBoundingClientRect().top+12))+'px'; }
+  function place(){
+    if(innerWidth<=768){ lang.style.bottom=''; side.classList.remove('tight'); return; }
+    side.classList.remove('tight'); put();
+    // Short screens with a long credit (e.g. Burmese): tighten the menu spacing rather than overlap the menu.
+    if(items.length && lang.getBoundingClientRect().top < items[items.length-1].getBoundingClientRect().bottom+6){ side.classList.add('tight'); put(); }
+  }
+  place(); addEventListener('resize',place); addEventListener('load',place);
+  if(window.TulusI18n) TulusI18n.onChange(function(){ requestAnimationFrame(place); });
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(place);
+})();
 </script>
 </body>
 </html>
