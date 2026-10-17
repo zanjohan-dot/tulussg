@@ -66,7 +66,7 @@ const hubKeys = new Set([...htmlKeys('campaigns/index.html'), ...CORE_KEYS]);
 // Text the directory script (campaigns/hub.js) uses in code.
 ['view.label', 'view.cards', 'view.calendar', 'filter.label', 'filter.all', 'sec.upcoming', 'sec.soon', 'sec.past',
   'status.active', 'status.coming-soon', 'status.closed', 'status.completed', 'card.view', 'card.dateTbc', 'hub.empty',
-  'cal.prev', 'cal.next', 'cal.empty', 'cal.note', 'date.months', 'date.weekdays', 'date.full', 'date.short', 'date.month',
+  'cal.prev', 'cal.next', 'cal.empty', 'date.months', 'date.weekdays', 'date.full', 'date.short', 'date.month',
   'date.range', ...['starts', 'ends', 'regOpens', 'regCloses', 'event'].map((k) => `kind.${k}`)].forEach((k) => hubKeys.add(k));
 const CATEGORIES = ['sports', 'stories', 'learning', 'community'];
 for (const c of campaigns) {

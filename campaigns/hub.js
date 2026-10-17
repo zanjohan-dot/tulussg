@@ -221,7 +221,6 @@
       });
       wrap.appendChild(ol);
     }
-    wrap.appendChild(el('p', 'cal-note', t('cal.note')));
     return wrap;
   }
   function focusNav(which) {
