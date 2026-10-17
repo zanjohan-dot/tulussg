@@ -21,7 +21,7 @@
     return node;
   }
   function nowMs() { return typeof window.TULUS_NOW === 'function' ? window.TULUS_NOW() : Date.now(); }
-  function href(c) { return TulusI18n.withLang('/campaigns/' + c.slug + '/'); }
+  function href(c) { return TulusI18n.withLang('https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-17-v14/campaigns/' + c.slug + '/index.html'); }
 
   // ---- dates in the chosen language (month names and word order come from /campaigns/i18n.js)
   function parts(ymd) { var p = ymd.split('-'); return { Y: p[0], m: +p[1], d: +p[2] }; }
@@ -82,7 +82,7 @@
   function card(c) {
     var li = el('li');
     var box = el('a', 'campaign-card' + (c.pub === 'open' ? '' : ' is-' + c.pub));
-    box.href = TulusI18n.withLang('/campaigns/' + c.slug + '/');
+    box.href = TulusI18n.withLang('https://raw.githack.com/zanjohan-dot/tulussg/preview-review-2026-10-17-v14/campaigns/' + c.slug + '/index.html');
     box.appendChild(picture(c, 'card-img'));
     var body = el('div', 'card-body');
     var meta = el('div', 'card-meta');
