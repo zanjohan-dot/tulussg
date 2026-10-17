@@ -208,7 +208,7 @@ TulusI18n.register({
     "footer.credit": "ডিজিটাল সিস্টেমগুলোর নকশা ও উন্নয়ন করেছে [a1]The Digital Systems Architect[/a1]।",
     "privacy.link": "গোপনীয়তা নীতি",
     "privacy.linkEnglishOnly": "গোপনীয়তা নীতি (ইংরেজিতে)",
-    "nav.campaigns": "ক্যাম্পেইন",
+    "nav.campaigns": "ক্যাম্পেইনসমূহ", // 17 Oct 2026 (owner): menu label plural, matching "Campaigns"; AI translation, not native-speaker verified
     "nav.allCampaigns": "সব ক্যাম্পেইন",
     "nav.main": "প্রধান মেনু",
     "nav.menu": "মেনু",

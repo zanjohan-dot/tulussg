@@ -56,6 +56,29 @@ if (window.top !== window.self) {
   // the others are AI-translated and independently AI-reviewed, not human-verified.
   var PRIVACY_PAGES = { en: '/privacy/', id: '/privacy/id/', tl: '/privacy/tl/', my: '/privacy/my/', bn: '/privacy/bn/', ta: '/privacy/ta/', zh: '/privacy/zh/' };
 
+  // Pages with a static page per language at <page>/<code>/ (built by _tests/i18n-static/build.py; keep in step).
+  // Search engines index those URLs; the language menu and translated links lead to them (owner, 17 Oct 2026).
+  var STATIC_PAGES = ['/', '/campaigns/', '/campaigns/share-your-story/', '/campaigns/share-your-story-migrant-workers/',
+    '/campaigns/sports-carnival/', '/domestic-worker-support-singapore/', '/migrant-worker-community-singapore/',
+    '/caregiver-support-singapore/', '/community-resources-singapore/', '/faq/'];
+  // Preview hosting only (raw.githack.com/<owner>/<repo>/<branch>/...): the path before the site root.
+  var PREFIX = (window.TULUS_PATH_PREFIX || (location.hostname === 'raw.githack.com' ? location.pathname.split('/').slice(0, 4).join('/') : '')).replace(/\/$/, '');
+  var STATIC_LANG = document.documentElement.getAttribute('data-static-lang');
+  function sitePath(p) { return PREFIX && p.indexOf(PREFIX + '/') === 0 ? p.slice(PREFIX.length) : p; }
+  // '/faq/id/' -> '/faq/'; a page without language versions -> null
+  function basePage(p) {
+    p = sitePath(p);
+    if (/\/index\.html$/.test(p)) p = p.replace(/index\.html$/, '');
+    var m = p.match(/^(.*\/)(id|tl|my|bn|ta|zh)\/$/);
+    if (m && STATIC_PAGES.indexOf(m[1]) !== -1) return m[1];
+    return STATIC_PAGES.indexOf(p) !== -1 ? p : null;
+  }
+  function langUrl(p, code) {
+    var b = basePage(p);
+    if (!b) return null;
+    return PREFIX + (code === 'en' ? b : b + code + '/') + (PREFIX ? 'index.html' : '');
+  }
+
   var dictionaries = [];
   var listeners = [];
   var lang = 'en';
@@ -175,8 +198,22 @@ if (window.top !== window.self) {
 
   function withLang(href) {
     var url = new URL(href, location.href);
-    if (lang === 'en') url.searchParams.delete('lang'); else url.searchParams.set('lang', lang);
+    url.searchParams.delete('lang');
+    var target = url.origin === location.origin ? langUrl(url.pathname, lang) : null;
+    if (target) url.pathname = target;
+    else if (lang !== 'en') url.searchParams.set('lang', lang);
     return url.pathname + url.search + url.hash;
+  }
+  // Open this page's version in another language (static page), keeping other query parameters and the #section.
+  function goTo(code) {
+    var target = langUrl(location.pathname, code);
+    if (!target) return false;
+    var url = new URL(location.href);
+    url.searchParams.delete('lang');
+    url.pathname = target;
+    if (url.href === location.href) return false;
+    location.replace(url.href);
+    return true;
   }
 
   function privacyHref(anchor) {
@@ -246,6 +283,15 @@ if (window.top !== window.self) {
       if (!el.dataset.baseHref) el.dataset.baseHref = el.getAttribute('href');
       el.setAttribute('href', withLang(el.dataset.baseHref));
     });
+    // Links to pages that have language versions lead to the version in the current language.
+    document.querySelectorAll('a[href]:not([data-keep-lang])').forEach(function (el) {
+      var h = el.getAttribute('href');
+      if (!h || h.charAt(0) === '#' || /^(mailto|tel|javascript|data):/i.test(h)) return;
+      var u;
+      try { u = new URL(h, location.href); } catch (e) { return; }
+      if (u.origin !== location.origin || !basePage(u.pathname)) return;
+      el.setAttribute('href', withLang(h));
+    });
 
     document.title = t('meta.title');
     var desc = document.querySelector('meta[name="description"]');
@@ -253,7 +299,18 @@ if (window.top !== window.self) {
     var select = document.getElementById('lang-select');
     if (select) select.value = lang;
 
-    if (persist) {
+    if (persist && basePage(location.pathname)) {
+      // Same page, other language: change the text in place (typed answers and the open view stay) and show the
+      // language's own URL, the page a reload or a shared link opens.
+      save(lang);
+      var to = new URL(location.href);
+      to.searchParams.delete('lang');
+      to.pathname = langUrl(location.pathname, lang);
+      history.replaceState(history.state, '', to);
+      var canon = document.querySelector('link[rel="canonical"]');
+      if (canon) canon.href = 'https://www.tulussg.com' + basePage(to.pathname) + (lang === 'en' ? '' : lang + '/');
+      document.documentElement.setAttribute('data-static-lang', lang);
+    } else if (persist) {
       save(lang);
       var url = new URL(location.href);
       if (lang === 'en') url.searchParams.delete('lang'); else url.searchParams.set('lang', lang);
@@ -340,9 +397,19 @@ if (window.top !== window.self) {
   }
 
   function start() {
-    buildLangInfo();
     var fromUrl = new URLSearchParams(location.search).get('lang');
-    var initial = (known(fromUrl) && fromUrl) || (known(saved()) && saved()) || 'en';
+    // Static language pages: the URL decides the language. An old ?lang= link, or a visitor's saved choice on the
+    // English page, opens the matching language page instead (search engines keep no saved choice).
+    if (basePage(location.pathname)) {
+      var here = known(STATIC_LANG) ? STATIC_LANG : 'en';
+      var want = known(fromUrl) ? fromUrl : (here === 'en' && !fromUrl && known(saved()) ? saved() : here);
+      if (known(fromUrl) || here !== 'en') save(want);
+      if (want !== here && goTo(want)) return;
+      if (fromUrl) { var u = new URL(location.href); u.searchParams.delete('lang'); history.replaceState(history.state, '', u); }
+      fromUrl = null;
+    }
+    buildLangInfo();
+    var initial = (known(STATIC_LANG) && STATIC_LANG) || (known(fromUrl) && fromUrl) || (known(saved()) && saved()) || 'en';
     var wanted = fromUrl || saved();
     if (wanted && initial === 'en' && wanted !== 'en' && Object.prototype.hasOwnProperty.call(LANGS, wanted) && !known(wanted)) showNotAvailable(wanted);
     // A ?lang= link is an explicit choice: remember it for the other campaign pages and later visits.
