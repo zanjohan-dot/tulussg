@@ -10,3 +10,7 @@ html:is([lang="my"],[lang="bn"],[lang="ta"]) .lang-note.lang-pop{line-height:1.7
 .lang-note.lang-pop a{color:#B4531F;text-decoration:underline}
 .lang-note.lang-pop[hidden]{display:none !important}
 @media (pointer:coarse){.lang-info{width:44px;height:44px}}
+/* Keep the menu and the (i) button on one line on narrow phones: the menu shrinks instead of overflowing. */
+.has-lang-info{max-width:100%;min-width:0;flex-shrink:1}
+.has-lang-info select{min-width:0;flex-shrink:1}
+.top-right,.lang-wrap{min-width:0}
