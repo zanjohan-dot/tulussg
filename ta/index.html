@@ -653,18 +653,21 @@ html:is([lang="my"],[lang="bn"],[lang="ta"],[lang="zh-Hans"]) .path-name{font-fa
 .feat-date .cal-day{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:600;line-height:.95;color:var(--terra);font-variant-numeric:lining-nums}
 .feat-date .cal-mon{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
 .feat-body{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:3px;padding:14px 18px}
-.feat-k{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#2F7A4D}
+/* Carnival card: name, then "10 January 2027 · Coming soon" on one line (Zan, 18 Oct 2026). */
+.feat-meta{font-size:14px;line-height:1.4}
+.feat-d{font-weight:600;color:var(--terra-text)}
+.feat-sep{color:var(--muted)}
+.feat-s{color:var(--muted);font-weight:500}
 .feat-t{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;line-height:1.1}
-.feat-p{font-size:12.5px;color:var(--muted);line-height:1.5}
-.feat-go{margin-top:4px;font-size:12px;font-weight:600;color:var(--terra-text)}
 .feat-pic{flex:0 0 34%;display:block;position:relative}
-.feat-ill{position:absolute;right:8px;bottom:8px;padding:2px 8px;border-radius:100px;background:rgba(44,32,21,0.7);color:var(--white);font-size:10px;font-weight:600}
+/* One discreet sentence for the whole Activities section (Zan, 18 Oct 2026); no per-picture labels. */
+#s2 .act-note{font-size:11px;color:var(--muted);margin-top:8px}
 .feat-pic img{display:block;width:100%;height:100%;object-fit:cover}
-.ideas-h{margin-top:16px;margin-bottom:6px;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+#s2 .act-grid.ideas{margin-top:14px}
 .act-grid.ideas{grid-template-columns:repeat(10,1fr);gap:8px;margin-top:0}
 .act-grid.ideas .act{border-radius:10px}
 .act-grid.ideas .act figcaption{font-size:clamp(7px,0.9vw,11px);padding:14px 4px 5px}
-@media(min-width:1440px){ .feat{max-width:900px} .feat-t{font-size:32px} .feat-p{font-size:14px} .act-grid.ideas{max-width:900px} }
+@media(min-width:1440px){ .feat{max-width:900px} .feat-t{font-size:32px} .feat-meta{font-size:16px} .act-grid.ideas{max-width:900px} }
 @media(max-width:1100px) and (min-width:769px){ .act-grid.ideas{grid-template-columns:repeat(5,1fr)} }
 @media(max-width:768px){
   .feat{border-radius:12px}
@@ -673,22 +676,19 @@ html:is([lang="my"],[lang="bn"],[lang="ta"],[lang="zh-Hans"]) .path-name{font-fa
   .feat-date .cal-day{font-size:32px}
   .feat-date .cal-mon{font-size:8.5px}
   .feat-body{padding:9px 12px;gap:2px}
-  .feat-k{font-size:8.5px}
+  .feat-meta{font-size:12px}
   .feat-t{font-size:19px}
-  .feat-p{font-size:11px;line-height:1.45}
-  .feat-go{font-size:11px;margin-top:2px}
   .feat-pic{display:none}
-  .ideas-h{margin-top:12px;font-size:9px}
+  #s2 .act-grid.ideas{margin-top:10px}
   .act-grid.ideas{grid-template-columns:repeat(5,1fr);gap:5px}
   .act-grid.ideas .act figcaption{font-size:8.5px;padding:10px 2px 3px}
 }
 /* Short phones: flatter idea tiles so the Activities slide ends above the controls in every language. */
 @media(max-width:768px) and (max-height:700px){
   .act-grid.ideas .act{aspect-ratio:4/3}
-  .ideas-h{margin-top:8px;margin-bottom:4px}
+  #s2 .act-grid.ideas{margin-top:8px}
   #s2 .act-note{font-size:10px;line-height:1.35;margin-top:4px}
   #s2 .display{margin-bottom:6px}
-  html:is([lang="my"],[lang="bn"],[lang="ta"]) .feat-p{font-size:10px;line-height:1.4}
   html:is([lang="my"],[lang="bn"],[lang="ta"]) #s2 .display{font-size:22px !important}
 }
 @media(max-width:380px) and (max-height:700px){ html[lang="ta"] .act-grid.ideas .act{aspect-ratio:16/10} html[lang="ta"] #s2 .act-note{font-size:9.5px} html[lang="ta"] .feat-body{padding:6px 10px} html[lang="ta"] #s2 .tag{margin-bottom:4px} }
@@ -730,6 +730,25 @@ html:is([lang="my"],[lang="bn"],[lang="ta"],[lang="zh-Hans"]) .feat-t{font-famil
 }
 /* Short phones in Burmese, Bengali and Tamil (taller script): the form and links only just fit, so the heading gives way. */
 @media(max-width:480px) and (max-height:700px){ html:is([lang="my"],[lang="bn"],[lang="ta"]) .mob-connect-title{display:none} }
+/* Fixes for defects also on the live site (18 Oct 2026): every link and line stays on screen and clear of the buttons
+   in Burmese, Bengali and Tamil on short phones. Spacing and type size only. */
+@media(max-width:480px) and (max-height:700px){
+  html:is([lang="my"],[lang="bn"],[lang="ta"]) #s4 .form-row{margin-bottom:7px}
+  html:is([lang="my"],[lang="bn"],[lang="ta"]) #s4 .form-row label{margin-bottom:1px}
+  html:is([lang="my"],[lang="bn"],[lang="ta"]) #s4 textarea{height:40px;min-height:40px}
+  html:is([lang="my"],[lang="bn"],[lang="ta"]) #s4 .form-btn{padding-top:9px;padding-bottom:9px}
+  html:is([lang="my"],[lang="bn"],[lang="ta"]) #s4 .mob-connect-header{margin-bottom:6px;padding-bottom:6px}
+  html:is([lang="my"],[lang="bn"],[lang="ta"]) #s4 .seo-pill{font-size:9.5px;padding:2px 7px;min-height:22px}
+  html:is([lang="my"],[lang="bn"],[lang="ta"]) #s4 .seo-pill:last-child{margin-bottom:0}
+  /* Our People: shorter bios lines so the heading is not cut off at the top */
+  html[lang="ta"] #s1 .why-item p{font-size:9.5px;line-height:1.4}
+  html[lang="ta"] #s1 .display{font-size:20px !important;margin-bottom:4px}
+  html[lang="ta"] #s1 .why-item{padding:7px 10px}
+  /* Mission: Tamil headline and text slightly smaller so the community cards clear the arrow button */
+  html[lang="ta"] #s0 .display{font-size:19px !important}
+  html[lang="ta"] #s0 .body-text{font-size:10.5px;line-height:1.4}
+  html[lang="ta"] #s0 .tag{margin-bottom:4px}
+}
 @keyframes hint-bob{0%,100%{transform:translateY(2px)}50%{transform:translateY(-3px)}}
 @media (prefers-reduced-motion: reduce){ .swipe-hint svg{animation:none} }
 </style>
@@ -845,14 +864,11 @@ html:is([lang="my"],[lang="bn"],[lang="ta"],[lang="zh-Hans"]) .feat-t{font-famil
 <a aria-label="TulusSG விளையாட்டுத் திருவிழா, ஞாயிறு, 10 ஜனவரி 2027" class="feat anim" data-i18n-attr="aria-label:act.carnival.aria" href="/campaigns/sports-carnival/ta/">
 <span aria-hidden="true" class="feat-date"><span class="cal-band" data-i18n="act.carnival.dow">ஞாயிறு</span><span class="cal-day">10</span><span class="cal-mon" data-i18n="act.carnival.month">ஜன 2027</span></span>
 <span class="feat-body">
-<span class="feat-k" data-i18n="act.feat.k">தேதி உறுதிசெய்யப்பட்டது</span>
 <span class="feat-t" data-i18n="act.feat.title">TulusSG விளையாட்டுத் திருவிழா</span>
-<span class="feat-p" data-i18n="act.feat.body">தொடக்கநிலையினருக்கு ஏற்ற மையங்களில் ஐந்து விளையாட்டுகளை முயற்சி செய்யுங்கள். அனுபவம் தேவையில்லை. இடம், நேரம், பதிவு விவரங்கள் அறிவிக்கப்படும்.</span>
-<span class="feat-go"><span data-i18n="act.feat.cta">நிகழ்வு விவரங்கள்</span> <span aria-hidden="true">→</span></span>
+<span class="feat-meta"><span class="feat-d" data-i18n="act.feat.date">10 ஜனவரி 2027</span><span aria-hidden="true" class="feat-sep"> · </span><span class="feat-s" data-i18n="status.coming-soon">விரைவில்</span></span>
 </span>
-<picture class="feat-pic"><source srcset="/campaigns/sports-carnival/banner-800.webp" type="image/webp"/><img alt="" height="300" loading="lazy" src="/campaigns/sports-carnival/banner-800.jpg" width="800"/><span class="feat-ill" data-i18n="act.feat.ill">விளக்கப்படம்</span></picture>
+<picture class="feat-pic"><source srcset="/campaigns/sports-carnival/banner-800.webp" type="image/webp"/><img alt="" height="300" loading="lazy" src="/campaigns/sports-carnival/banner-800.jpg" width="800"/></picture>
 </a>
-<p class="ideas-h anim" data-i18n="act.ideas">மேலும் சில செயல்பாட்டு யோசனைகள்</p>
 <div class="act-grid ideas anim">
 <figure class="act"><img alt="விளக்கப்படம்: நீர்த்தேக்கத்தில் கயாக்கிங் செய்யும் பெண்கள்" data-i18n-attr="alt:act.kayaking.alt" height="200" loading="lazy" src="/assets/activities/kayaking.jpg" width="200"/><figcaption data-i18n="act.kayaking">கயாக்கிங்</figcaption></figure>
 <figure class="act"><img alt="விளக்கப்படம்: மைதானத்தில் கால்பந்து விளையாடும் பெண்கள்" data-i18n-attr="alt:act.football.alt" height="200" loading="lazy" src="/assets/activities/football.jpg" width="200"/><figcaption data-i18n="act.football">கால்பந்து</figcaption></figure>
@@ -865,7 +881,7 @@ html:is([lang="my"],[lang="bn"],[lang="ta"],[lang="zh-Hans"]) .feat-t{font-famil
 <figure class="act"><img alt="விளக்கப்படம்: வலைப்பந்து விளையாடும் பெண்கள்" data-i18n-attr="alt:act.netball.alt" height="200" loading="lazy" src="/assets/activities/netball.jpg" width="200"/><figcaption data-i18n="act.netball">வலைப்பந்து</figcaption></figure>
 <figure class="act"><img alt="விளக்கப்படம்: கிட்டாருடன் சேர்ந்து பாடும் பெண்கள்" data-i18n-attr="alt:act.singing.alt" height="200" loading="lazy" src="/assets/activities/singing.jpg" width="200"/><figcaption data-i18n="act.singing">பாடுதல்</figcaption></figure>
 </div>
-<p class="act-note anim" data-i18n-rich="act.note2">இந்தப் படங்கள் செயல்பாட்டு யோசனைகளுக்கான விளக்கப்படங்கள் மட்டுமே; TulusSG நிகழ்வுகளின் புகைப்படங்கள் அல்ல. உறுதிசெய்யப்பட்ட தேதிகள் எங்கள் <a href="/campaigns/ta/">திட்டப் பக்கங்களில்</a> இருக்கும்.</p>
+<p class="act-note anim" data-i18n="act.note2">காட்டப்பட்டுள்ள செயல்பாடுகள் விளக்கத்திற்காக மட்டுமே. விவரங்கள் விரைவில் அறிவிக்கப்படும்.</p>
 </div>
 </section>
 <!-- 3: GET INVOLVED -->
