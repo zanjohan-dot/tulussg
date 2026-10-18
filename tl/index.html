@@ -605,7 +605,7 @@ html:is([lang="my"],[lang="bn"],[lang="ta"]) .sidebar-foot{font-size:10.5px;line
 .path-name{display:block;padding:10px 14px 4px;font-weight:600;font-size:14px;line-height:1.3}
 .path-go{color:var(--terra);transition:transform .3s;display:inline-block}
 .path:hover .path-go{transform:translateX(3px)}
-.path-camp{position:relative;z-index:2;display:flex;align-items:center;gap:7px;margin:2px 14px 12px;padding:4px 0;font-size:11.5px;font-weight:600;color:var(--terra-text);text-decoration:none;line-height:1.3}
+.path-camp{position:relative;z-index:2;display:flex;align-items:center;gap:7px;margin:2px 14px 12px;padding:4px 0;font-size:11.5px;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.3} /* secondary to the community name */
 .path-camp[hidden]{display:none}
 .path-camp:hover .path-camp-t,.path-camp:focus-visible .path-camp-t{text-decoration:underline;text-underline-offset:3px}
 .path-camp:focus-visible{outline:2px solid var(--terra);outline-offset:2px;border-radius:4px}
@@ -682,6 +682,16 @@ html:is([lang="my"],[lang="bn"],[lang="ta"],[lang="zh-Hans"]) .path-name{font-fa
   .act-grid.ideas{grid-template-columns:repeat(5,1fr);gap:5px}
   .act-grid.ideas .act figcaption{font-size:8.5px;padding:10px 2px 3px}
 }
+/* Short phones: flatter idea tiles so the Activities slide ends above the controls in every language. */
+@media(max-width:768px) and (max-height:700px){
+  .act-grid.ideas .act{aspect-ratio:4/3}
+  .ideas-h{margin-top:8px;margin-bottom:4px}
+  #s2 .act-note{font-size:10px;line-height:1.35;margin-top:4px}
+  #s2 .display{margin-bottom:6px}
+  html:is([lang="my"],[lang="bn"],[lang="ta"]) .feat-p{font-size:10px;line-height:1.4}
+  html:is([lang="my"],[lang="bn"],[lang="ta"]) #s2 .display{font-size:22px !important}
+}
+@media(max-width:380px) and (max-height:700px){ html[lang="ta"] .act-grid.ideas .act{aspect-ratio:16/10} html[lang="ta"] #s2 .act-note{font-size:9.5px} html[lang="ta"] .feat-body{padding:6px 10px} html[lang="ta"] #s2 .tag{margin-bottom:4px} }
 html:is([lang="my"],[lang="bn"],[lang="ta"],[lang="zh-Hans"]) .mob-connect-title{font-family:'Noto Sans Myanmar','Noto Sans Bengali','Noto Sans Tamil','Noto Sans SC',sans-serif;font-size:20px;line-height:1.35;font-weight:400}
 html:is([lang="my"],[lang="bn"],[lang="ta"],[lang="zh-Hans"]) .feat-t{font-family:'Noto Sans Myanmar','Noto Sans Bengali','Noto Sans Tamil','Noto Sans SC','Cormorant Garamond',serif;font-size:20px;line-height:1.3}
 
@@ -701,7 +711,7 @@ html:is([lang="my"],[lang="bn"],[lang="ta"],[lang="zh-Hans"]) .feat-t{font-famil
   .mob-dots button::before{content:'';width:8px;height:8px;border-radius:50%;background:rgba(44,32,21,0.25);transition:all .3s}
   .mob-dots button[aria-current="true"]::before{width:20px;border-radius:5px;background:var(--terra-d)}
   .mob-dots button:focus-visible{outline:2px solid var(--terra);outline-offset:1px;border-radius:50%}
-  .swipe-hint{position:fixed;left:12px;bottom:calc(25px + env(safe-area-inset-bottom,0px));max-width:calc(100vw - 100px);z-index:110;display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:100px;background:var(--ink);color:var(--cream);font-size:11px;font-weight:600;line-height:1.3;box-shadow:0 6px 18px rgba(44,32,21,0.25);transition:opacity .4s;pointer-events:none}
+  .swipe-hint{position:fixed;left:12px;bottom:calc(25px + env(safe-area-inset-bottom,0px));max-width:calc(100vw - 100px);z-index:110;display:flex;align-items:center;gap:6px;padding:7px 12px;border-radius:100px;background:rgba(253,246,236,0.95);color:var(--muted);border:1px solid rgba(44,32,21,0.12);font-size:11px;font-weight:500;line-height:1.3;transition:opacity .4s;pointer-events:none} /* discreet: same place and shape as the dots it stands in for */
   .swipe-hint svg{width:13px;height:13px;animation:hint-bob 1.6s ease-in-out infinite}
   body:not(.hint-on) .swipe-hint{display:none}
   .mob-connect-title{display:block;font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;line-height:1.1;color:var(--ink);margin:4px 0 10px}
@@ -709,7 +719,17 @@ html:is([lang="my"],[lang="bn"],[lang="ta"],[lang="zh-Hans"]) .feat-t{font-famil
   .mob-connect-title br{display:none}
   .mob-connect-title em{margin-left:.22em}
 }
-@media(max-width:480px) and (max-height:700px){ .mob-connect-title{font-size:22px;margin-bottom:6px} body[data-sec="4"] .mob-dots{display:none} }
+@media(max-width:480px) and (max-height:700px){
+  .mob-connect-title{font-size:19px;margin:0 0 4px}
+  .mob-connect-header{margin-bottom:8px;padding-bottom:8px}
+  #s4 .form-row{margin-bottom:10px}
+  body[data-sec="4"] .mob-dots{display:none}
+  /* On short phones the Connect slide has no floating controls (existing rule hides the button there): use the room. */
+  .connect-right{padding-bottom:calc(20px + env(safe-area-inset-bottom,0px))}
+  html:is([lang="my"],[lang="bn"],[lang="ta"]) .mob-connect-title{font-size:16px;margin:0 0 4px}
+}
+/* Short phones in Burmese, Bengali and Tamil (taller script): the form and links only just fit, so the heading gives way. */
+@media(max-width:480px) and (max-height:700px){ html:is([lang="my"],[lang="bn"],[lang="ta"]) .mob-connect-title{display:none} }
 @keyframes hint-bob{0%,100%{transform:translateY(2px)}50%{transform:translateY(-3px)}}
 @media (prefers-reduced-motion: reduce){ .swipe-hint svg{animation:none} }
 </style>
@@ -800,14 +820,14 @@ html:is([lang="my"],[lang="bn"],[lang="ta"],[lang="zh-Hans"]) .feat-t{font-famil
 <div class="path">
 <a class="path-main" href="/domestic-worker-support-singapore/tl/">
 <picture><source srcset="/campaigns/share-your-story/hero-640.webp" type="image/webp"/><img alt="" class="path-img path-img-mdw" height="881" src="/campaigns/share-your-story/hero-640.jpg" width="640"/></picture>
-<span class="path-name"><span data-i18n="paths.mdw">Para sa mga migrant domestic worker</span> <span aria-hidden="true" class="path-go">→</span></span>
+<span class="path-name"><span data-i18n="paths.mdw">Mga Migrant Domestic Worker</span> <span aria-hidden="true" class="path-go">→</span></span>
 </a>
 <a class="path-camp" data-camp="share-your-story" data-open="paths.mdw.open" hidden="" href="/campaigns/share-your-story/tl/"><span aria-hidden="true" class="path-dot"></span><span class="path-camp-t"></span></a>
 </div>
 <div class="path">
 <a class="path-main" href="/migrant-worker-community-singapore/tl/">
 <picture><source srcset="/campaigns/share-your-story-migrant-workers/hero-640.webp" type="image/webp"/><img alt="" class="path-img path-img-mw" height="360" src="/campaigns/share-your-story-migrant-workers/hero-640.jpg" width="640"/></picture>
-<span class="path-name"><span data-i18n="paths.mw">Para sa mga migrant worker</span> <span aria-hidden="true" class="path-go">→</span></span>
+<span class="path-name"><span data-i18n="paths.mw">Mga Migrant Worker</span> <span aria-hidden="true" class="path-go">→</span></span>
 </a>
 <a class="path-camp" data-camp="share-your-story-migrant-workers" data-open="paths.mw.open" data-soon="paths.mw.soon" hidden="" href="/campaigns/share-your-story-migrant-workers/tl/"><span aria-hidden="true" class="path-dot"></span><span class="path-camp-t"></span></a>
 </div>
@@ -1225,7 +1245,14 @@ function renderPaths(){
 }
 renderPaths();
 // One-time swipe hint on touch screens, first slide only, until the visitor moves on.
-if (window.matchMedia && matchMedia('(pointer:coarse)').matches && cur===0) document.body.classList.add('hint-on');
+// Shown once per visitor (remembered in this browser only), hidden after the first move or after 6 seconds.
+(function(){
+  var seen=false; try{seen=localStorage.getItem('tulus-swipe-hint')==='1';}catch(e){}
+  if(seen || !(window.matchMedia && matchMedia('(pointer:coarse)').matches) || cur!==0) return;
+  document.body.classList.add('hint-on');
+  try{localStorage.setItem('tulus-swipe-hint','1');}catch(e){}
+  setTimeout(function(){document.body.classList.remove('hint-on');},6000);
+})();
 // Language (17 Oct 2026): start the shared engine; re-show texts this script wrote when the language changes.
 if (window.TulusI18n) {
   TulusI18n.onChange(function(){

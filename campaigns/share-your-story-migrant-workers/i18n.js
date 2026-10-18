@@ -13,6 +13,9 @@
  * launch on 14 Oct 2026. These are AI-reviewed translations, NOT independently human-certified. Participants can report
  * a translation problem (shared lang.notice); any material error must be corrected promptly. Audit records: private
  * repo docs/review-packs/v7-2026-10-15-audit/. No "English prevails" statement (Document 1; Privacy Policy section 14).
+ *
+ * soon.body, soon.channelNote (18 Oct 2026, shown only before registration opens): English approved by Zan 18 Oct 2026;
+ * id, tl, my, bn, ta, zh AI-translated and independently AI-reviewed 18 Oct 2026. NOT human-verified.
  */
 TulusI18n.register({
   name: 'share-your-story-migrant-workers',
@@ -630,7 +633,7 @@ TulusI18n.register({
     "success.channelBody": "খবর ও কার্যক্রমের আপডেট পেতে আমাদের WhatsApp চ্যানেল ফলো করুন। এটি আপনার নিজের ইচ্ছা, এবং আপনার নিবন্ধন বা আপনি বাছাই হবেন কি না তার সাথে এর কোনো সম্পর্ক নেই। অন্য ফলোয়াররা আপনার নাম বা ফোন নম্বর দেখতে পাবেন না।",
     "success.channel": "আমাদের WhatsApp চ্যানেল ফলো করুন",
     "soon.body": "নিবন্ধন খুলবে সোমবার, ২৬ অক্টোবর ২০২৬।",
-    "soon.channelNote": "মনে করিয়ে দেওয়া চান? খবর পেতে আমাদের WhatsApp চ্যানেল ফলো করুন। এটি ঐচ্ছিক, এবং ফলো করলে নিবন্ধন হয় না।",
+    "soon.channelNote": "রিমাইন্ডার চান? খবর পেতে আমাদের WhatsApp চ্যানেল ফলো করুন। এটি ঐচ্ছিক, এবং ফলো করলে নিবন্ধন হয় না।",
     "nat.bangladesh": "বাংলাদেশ",
     "nat.china": "চীন",
     "nat.thailand": "থাইল্যান্ড",
@@ -755,7 +758,7 @@ TulusI18n.register({
     "success.channelTitle": "TulusSG செய்திகள் வேண்டுமா?",
     "success.channelBody": "செய்திகள் மற்றும் நிகழ்வுத் தகவல்களுக்கு எங்கள் WhatsApp சேனலைப் பின்தொடருங்கள். இது உங்கள் விருப்பம்; இதற்கும் உங்கள் பதிவுக்கும், நீங்கள் தேர்ந்தெடுக்கப்படுவதற்கும் எந்தத் தொடர்பும் இல்லை. மற்ற பின்தொடர்பவர்களால் உங்கள் பெயரையோ தொலைபேசி எண்ணையோ பார்க்க முடியாது.",
     "success.channel": "எங்கள் WhatsApp சேனலைப் பின்தொடருங்கள்",
-    "soon.body": "பதிவு 2026 அக்டோபர் 26, திங்கட்கிழமை அன்று தொடங்கும்.",
+    "soon.body": "பதிவு திங்கட்கிழமை, 26 அக்டோபர் 2026 அன்று தொடங்கும்.",
     "soon.channelNote": "நினைவூட்டல் வேண்டுமா? செய்திகளுக்கு எங்கள் WhatsApp சேனலைப் பின்தொடருங்கள். இது கட்டாயமில்லை; பின்தொடர்வது பதிவு ஆகாது.",
     "nat.bangladesh": "பங்களாதேஷ்",
     "nat.china": "சீனா",
