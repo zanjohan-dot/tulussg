@@ -177,8 +177,11 @@
     // Month grid (visual overview; the list below it is the accessible version with every link)
     var grid = el('div', 'cal-grid');
     grid.setAttribute('aria-hidden', 'true');
-    t('date.weekdays').split(',').forEach(function (w) { grid.appendChild(el('span', 'cal-wd', w)); });
-    var startDow = new Date(Date.parse(ym + '-01T00:00:00Z')).getUTCDay(); // Sunday = 0
+    // Weeks run Monday to Sunday (owner, 17 Oct 2026). The weekday names stay Sunday-first in every language
+    // dictionary (they are also indexed by getUTCDay() below), so only the display order is rotated here.
+    var wd = t('date.weekdays').split(',');
+    wd.slice(1).concat(wd.slice(0, 1)).forEach(function (w) { grid.appendChild(el('span', 'cal-wd', w)); });
+    var startDow = (new Date(Date.parse(ym + '-01T00:00:00Z')).getUTCDay() + 6) % 7; // Monday = 0 ... Sunday = 6
     var y = +ym.slice(0, 4), m = +ym.slice(5, 7);
     var days = new Date(Date.UTC(y, m, 0)).getUTCDate();
     for (var i = 0; i < startDow; i++) grid.appendChild(el('span', 'cal-day is-empty'));
