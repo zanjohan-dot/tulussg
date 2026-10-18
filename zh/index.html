@@ -588,6 +588,130 @@ body[data-sec="3"] .next-fab:focus-visible{outline-color:#E08A55}
 .sidebar.tight .logo-mark{margin-bottom:24px !important}
 .sidebar-foot{font-size:10px;line-height:1.55;color:rgba(255,255,255,0.55)}
 html:is([lang="my"],[lang="bn"],[lang="ta"]) .sidebar-foot{font-size:10.5px;line-height:1.65}
+
+/* ── Visitor review (18 Oct 2026, PREVIEW) ─────────────────────────────────────────────────────────────────────── */
+/* 1+2. Hero: two equal entry points, one per community, with the approved campaign images. */
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px;max-width:620px}
+.path{position:relative;display:flex;flex-direction:column;background:var(--white);border:1px solid rgba(196,98,45,0.22);border-radius:14px;overflow:hidden;transition:border-color .3s,transform .3s,box-shadow .3s}
+.path:hover,.path:focus-within{border-color:var(--terra);transform:translateY(-2px);box-shadow:0 10px 26px rgba(44,32,21,0.10)}
+.path-main{display:flex;flex-direction:column;color:var(--ink);text-decoration:none;flex:1}
+.path-main::after{content:'';position:absolute;inset:0;z-index:1} /* whole card opens the community page */
+.path-main:focus-visible{outline:none}
+.path:has(.path-main:focus-visible){outline:2px solid var(--terra);outline-offset:2px}
+.path-main picture{display:block}
+.path-img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:var(--warm)}
+.path-img-mdw{object-position:50% 28%}
+.path-img-mw{object-position:50% 40%}
+.path-name{display:block;padding:10px 14px 4px;font-weight:600;font-size:14px;line-height:1.3}
+.path-go{color:var(--terra);transition:transform .3s;display:inline-block}
+.path:hover .path-go{transform:translateX(3px)}
+.path-camp{position:relative;z-index:2;display:flex;align-items:center;gap:7px;margin:2px 14px 12px;padding:4px 0;font-size:11.5px;font-weight:600;color:var(--terra-text);text-decoration:none;line-height:1.3}
+.path-camp[hidden]{display:none}
+.path-camp:hover .path-camp-t,.path-camp:focus-visible .path-camp-t{text-decoration:underline;text-underline-offset:3px}
+.path-camp:focus-visible{outline:2px solid var(--terra);outline-offset:2px;border-radius:4px}
+.path-dot{width:7px;height:7px;border-radius:50%;background:#3E8E5C;flex-shrink:0}
+.path-camp.soon .path-dot{background:transparent;border:1.5px solid var(--terra)}
+.path:not(:has(.path-camp:not([hidden]))) .path-name{padding-bottom:14px}
+@media(min-width:1200px) and (min-height:700px){
+  #s0 .s-inner.hero-wrap{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:44px;align-items:center;max-width:1080px}
+  #s0 .display{font-size:clamp(52px,4.6vw,72px)}
+  .paths{grid-template-columns:1fr;margin-top:0;gap:14px}
+  .path-img{aspect-ratio:16/8}
+  .path-name{font-size:16px;padding:12px 16px 4px}
+  .path-camp{margin:2px 16px 14px;font-size:12.5px}
+}
+@media(min-width:1440px) and (min-height:700px){ #s0 .s-inner.hero-wrap{grid-template-columns:minmax(0,1fr) 330px} }
+@media(max-width:768px){
+  .paths{gap:8px;margin-top:14px;max-width:none}
+  .path{border-radius:12px}
+  .path-img{aspect-ratio:16/8}
+  .path-name{font-size:12.5px;padding:8px 10px 2px}
+  .path-camp{margin:1px 10px 9px;font-size:10.5px;gap:5px}
+  #s0 .hero-stats{margin-top:10px}
+}
+/* Shorter phones (most phones with the browser bars showing): compact cards, small round photo beside the text. */
+@media(max-width:768px) and (max-height:760px){
+  .path-main{flex-direction:row;align-items:center;gap:8px;padding:8px 8px 0}
+  .path-main picture{flex:0 0 40px}
+  .path-img{width:40px;height:40px;aspect-ratio:1/1;border-radius:50%}
+  .path-name{padding:0;font-size:12px}
+  .path-camp{margin:4px 8px 8px}
+  #s0 .body-text{margin-bottom:8px}
+  html:is([lang="my"],[lang="bn"],[lang="ta"]) #s0 .display{font-size:21px !important;margin-bottom:6px}
+  html:is([lang="my"],[lang="bn"],[lang="ta"]) #s0 .body-text{font-size:11px;line-height:1.45}
+  html:is([lang="my"],[lang="bn"],[lang="ta"]) .hero-focus .h-stat-l{display:none}
+}
+@media(max-width:340px){ .path-name{font-size:11px} .path-camp{font-size:9.5px} }
+html:is([lang="my"],[lang="bn"],[lang="ta"],[lang="zh-Hans"]) .path-name{font-family:'Plus Jakarta Sans','Noto Sans Myanmar','Noto Sans Bengali','Noto Sans Tamil','Noto Sans SC',sans-serif}
+
+/* 4. Activities: the confirmed Sports Carnival first, as its own card; activity ideas below it. */
+.feat{position:relative;display:flex;align-items:stretch;gap:0;max-width:760px;margin-top:6px;background:var(--white);border:1px solid rgba(196,98,45,0.3);border-radius:14px;overflow:hidden;color:var(--ink);text-decoration:none;transition:border-color .3s,transform .3s,box-shadow .3s}
+.feat:hover,.feat:focus-visible{border-color:var(--terra);transform:translateY(-2px);box-shadow:0 10px 26px rgba(44,32,21,0.10)}
+.feat:focus-visible{outline:2px solid var(--terra);outline-offset:2px}
+.feat-date{position:relative;flex:0 0 96px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:24px 6px 10px;background:var(--cream);border-right:1px solid rgba(196,98,45,0.2);text-align:center}
+.feat-date .cal-band{position:absolute;top:0;left:0;right:0;height:20px;display:flex;align-items:center;justify-content:center;background:var(--terra-d);color:var(--white);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.feat-date .cal-day{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:600;line-height:.95;color:var(--terra);font-variant-numeric:lining-nums}
+.feat-date .cal-mon{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.feat-body{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:3px;padding:14px 18px}
+.feat-k{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#2F7A4D}
+.feat-t{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;line-height:1.1}
+.feat-p{font-size:12.5px;color:var(--muted);line-height:1.5}
+.feat-go{margin-top:4px;font-size:12px;font-weight:600;color:var(--terra-text)}
+.feat-pic{flex:0 0 34%;display:block;position:relative}
+.feat-ill{position:absolute;right:8px;bottom:8px;padding:2px 8px;border-radius:100px;background:rgba(44,32,21,0.7);color:var(--white);font-size:10px;font-weight:600}
+.feat-pic img{display:block;width:100%;height:100%;object-fit:cover}
+.ideas-h{margin-top:16px;margin-bottom:6px;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.act-grid.ideas{grid-template-columns:repeat(10,1fr);gap:8px;margin-top:0}
+.act-grid.ideas .act{border-radius:10px}
+.act-grid.ideas .act figcaption{font-size:clamp(7px,0.9vw,11px);padding:14px 4px 5px}
+@media(min-width:1440px){ .feat{max-width:900px} .feat-t{font-size:32px} .feat-p{font-size:14px} .act-grid.ideas{max-width:900px} }
+@media(max-width:1100px) and (min-width:769px){ .act-grid.ideas{grid-template-columns:repeat(5,1fr)} }
+@media(max-width:768px){
+  .feat{border-radius:12px}
+  .feat-date{flex-basis:70px;padding:18px 4px 6px}
+  .feat-date .cal-band{height:15px;font-size:8px}
+  .feat-date .cal-day{font-size:32px}
+  .feat-date .cal-mon{font-size:8.5px}
+  .feat-body{padding:9px 12px;gap:2px}
+  .feat-k{font-size:8.5px}
+  .feat-t{font-size:19px}
+  .feat-p{font-size:11px;line-height:1.45}
+  .feat-go{font-size:11px;margin-top:2px}
+  .feat-pic{display:none}
+  .ideas-h{margin-top:12px;font-size:9px}
+  .act-grid.ideas{grid-template-columns:repeat(5,1fr);gap:5px}
+  .act-grid.ideas .act figcaption{font-size:8.5px;padding:10px 2px 3px}
+}
+html:is([lang="my"],[lang="bn"],[lang="ta"],[lang="zh-Hans"]) .mob-connect-title{font-family:'Noto Sans Myanmar','Noto Sans Bengali','Noto Sans Tamil','Noto Sans SC',sans-serif;font-size:20px;line-height:1.35;font-weight:400}
+html:is([lang="my"],[lang="bn"],[lang="ta"],[lang="zh-Hans"]) .feat-t{font-family:'Noto Sans Myanmar','Noto Sans Bengali','Noto Sans Tamil','Noto Sans SC','Cormorant Garamond',serif;font-size:20px;line-height:1.3}
+
+/* 5. Phone navigation: tappable slide dots (replace "01 / 05"), a one-time swipe hint, and the Connect heading. */
+.mob-dots,.swipe-hint,.mob-connect-title{display:none}
+@media(max-width:768px){
+  .section-counter{display:none !important}
+  /* Controls move down to the bottom edge (they floated 80px up, over slide content on shorter phones);
+     dots on the same line as the round "next" button; every slide's content ends above both. */
+  .next-fab,.section-counter{bottom:calc(14px + env(safe-area-inset-bottom,0px))}
+  .mob-dots{display:flex;gap:2px;position:fixed;left:12px;bottom:calc(23px + env(safe-area-inset-bottom,0px));z-index:120;padding:2px 6px;border-radius:100px;background:rgba(253,246,236,0.92);border:1px solid rgba(44,32,21,0.1)}
+  .section{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+  .connect-right{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+  /* First visit, first slide: the hint takes the dots' place until the visitor moves on. */
+  body.hint-on .mob-dots{visibility:hidden}
+  .mob-dots button{width:26px;height:26px;padding:0;border:0;background:none;display:flex;align-items:center;justify-content:center;cursor:pointer}
+  .mob-dots button::before{content:'';width:8px;height:8px;border-radius:50%;background:rgba(44,32,21,0.25);transition:all .3s}
+  .mob-dots button[aria-current="true"]::before{width:20px;border-radius:5px;background:var(--terra-d)}
+  .mob-dots button:focus-visible{outline:2px solid var(--terra);outline-offset:1px;border-radius:50%}
+  .swipe-hint{position:fixed;left:12px;bottom:calc(25px + env(safe-area-inset-bottom,0px));max-width:calc(100vw - 100px);z-index:110;display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:100px;background:var(--ink);color:var(--cream);font-size:11px;font-weight:600;line-height:1.3;box-shadow:0 6px 18px rgba(44,32,21,0.25);transition:opacity .4s;pointer-events:none}
+  .swipe-hint svg{width:13px;height:13px;animation:hint-bob 1.6s ease-in-out infinite}
+  body:not(.hint-on) .swipe-hint{display:none}
+  .mob-connect-title{display:block;font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;line-height:1.1;color:var(--ink);margin:4px 0 10px}
+  .mob-connect-title em{font-style:italic;color:var(--terra)}
+  .mob-connect-title br{display:none}
+  .mob-connect-title em{margin-left:.22em}
+}
+@media(max-width:480px) and (max-height:700px){ .mob-connect-title{font-size:22px;margin-bottom:6px} body[data-sec="4"] .mob-dots{display:none} }
+@keyframes hint-bob{0%,100%{transform:translateY(2px)}50%{transform:translateY(-3px)}}
+@media (prefers-reduced-motion: reduce){ .swipe-hint svg{animation:none} }
 </style>
 <link href="/campaigns/shared/lang-info.css" rel="stylesheet"/>
 </head>
@@ -630,9 +754,9 @@ html:is([lang="my"],[lang="bn"],[lang="ta"]) .sidebar-foot{font-size:10.5px;line
 <div class="mob-overlay" id="mob-overlay">
 <button aria-label="关闭菜单" class="mob-close" data-i18n-attr="aria-label:a11y.closeMenu" onclick="toggleMob()">✕</button>
 <a class="m-item" data-i18n="nav.mission" href="#mission" onclick="goTo(0);toggleMob()">使命</a>
-<a class="m-item" data-i18n="nav.people" href="#people" onclick="goTo(1);toggleMob()">我们的团队</a>
-<a class="m-item" data-i18n="nav.activities" href="#activities" onclick="goTo(2);toggleMob()">活动</a>
-<a class="m-item" data-i18n="nav.getInvolved" href="#get-involved" onclick="goTo(3);toggleMob()">参与</a>
+<a class="m-item" data-i18n="nav.activities" href="#activities" onclick="goTo(1);toggleMob()">活动</a>
+<a class="m-item" data-i18n="nav.getInvolved" href="#get-involved" onclick="goTo(2);toggleMob()">参与</a>
+<a class="m-item" data-i18n="nav.people" href="#people" onclick="goTo(3);toggleMob()">我们的团队</a>
 <a class="m-item" data-i18n="nav.connect" href="#connect" onclick="goTo(4);toggleMob()">联系我们</a>
 <a class="m-item" data-i18n="nav.campaigns" href="/campaigns/zh/">专题活动</a>
 </div>
@@ -643,9 +767,9 @@ html:is([lang="my"],[lang="bn"],[lang="ta"]) .sidebar-foot{font-size:10.5px;line
 </div>
 <nav class="v-nav">
 <button class="v-nav-item active" onclick="goTo(0)"><div class="n-bar"></div><span class="n-num">01</span><span class="n-label" data-i18n="nav.mission">使命</span></button>
-<button class="v-nav-item" onclick="goTo(1)"><div class="n-bar"></div><span class="n-num">02</span><span class="n-label" data-i18n="nav.people">我们的团队</span></button>
-<button class="v-nav-item" onclick="goTo(2)"><div class="n-bar"></div><span class="n-num">03</span><span class="n-label" data-i18n="nav.activities">活动</span></button>
-<button class="v-nav-item" onclick="goTo(3)"><div class="n-bar"></div><span class="n-num">04</span><span class="n-label" data-i18n="nav.getInvolved">参与</span></button>
+<button class="v-nav-item" onclick="goTo(1)"><div class="n-bar"></div><span class="n-num">02</span><span class="n-label" data-i18n="nav.activities">活动</span></button>
+<button class="v-nav-item" onclick="goTo(2)"><div class="n-bar"></div><span class="n-num">03</span><span class="n-label" data-i18n="nav.getInvolved">参与</span></button>
+<button class="v-nav-item" onclick="goTo(3)"><div class="n-bar"></div><span class="n-num">04</span><span class="n-label" data-i18n="nav.people">我们的团队</span></button>
 <button class="v-nav-item" onclick="goTo(4)"><div class="n-bar"></div><span class="n-num">05</span><span class="n-label" data-i18n="nav.connect">联系我们</span></button>
 <a class="v-nav-item v-nav-link" href="/campaigns/zh/"><div class="n-bar"></div><span aria-hidden="true" class="n-num">↗</span><span class="n-label" data-i18n="nav.campaigns">专题活动</span></a>
 </nav>
@@ -658,19 +782,94 @@ html:is([lang="my"],[lang="bn"],[lang="ta"]) .sidebar-foot{font-size:10.5px;line
 <section class="section active" id="s0">
 <div class="blob blob-a"></div>
 <div class="blob blob-b"></div>
-<div class="s-inner">
+<div class="s-inner hero-wrap">
+<div class="hero-main">
 <div class="tag anim" data-i18n="hero.tag">草根社区计划</div>
 <h1 class="display anim" data-i18n-rich="hero.title"><strong>在新加坡，</strong><br/>支持<br/><em>外籍劳工社群。</em></h1>
 <p class="body-text anim" data-i18n="hero.body">TulusSG 是一项社区计划，服务新加坡的外籍家庭帮佣和客工。我们致力于让更多人参与有意义的活动，为他们的故事创造被听见的空间，并为他们联系合适的社区支援。</p>
 <div aria-label="我们的三大重点" class="hero-stats hero-focus anim" data-i18n-attr="aria-label:a11y.focus">
-<a class="h-stat" href="#activities" onclick="event.preventDefault();goTo(2)"><div class="h-stat-n" data-i18n="focus.activities">有意义的活动</div><div class="h-stat-l" data-i18n="focus.activitiesLink">查看活动 →</div></a>
+<a class="h-stat" href="#activities" onclick="event.preventDefault();goTo(1)"><div class="h-stat-n" data-i18n="focus.activities">有意义的活动</div><div class="h-stat-l" data-i18n="focus.activitiesLink">查看活动 →</div></a>
 <a class="h-stat" href="/campaigns/zh/"><div class="h-stat-n" data-i18n="focus.stories">他们的故事</div><div class="h-stat-l" data-i18n="focus.storiesLink">故事专题活动 →</div></a>
 <a class="h-stat" href="#connect" onclick="event.preventDefault();goTo(4)"><div class="h-stat-n" data-i18n="focus.support">社区支援</div><div class="h-stat-l" data-i18n="focus.supportLink">向我们求助 →</div></a>
 </div>
-<a class="campaign-link anim" href="/campaigns/share-your-story/zh/"><span aria-hidden="true" class="campaign-dot"></span><span data-i18n="hero.campaign">家庭帮佣：Share Your Story</span> <span aria-hidden="true">→</span></a>
+</div>
+<!-- Visitor review (18 Oct 2026, PREVIEW): two equal, separate entry points, one per community. Each card opens that
+             community's own page; its Share Your Story line follows the campaign's real status (/campaigns/campaigns.js)
+             and disappears when that campaign is closed. Images: the approved campaign images, decorative here. -->
+<div aria-label="各社群的专属页面" class="paths anim" data-i18n-attr="aria-label:paths.aria" role="group">
+<div class="path">
+<a class="path-main" href="/domestic-worker-support-singapore/zh/">
+<picture><source srcset="/campaigns/share-your-story/hero-640.webp" type="image/webp"/><img alt="" class="path-img path-img-mdw" height="881" src="/campaigns/share-your-story/hero-640.jpg" width="640"/></picture>
+<span class="path-name"><span data-i18n="paths.mdw">给外籍家庭帮佣</span> <span aria-hidden="true" class="path-go">→</span></span>
+</a>
+<a class="path-camp" data-camp="share-your-story" data-open="paths.mdw.open" hidden="" href="/campaigns/share-your-story/zh/"><span aria-hidden="true" class="path-dot"></span><span class="path-camp-t"></span></a>
+</div>
+<div class="path">
+<a class="path-main" href="/migrant-worker-community-singapore/zh/">
+<picture><source srcset="/campaigns/share-your-story-migrant-workers/hero-640.webp" type="image/webp"/><img alt="" class="path-img path-img-mw" height="360" src="/campaigns/share-your-story-migrant-workers/hero-640.jpg" width="640"/></picture>
+<span class="path-name"><span data-i18n="paths.mw">给客工</span> <span aria-hidden="true" class="path-go">→</span></span>
+</a>
+<a class="path-camp" data-camp="share-your-story-migrant-workers" data-open="paths.mw.open" data-soon="paths.mw.soon" hidden="" href="/campaigns/share-your-story-migrant-workers/zh/"><span aria-hidden="true" class="path-dot"></span><span class="path-camp-t"></span></a>
+</div>
+</div>
 </div>
 </section>
-<!-- 1: WHY -->
+<!-- 2: PILLARS (shown 2nd) -->
+<section class="section" id="s2">
+<div class="blob blob-a"></div>
+<div class="s-inner">
+<div class="tag anim" data-i18n="act.tag">我们正在考虑的活动</div>
+<h2 class="display anim" data-i18n-rich="act.title" style="font-size:50px;">一起<em>动起来！</em></h2>
+<!-- Visitor review (18 Oct 2026, PREVIEW): the confirmed event first, as its own card; only CONFIRMED facts
+             (date, five beginner-friendly sports stations, no experience needed). Venue, time and registration: not announced. -->
+<a aria-label="TulusSG 运动嘉年华，2027年1月10日（周日）" class="feat anim" data-i18n-attr="aria-label:act.carnival.aria" href="/campaigns/sports-carnival/zh/">
+<span aria-hidden="true" class="feat-date"><span class="cal-band" data-i18n="act.carnival.dow">周日</span><span class="cal-day">10</span><span class="cal-mon" data-i18n="act.carnival.month">2027年1月</span></span>
+<span class="feat-body">
+<span class="feat-k" data-i18n="act.feat.k">日期已确定</span>
+<span class="feat-t" data-i18n="act.feat.title">TulusSG 运动嘉年华</span>
+<span class="feat-p" data-i18n="act.feat.body">在适合初学者的活动站体验五项运动，无需任何经验。地点、时间和报名方式将另行公布。</span>
+<span class="feat-go"><span data-i18n="act.feat.cta">活动详情</span> <span aria-hidden="true">→</span></span>
+</span>
+<picture class="feat-pic"><source srcset="/campaigns/sports-carnival/banner-800.webp" type="image/webp"/><img alt="" height="300" loading="lazy" src="/campaigns/sports-carnival/banner-800.jpg" width="800"/><span class="feat-ill" data-i18n="act.feat.ill">示意图</span></picture>
+</a>
+<p class="ideas-h anim" data-i18n="act.ideas">更多活动构想</p>
+<div class="act-grid ideas anim">
+<figure class="act"><img alt="插图：女性在水库划皮划艇" data-i18n-attr="alt:act.kayaking.alt" height="200" loading="lazy" src="/assets/activities/kayaking.jpg" width="200"/><figcaption data-i18n="act.kayaking">皮划艇</figcaption></figure>
+<figure class="act"><img alt="插图：女性在球场上踢足球" data-i18n-attr="alt:act.football.alt" height="200" loading="lazy" src="/assets/activities/football.jpg" width="200"/><figcaption data-i18n="act.football">足球</figcaption></figure>
+<figure class="act"><img alt="插图：女性在室内打福乐球" data-i18n-attr="alt:act.floorball.alt" height="200" loading="lazy" src="/assets/activities/floorball.jpg" width="200"/><figcaption data-i18n="act.floorball">福乐球</figcaption></figure>
+<figure class="act"><img alt="插图：女性在打匹克球" data-i18n-attr="alt:act.pickleball.alt" height="200" loading="lazy" src="/assets/activities/pickleball.jpg" width="200"/><figcaption data-i18n="act.pickleball">匹克球</figcaption></figure>
+<figure class="act"><img alt="插图：女性在上 Piloxing 课" data-i18n-attr="alt:act.piloxing.alt" height="200" loading="lazy" src="/assets/activities/piloxing.jpg" width="200"/><figcaption data-i18n="act.piloxing">Piloxing</figcaption></figure>
+<figure class="act"><img alt="插图：女性在健身球上打鼓" data-i18n-attr="alt:act.drums.alt" height="200" loading="lazy" src="/assets/activities/drums-up.jpg" width="200"/><figcaption>DRUMS UP</figcaption></figure>
+<figure class="act"><img alt="插图：女性在打羽毛球" data-i18n-attr="alt:act.badminton.alt" height="200" loading="lazy" src="/assets/activities/badminton.jpg" width="200"/><figcaption data-i18n="act.badminton">羽毛球</figcaption></figure>
+<figure class="act"><img alt="插图：女性在打篮球" data-i18n-attr="alt:act.basketball.alt" height="200" loading="lazy" src="/assets/activities/basketball.jpg" width="200"/><figcaption data-i18n="act.basketball">篮球</figcaption></figure>
+<figure class="act"><img alt="插图：女性在打无板篮球" data-i18n-attr="alt:act.netball.alt" height="200" loading="lazy" src="/assets/activities/netball.jpg" width="200"/><figcaption data-i18n="act.netball">无板篮球</figcaption></figure>
+<figure class="act"><img alt="插图：女性弹着吉他一起唱歌" data-i18n-attr="alt:act.singing.alt" height="200" loading="lazy" src="/assets/activities/singing.jpg" width="200"/><figcaption data-i18n="act.singing">唱歌</figcaption></figure>
+</div>
+<p class="act-note anim" data-i18n-rich="act.note2">图片仅为活动构想的示意图，并非 TulusSG 活动的实拍照片。已确定的日期请见我们的<a href="/campaigns/zh/">专题活动页面</a>。</p>
+</div>
+</section>
+<!-- 3: GET INVOLVED -->
+<section class="section" id="s3">
+<div class="s-inner">
+<div class="tag anim" data-i18n="inv.tag" style="color:#E08A55;">如何参与</div>
+<h2 class="inv-display anim" data-i18n-rich="inv.title">保持联系。<br/>一起参与。<br/><strong>加入我们。</strong></h2>
+<p class="anim" data-i18n="inv.who" style="font-size:12px;color:rgba(255,255,255,0.72);margin-bottom:14px;font-weight:400;letter-spacing:0.05em;">您是？</p>
+<div class="audience-tags anim">
+<button class="a-tag sel" data-i18n="inv.worker" onclick="pick(this,'worker')">家庭帮佣</button>
+<button class="a-tag" data-i18n="inv.mw" onclick="pick(this,'mw')">客工</button>
+<button class="a-tag" data-i18n="inv.family" onclick="pick(this,'family')">雇主</button>
+<button class="a-tag" data-i18n="inv.vol" onclick="pick(this,'vol')">志愿者</button>
+<button class="a-tag" data-i18n="inv.org" onclick="pick(this,'org')">机构</button>
+<button class="a-tag" data-i18n="inv.tech" onclick="pick(this,'tech')">教练／导师</button>
+</div>
+<div class="inv-desc anim" id="inv-desc">Join our WhatsApp community for domestic workers. Meet new friends and hear about activities.</div>
+<div class="cta-row anim">
+<a class="cta-btn" href="https://chat.whatsapp.com/F4tFULkpAh7EIJkxRVet8q?mode=gi_t" id="inv-cta" rel="noopener" target="_blank">Join our WhatsApp community →</a>
+<button class="cta-ghost" data-i18n="inv.ghost" id="inv-ghost" onclick="goTo(4)">留言</button>
+</div>
+</div>
+</section>
+<!-- 1: WHY / OUR PEOPLE (shown 4th: visitor review, 18 Oct 2026 PREVIEW — what TulusSG offers first, then the team) -->
 <section class="section" id="s1">
 <div class="blob blob-a"></div>
 <div class="s-inner">
@@ -693,49 +892,6 @@ html:is([lang="my"],[lang="bn"],[lang="ta"]) .sidebar-foot{font-size:10.5px;line
 <div class="why-item-num" data-i18n="people.collaborators">协作单位</div>
 <div class="logos logo-list"><a class="logo-slot logo-img" href="https://www.facebook.com/thefacilitatorsproject/" rel="noopener" target="_blank" title="The Facilitators’ Project on Facebook"><img alt="The Facilitators Project" height="108" src="/assets/collaborators/facilitators-project.png" width="120"/></a><a class="logo-slot logo-img" href="https://www.instagram.com/the.affirmative.people/" rel="noopener" target="_blank" title="The Affirmative People on Instagram"><img alt="The Affirmative People" height="108" src="/assets/collaborators/affirmative-people.png" width="108"/></a><a class="logo-slot logo-img" href="https://www.youtube.com/@kauapehalx" rel="noopener" target="_blank" title="Kahtel TV on YouTube"><img alt="Kahtel Media" height="108" src="/assets/collaborators/kahtel.png" width="108"/></a><a class="logo-slot logo-img" href="https://www.instagram.com/outsideinsg/" rel="noopener" target="_blank" title="Outsidein Podcast on Instagram"><img alt="Outsidein Motion" height="108" src="/assets/collaborators/outsidein.png" width="376"/></a></div>
 </div>
-</div>
-</div>
-</section>
-<!-- 2: PILLARS -->
-<section class="section" id="s2">
-<div class="blob blob-a"></div>
-<div class="s-inner">
-<div class="tag anim" data-i18n="act.tag">我们正在考虑的活动</div>
-<h2 class="display anim" data-i18n-rich="act.title" style="font-size:50px;">一起<em>动起来！</em></h2>
-<div class="act-grid cal anim">
-<a aria-label="TulusSG 运动嘉年华，2027年1月10日（周日）" class="act act-date" data-i18n-attr="aria-label:act.carnival.aria" href="/campaigns/sports-carnival/zh/"><span class="cal-band" data-i18n="act.carnival.dow">周日</span><span class="cal-day">10</span><span class="cal-mon" data-i18n="act.carnival.month">2027年1月</span><span class="cal-cap" data-i18n="act.carnival.cap">运动嘉年华</span></a>
-<figure class="act"><img alt="插图：女性在水库划皮划艇" data-i18n-attr="alt:act.kayaking.alt" height="200" loading="lazy" src="/assets/activities/kayaking.jpg" width="200"/><figcaption data-i18n="act.kayaking">皮划艇</figcaption></figure>
-<figure class="act"><img alt="插图：女性在球场上踢足球" data-i18n-attr="alt:act.football.alt" height="200" loading="lazy" src="/assets/activities/football.jpg" width="200"/><figcaption data-i18n="act.football">足球</figcaption></figure>
-<figure class="act"><img alt="插图：女性在室内打福乐球" data-i18n-attr="alt:act.floorball.alt" height="200" loading="lazy" src="/assets/activities/floorball.jpg" width="200"/><figcaption data-i18n="act.floorball">福乐球</figcaption></figure>
-<figure class="act"><img alt="插图：女性在打匹克球" data-i18n-attr="alt:act.pickleball.alt" height="200" loading="lazy" src="/assets/activities/pickleball.jpg" width="200"/><figcaption data-i18n="act.pickleball">匹克球</figcaption></figure>
-<figure class="act"><img alt="插图：女性在上 Piloxing 课" data-i18n-attr="alt:act.piloxing.alt" height="200" loading="lazy" src="/assets/activities/piloxing.jpg" width="200"/><figcaption data-i18n="act.piloxing">Piloxing</figcaption></figure>
-<figure class="act"><img alt="插图：女性在健身球上打鼓" data-i18n-attr="alt:act.drums.alt" height="200" loading="lazy" src="/assets/activities/drums-up.jpg" width="200"/><figcaption>DRUMS UP</figcaption></figure>
-<figure class="act"><img alt="插图：女性在打羽毛球" data-i18n-attr="alt:act.badminton.alt" height="200" loading="lazy" src="/assets/activities/badminton.jpg" width="200"/><figcaption data-i18n="act.badminton">羽毛球</figcaption></figure>
-<figure class="act"><img alt="插图：女性在打篮球" data-i18n-attr="alt:act.basketball.alt" height="200" loading="lazy" src="/assets/activities/basketball.jpg" width="200"/><figcaption data-i18n="act.basketball">篮球</figcaption></figure>
-<figure class="act"><img alt="插图：女性在打无板篮球" data-i18n-attr="alt:act.netball.alt" height="200" loading="lazy" src="/assets/activities/netball.jpg" width="200"/><figcaption data-i18n="act.netball">无板篮球</figcaption></figure>
-<figure class="act"><img alt="插图：女性弹着吉他一起唱歌" data-i18n-attr="alt:act.singing.alt" height="200" loading="lazy" src="/assets/activities/singing.jpg" width="200"/><figcaption data-i18n="act.singing">唱歌</figcaption></figure>
-</div>
-<p class="act-note anim" data-i18n-rich="act.note">图片仅供示意。活动详情将在<a href="/campaigns/zh/">专题活动页面</a>公布。</p>
-</div>
-</section>
-<!-- 3: GET INVOLVED -->
-<section class="section" id="s3">
-<div class="s-inner">
-<div class="tag anim" data-i18n="inv.tag" style="color:#E08A55;">如何参与</div>
-<h2 class="inv-display anim" data-i18n-rich="inv.title">保持联系。<br/>一起参与。<br/><strong>加入我们。</strong></h2>
-<p class="anim" data-i18n="inv.who" style="font-size:12px;color:rgba(255,255,255,0.72);margin-bottom:14px;font-weight:400;letter-spacing:0.05em;">您是？</p>
-<div class="audience-tags anim">
-<button class="a-tag sel" data-i18n="inv.worker" onclick="pick(this,'worker')">家庭帮佣</button>
-<button class="a-tag" data-i18n="inv.mw" onclick="pick(this,'mw')">客工</button>
-<button class="a-tag" data-i18n="inv.family" onclick="pick(this,'family')">雇主</button>
-<button class="a-tag" data-i18n="inv.vol" onclick="pick(this,'vol')">志愿者</button>
-<button class="a-tag" data-i18n="inv.org" onclick="pick(this,'org')">机构</button>
-<button class="a-tag" data-i18n="inv.tech" onclick="pick(this,'tech')">教练／导师</button>
-</div>
-<div class="inv-desc anim" id="inv-desc">Join our WhatsApp community for domestic workers. Meet new friends and hear about activities.</div>
-<div class="cta-row anim">
-<a class="cta-btn" href="https://chat.whatsapp.com/F4tFULkpAh7EIJkxRVet8q?mode=gi_t" id="inv-cta" rel="noopener" target="_blank">Join our WhatsApp community →</a>
-<button class="cta-ghost" data-i18n="inv.ghost" id="inv-ghost" onclick="goTo(4)">留言</button>
 </div>
 </div>
 </section>
@@ -776,7 +932,8 @@ html:is([lang="my"],[lang="bn"],[lang="ta"]) .sidebar-foot{font-size:10.5px;line
 </div>
 </div>
 <div class="connect-right">
-<!-- Mobile-only compact header -->
+<!-- Mobile-only compact header (visitor review PREVIEW: with the "Come and say hello" heading, hidden on phones before) -->
+<h2 class="mob-connect-title" data-i18n-rich="con.title">来和我们<br/><em>打个招呼。</em></h2>
 <div class="mob-connect-header" style="display:none">
 <a class="mob-connect-email" href="mailto:admin@tulussg.com">admin@tulussg.com</a>
 <div class="mob-soc-dock">
@@ -845,10 +1002,20 @@ html:is([lang="my"],[lang="bn"],[lang="ta"]) .sidebar-foot{font-size:10.5px;line
 </section>
 <div class="progress-bar"><div class="progress-fill" id="prog" style="width:20%"></div></div>
 <button aria-label="下一部分" class="next-fab" data-i18n-attr="aria-label:a11y.next" id="next-fab" onclick="nextSection()">
-<span id="fab-lbl">Our People</span>
+<span id="fab-lbl">Activities</span>
 <svg fill="none" id="fab-icon" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </button>
 <div class="section-counter"><strong id="cur-n">01</strong> / 05</div>
+<!-- Phones (visitor review, 18 Oct 2026 PREVIEW): one dot per slide, tappable; the hint shows on the first slide
+         until the visitor moves on once. -->
+<nav aria-label="页面板块" class="mob-dots" data-i18n-attr="aria-label:home.sections" id="mob-dots">
+<button aria-current="true" aria-label="使命" data-i18n-attr="aria-label:nav.mission" onclick="goTo(0)" type="button"></button>
+<button aria-label="活动" data-i18n-attr="aria-label:nav.activities" onclick="goTo(1)" type="button"></button>
+<button aria-label="参与" data-i18n-attr="aria-label:nav.getInvolved" onclick="goTo(2)" type="button"></button>
+<button aria-label="我们的团队" data-i18n-attr="aria-label:nav.people" onclick="goTo(3)" type="button"></button>
+<button aria-label="联系我们" data-i18n-attr="aria-label:nav.connect" onclick="goTo(4)" type="button"></button>
+</nav>
+<div aria-hidden="true" class="swipe-hint" id="swipe-hint"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"></path></svg><span data-i18n="home.swipeHint">向上滑动查看更多</span></div>
 </main>
 </div>
 <script src="/campaigns/translations.js"></script>
@@ -856,10 +1023,12 @@ html:is([lang="my"],[lang="bn"],[lang="ta"]) .sidebar-foot{font-size:10.5px;line
 <script src="/campaigns/shared/i18n-shared.js"></script>
 <script src="/assets/i18n/site.js"></script>
 <script src="/assets/i18n/home.js"></script>
+<script src="/campaigns/campaigns.js"></script>
 <script>
 // Texts this script shows come from the language dictionaries (/assets/i18n/home.js); set with textContent only.
 const T=k=>(window.TulusI18n?TulusI18n.t(k):k);
-const FAB_LABELS=['nav.people','nav.activities','nav.getInvolved','nav.connect'];
+// Slide order (visitor review, 18 Oct 2026 PREVIEW): what TulusSG offers first, then how to take part, then the team.
+const FAB_LABELS=['nav.activities','nav.getInvolved','nav.people','nav.connect'];
 const SEC_NUMS=['01','02','03','04','05'];
 const PROGRESS=['20%','40%','60%','80%','100%'];
 // Audience texts: inv.desc.<type> in /assets/i18n/home.js.
@@ -898,9 +1067,11 @@ function goTo(idx){
   setTimeout(()=>{
     sections[cur].classList.remove('exit'); cur=idx;
     sections[cur].classList.add('active'); navItems[cur].classList.add('active');
-    document.body.dataset.sec=cur;
+    document.body.dataset.sec=sections[cur].id.slice(1); // the slide's own number (s0-s4), so its colours follow it
     document.getElementById('prog').style.width=PROGRESS[cur];
     document.getElementById('cur-n').textContent=SEC_NUMS[cur];
+    document.querySelectorAll('#mob-dots button').forEach((b,i)=>{ if(i===cur) b.setAttribute('aria-current','true'); else b.removeAttribute('aria-current'); });
+    document.body.classList.remove('hint-on');
     document.getElementById('next-fab').style.display='flex';
     if(cur === 4) {
       document.getElementById('fab-lbl').textContent = T('fab.start');
@@ -915,7 +1086,7 @@ function goTo(idx){
 function nextSection(){goTo(cur<sections.length-1?cur+1:0);}
 // Deep links (16 Oct 2026): /#people, /#activities, /#get-involved and /#connect open that section,
 // so the campaign pages' menu can link to the same places as this menu.
-const SEC_HASH={mission:0,people:1,activities:2,'get-involved':3,connect:4};
+const SEC_HASH={mission:0,activities:1,'get-involved':2,people:3,connect:4};
 function goToHash(){const i=SEC_HASH[location.hash.slice(1)];if(i!==undefined)goTo(i);}
 window.addEventListener('hashchange',goToHash);
 goToHash();
@@ -1040,9 +1211,25 @@ function onFirstInteract() {
 document.addEventListener('click', onFirstInteract);
 document.addEventListener('touchstart', onFirstInteract, {passive:true});
 
+// Visitor review (18 Oct 2026, PREVIEW). Hero cards: each Share Your Story line follows the campaign's real registration
+// state from /campaigns/campaigns.js (same rule as the campaign pages and the API): open -> "open until …",
+// not open yet -> "opens …" (only where a text exists), closed -> no line.
+function renderPaths(){
+  document.querySelectorAll('.path-camp').forEach(function(a){
+    var c=(window.TULUS_CAMPAIGNS||[]).filter(function(x){return x.slug===a.getAttribute('data-camp');})[0];
+    var st=(c&&window.TULUS_CAMPAIGN_STATE)?TULUS_CAMPAIGN_STATE(c):'closed';
+    var key=st==='active'?a.getAttribute('data-open'):(st==='coming-soon'?a.getAttribute('data-soon'):null);
+    a.hidden=!key; a.classList.toggle('soon',st==='coming-soon');
+    if(key) a.querySelector('.path-camp-t').textContent=T(key);
+  });
+}
+renderPaths();
+// One-time swipe hint on touch screens, first slide only, until the visitor moves on.
+if (window.matchMedia && matchMedia('(pointer:coarse)').matches && cur===0) document.body.classList.add('hint-on');
 // Language (17 Oct 2026): start the shared engine; re-show texts this script wrote when the language changes.
 if (window.TulusI18n) {
   TulusI18n.onChange(function(){
+    renderPaths();
     document.getElementById('inv-desc').textContent=T('inv.desc.'+curAud);
     setCta(curAud);
     document.getElementById('fab-lbl').textContent = cur===4 ? T('fab.start') : T(FAB_LABELS[cur]);

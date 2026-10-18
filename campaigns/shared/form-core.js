@@ -80,7 +80,12 @@
       var heroBtn = document.querySelector('#hero-cta .btn');
       if (heroBtn) heroBtn.style.display = 'none';
       document.getElementById('status-title').setAttribute('data-i18n', 'state.' + state + '.title');
-      document.getElementById('status-body').setAttribute('data-i18n', 'state.' + state + '.body');
+      // A page may give its own "not open yet" text (e.g. the opening date) and extras (data-soon-body, #status-soon).
+      var soonBody = state === 'coming-soon' && statusView.getAttribute('data-soon-body');
+      document.getElementById('status-body').setAttribute('data-i18n', soonBody || ('state.' + state + '.body'));
+      var soonExtra = document.getElementById('status-soon');
+      if (soonExtra) soonExtra.hidden = state !== 'coming-soon';
+      if (soonExtra && state === 'coming-soon') statusView.classList.add('is-soon');
     }
 
     // ------------------------------------------------------------ inline validation
