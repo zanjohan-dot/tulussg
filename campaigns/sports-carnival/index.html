@@ -108,8 +108,9 @@
   <main>
     <figure class="event-banner">
       <picture>
-        <source type="image/webp" srcset="banner-800.webp 800w, banner-1600.webp 1600w" sizes="(min-width: 1080px) 1016px, 100vw">
-        <img src="banner-800.jpg" srcset="banner-800.jpg 800w, banner-1600.jpg 1600w" sizes="(min-width: 1080px) 1016px, 100vw"
+        <!-- Absolute paths (18 Oct 2026): the language copies (/campaigns/sports-carnival/<lang>/) use this same markup. -->
+        <source type="image/webp" srcset="/campaigns/sports-carnival/banner-800.webp 800w, /campaigns/sports-carnival/banner-1600.webp 1600w" sizes="(min-width: 1080px) 1016px, 100vw">
+        <img src="/campaigns/sports-carnival/banner-800.jpg" srcset="/campaigns/sports-carnival/banner-800.jpg 800w, /campaigns/sports-carnival/banner-1600.jpg 1600w" sizes="(min-width: 1080px) 1016px, 100vw"
              width="1600" height="600" alt="Illustration: people trying football, badminton, basketball, floorball and table tennis in a park in Singapore" data-i18n-attr="alt:banner.alt" fetchpriority="high">
       </picture>
       <figcaption data-i18n="banner.note">Illustration only.</figcaption>

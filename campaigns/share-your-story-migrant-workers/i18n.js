@@ -13,6 +13,9 @@
  * launch on 14 Oct 2026. These are AI-reviewed translations, NOT independently human-certified. Participants can report
  * a translation problem (shared lang.notice); any material error must be corrected promptly. Audit records: private
  * repo docs/review-packs/v7-2026-10-15-audit/. No "English prevails" statement (Document 1; Privacy Policy section 14).
+ *
+ * soon.body, soon.channelNote (18 Oct 2026, shown only before registration opens): English approved by Zan 18 Oct 2026;
+ * id, tl, my, bn, ta, zh AI-translated and independently AI-reviewed 18 Oct 2026. NOT human-verified.
  */
 TulusI18n.register({
   name: 'share-your-story-migrant-workers',
@@ -131,6 +134,8 @@ TulusI18n.register({
     'success.channelTitle': 'Want TulusSG news?',
     'success.channelBody': 'Follow our WhatsApp Channel for news and activity updates. This is your choice and has nothing to do with your registration or whether you are selected. Other followers cannot see your name or phone number.',
     'success.channel': 'Follow our WhatsApp Channel',
+    'soon.body': 'Registrations open on Monday, 26 October 2026.',
+    'soon.channelNote': 'Want a reminder? Follow our WhatsApp Channel for news. Following is optional and does not register you.',
     'nat.bangladesh': "Bangladesh",
     'nat.china': "China",
     'nat.thailand': "Thailand",
@@ -253,6 +258,8 @@ TulusI18n.register({
     'success.channelTitle': 'Ingin kabar dari TulusSG?',
     'success.channelBody': 'Ikuti Saluran WhatsApp kami untuk berita dan kabar kegiatan. Ini pilihan Anda dan tidak ada hubungannya dengan pendaftaran Anda atau apakah Anda terpilih. Pengikut lain tidak dapat melihat nama atau nomor telepon Anda.',
     'success.channel': 'Ikuti Saluran WhatsApp kami',
+    'soon.body': 'Pendaftaran dibuka pada hari Senin, 26 Oktober 2026.',
+    'soon.channelNote': 'Ingin diingatkan? Ikuti Saluran WhatsApp kami untuk kabar terbaru. Ini tidak wajib dan tidak sama dengan mendaftar.',
     'nat.bangladesh': "Bangladesh",
     'nat.china': "Tiongkok",
     'nat.thailand': "Thailand",
@@ -375,6 +382,8 @@ TulusI18n.register({
     'success.channelTitle': 'Gusto mo ng balita mula sa TulusSG?',
     'success.channelBody': 'I-follow ang aming WhatsApp Channel para sa mga balita at update sa activities. Ikaw ang bahala rito at wala itong kinalaman sa registration mo o kung mapipili ka. Hindi makikita ng ibang followers ang pangalan o phone number mo.',
     'success.channel': 'I-follow ang aming WhatsApp Channel',
+    'soon.body': 'Magbubukas ang registration sa Lunes, 26 Oktubre 2026.',
+    'soon.channelNote': 'Gusto mo ng paalala? I-follow ang aming WhatsApp Channel para sa mga balita. Hindi ito kailangan at hindi ito pag-register.',
     'nat.bangladesh': "Bangladesh",
     'nat.china': "China",
     'nat.thailand': "Thailand",
@@ -497,6 +506,8 @@ TulusI18n.register({
     'success.channelTitle': 'TulusSG သတင်းများ လိုချင်ပါသလား။',
     'success.channelBody': "သတင်းများနှင့် လှုပ်ရှားမှု အသစ်များကို သိရှိရန် ကျွန်ုပ်တို့၏ WhatsApp Channel ကို follow လုပ်ပါ။ ၎င်းသည် သင့်ဆန္ဒအလျောက်သာ ဖြစ်ပြီး သင့်စာရင်းသွင်းမှု သို့မဟုတ် သင် ရွေးချယ်ခံရခြင်း ရှိ/မရှိနှင့် မသက်ဆိုင်ပါ။ follow လုပ်ထားသော အခြားသူများသည် သင့်အမည် သို့မဟုတ် ဖုန်းနံပါတ်ကို မမြင်နိုင်ပါ။",
     'success.channel': 'ကျွန်ုပ်တို့၏ WhatsApp Channel ကို follow လုပ်ရန်',
+    'soon.body': 'စာရင်းသွင်းခြင်းကို 2026 ခုနှစ် အောက်တိုဘာ 26 ရက်၊ တနင်္လာနေ့တွင် ဖွင့်ပါမည်။',
+    'soon.channelNote': 'သတိပေးချက် လိုချင်ပါသလား။ သတင်းများအတွက် ကျွန်ုပ်တို့၏ WhatsApp Channel ကို follow လုပ်ပါ။ ၎င်းသည် မဖြစ်မနေ လုပ်ရန် မလိုသလို စာရင်းသွင်းခြင်းလည်း မဟုတ်ပါ။',
     'nat.bangladesh': "ဘင်္ဂလားဒေ့ရှ်",
     'nat.china': "တရုတ်",
     'nat.thailand': "ထိုင်း",
@@ -621,6 +632,8 @@ TulusI18n.register({
     "success.channelTitle": "TulusSG-এর খবর পেতে চান?",
     "success.channelBody": "খবর ও কার্যক্রমের আপডেট পেতে আমাদের WhatsApp চ্যানেল ফলো করুন। এটি আপনার নিজের ইচ্ছা, এবং আপনার নিবন্ধন বা আপনি বাছাই হবেন কি না তার সাথে এর কোনো সম্পর্ক নেই। অন্য ফলোয়াররা আপনার নাম বা ফোন নম্বর দেখতে পাবেন না।",
     "success.channel": "আমাদের WhatsApp চ্যানেল ফলো করুন",
+    "soon.body": "নিবন্ধন খুলবে সোমবার, ২৬ অক্টোবর ২০২৬।",
+    "soon.channelNote": "রিমাইন্ডার চান? খবর পেতে আমাদের WhatsApp চ্যানেল ফলো করুন। এটি ঐচ্ছিক, এবং ফলো করলে নিবন্ধন হয় না।",
     "nat.bangladesh": "বাংলাদেশ",
     "nat.china": "চীন",
     "nat.thailand": "থাইল্যান্ড",
@@ -745,6 +758,8 @@ TulusI18n.register({
     "success.channelTitle": "TulusSG செய்திகள் வேண்டுமா?",
     "success.channelBody": "செய்திகள் மற்றும் நிகழ்வுத் தகவல்களுக்கு எங்கள் WhatsApp சேனலைப் பின்தொடருங்கள். இது உங்கள் விருப்பம்; இதற்கும் உங்கள் பதிவுக்கும், நீங்கள் தேர்ந்தெடுக்கப்படுவதற்கும் எந்தத் தொடர்பும் இல்லை. மற்ற பின்தொடர்பவர்களால் உங்கள் பெயரையோ தொலைபேசி எண்ணையோ பார்க்க முடியாது.",
     "success.channel": "எங்கள் WhatsApp சேனலைப் பின்தொடருங்கள்",
+    "soon.body": "பதிவு திங்கட்கிழமை, 26 அக்டோபர் 2026 அன்று தொடங்கும்.",
+    "soon.channelNote": "நினைவூட்டல் வேண்டுமா? செய்திகளுக்கு எங்கள் WhatsApp சேனலைப் பின்தொடருங்கள். இது கட்டாயமில்லை; பின்தொடர்வது பதிவு ஆகாது.",
     "nat.bangladesh": "பங்களாதேஷ்",
     "nat.china": "சீனா",
     "nat.thailand": "தாய்லாந்து",
@@ -869,6 +884,8 @@ TulusI18n.register({
     "success.channelTitle": "想获取 TulusSG 的消息吗？",
     "success.channelBody": "关注我们的 WhatsApp 频道，获取新闻和活动最新消息。是否关注由您决定，与您的报名或是否被选中无关。其他关注者看不到您的姓名或电话号码。",
     "success.channel": "关注我们的 WhatsApp 频道",
+    "soon.body": "报名将于2026年10月26日（星期一）开放。",
+    "soon.channelNote": "想收到提醒？请关注我们的 WhatsApp 频道获取最新消息。关注与否由您决定，关注并不等于报名。",
     "nat.bangladesh": "孟加拉国",
     "nat.china": "中国",
     "nat.thailand": "泰国",
