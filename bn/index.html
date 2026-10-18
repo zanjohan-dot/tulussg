@@ -1239,8 +1239,9 @@ function renderPaths(){
     var c=(window.TULUS_CAMPAIGNS||[]).filter(function(x){return x.slug===a.getAttribute('data-camp');})[0];
     var st=(c&&window.TULUS_CAMPAIGN_STATE)?TULUS_CAMPAIGN_STATE(c):'closed';
     var key=st==='active'?a.getAttribute('data-open'):(st==='coming-soon'?a.getAttribute('data-soon'):null);
-    a.hidden=!key; a.classList.toggle('soon',st==='coming-soon');
-    if(key) a.querySelector('.path-camp-t').textContent=T(key);
+    var txt=key?T(key):''; if(txt===key) txt=''; // no dictionary (e.g. it failed to load): show no line rather than a code
+    a.hidden=!txt; a.classList.toggle('soon',st==='coming-soon');
+    if(txt) a.querySelector('.path-camp-t').textContent=txt;
   });
 }
 renderPaths();
