@@ -689,8 +689,3 @@ img {
     height: 92px;
   }
 }
-
-/* "About …" heading above a card's biography (19 Oct 2026), in the existing small-label style. */
-.bio-heading {
-  margin: 16px 0 0;
-}

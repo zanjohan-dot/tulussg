@@ -786,8 +786,13 @@ html:is([lang="my"],[lang="bn"],[lang="ta"],[lang="zh-Hans"]) .feat-t{font-famil
   html:is([lang="tl"],[lang="my"],[lang="ta"]) #s1 .display{font-size:30px !important}
   #s1 .people-grid{gap:6px}
   #s1 .people-grid .why-item{padding:9px 16px}
-  #s1 .people-grid .why-item p{font-size:11.5px;line-height:1.4}
-  html:is([lang="tl"],[lang="my"],[lang="ta"]) #s1 .people-grid .why-item p{font-size:11px;line-height:1.35}
+}
+/* Desktop and tablet (769px+): the Our People slide ends above the slide counter and Next button, so profiles never
+   sit underneath them. In the rare window where three profiles and partners still do not fit (narrow or short
+   windows, longest languages), the slide scrolls rather than being cut off; text is not shrunk further. */
+@media(min-width:769px){
+  #s1{bottom:var(--s1-ctl,72px);padding-top:min(40px,5vh);padding-bottom:10px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;align-items:flex-start;box-shadow:0 var(--s1-ctl,72px) 0 var(--warm)}
+  #s1 > .s-inner{margin-top:auto;margin-bottom:auto}
 }
 /* Tamil (longest text) on any phone: slightly smaller profile text so the logos clear the controls. */
 @media(max-width:480px){
@@ -1218,10 +1223,18 @@ document.addEventListener('keydown',e=>{
   if(['ArrowRight','ArrowDown',' '].includes(e.key)){e.preventDefault();if(cur<4)goTo(cur+1);}
   if(['ArrowLeft','ArrowUp'].includes(e.key)){e.preventDefault();if(cur>0)goTo(cur-1);}
 });
-let ty=0;
-document.addEventListener('touchstart',e=>{ty=e.changedTouches[0].screenY;},{passive:true});
+let ty=0,tScroll=null;
+document.addEventListener('touchstart',e=>{
+  ty=e.changedTouches[0].screenY;
+  // A slide that scrolls (Our People on short tablet/desktop windows) scrolls first; a swipe moves to the next or
+  // previous slide only when it started at the end of that scroll (19 Oct 2026).
+  const sc=e.target.closest&&e.target.closest('.section');
+  tScroll=(sc&&getComputedStyle(sc).overflowY==='auto'&&sc.scrollHeight>sc.clientHeight+2)
+    ?{top:sc.scrollTop<=2,bottom:sc.scrollTop+sc.clientHeight>=sc.scrollHeight-2}:null;
+},{passive:true});
 document.addEventListener('touchend',e=>{
   const d=ty-e.changedTouches[0].screenY;
+  if(tScroll&&((d>50&&!tScroll.bottom)||(d<-50&&!tScroll.top)))return;
   if(d>50&&cur<4)goTo(cur+1); else if(d<-50&&cur>0)goTo(cur-1);
 },{passive:true});
 function pick(el,type){
