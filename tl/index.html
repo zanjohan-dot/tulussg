@@ -749,6 +749,75 @@ html:is([lang="my"],[lang="bn"],[lang="ta"],[lang="zh-Hans"]) .feat-t{font-famil
   html[lang="ta"] #s0 .body-text{font-size:10.5px;line-height:1.4}
   html[lang="ta"] #s0 .tag{margin-bottom:4px}
 }
+/* Our People with three core team members (19 Oct 2026): one full-width row per person (all screens), partners and
+   collaborators side by side below; the initials placeholder keeps the photo frame until a photograph is supplied. */
+.people-grid .person{grid-column:1/-1}
+.people-grid .why-item.span2{grid-column:auto;min-width:0}
+.people-grid{grid-template-columns:auto minmax(0,1fr)}
+.p-photo.p-initials{aspect-ratio:1/1;align-self:flex-start}
+@media(min-width:769px){ .people-grid .person > div{max-width:none} .people-grid .why-item{padding:14px 20px} .people-grid .why-item p{line-height:1.5} }
+@media(max-width:768px){
+  #s1{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+  .p-photo.p-initials{align-self:center}
+}
+/* Option B (approved 19 Oct 2026): from 1200px wide, three equal columns (photo + role + name, biography below);
+   partners and collaborators share the row beneath. Below 1200px the full-width rows above apply. */
+@media(min-width:1200px){
+  #s1 .people-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
+  #s1 .people-grid .person{grid-column:span 2;display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-rows:auto auto 1fr;column-gap:12px;row-gap:2px;align-items:center}
+  #s1 .people-grid .person > div:not(.p-photo){display:contents}
+  #s1 .people-grid .person .p-photo{grid-row:1 / 3;grid-column:1}
+  #s1 .people-grid .person .why-item-num{grid-column:2;grid-row:1;margin:0;align-self:end}
+  #s1 .people-grid .person h4{grid-column:2;grid-row:2;margin:0;align-self:start;overflow-wrap:break-word;min-width:0}
+  #s1 .people-grid .person p{grid-column:1 / -1;grid-row:3;margin-top:10px;font-size:13px;line-height:1.55;align-self:start}
+  #s1 .people-grid .why-item.span2{grid-column:span 3}
+}
+@media(min-width:1440px){ #s1 .people-grid .person p{font-size:14px} }
+/* 769–1199px (stacked rows): a slightly smaller heading and tighter rows keep the slide clear of the controls. */
+@media(min-width:769px) and (max-width:1199px){
+  #s1 .display{font-size:46px;margin-bottom:14px}
+  #s1 .people-grid{gap:8px}
+  #s1 .people-grid .why-item{padding:11px 18px}
+  #s1 .people-grid .why-item-num{margin-bottom:2px}
+  #s1 .people-grid .why-item h4{margin-bottom:4px}
+  #s1 .people-grid .why-item p{font-size:12px;line-height:1.45}
+  html:is([lang="my"],[lang="ta"]) #s1 .people-grid .why-item p{font-size:11.5px;line-height:1.4}
+  html[lang="ta"] #s1 .display{font-size:36px}
+}
+@media(min-width:769px) and (max-width:1199px) and (max-height:860px){
+  #s1 .display{font-size:36px !important;margin-bottom:10px}
+  html:is([lang="tl"],[lang="my"],[lang="ta"]) #s1 .display{font-size:30px !important}
+  #s1 .people-grid{gap:6px}
+  #s1 .people-grid .why-item{padding:9px 16px}
+}
+/* Desktop and tablet (769px+): the Our People slide ends above the slide counter and Next button, so profiles never
+   sit underneath them. In the rare window where three profiles and partners still do not fit (narrow or short
+   windows, longest languages), the slide scrolls rather than being cut off; text is not shrunk further. */
+@media(min-width:769px){
+  #s1{bottom:var(--s1-ctl,72px);padding-top:min(40px,5vh);padding-bottom:10px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;align-items:flex-start;box-shadow:0 var(--s1-ctl,72px) 0 var(--warm)}
+  #s1 > .s-inner{margin-top:auto;margin-bottom:auto}
+}
+/* Tamil (longest text) on any phone: slightly smaller profile text so the logos clear the controls. */
+@media(max-width:480px){
+  html[lang="ta"] #s1 .people-grid .why-item p{font-size:9.5px;line-height:1.35}
+  html[lang="ta"] #s1 .people-grid .why-item{padding:6px 9px}
+  html[lang="ta"] #s1 .display{font-size:20px !important}
+}
+/* Short phones: three profiles plus partners still end above the controls (every language). */
+@media(max-width:480px) and (max-height:700px){
+  #s1 .display{font-size:22px !important;margin-bottom:6px}
+  #s1 .tag{margin-bottom:4px}
+  .people-grid{gap:5px}
+  .people-grid .why-item{padding:6px 9px}
+  .people-grid .why-item p{font-size:9.5px;line-height:1.35}
+  .people-grid .p-photo{width:32px}
+  html:is([lang="my"],[lang="bn"],[lang="ta"]) .people-grid .why-item p{font-size:9px;line-height:1.35}
+  html:is([lang="my"],[lang="bn"],[lang="ta"]) #s1 .display{font-size:18px !important}
+  html[lang="ta"] #s1 .people-grid .why-item p{font-size:9px;line-height:1.3}
+  html[lang="ta"] #s1 .people-grid .why-item{padding:5px 8px}
+  html[lang="ta"] #s1 .people-grid{gap:4px}
+  html[lang="ta"] #s1 .why-item-num{margin-bottom:0}
+}
 @keyframes hint-bob{0%,100%{transform:translateY(2px)}50%{transform:translateY(-3px)}}
 @media (prefers-reduced-motion: reduce){ .swipe-hint svg{animation:none} }
 </style>
@@ -919,6 +988,11 @@ html:is([lang="my"],[lang="bn"],[lang="ta"],[lang="zh-Hans"]) .feat-t{font-famil
 <a aria-label="Vijaikumar Rangabashayam, Community Events Lead. Buksan ang digital name card." class="why-item person person-link" data-i18n-attr="aria-label:people.vijai.aria" href="/vijai/">
 <div class="p-photo"><img alt="Larawan ni Vijaikumar Rangabashayam" data-i18n-attr="alt:people.vijai.alt" height="360" src="/assets/people/vijaikumar-rangabashayam-headshot.jpg" width="360"/></div>
 <div><div class="why-item-num" data-i18n="people.vijai.role">Community Events Lead</div><h4>Vijaikumar Rangabashayam</h4><p data-i18n="people.vijai.bio">Saklaw ng propesyonal na karanasan ni Vijai ang community sport at volunteer engagement, kasama ang pagkakasangkot sa SportSG at sa mga tertiary institution. Sa TulusSG, siya ang nangangasiwa sa pagpaplano at pagsasagawa ng mga community event at nag-oorganisa ng pakikilahok ng mga volunteer.</p></div>
+</a>
+<!-- Third core team member (19 Oct 2026). Photo not yet supplied: initials in the existing placeholder style. -->
+<a aria-label="Zulkarnaen Abdullah, Creative Lead. Buksan ang digital name card." class="why-item person person-link" data-i18n-attr="aria-label:people.zul.aria" href="/zul/">
+<div aria-hidden="true" class="p-photo p-initials">ZA</div>
+<div><div class="why-item-num" data-i18n="people.zul.role">Creative Lead</div><h4>Zulkarnaen Abdullah</h4><p data-i18n="people.zul.bio">Mula sa propesyonal na karanasan sa public service at visual communications, nagdadala si Zul ng maingat na pananaw sa creative direction at storytelling. Pinamumunuan niya ang social media strategy at media production ng TulusSG, at hinuhubog kung paano ipinapahayag ang mga inisyatiba at kuwento ng komunidad nito.</p></div>
 </a>
 <div class="why-item span2">
 <div class="why-item-num" data-i18n="people.partners">Mga Partner</div>
@@ -1132,10 +1206,18 @@ document.addEventListener('keydown',e=>{
   if(['ArrowRight','ArrowDown',' '].includes(e.key)){e.preventDefault();if(cur<4)goTo(cur+1);}
   if(['ArrowLeft','ArrowUp'].includes(e.key)){e.preventDefault();if(cur>0)goTo(cur-1);}
 });
-let ty=0;
-document.addEventListener('touchstart',e=>{ty=e.changedTouches[0].screenY;},{passive:true});
+let ty=0,tScroll=null;
+document.addEventListener('touchstart',e=>{
+  ty=e.changedTouches[0].screenY;
+  // A slide that scrolls (Our People on short tablet/desktop windows) scrolls first; a swipe moves to the next or
+  // previous slide only when it started at the end of that scroll (19 Oct 2026).
+  const sc=e.target.closest&&e.target.closest('.section');
+  tScroll=(sc&&getComputedStyle(sc).overflowY==='auto'&&sc.scrollHeight>sc.clientHeight+2)
+    ?{top:sc.scrollTop<=2,bottom:sc.scrollTop+sc.clientHeight>=sc.scrollHeight-2}:null;
+},{passive:true});
 document.addEventListener('touchend',e=>{
   const d=ty-e.changedTouches[0].screenY;
+  if(tScroll&&((d>50&&!tScroll.bottom)||(d<-50&&!tScroll.top)))return;
   if(d>50&&cur<4)goTo(cur+1); else if(d<-50&&cur>0)goTo(cur-1);
 },{passive:true});
 function pick(el,type){

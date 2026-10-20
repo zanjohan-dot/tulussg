@@ -93,7 +93,7 @@ const KEEP_LATIN = new Set(['TulusSG', 'Share', 'Your', 'Story', 'WhatsApp', 'Fa
   // loanwords Burmese readers use as they appear in the apps
   'Channel', 'follow', 'Follow', 'mailing', 'list',
   // main website: names, brands and sports kept in Latin script
-  'Johan', 'Vijaikumar', 'Rangabashayam', 'Vijai', 'SportSG', 'LinkedIn', 'Piloxing', 'Kahtel', 'Media', 'Outsidein',
+  'Johan', 'Vijaikumar', 'Rangabashayam', 'Vijai', 'Zulkarnaen', 'Abdullah', 'Zul', 'SportSG', 'LinkedIn', 'Piloxing', 'Kahtel', 'Media', 'Outsidein',
   'Motion', 'Facilitators', 'Project', 'Affirmative', 'People', 'asia', 'Floorball', 'Pickleball', 'Netball', 'floorball',
   'pickleball', 'netball', 'piloxing', 'Kayak', 'Kayaking', 'Badminton', 'Basketball', 'Football', 'Singapore', 'Partners']);
 const NON_LATIN = ['my', 'bn', 'ta', 'zh'];
