@@ -6,6 +6,8 @@
  * 18 Oct 2026; id, tl, my, bn, ta, zh AI-translated and independently AI-reviewed 18 Oct 2026 (6 fixes applied).
  * NOT human-verified.
  * people.zul.alt added 22 Oct 2026 (photo alt text; mirrors people.zan.alt in every language).
+ * form.privacyNote added 20 Oct 2026 (privacy link by the contact form): English for owner approval; id, tl, my, bn, ta, zh
+ * AI-translated and AI-reviewed 20 Oct 2026. NOT human-verified.
  * Public use per language: /campaigns/translations.js. Every language must have exactly the same keys and the same
  * [em] [strong] [br] [aN] tokens as English (checked by _tests/check-i18n.mjs).
  * people.zul.* (19 Oct 2026, Zulkarnaen Abdullah, Creative Lead): English approved by Zan 19 Oct 2026; id, tl, my, bn,
@@ -126,6 +128,7 @@ TulusI18n.register({
     "form.message": "Message",
     "form.messagePh": "Say hello",
     "form.send": "Send Message",
+    "form.privacyNote": "We use your details only to reply to your message. {link}",
     "form.sending": "Sending...",
     "pill.domestic": "For Domestic Workers",
     "pill.migrant": "For Migrant Workers",
@@ -253,6 +256,7 @@ TulusI18n.register({
     "form.message": "Pesan",
     "form.messagePh": "Sampaikan salam",
     "form.send": "Kirim Pesan",
+    "form.privacyNote": "Kami hanya menggunakan data Anda untuk membalas pesan Anda. {link}",
     "form.sending": "Mengirim...",
     "pill.domestic": "Untuk Pekerja Rumah Tangga",
     "pill.migrant": "Untuk Pekerja Migran",
@@ -380,6 +384,7 @@ TulusI18n.register({
     "form.message": "Mensahe",
     "form.messagePh": "Mag-hello",
     "form.send": "Ipadala",
+    "form.privacyNote": "Gagamitin lang namin ang iyong mga detalye para sagutin ang iyong mensahe. {link}",
     "form.sending": "Ipinapadala...",
     "pill.domestic": "Para sa mga Domestic Worker",
     "pill.migrant": "Para sa mga Migrant Worker",
@@ -507,6 +512,7 @@ TulusI18n.register({
     "form.message": "စာ",
     "form.messagePh": "နှုတ်ဆက်ပါ",
     "form.send": "စာပို့ရန်",
+    "form.privacyNote": "သင့်အချက်အလက်များကို သင့်စာကို ပြန်ကြားရန်အတွက်သာ အသုံးပြုပါသည်။ {link}",
     "form.sending": "ပို့နေသည်...",
     "pill.domestic": "အိမ်အကူများအတွက်",
     "pill.migrant": "ရွှေ့ပြောင်းအလုပ်သမားများအတွက်",
@@ -634,6 +640,7 @@ TulusI18n.register({
     "form.message": "মেসেজ",
     "form.messagePh": "হ্যালো বলুন",
     "form.send": "মেসেজ পাঠান",
+    "form.privacyNote": "আমরা আপনার তথ্য শুধু আপনার মেসেজের উত্তর দিতে ব্যবহার করি। {link}",
     "form.sending": "পাঠানো হচ্ছে...",
     "pill.domestic": "গৃহকর্মীদের জন্য",
     "pill.migrant": "প্রবাসী শ্রমিকদের জন্য",
@@ -761,6 +768,7 @@ TulusI18n.register({
     "form.message": "செய்தி",
     "form.messagePh": "வணக்கம் சொல்லுங்கள்",
     "form.send": "செய்தியை அனுப்பு",
+    "form.privacyNote": "உங்கள் செய்திக்குப் பதிலளிக்க மட்டுமே உங்கள் விவரங்களைப் பயன்படுத்துகிறோம். {link}",
     "form.sending": "அனுப்பப்படுகிறது...",
     "pill.domestic": "வீட்டுப் பணியாளர்களுக்கு",
     "pill.migrant": "வெளிநாட்டு ஊழியர்களுக்கு",
@@ -888,6 +896,7 @@ TulusI18n.register({
     "form.message": "留言",
     "form.messagePh": "打个招呼吧",
     "form.send": "发送留言",
+    "form.privacyNote": "我们仅使用您的信息来回复您的留言。{link}",
     "form.sending": "发送中……",
     "pill.domestic": "给家庭帮佣",
     "pill.migrant": "给客工",
