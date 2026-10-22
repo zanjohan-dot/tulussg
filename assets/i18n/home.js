@@ -5,6 +5,7 @@
  * Lines added 18 Oct 2026 (visitor review: paths.*, act.feat.*, act.ideas, act.note2, home.*): English approved by Zan
  * 18 Oct 2026; id, tl, my, bn, ta, zh AI-translated and independently AI-reviewed 18 Oct 2026 (6 fixes applied).
  * NOT human-verified.
+ * people.zul.alt added 22 Oct 2026 (photo alt text; mirrors people.zan.alt in every language).
  * Public use per language: /campaigns/translations.js. Every language must have exactly the same keys and the same
  * [em] [strong] [br] [aN] tokens as English (checked by _tests/check-i18n.mjs).
  * people.zul.* (19 Oct 2026, Zulkarnaen Abdullah, Creative Lead): English approved by Zan 19 Oct 2026; id, tl, my, bn,
@@ -39,6 +40,7 @@ TulusI18n.register({
     "people.title": "The people behind [em]TulusSG.[/em]",
     "people.zan.aria": "Zan Johan, Project Lead. Open digital name card.",
     "people.zan.alt": "Portrait of Zan Johan",
+    "people.zul.alt": "Portrait of Zulkarnaen Abdullah",
     "people.zan.role": "Project Lead",
     "people.zan.bio": "Zan's professional background spans public service, digital systems, finance and law. She leads TulusSG's strategy, platform development and partnerships, with a focus on shaping programmes around the interests and needs of the migrant communities TulusSG serves.",
     "people.vijai.aria": "Vijaikumar Rangabashayam, Community Events Lead. Open digital name card.",
@@ -165,6 +167,7 @@ TulusI18n.register({
     "people.title": "Orang-orang di balik [em]TulusSG.[/em]",
     "people.zan.aria": "Zan Johan, Pemimpin Proyek. Buka kartu nama digital.",
     "people.zan.alt": "Foto Zan Johan",
+    "people.zul.alt": "Foto Zulkarnaen Abdullah",
     "people.zan.role": "Pemimpin Proyek",
     "people.zan.bio": "Latar belakang profesional Zan mencakup pelayanan publik, sistem digital, keuangan, dan hukum. Ia memimpin strategi, pengembangan platform, dan kemitraan TulusSG, dengan fokus menyusun program sesuai minat dan kebutuhan komunitas migran yang dilayani TulusSG.",
     "people.vijai.aria": "Vijaikumar Rangabashayam, Pemimpin Acara Komunitas. Buka kartu nama digital.",
@@ -291,6 +294,7 @@ TulusI18n.register({
     "people.title": "Ang mga tao sa likod ng [em]TulusSG.[/em]",
     "people.zan.aria": "Zan Johan, Project Lead. Buksan ang digital name card.",
     "people.zan.alt": "Larawan ni Zan Johan",
+    "people.zul.alt": "Larawan ni Zulkarnaen Abdullah",
     "people.zan.role": "Project Lead",
     "people.zan.bio": "Saklaw ng propesyonal na karanasan ni Zan ang public service, digital systems, finance at batas. Siya ang namumuno sa strategy, platform development at partnerships ng TulusSG, at nakatuon siya sa paghubog ng mga programa ayon sa interes at pangangailangan ng mga migrant community na pinaglilingkuran ng TulusSG.",
     "people.vijai.aria": "Vijaikumar Rangabashayam, Community Events Lead. Buksan ang digital name card.",
@@ -417,6 +421,7 @@ TulusI18n.register({
     "people.title": "[em]TulusSG[/em] ၏ နောက်ကွယ်မှ ပုဂ္ဂိုလ်များ။",
     "people.zan.aria": "Zan Johan၊ စီမံကိန်းခေါင်းဆောင်။ ဒစ်ဂျစ်တယ် လိပ်စာကတ် ဖွင့်ရန်။",
     "people.zan.alt": "Zan Johan ၏ ဓာတ်ပုံ",
+    "people.zul.alt": "Zulkarnaen Abdullah ၏ ဓာတ်ပုံ",
     "people.zan.role": "စီမံကိန်းခေါင်းဆောင်",
     "people.zan.bio": "Zan ၏ လုပ်ငန်းနောက်ခံသည် ပြည်သူ့ဝန်ဆောင်မှု၊ ဒစ်ဂျစ်တယ်စနစ်များ၊ ဘဏ္ဍာရေးနှင့် ဥပဒေ နယ်ပယ်များကို လွှမ်းခြုံပါသည်။ သူမသည် TulusSG ၏ မဟာဗျူဟာ၊ ပလက်ဖောင်း ဖွံ့ဖြိုးတိုးတက်ရေးနှင့် မိတ်ဖက်ဆောင်ရွက်မှုများကို ဦးဆောင်ပြီး TulusSG ဆောင်ရွက်ပေးနေသော ရွှေ့ပြောင်းအသိုင်းအဝိုင်းများ၏ စိတ်ဝင်စားမှုနှင့် လိုအပ်ချက်များကို အခြေခံ၍ ပရိုဂရမ်များ ပုံဖော်ရန် အဓိကထားပါသည်။",
     "people.vijai.aria": "Vijaikumar Rangabashayam၊ အသိုင်းအဝိုင်း ပွဲများ ခေါင်းဆောင်။ ဒစ်ဂျစ်တယ် လိပ်စာကတ် ဖွင့်ရန်။",
@@ -543,6 +548,7 @@ TulusI18n.register({
     "people.title": "[em]TulusSG-এর[/em] পেছনের মানুষেরা",
     "people.zan.aria": "Zan Johan, প্রজেক্ট লিড। ডিজিটাল নেম কার্ড খুলুন।",
     "people.zan.alt": "Zan Johan-এর ছবি",
+    "people.zul.alt": "Zulkarnaen Abdullah-এর ছবি",
     "people.zan.role": "প্রজেক্ট লিড",
     "people.zan.bio": "Zan-এর পেশাগত অভিজ্ঞতা সরকারি সেবা, ডিজিটাল সিস্টেম, ফাইন্যান্স ও আইন জুড়ে। তিনি TulusSG-এর কৌশল, প্ল্যাটফর্ম তৈরি ও পার্টনারশিপের নেতৃত্ব দেন, আর TulusSG যে প্রবাসী কমিউনিটিগুলোর জন্য কাজ করে তাদের আগ্রহ ও প্রয়োজন অনুযায়ী প্রোগ্রাম সাজানোর দিকে বিশেষ নজর দেন।",
     "people.vijai.aria": "Vijaikumar Rangabashayam, কমিউনিটি ইভেন্টস লিড। ডিজিটাল নেম কার্ড খুলুন।",
@@ -669,6 +675,7 @@ TulusI18n.register({
     "people.title": "[em]TulusSG[/em]-இன் பின்னணியில் இருப்பவர்கள்.",
     "people.zan.aria": "Zan Johan, திட்டத் தலைவர். டிஜிட்டல் பெயர் அட்டையைத் திறக்க.",
     "people.zan.alt": "Zan Johan-இன் உருவப்படம்",
+    "people.zul.alt": "Zulkarnaen Abdullah-இன் உருவப்படம்",
     "people.zan.role": "திட்டத் தலைவர்",
     "people.zan.bio": "Zan-இன் தொழில்முறை அனுபவம் பொதுச் சேவை, டிஜிட்டல் அமைப்புகள், நிதி, சட்டம் ஆகிய துறைகளில் பரந்துள்ளது. TulusSG-இன் உத்தி, தள உருவாக்கம், கூட்டாண்மைகள் ஆகியவற்றை அவர் வழிநடத்துகிறார். TulusSG சேவை செய்யும் வெளிநாட்டுப் பணியாளர் சமூகங்களின் விருப்பங்களுக்கும் தேவைகளுக்கும் ஏற்ப திட்டங்களை வடிவமைப்பதில் அவர் கவனம் செலுத்துகிறார்.",
     "people.vijai.aria": "Vijaikumar Rangabashayam, சமூக நிகழ்வுகள் தலைவர். டிஜிட்டல் பெயர் அட்டையைத் திறக்க.",
@@ -795,6 +802,7 @@ TulusI18n.register({
     "people.title": "[em]TulusSG[/em] 背后的团队",
     "people.zan.aria": "Zan Johan，项目负责人。打开电子名片。",
     "people.zan.alt": "Zan Johan 的照片",
+    "people.zul.alt": "Zulkarnaen Abdullah 的照片",
     "people.zan.role": "项目负责人",
     "people.zan.bio": "Zan 的专业背景涵盖公共服务、数字系统、金融和法律。她负责 TulusSG 的策略、平台开发和合作伙伴关系，重点是根据 TulusSG 所服务的外籍劳工社群的兴趣和需要来规划项目。",
     "people.vijai.aria": "Vijaikumar Rangabashayam，社区活动负责人。打开电子名片。",
