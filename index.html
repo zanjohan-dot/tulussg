@@ -207,6 +207,14 @@ a.h-stat:focus-visible { outline:2px solid var(--terra); outline-offset:2px; }
 .form-row textarea { resize:none; }
 .form-btn { -webkit-appearance:none!important; appearance:none!important; display:block; width:100%; background:var(--ink)!important; color:var(--white)!important; border:none!important; padding:14px; border-radius:8px; font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:all 0.3s; margin-top:8px; }
 .form-btn:hover { background:var(--terra)!important; }
+/* Contact form: privacy note under the button and the hidden spam trap (20 Oct 2026). */
+.form-privacy { font-size:10px; line-height:1.45; color:var(--muted); text-align:center; margin-top:8px; }
+.form-privacy a, .footer-privacy { color:var(--terra-text); text-decoration:underline; text-underline-offset:2px; }
+.hp-field { position:absolute !important; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
+/* Phones: the note under the button already links to the policy, so the footer repeats it only on larger screens;
+   slightly tighter rows keep the page links clear of the controls (text sizes unchanged). */
+@media(max-width:768px){ .footer-privacy-wrap{display:none} .form-privacy{margin-top:6px;margin-bottom:0;line-height:1.35} #s4 #cForm .form-row{margin-bottom:8px} #s4 #cForm .site-copy{margin-top:6px !important} }
+@media(max-width:480px) and (max-height:700px){ #s4 #cForm .form-row{margin-bottom:5px} #s4 #cForm .form-row label{margin-bottom:2px} #s4 #cForm .site-copy{margin-bottom:4px !important} }
 .s-over { position:absolute; inset:0; background:rgba(253,246,236,0.97); display:none; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:40px; }
 .s-check { width:50px; height:50px; border-radius:50%; background:rgba(196,98,45,0.1); color:var(--terra); font-size:22px; display:flex; align-items:center; justify-content:center; margin:0 auto 14px; }
 .mob-footer { display: none; }
@@ -1087,8 +1095,8 @@ html:is([lang="my"],[lang="bn"],[lang="ta"],[lang="zh-Hans"]) .feat-t{font-famil
             </div>
           </div>
           <form class="min-form" id="cForm" method="post" onsubmit="event.preventDefault();submitForm();">
-            <div class="form-row anim"><label for="cf-name" data-i18n="form.name">Your Name</label><input type="text" id="cf-name" name="name" placeholder="Full name" data-i18n-attr="placeholder:form.namePh" required></div>
-            <div class="form-row anim"><label for="cf-email" data-i18n="form.email">Email Address</label><input type="email" id="cf-email" name="email" placeholder="you@email.com" required></div>
+            <div class="form-row anim"><label for="cf-name" data-i18n="form.name">Your Name</label><input type="text" id="cf-name" name="name" placeholder="Full name" data-i18n-attr="placeholder:form.namePh" maxlength="100" autocomplete="name" required></div>
+            <div class="form-row anim"><label for="cf-email" data-i18n="form.email">Email Address</label><input type="email" id="cf-email" name="email" placeholder="you@email.com" maxlength="254" autocomplete="email" required></div>
             <div class="form-row anim">
               <label for="cf-role" data-i18n="form.role">I am a...</label>
               <select id="cf-role" name="role" required>
@@ -1102,9 +1110,12 @@ html:is([lang="my"],[lang="bn"],[lang="ta"],[lang="zh-Hans"]) .feat-t{font-famil
                 <option value="Just curious" data-i18n="form.role.curious">Just curious</option>
               </select>
             </div>
-            <div class="form-row anim"><label for="cf-message" data-i18n="form.message">Message</label><textarea id="cf-message" name="message" rows="3" placeholder="Say hello" data-i18n-attr="placeholder:form.messagePh" required></textarea></div>
+            <div class="form-row anim"><label for="cf-message" data-i18n="form.message">Message</label><textarea id="cf-message" name="message" rows="3" placeholder="Say hello" data-i18n-attr="placeholder:form.messagePh" maxlength="3000" required></textarea></div>
+            <!-- Spam trap (20 Oct 2026): hidden from people and screen readers; the contact-form script discards any message that fills it. -->
+            <div class="hp-field" aria-hidden="true"><label for="cf-website">Website</label><input type="text" id="cf-website" name="website" tabindex="-1" autocomplete="off"></div>
             <button type="submit" class="form-btn anim" data-i18n="form.send">Send Message</button>
-            <p class="anim site-copy" style="font-size: 10px; color: var(--muted); text-align: center; margin-top: 16px; margin-bottom: 12px;"><span data-i18n="footer.copyright">© 2026 TulusSG. All rights reserved.</span><br><span data-i18n="footer.rights">Website content and original design shall not be reproduced or adapted without prior written permission, except as permitted by law.</span><span class="copy-credit"><br><span data-i18n-rich="footer.credit">Digital systems designed and developed by <a href="https://digi-architect.studio" target="_blank" rel="noopener" style="color: var(--terra); text-decoration: none;">The Digital Systems Architect</a>.</span></span></p>
+            <p class="form-privacy anim" data-i18n-link="form.privacyNote" data-privacy-anchor="contact-form">We use your details only to reply to your message. <a href="/privacy/#contact-form">Privacy Policy</a></p>
+            <p class="anim site-copy" style="font-size: 10px; color: var(--muted); text-align: center; margin-top: 16px; margin-bottom: 12px;"><span data-i18n="footer.copyright">© 2026 TulusSG. All rights reserved.</span><span class="footer-privacy-wrap"> · <a data-privacy-link="" href="/privacy/" class="footer-privacy">Privacy Policy</a></span><br><span data-i18n="footer.rights">Website content and original design shall not be reproduced or adapted without prior written permission, except as permitted by law.</span><span class="copy-credit"><br><span data-i18n-rich="footer.credit">Digital systems designed and developed by <a href="https://digi-architect.studio" target="_blank" rel="noopener" style="color: var(--terra); text-decoration: none;">The Digital Systems Architect</a>.</span></span></p>
             
             <div class="anim" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 8px;">
               <a href="/domestic-worker-support-singapore/" class="seo-pill" data-i18n="pill.domestic">For Domestic Workers</a>
