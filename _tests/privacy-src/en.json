@@ -8,7 +8,7 @@
   "ogDescription": "How TulusSG collects, uses and protects personal information.",
   "back": "Campaigns",
   "h1": "Privacy Policy",
-  "updated": "Last updated: 17 October 2026",
+  "updated": "Last updated: 24 October 2026",
   "languages": "Languages",
   "translationNote": "",
   "contents": "Contents",
@@ -26,11 +26,11 @@
   },
   {
    "t": "p",
-   "h": "TulusSG is a ground-up community initiative of <strong>Zan J Private Limited (UEN: 202616105R)</strong>. The Share Your Story campaigns are run by TulusSG."
+   "h": "TulusSG is a ground-up community initiative supporting migrant communities in Singapore. It is supported by <strong>Zan J Private Limited</strong>, which provides the legal and administrative framework for the initiative. The Share Your Story campaigns are run by TulusSG."
   },
   {
    "t": "p",
-   "h": "Zan J Private Limited, which operates TulusSG, is responsible for the collection and use of the personal information you provide. In this Privacy Policy, references to “we”, “us” and “TulusSG” mean Zan J Private Limited acting through its initiatives and brands."
+   "h": "For the purposes of this Privacy Policy, Zan J Private Limited is the legal entity responsible for personal data collected, used or disclosed in connection with TulusSG’s activities. For the purposes of this Privacy Policy, references to “we”, “us” and “our” in relation to the collection, use, disclosure, storage and protection of personal data refer to Zan J Private Limited in its capacity as the responsible legal entity."
   },
   {
    "t": "p",
@@ -120,7 +120,7 @@
   },
   {
    "t": "p",
-   "h": "Your registration can be seen only by people authorised by TulusSG to manage the campaign, and by the service providers that run our registration system (see <a href=\"#providers\">section 6</a>). If your story includes personal or sensitive experiences, we treat it with particular care (see <a href=\"#stories\">section 4</a>)."
+   "h": "Your registration can be seen only by people we authorise to manage the campaign, and by the service providers that run our registration system (see <a href=\"#providers\">section 6</a>). If your story includes personal or sensitive experiences, we treat it with particular care (see <a href=\"#stories\">section 4</a>)."
   },
   {
    "t": "p",
@@ -370,7 +370,7 @@
   },
   {
    "t": "p",
-   "h": "TulusSG does not intend to collect personal information from children through forms designed for adult participants unless the relevant programme specifically involves children and appropriate consent arrangements have been established."
+   "h": "We do not intend to collect personal information from children through forms designed for adult participants unless the relevant programme specifically involves children and appropriate consent arrangements have been established."
   },
   {
    "t": "p",
@@ -398,7 +398,7 @@
   },
   {
    "t": "p",
-   "h": "The TulusSG website may contain links to websites, platforms or services operated by other organisations. Their privacy practices are governed by their own policies, and TulusSG is not responsible for how those third-party services handle information."
+   "h": "The TulusSG website may contain links to websites, platforms or services operated by other organisations. Their privacy practices are governed by their own policies, and we are not responsible for how those third-party services handle information."
   },
   {
    "t": "h2",
@@ -450,7 +450,7 @@
   },
   {
    "t": "p",
-   "h": "Zan J Private Limited (UEN: 202616105R), which operates TulusSG, is responsible for the collection and use of the personal information described in this policy. If you have questions about this policy, or want to make a request under <a href=\"#choices\">section 9</a>, please contact our Data Protection Officer:"
+   "h": "Zan J Private Limited (UEN: 202616105R) is responsible for personal-data matters under this Privacy Policy. If you have questions about this policy, or want to make a request under <a href=\"#choices\">section 9</a>, please contact our Data Protection Officer:"
   },
   {
    "t": "contact"
